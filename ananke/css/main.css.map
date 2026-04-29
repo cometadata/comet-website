@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/bruce/Development/hugo/comet-website",
+	"sourceRoot": "/home/runner/work/comet-website/comet-website",
 	"sources": [
 		"ananke/css/main.css"
 	],
