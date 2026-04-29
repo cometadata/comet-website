@@ -24,7 +24,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo --minify -b 'https://deploy url goes here/'
+        run: hugo --minify -b 'https://cometadata.github.io/comet-website/'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
