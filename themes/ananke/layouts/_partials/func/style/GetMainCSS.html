@@ -52,7 +52,7 @@ css asset directory we (unless condition below) add to aforementioned slice */}}
         {{ if hugo.IsExtended }}
           {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
           {{ $assets_to_concat = $assets_to_concat | collections.Append (. | css.Sass) }}
-          {{ partials.Include "func/warn.html" (fmt.Printf "Hello World %s %s"  .Name .MediaType.SubType) }}
+          {{ partials.Include "func/warn.html" (fmt.Printf "Build with sass stylesheet here: %s %s"  .Name .MediaType.SubType) }}
         {{ else }}
           {{ partials.Include "func/warn.html" (fmt.Printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
         {{ end }}
