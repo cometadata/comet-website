@@ -2,3 +2,21 @@ baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'Cometadata development website'
 theme = 'ananke'
+
+[params.custom_css]
+name = "sass/_cometadata.scss"
+
+
+[menu]
+[[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
+    name       = "Option 1: Default Page"
+    url        = "/"
+    weight     = 1
+    parent     = "menu.home"
+
