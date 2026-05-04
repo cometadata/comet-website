@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* SOME VARIABLES */
+$crossref-red: #ef3340;
+$crossref-darkgrey: #4f5858;
+$crossref-yellow: #ffc72c;
+$crossref-blue: #3eb1c8;
+$crossref-blue-corrected: #017698;
+$crossref-green: #00ab84;
+$crossref-lightgrey: #d8d2c4;
+$crossref-darkyellow: #ffa300;
+$crossref-darkred: #a6192e;
+$crossref-darkblue: #005f83;
+$crossref-darkbeige: #a39382;
+$crossref-orange: #fd8332;
+$generic-lightgrey: #f3f3f3;
+$transition-time: 0.1s;
+$white: #fff;
+
+/* alt-font-stack defines the backup stack if the initial, usually something specific like a light or regular font, isn't available */
+$alt-font-stack: "Inter-Regular", Helvetica, Arial, sans-serif;
+$font-light: "Inter-Light", $alt-font-stack;
+$font-light-italic: "Inter-LightItalic", $alt-font-stack;
+$font-regular: "Inter-Regular", $alt-font-stack;
+$font-regular-italic: "Inter-Regular", $alt-font-stack;
+$font-medium: "Inter-Medium", $alt-font-stack;
+$font-medium-italic: "Inter-MediumItalic", $alt-font-stack;
+$font-bold: "Inter-Bold", $alt-font-stack;
+$font-bold-italic: "Inter-BoldItalic", $alt-font-stack;
+
+@import "partials/_fonts.scss",
+        "partials/_nav.scss";
+
+
+.text-media-band,
+.impact-band,
+.action-lanes,
+.timeline-cards,
+.principle-triptych,
+.diagram-stage,
+.project-summary-list ,
+.logo-bar ,
+.people-grid ,
+.scroll-table,
+.form-stack,
+.post-grid,
+.article-body
+{
+    border:1px solid orange;
+}
+
