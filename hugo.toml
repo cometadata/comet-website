@@ -3,9 +3,10 @@ locale = 'en-us'
 title = 'Cometadata development website'
 theme = 'ananke'
 
+# make better changes with our own styling in sass
+# this get added to the end of the main style file
 [params.custom_css]
 name = "sass/_cometadata.scss"
-
 
 [menu]
 [[menu.main]]
@@ -19,4 +20,14 @@ name = "sass/_cometadata.scss"
     url        = "/"
     weight     = 1
     parent     = "menu.home"
+[[menu.main]]
+    name       = "Blocks"
+    identifier = "menu.test"
+    url        = "/reusable-blocks"
+    weight     = 1
+[[menu.main]]
+    name       = "TestPage"
+    identifier = "menu."
+    url        = "/testpage"
+    weight     = 3
 
