@@ -1,2 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cometadata development website</title><link>https://cometadata.github.io/comet-website/</link><description>Recent content on Cometadata development website</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 Apr 2026 17:35:32 +0100</lastBuildDate><atom:link href="https://cometadata.github.io/comet-website/index.xml" rel="self" type="application/rss+xml"/><item><title>Testpage</title><link>https://cometadata.github.io/comet-website/testpage/</link><pubDate>Wed, 29 Apr 2026 17:35:32 +0100</pubDate><guid>https://cometadata.github.io/comet-website/testpage/</guid><description>&lt;p&gt;this is a testpage&lt;/p&gt;</description></item><item><title>My First Post</title><link>https://cometadata.github.io/comet-website/posts/my-first-post/</link><pubDate>Wed, 29 Apr 2026 17:28:54 +0100</pubDate><guid>https://cometadata.github.io/comet-website/posts/my-first-post/</guid><description>&lt;h2 id="test-post"&gt;Test Post&lt;/h2&gt;
-&lt;p&gt;This is just a test post&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cometadata development website</title><link>https://cometadata.github.io/comet-website/</link><description>Recent content on Cometadata development website</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 04 May 2026 13:15:58 +0100</lastBuildDate><atom:link href="https://cometadata.github.io/comet-website/index.xml" rel="self" type="application/rss+xml"/><item><title>Blocks</title><link>https://cometadata.github.io/comet-website/reusable-blocks/</link><pubDate>Mon, 04 May 2026 13:15:58 +0100</pubDate><guid>https://cometadata.github.io/comet-website/reusable-blocks/</guid><description>&lt;i&gt;this is the text-media-band shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="text-media-band"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the impact-band shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="impact-band"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the action-lanes shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="action-lanes"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the timeline-cards shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="timeline-cards"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the principle-triptych shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="principle-triptych"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the diagram-stage shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="diagram-stage"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the project-summary-list shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="project-summary-list"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the logo-bar shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="logo-bar"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the people-grid shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="people-grid"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the scroll-table shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="scroll-table"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the form-stack shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="form-stack"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the post-grid shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="post-grid"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;
+&lt;i&gt;this is the article-body shortcode&lt;/i&gt;&lt;br /&gt;
+&lt;div class="article-body"&gt; 
+ 
+this is some content
+
+&lt;/div&gt;</description></item><item><title>Testpage</title><link>https://cometadata.github.io/comet-website/testpage/</link><pubDate>Mon, 04 May 2026 13:15:58 +0100</pubDate><guid>https://cometadata.github.io/comet-website/testpage/</guid><description>&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur&lt;/em&gt; adipisicing elit, sed do eiusmod
+tempor incididunt ut &lt;strong&gt;labore et dolore magna aliqua&lt;/strong&gt;. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. &lt;em&gt;&lt;strong&gt;Duis aute irure dolor&lt;/strong&gt;&lt;/em&gt; in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. &lt;del&gt;Excepteur sint occaecat&lt;/del&gt; cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;h2 id="h2"&gt;H2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur&lt;/em&gt; adipisicing elit, sed do eiusmod
+tempor incididunt ut &lt;strong&gt;labore et dolore magna aliqua&lt;/strong&gt;. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.&lt;/p&gt;</description></item></channel></rss>
