@@ -1,5 +1,4 @@
 .text-media-band {
-    display:flex;
     .column {
         background-color:rgb(230, 231, 232);
         padding: $column-padding;
@@ -8,4 +7,12 @@
         }
     }
     
+}
+
+
+.flexed  {
+    display:flex;
+    @media (max-width: $media-md) {
+        display:block;
+    }
 }
