@@ -5,7 +5,39 @@ featured_image = 'images/gohugo-default-sample-hero-image.jpg'
 +++
 
 {{< text-media-band >}}
-this is some content
+{{< column >}}
+{{< figure
+  src="https://gohugo.io/images/examples/zion-national-park.jpg"
+  alt="A photograph of Zion National Park"
+  link="https://www.nps.gov/zion/index.htm"
+  caption="Zion National Park"
+>}}
+{{< /column >}}
+{{% column %}}
+### Collective action leads to structural change
+COMET brings together stakeholders across domains committed to the collective stewardship of quality, trustworthy, and open scholarly metadata.
+
+Together we’re implementing a new model for metadata enrichment that recognises all the stakeholders in research creation, curation, and consumption. Research is a collective endeavour. Its description should be too.
+
+What is the COMET model? [Explore](#)
+{{% /column %}}
+{{< /text-media-band >}}
+
+{{< text-media-band >}}
+{{% column %}}
+***Duis aute irure dolor*** in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. ~~Excepteur sint occaecat~~ cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+{{% /column %}}
+{{< column >}}
+{{< figure
+  src="https://gohugo.io/images/examples/zion-national-park.jpg"
+  alt="A photograph of Zion National Park"
+  link="https://www.nps.gov/zion/index.htm"
+  caption="Zion National Park"
+  width="1400"
+>}}
+{{< /column >}}
 {{< /text-media-band >}}
 
 
