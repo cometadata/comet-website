@@ -24,7 +24,7 @@ name = "sass/_cometadata.scss"
     name       = "Blocks"
     identifier = "menu.test"
     url        = "/reusable-blocks"
-    weight     = 1
+    weight     = 2
 [[menu.main]]
     name       = "TestPage"
     identifier = "menu."

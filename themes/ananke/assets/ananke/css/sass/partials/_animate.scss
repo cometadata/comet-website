@@ -1,0 +1,7 @@
+figure img {
+    transition: $transition-time;
+    &:hover {
+        transform: scale($grow-scale);
+        transition: $transition-time;
+    }
+}
