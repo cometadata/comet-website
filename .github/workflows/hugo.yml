@@ -19,7 +19,7 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
           
-      - name: Install Dart Sass Embedded # Installs dart-sass
+      - name: Install Dart Sass Replacement for LibSass # Installs dart-sass
         run: sudo snap install dart-sass
 
       - name: Setup Hugo
