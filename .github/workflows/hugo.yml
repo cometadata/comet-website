@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
           
       - name: Install Dart Sass Embedded # Installs dart-sass
-        run: sudo snap install dart-sass-embedded
+        run: sudo snap install dart-sass
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
