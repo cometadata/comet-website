@@ -1,4 +1,17 @@
 <div>
     <h3>text-media-band</h3>
     {{ .testing }}
+
+    <p>variant={{ .variant }}</p>
+    {{ if eq .variant "cta-only" }}
+        <i>CTA layout invoked</i>        
+    {{ else if eq .variant "image-left" }}
+        <i>image-left layout invoked</i>      
+    {{ else if eq .variant "image-right" }}
+        <i>image-right layout invoked</i>   
+    {{ else if eq .variant "text-only" }}
+        <i>text-only layout invoked</i>  
+    {{ else }}
+        <i>Default layout invoked</i>  
+    {{ end }}
 </div>

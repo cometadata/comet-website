@@ -1,0 +1,9 @@
+.stacked-element-container {
+    display:flex;
+    justify-content: space-around;
+    .stacked-element {
+        display:block;
+        border: 2px solid orange;
+        padding:20px;
+    }
+}

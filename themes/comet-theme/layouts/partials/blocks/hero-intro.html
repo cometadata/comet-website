@@ -1,4 +1,17 @@
 <div>
     <h3>hero-intro</h3>
     {{ .testing }}
+
+    <p>variant={{ .variant }}</p>
+    {{ if eq .variant "with-cta" }}
+        <i>with-cta layout invoked</i>        
+    {{ else if eq .variant "media-right" }}
+        <i>media-right layout invoked</i>      
+    {{ else if eq .variant "media-left" }}
+        <i>media-left layout invoked</i>   
+    {{ else if eq .variant "with-bullets" }}
+        <i>with-bullets layout invoked</i>  
+    {{ else }}
+        <i>Default layout invoked</i>  
+    {{ end }}
 </div>
