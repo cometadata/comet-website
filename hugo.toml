@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'Cometadata development website'
-theme = 'ananke'
+theme = 'comet-theme'
 
 # make better changes with our own styling in sass
 # this get added to the end of the main style file
@@ -16,18 +16,23 @@ name = "sass/_cometadata.scss"
     weight     = 1
 
 [[menu.main]]
-    name       = "Option 1: Default Page"
-    url        = "/"
-    weight     = 1
-    parent     = "menu.home"
+    name       = "About"
+    url        = "/about"
+    weight     = 10
 [[menu.main]]
-    name       = "Blocks"
-    identifier = "menu.test"
-    url        = "/reusable-blocks"
-    weight     = 2
+    name       = "The Comet Model"
+    url        = "/the-comet-model"
+    weight     = 20
 [[menu.main]]
-    name       = "TestPage"
-    identifier = "menu."
-    url        = "/testpage"
-    weight     = 3
+    name       = "Projects"
+    url        = "/projects"
+    weight     = 30
+[[menu.main]]
+    name       = "Community"
+    url        = "/community"
+    weight     = 40
+[[menu.main]]
+    name       = "Blog"
+    url        = "/blog"
+    weight     = 50
 

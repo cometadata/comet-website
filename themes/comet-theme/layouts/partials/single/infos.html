@@ -1,0 +1,28 @@
+<section class="home-infos">
+    
+    {{ if .title }}
+    <div class="row">
+        
+        <div class="col heading">
+            <h2 class="title">{{ .title }}</h2>
+        </div>
+    
+    </div>
+    {{ end }}
+    
+    
+    <div class="row">
+
+        <div class="col" >
+            {{ if .left.title }}<h3 class="title">{{ .left.title }}</h3>{{ end }}
+            <div class="maintext">{{ .left.maintext | markdownify }}</div>
+        </div>
+
+        <div class="col" >
+            {{ if .right.title }}<h3 class="title">{{ .right.title }}</h3>{{ end }}
+            <div class="maintext">{{ .right.maintext | markdownify }}</div>
+        </div>
+
+    </div>
+    
+</section>

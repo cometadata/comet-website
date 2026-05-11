@@ -1,0 +1,31 @@
+{{ define "main" }}
+    <main aria-role="main">
+      <header class="homepage-header">
+      </header>
+      <div class="homepage-content">
+        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        {{ with .Site.Data.home }}
+          {{ with .hero }}
+            {{ partial "blocks/hero-intro.html" . }}
+          {{ end }}
+          {{ with .text_media_band_top }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
+          {{ with .impact_band }}
+            {{ partial "blocks/impact-band.html" . }}
+          {{ end }}
+          
+          {{ with .text_media_band_cta }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
+
+          {{ with .stacked_cards }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
+        {{ end }}        
+      </div>
+    </main>
+    
+    {{ partial "numbers-graphs-js.html" . }}
+    
+{{ end }}
