@@ -1,0 +1,14 @@
+testing: "Testing stacked cards"
+layout_variant: "stack"
+treatment_variant: "timeline"
+media_variant: "portrait"
+
+elements:
+  - title: "Element Title 1"
+    content: "some content for element 1"    
+  - title: "Element Title 2"
+    content: "some content for element 2"    
+  - title: "Element Title 3"
+    content: "some content for element 3"    
+  - title: "Element Title 4"
+    content: "some content for element 4"
