@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.Language.Locale | default "en-us" }}">
 <head>
 	{{ if .Params.noindex }}
 	<meta name="robots" content="noindex, nofollow" />
@@ -43,7 +43,7 @@
 			"enableSourceMap" (not hugo.IsProduction)
 			"outputStyle" (cond hugo.IsProduction "compressed" "expanded")
 			"targetPath" "css/style.css"
-			"transpiler" "libsass"
+			"transpiler" "dartsass"
 		}}
 		{{ with . | toCSS $opts }}
 			{{ if hugo.IsProduction }}

@@ -1,3 +1,4 @@
+@use "partials/variables";
 header {
     
     width:100%;
@@ -24,7 +25,7 @@ header {
         }
     }
     
-    @media (max-width: $break-large) {
+    @media (max-width: variables.$break-large) {
         &:hover {
             background:transparent;
             box-shadow: none;
@@ -46,16 +47,16 @@ header {
         z-index:5;
     }    
     .row {
-        width: $content-width;
+        width: variables.$content-width;
         margin:0 auto;
         display:flex;
         position:relative;
         padding: 40px 0;
 
-        @media (max-width: $break-large) {
+        @media (max-width: variables.$break-large) {
         }
 
-        @media (max-width: $break-medium) {
+        @media (max-width: variables.$break-medium) {
             display:block;
         }
 
@@ -92,7 +93,7 @@ header {
                 margin-bottom:0;
             }
             a {
-                color: $main-font-color;
+                color: variables.$main-font-color;
                 text-decoration:none;
                 &:hover {
                     text-decoration:underline;
@@ -137,7 +138,7 @@ header {
             input[type="checkbox"], .hamburger-lines {
                 display:none;
             }
-            @media (max-width: $break-large) {
+            @media (max-width: variables.$break-large) {
                 position:absolute;
                 top:0;
                 left:0;

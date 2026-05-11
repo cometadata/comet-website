@@ -1,4 +1,5 @@
-@media (max-width: $break-large) {
+@use "partials/variables";
+@media (max-width: variables.$break-large) {
     .row {
         display:block;
     }

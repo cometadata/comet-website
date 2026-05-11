@@ -1,3 +1,4 @@
+@use "partials/variables";
 body {
   font-family: 'futura-pt';
   font-size: 18px;
@@ -5,9 +6,9 @@ body {
 
 .page-content {
 
-    width: $content-width;
+    width: variables.$content-width;
     margin:0 auto;
-    padding-bottom: $standard-padding;
+    padding-bottom: variables.$standard-padding;
 
 
   strong {
@@ -67,7 +68,7 @@ p {
 p:last-child {
     margin-bottom: 0;
 
-    @media (max-width: $break-large) {
+    @media (max-width: variables.$break-large) {
       
       [class~='col']:first-of-type & {
         margin-bottom: 30px;
@@ -93,7 +94,7 @@ code {
   font-size: 1em;
   font-family: 'futura-pt';
   display: inline;
-  background-color: $background-grey;
+  background-color: variables.$background-grey;
   padding: 2px 4px;
   margin: 0 -2px;
   border: 1px solid #ddd;
@@ -106,7 +107,7 @@ pre {
   font-size: 1em;
   font-family: 'futura-pt';
   display: inline;
-  background-color: $background-grey;
+  background-color: variables.$background-grey;
   padding: 2px 4px;
   border: 1px solid #ddd;
   border-radius: 4px;

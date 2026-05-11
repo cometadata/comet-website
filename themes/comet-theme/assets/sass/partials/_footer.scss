@@ -1,3 +1,4 @@
+@use "partials/variables";
 footer {
 
     background: #000;
@@ -7,7 +8,7 @@ footer {
         position:relative;
         width:320px;
         margin-bottom:30px;
-        @media (max-width: $break-medium) {
+        @media (max-width: variables.$break-medium) {
             width:300px;
             position:relative;
             left:0;
@@ -16,16 +17,16 @@ footer {
     
       
     .row {
-        width: $content-width;
+        width: variables.$content-width;
         margin:0 auto;
         display:flex;
         position:relative;
         padding: 40px 0;
 
-        @media (max-width: $break-large) {
+        @media (max-width: variables.$break-large) {
         }
 
-        @media (max-width: $break-medium) {
+        @media (max-width: variables.$break-medium) {
             display:block;
         }
 
@@ -57,7 +58,7 @@ footer {
                 margin-bottom:0;
             }
             a {
-                color: $main-font-color;
+                color: variables.$main-font-color;
                 text-decoration:none;
                 &:hover {
                     text-decoration:underline;
@@ -102,7 +103,7 @@ footer {
             input[type="checkbox"], .hamburger-lines {
                 display:none;
             }
-            @media (max-width: $break-large) {
+            @media (max-width: variables.$break-large) {
                 position:absolute;
                 top:0;
                 left:0;

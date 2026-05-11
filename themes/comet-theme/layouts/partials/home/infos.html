@@ -2,7 +2,7 @@
     
     <div class="row">
 
-    {{ range sort .Site.Data.home.infos "weight" }}
+    {{ range sort hugo.Data.home.infos "weight" }}
         <div class="col" >
             <div class='icon'><img src="{{ .icon }}"/></div>
             <h2 class="title">{{ .title }}</h2>

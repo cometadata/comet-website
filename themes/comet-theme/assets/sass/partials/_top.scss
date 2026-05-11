@@ -1,21 +1,22 @@
-section.home-top {
-    
-    margin-top: $standard-padding * 2;
+@use "partials/variables";
+
+section.home-top {    
+    margin-top: variables.$standard-padding * 2;
 
     .background {
         position:absolute;
         width:50%;
         height:100%;
-        //top: -($standard-padding * .5);
+        //top: -(variables.$standard-padding * .5);
         right:0;
         background-size:contain;
         background-position:center;
         background-repeat:no-repeat;
         z-index: -2;
-        @media (max-width: $break-large) {
+        @media (max-width: variables.$break-large) {
             opacity: .3;
         }
-        @media (max-width: $break-medium) {            
+        @media (max-width: variables.$break-medium) {            
             display:none;
         }
     }
@@ -41,7 +42,7 @@ section.home-top {
     
 
     .row {
-        width: $content-width;
+        width: variables.$content-width;
         margin:0 auto;
         align-items: stretch;
         height: 100%;
@@ -53,9 +54,9 @@ section.home-top {
         display:flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: ($standard-padding * 2) 0;
-        @media (max-width: $break-large) {
-            padding: $standard-padding 0;
+        padding: (variables.$standard-padding * 2) 0;
+        @media (max-width: variables.$break-large) {
+            padding: variables.$standard-padding 0;
         }
         .maintext {
             flex-basis:30%;

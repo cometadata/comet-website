@@ -1,17 +1,18 @@
+@use "partials/variables";
 section.single-top {
-    width: $content-width;
-    margin: ($standard-padding * 2) auto 0;
+    width: variables.$content-width;
+    margin: (variables.$standard-padding * 2) auto 0;
     
     .row {
         align-items: stretch;
         height: 100%;
-        padding: ($standard-padding * 2) 0 $standard-padding  0;
+        padding: (variables.$standard-padding * 2) 0 variables.$standard-padding  0;
         
-        @media (max-width: $break-medium) {
-            padding: $mobile-padding 0;
+        @media (max-width: variables.$break-medium) {
+            padding: variables.$mobile-padding 0;
         }
         &.short {            
-            padding: ($standard-padding) 0 $standard-padding  0;
+            padding: (variables.$standard-padding) 0 variables.$standard-padding  0;
         }
     }
     .col {
@@ -38,13 +39,13 @@ section.single-top {
                 font-family: "futura-pt-bold";
             }
         }     
-        @media (max-width: $break-xxlarge) {
+        @media (max-width: variables.$break-xxlarge) {
             padding-left:100px;
         } 
-        @media (max-width: $break-xlarge) {
+        @media (max-width: variables.$break-xlarge) {
             padding-left:200px;
         }  
-        @media (max-width: $break-large) {   
+        @media (max-width: variables.$break-large) {   
             padding-left: calc(var(--bs-gutter-x) * .5);         
         }  
     }
@@ -52,7 +53,7 @@ section.single-top {
         position:relative;
         min-height:400px;
         
-        @media (max-width: $break-large) {
+        @media (max-width: variables.$break-large) {
             min-height: 240px;
         }
         
@@ -65,11 +66,11 @@ section.single-top {
                 width:360px;
                 height:360px;
                 left:160px;
-                background-color: $background-orange;
+                background-color: variables.$background-orange;
                 border-radius:50%;
                 z-index:-1;
                 
-                @media (max-width: $break-large) {
+                @media (max-width: variables.$break-large) {
                     width: 240px;
                     height: 240px;
                     top:-60px;
@@ -88,7 +89,7 @@ section.single-top {
                     font-weight:bold;
                     font-family: "futura-pt-bold";
                     margin-bottom:12px;
-                    color:$sub-font-color;
+                    color:variables.$sub-font-color;
                     text-transform: none;
                     margin-bottom: 0;
                     margin-top: 0;
@@ -102,7 +103,7 @@ section.single-top {
                     font-family: 'futura-pt-bold';
                     margin-top: 0;
                     
-                    @media (max-width: $break-small) {
+                    @media (max-width: variables.$break-small) {
                         font-size:40px;
                         line-height:42px;
                     }
@@ -114,23 +115,23 @@ section.single-top {
 }
 
 section.single-top-light {
-width: $content-width;
-margin: ($standard-padding * 1) auto 0;
+width: variables.$content-width;
+margin: (variables.$standard-padding * 1) auto 0;
 
     .row {
         align-items: stretch;
         height: 100%;
-        padding: ($standard-padding * 2) 0 0  0;
+        padding: (variables.$standard-padding * 2) 0 0  0;
         
-        @media (max-width: $break-medium) {
-            padding: $mobile-padding ($standard-padding * 1) 0 0 0;
+        @media (max-width: variables.$break-medium) {
+            padding: variables.$mobile-padding (variables.$standard-padding * 1) 0 0 0;
         }
     }
     
     .left {
         min-height: 240px;
         
-        @media (max-width: $break-large) {
+        @media (max-width: variables.$break-large) {
             min-height: 120px;
         }
     }

@@ -1,18 +1,17 @@
-@import 'mixins/basics';
+@use 'mixins/basics';
 
-@import "partials/variables",
-        "partials/fonts",
-        "partials/reset",
-        "partials/animations",
-        "partials/top",
-        "partials/footer",
-        "partials/header",
-        "partials/single/top",
-        "partials/responsive",
-        "partials/single/page",
-        "partials/blocks-callouts",
-        "partials/stacked-cards",
-        "partials/generic_page";
+@use "partials/variables";
+@use        "partials/fonts";
+@use        "partials/reset";
+@use        "partials/animations";
+@use        "partials/top";
+@use        "partials/footer";
+@use        "partials/header";
+@use        "partials/single-top";
+@use        "partials/responsive";
+@use        "partials/single-page";
+@use        "partials/stacked-cards";
+@use        "partials/generic_page";
 
 body::-webkit-scrollbar:horizontal {
     display: none;
@@ -25,24 +24,24 @@ body{
     a {
         text-transform: uppercase;
         text-decoration: none;
-        color: $link-color;
+        color: variables.$link-color;
         font-weight:bold;
         &:hover {
             color: initial;
         }
     }
     span, i {
-        color:$link-arrow;
+        color:variables.$link-arrow;
         font-size:1rem;
     }
 }
 
 a {
-    color: $link-blue;
+    color: variables.$link-blue;
     text-decoration:none;
     font-family: 'futura-pt-bold';
     &:hover {
-        color: $link-blue;
+        color: variables.$link-blue;
         text-decoration:underline;
     }
 }
@@ -66,7 +65,7 @@ a {
         padding:12px 40px;
         line-height: 2rem;
         
-        @media (max-width: $break-xsmall) {
+        @media (max-width: variables.$break-xsmall) {
             padding: 12px 10px; 
         }
     }
@@ -74,11 +73,11 @@ a {
         font-size:1rem;
         padding:12px 40px;
     
-        @media (max-width: $break-small) {
+        @media (max-width: variables.$break-small) {
             padding: 12px 20px; 
         }
         
-        @media (max-width: $break-xsmall) {
+        @media (max-width: variables.$break-xsmall) {
             padding: 12px 10px; 
         }
     }
@@ -90,12 +89,12 @@ a {
         padding-left:50px;            
         transition: all 0.2s ease-in-out; 
     
-        @media (max-width: $break-small) {
+        @media (max-width: variables.$break-small) {
             padding-right:10px;
             padding-left:30px;
         }
         
-        @media (max-width: $break-xsmall) {
+        @media (max-width: variables.$break-xsmall) {
             padding-right:5px;
             padding-left:15px;
         }
@@ -129,8 +128,8 @@ table {
 
 
     thead tr, thead tr:hover {
-        background-color: $background-blue;
-        border: 1px solid $background-blue;
+        background-color: variables.$background-blue;
+        border: 1px solid variables.$background-blue;
         color: #fff;
     }
 
@@ -143,7 +142,7 @@ table {
     }
 
     tr:nth-child(2n+2) {
-        background-color: $background-grey;
+        background-color: variables.$background-grey;
     }
   
     &.no-zebra {

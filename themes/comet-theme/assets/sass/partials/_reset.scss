@@ -1,18 +1,19 @@
+@use "partials/variables";
 body {
-    color: $main-font-color;
+    color: variables.$main-font-color;
     font-size:18px;
     font-weight:300;
 }
 .homepage-header, .single-header {
-    width: $content-width;
+    width: variables.$content-width;
     margin:0 auto;
 }
 
 .row {
     display:flex;
-    padding: $standard-padding 0;
+    padding: variables.$standard-padding 0;
 
-    @media (max-width: $break-large) {
+    @media (max-width: variables.$break-large) {
         .col {
         }
     }
