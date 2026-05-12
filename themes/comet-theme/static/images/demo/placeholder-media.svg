@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder media</title>
+  <desc id="desc">A neutral placeholder illustration for wireframe media slots.</desc>
+  <rect width="1200" height="800" fill="#eef1f4"/>
+  <rect x="28" y="28" width="1144" height="744" fill="none" stroke="#9aa3ab" stroke-width="10" stroke-dasharray="18 14"/>
+  <circle cx="290" cy="248" r="70" fill="#c6ced5"/>
+  <path d="M160 620 410 350l122 138 80-92 192 224H160Z" fill="#c7d0d7"/>
+  <path d="M468 620 690 396l104 120 68-72 178 176H468Z" fill="#b4bfc8"/>
+  <path d="M92 674h1016" stroke="#7f8b95" stroke-width="12" stroke-linecap="round"/>
+  <text x="600" y="722" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="54" letter-spacing="8" fill="#606c76">PLACEHOLDER IMAGE</text>
+</svg>
