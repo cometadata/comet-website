@@ -8,10 +8,24 @@
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
+          
+          {{ with .text_media_band_top }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
+          {{ with .text_media_band_middle }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
+          
+          {{ with .stacked_cards }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
+
+          {{ with .text_media_band_bottom }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
         {{ end }}        
       </div>
     </main>
     
-    {{ partial "numbers-graphs-js.html" . }}
     
 {{ end }}

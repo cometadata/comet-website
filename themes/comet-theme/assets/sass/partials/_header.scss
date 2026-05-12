@@ -81,7 +81,7 @@ header {
         nav {
             position:relative;
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 10%;
             margin-top:-80px;
             margin-bottom:40px;
             z-index:3;
@@ -104,7 +104,6 @@ header {
                 padding-left:0;
                 order:2;
                 display:flex;
-                margin-right:60px;
                 line-height: 1.3em;
                 li {
                     list-style:none;
@@ -113,7 +112,6 @@ header {
                     span.nolink {
                         display:inline-block;
                         margin-bottom:10px;
-                        font-family: futura-pt-bold;
                     }
                     span.more {
                         font-size: 16px;
@@ -129,7 +127,6 @@ header {
                             padding:0;
                             
                             a {
-                                font-family: 'futura-pt';
                             }
                         }
                     }

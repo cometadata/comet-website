@@ -1,0 +1,19 @@
+@use "partials/variables";
+
+.section-block {
+    position:relative;
+    background-color: variables.$section-background-color;
+    border-radius: variables.$section-radius;
+    padding: variables.$section-padding;
+    width: variables.$section-width;
+    border: 1px solid darkgrey;
+    margin: 0 auto;
+    margin-bottom:variables.$section-gap;
+    display:flex;
+    & > div {
+        background-color:#f6f7f9;
+        padding: variables.$section-div-padding;
+        flex-grow:1;
+    }
+    
+}

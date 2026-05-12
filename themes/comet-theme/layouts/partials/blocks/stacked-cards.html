@@ -1,26 +1,28 @@
-<div>
-    <h3>stacked-cards</h3>
-    {{ .testing }}<br />
+<section class="section-block stacked-cards">
+    <div>
+        <h3>stacked-cards</h3>
+        {{ .testing }}<br />
 
-    {{ $lv := .layout_variant }}
-    {{ $tv := .treatment_variant }}
-    {{ $mv := .media_variant }}
-    lv = {{ $lv }}<br />
-    tv = {{ $tv }}<br />
-    mv = {{ $mv }}<br />
+        {{ $lv := .layout_variant }}
+        {{ $tv := .treatment_variant }}
+        {{ $mv := .media_variant }}
+        lv = {{ $lv }}<br />
+        tv = {{ $tv }}<br />
+        mv = {{ $mv }}<br />
 
 
-    
-    {{ if .elements }}
-    <div class="stacked-element-container">
-    
-        {{ range .elements }}
-            <div class="stacked-element">
-                <h5>{{ .title }}</h5>
-                <p>{{ .content }}</p>
-            </div>
+        
+        {{ if .elements }}
+        <div class="stacked-element-container">
+        
+            {{ range .elements }}
+                <div class="stacked-element">
+                    <h5>{{ .title }}</h5>
+                    <p>{{ .content }}</p>
+                </div>
+            {{ end }}
+        
+        </div>
         {{ end }}
-    
     </div>
-    {{ end }}
-</div>
+</section>
