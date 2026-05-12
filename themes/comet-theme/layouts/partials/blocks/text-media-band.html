@@ -7,7 +7,7 @@
             <i class="debug-info">image-left layout invoked</i>  
             <div class="row"> 
                 <div class="media-col col-5">
-                    <img src="{{ .media }}" class="img-fluid"/>
+                    <img src="{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>
                 <div class="col-7">
                     <h2>{{ .headline }}</h2>
@@ -24,7 +24,7 @@
                     <div>{{ .content | markdownify }}</div>
                 </div> 
                 <div class="media-col col-5">
-                    <img src="{{ .media }}" class="img-fluid"/>
+                    <img src="{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>  
             </div>     
  
