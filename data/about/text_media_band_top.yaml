@@ -1,2 +1,15 @@
-testing: "Testing top"
 variant: "image-left"
+
+headline: "Metadata quality: Why collaboration matters"
+content: "When metadata is incomplete or inaccurate, the consequences reverberate across the entire ecosystem:
+
+- researchers can't find relevant work,
+- institutions struggle to demonstrate impact,
+- funders lose visibility over their investments,
+- underrepresented communities face barriers to recognition,
+- and society is denied valuable knowledge that could shape our future.
+
+The fundamental problem is structural. Today's PID ecosystem relies on a single-source ownership model, where original depositors bear sole responsibility for their metadata records. This model preserves source authority—a legitimate and necessary prioirty—but conflates it with quality. The broader community has the knowledge and capacity to fill gaps and correct errors, yet lacks a structured mechanism to do so. COMET exists to change that."
+media: "/images/demo/wp8272418.jpg"
+media_hover: "Bruce's garage"
+media_alt: "note quite"

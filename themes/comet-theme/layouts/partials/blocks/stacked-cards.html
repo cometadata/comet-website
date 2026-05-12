@@ -10,19 +10,51 @@
         tv = {{ $tv }}<br />
         mv = {{ $mv }}<br />
 
+        
+        {{ if eq $tv "timeline" }} 
+            
+            <i class="debug-info">timeline layout invoked</i> 
+            
+            <h2>{{ .headline }}</h2>
+            <div>{{ .content | markdownify}}</div>
 
-        
-        {{ if .elements }}
-        <div class="stacked-element-container">
-        
-            {{ range .elements }}
-                <div class="stacked-element">
-                    <h5>{{ .title }}</h5>
-                    <p>{{ .content }}</p>
+            {{ if .elements }}
+                <div class="stacked-element-container {{ $tv }}">
+                
+                    {{ range .elements }}
+                        <div class="row stacked-element {{ $tv }}">
+                            <div class="col-2">
+                                <h5>{{ .title }}</h5>
+                            </div>
+                            <div class="col-10">
+                                <h5>{{ .headline }}</h5>
+                                <p>{{ .content |markdownify}}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                
                 </div>
             {{ end }}
-        
-        </div>
+
+        {{ else if eq .variant "image-right" }}
+
+             {{ if .elements }}
+                <div class="stacked-element-container">
+                
+                    {{ range .elements }}
+                        <div class="stacked-element">
+                            <h5>{{ .title }}</h5>
+                            <p>{{ .content }}</p>
+                        </div>
+                    {{ end }}
+                
+                </div>
+            {{ end }}
+
         {{ end }}
+
+
+        
+       
     </div>
 </section>
