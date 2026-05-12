@@ -1,28 +1,33 @@
 @use 'mixins/basics';
 
 @use "partials/variables";
-@use        "partials/fonts";
-@use        "partials/reset";
-@use        "partials/animations";
-@use        "partials/top";
-@use        "partials/footer";
-@use        "partials/header";
-@use        "partials/single-top";
-@use        "partials/responsive";
-@use        "partials/single-page";
-@use        "partials/stacked-cards";
-@use        "partials/generic_page";
+@use "partials/sections";
+@use "partials/fonts";
+@use "partials/reset";
+@use "partials/animations";
+@use "partials/top";
+@use "partials/footer";
+@use "partials/header";
+@use "partials/single-top";
+@use "partials/responsive";
+@use "partials/single-page";
+@use "partials/stacked-cards";
+@use "partials/generic_page";
 
 body::-webkit-scrollbar:horizontal {
     display: none;
 }
 body{
-    background-color:lightgrey;
+    background-color:#f7f8fa;
+}
+.debug-info {
+    display:block;
+    position:absolute;
+    top:0px;
 }
 
 .link {
     a {
-        text-transform: uppercase;
         text-decoration: none;
         color: variables.$link-color;
         font-weight:bold;
@@ -56,9 +61,7 @@ a {
         display: inline-block;
         padding:10px;
     }
-    a {
-        
-        text-transform: uppercase;
+    a {        
         text-decoration: none;
         font-weight:bold;
         border-right:2px solid #fff;

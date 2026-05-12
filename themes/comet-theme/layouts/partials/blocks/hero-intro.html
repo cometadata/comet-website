@@ -1,17 +1,37 @@
-<div>
-    <h3>hero-intro</h3>
-    {{ .testing }}
+<section class="section-block hero-intro">
+    <div>
+        {{ if eq .variant "with-cta" }}
+            <i>with-cta layout invoked</i>        
+        {{ else if eq .variant "media-right" }}
+        
+            <i class="debug-info">media-right layout invoked</i>  
+            <div class="row">
+                <div class="col-9">
+                    <h1>{{ .headline }}</h1>
+                    <div>{{ .content | markdownify }}</div>
+                </div>    
+                <div class="media-col col-3">
+                    <img src="{{ .media }}" class="img-fluid"/>
+                </div>
+            </div>
 
-    <p>variant={{ .variant }}</p>
-    {{ if eq .variant "with-cta" }}
-        <i>with-cta layout invoked</i>        
-    {{ else if eq .variant "media-right" }}
-        <i>media-right layout invoked</i>      
-    {{ else if eq .variant "media-left" }}
-        <i>media-left layout invoked</i>   
-    {{ else if eq .variant "with-bullets" }}
-        <i>with-bullets layout invoked</i>  
-    {{ else }}
-        <i>Default layout invoked</i>  
-    {{ end }}
-</div>
+        {{ else if eq .variant "media-left" }}  
+
+            <i class="debug-info">media-left layout invoked</i>  
+            <div class="row"> 
+                <div class="media-col col-3">
+                    <img src="{{ .media }}" class="img-fluid"/>
+                </div>
+                <div class="col-9">
+                    <h1>{{ .headline }}</h1>
+                    <div>{{ .content | markdownify }}</div>
+                </div>   
+            </div>
+
+        {{ else if eq .variant "with-bullets" }}
+            <i>with-bullets layout invoked</i>  
+        {{ else }}
+            <i>Default layout invoked</i>  
+        {{ end }}
+    </div>
+</section>

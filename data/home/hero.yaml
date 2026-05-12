@@ -1,1 +1,4 @@
-testing: "Testing A"
+variant: "media-right"
+headline: "Richer metadata. Together."
+content: "The COMET community is setting the standards for collaborative metadata enrichment practices and creating the shared infrastructure needed for trustworthy quality metadata to flow into the persistent identifier (PID) ecosystem we all rely on."
+media: "/images/demo/istockphoto-609809548-612x612.jpg"

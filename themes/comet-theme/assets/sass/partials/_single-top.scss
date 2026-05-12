@@ -100,7 +100,7 @@ section.single-top {
                     font-size:62px;
                     line-height:1em;
                     text-transform: uppercase;
-                    font-family: 'futura-pt-bold';
+                    font-family: variables.$font-bold;
                     margin-top: 0;
                     
                     @media (max-width: variables.$break-small) {

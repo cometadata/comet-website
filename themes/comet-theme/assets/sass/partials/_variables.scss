@@ -10,7 +10,7 @@ $link-blue: #5c7292;
 
 $content-width:80%;
 
-$standard-padding:60px;
+$standard-padding:0;
 $mobile-padding: 50px;
 
 // Predefined Break-points
@@ -20,4 +20,16 @@ $break-large: 1260px;
 $break-medium: 960px;
 $break-small: 480px;
 $break-xsmall: 320px;
+
+// section outlines
+$section-radius: 12px;
+$section-padding: 20px;
+$section-background-color: #fff;
+$section-gap: 20px;
+$section-width: 80%;
+
+$section-div-padding: 20px;
+
+$font-default: 'Arial';
+$font-bold: 'Arial';
 
