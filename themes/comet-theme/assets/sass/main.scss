@@ -44,7 +44,7 @@ body{
 a {
     color: variables.$link-blue;
     text-decoration:none;
-    font-family: 'futura-pt-bold';
+    font-family: variables.$font-default;
     &:hover {
         color: variables.$link-blue;
         text-decoration:underline;
@@ -53,7 +53,7 @@ a {
 .link-alt {    
     border:2px solid #fff;
     display:inline-block;
-    font-family: "futura-pt-bold";
+    font-family: variables.$font-default;
     transition: all 0.2s ease-in-out; 
     
     a, span {
@@ -161,5 +161,5 @@ table {
 }
 
 .citation-link {
-    font-family: 'futura-pt';
+    font-family: variables.$font-default;
 }

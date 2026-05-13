@@ -36,7 +36,7 @@ section.single-top {
             flex-basis: 20%;
             padding-top:10px;
             a {
-                font-family: "futura-pt-bold";
+                font-family: variables.$font-default;
             }
         }     
         @media (max-width: variables.$break-xxlarge) {
@@ -87,7 +87,7 @@ section.single-top {
                 h1 {
                     font-size:23px;
                     font-weight:bold;
-                    font-family: "futura-pt-bold";
+                    font-family: variables.$font-default;
                     margin-bottom:12px;
                     color:variables.$sub-font-color;
                     text-transform: none;

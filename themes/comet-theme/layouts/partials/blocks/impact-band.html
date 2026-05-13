@@ -1,6 +1,15 @@
 <section class="section-block impact-band">
     <div>
-        <h3>impact-band</h3>
-        {{ .testing }}
+            <i class="debug-info">impact-band layout invoked</i>  
+            <div class="row">
+                <div class="col-5">
+                    <h1>{{ .headline }}</h1>
+                    <div>{{ .content | markdownify }}</div>
+                </div>    
+                <div class="col-7">                    
+                    <div>{{ .table | markdownify }}</div>
+                </div>
+            </div>
+
     </div>
 </section>

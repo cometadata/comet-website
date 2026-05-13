@@ -8,6 +8,17 @@
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
+          {{ with .stacked_cards_top }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
+          
+          {{ partial "blocks/diagram-stage.html" . }}
+
+          
+          {{ with .stacked_cards_bottom }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
+          
         {{ end }}        
       </div>
     </main>
