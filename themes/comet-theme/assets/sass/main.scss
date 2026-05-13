@@ -13,6 +13,7 @@
 @use "partials/single-page";
 @use "partials/stacked-cards";
 @use "partials/generic_page";
+@use "partials/form";
 
 body::-webkit-scrollbar:horizontal {
     display: none;
