@@ -1,1 +1,7 @@
-testing: "Testing about here A"
+variant: "media-right"
+headline: "Metadata quality: Why collaboration matters"
+content: "Knowledge creation relies on a collaborative, always evolving, research ecosystem. In this ecosystem ideas are spread through reliable persistent identifiers (PIDs) that connect research to researchers, institutions, funders, communities, and society at large"
+
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "placeholder image"

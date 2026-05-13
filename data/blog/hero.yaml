@@ -1,1 +1,5 @@
-testing: "Testing blog header"
+variant: "media-right"
+headline: "Blog"
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "placeholder image"

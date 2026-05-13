@@ -1,1 +1,7 @@
-testing: "Testing Projects"
+variant: "media-right"
+headline: "Projects"
+content: "TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE."
+
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "placeholder image"
