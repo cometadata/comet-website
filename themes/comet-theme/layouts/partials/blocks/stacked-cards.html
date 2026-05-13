@@ -60,6 +60,34 @@
                 </div>
             </div>
 
+        {{ else if eq $tv "principles" }}
+            <i class="debug-info">principles layout invoked</i> 
+            
+            <h2>{{ .headline }}</h2>
+            <div>{{ .content | markdownify}}</div>
+
+            {{ if .elements }}
+                <div class="stacked-element-container ">
+                
+                    {{ range .elements }}
+                        <div class="row stacked-element ">
+                            <div class="col">
+                                <h5>{{ .title }}</h5>
+                                <p>{{ .content |markdownify}}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                
+                </div>
+            {{ end }}
+            <div class="row space-between">
+                <div class="col">
+                    {{ .cta_content }}
+                </div>
+                <div class="col-auto">
+                    <a href="{{ .cta_link_url }}">{{ .cta_link_text }}</a>
+                </div>
+            </div>
 
         {{ else if eq .variant "image-right" }}
 
