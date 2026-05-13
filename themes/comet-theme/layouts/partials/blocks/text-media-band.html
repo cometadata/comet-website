@@ -1,7 +1,21 @@
 <section class="section-block text-media-band">
     <div>
-        {{ if eq .variant "cta-only" }}
-            <i>CTA layout invoked</i>        
+        {{ if eq .variant "cta-only" }} 
+            <i class="debug-info">cta-only layout invoked</i>  
+            <div class="row"> 
+                <div class="col-12">
+                    <h2>{{ .headline }}</h2>
+                    <div>{{ .content | markdownify }}</div>
+                </div> 
+            </div>      
+            <div class="row">
+                <div class="col-3">
+                    <a href="{{ .cta_left_url }}"><button>{{ .cta_left_text }}</button></a>
+                </div>
+                <div class="col-3">
+                    <a href="{{ .cta_right_url }}"><button>{{ .cta_right_text }}</button></a>
+                </div>
+            </div> 
         {{ else if eq .variant "image-left" }}
 
             <i class="debug-info">image-left layout invoked</i>  

@@ -1,1 +1,6 @@
-testing: "Testing D"
+headline: "Impact"
+content: "COMET has produced enriched metadata for over 6.2 million unique DOIs across three high-value metadata fields through our targeted enrichment projects.
+
+COMET treats gaps in high-value PID metadata fields as discrete, community-prioritised problems—each one tractable and measurable—demonstrating that collective action produces better outcomes than individual effort alone."
+
+table: "table goes here"

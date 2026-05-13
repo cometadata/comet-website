@@ -1,2 +1,9 @@
-testing: "Testing C"
 variant: "cta-only"
+headline: "Enrichment dashboards"
+content: "COMET creates dashboards to visualise the value being added to the PID ecosystem. Explore examples of metadata enrichment impact below."
+
+cta_left_text: "left text"
+cta_left_url: "#left"
+
+cta_right_text: "right text"
+cta_right_url: "#right"
