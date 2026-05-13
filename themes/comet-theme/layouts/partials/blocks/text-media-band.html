@@ -9,12 +9,17 @@
                 </div> 
             </div>      
             <div class="row">
+                {{ if .cta_left_url }}
                 <div class="col-3">
                     <a href="{{ .cta_left_url }}"><button>{{ .cta_left_text }}</button></a>
                 </div>
+                {{ end }}
+                
+                {{ if .cta_right_url }}
                 <div class="col-3">
                     <a href="{{ .cta_right_url }}"><button>{{ .cta_right_text }}</button></a>
                 </div>
+                {{ end }}
             </div> 
         {{ else if eq .variant "image-left" }}
 

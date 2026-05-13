@@ -8,6 +8,15 @@
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
+          {{ with .text_media_band_cta }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
+          {{ with .stacked_cards_organisers }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
+          {{ with .stacked_cards_advisors }}
+            {{ partial "blocks/stacked-cards.html" . }}
+          {{ end }}
         {{ end }}        
       </div>
     </main>
