@@ -1,0 +1,11 @@
+@use "partials/variables";
+
+label {
+    input,textarea {
+        display:block;
+    }
+    font-weight:bold;
+}
+.checkboxes > div {
+    padding-bottom: 10px;
+}

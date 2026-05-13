@@ -1,0 +1,140 @@
+<section class="section-block form-stack">
+<div>
+    <i class="debug-info">form-stack layout invoked</i>  
+    <h1>{{ .headline }}</h1>
+    <div>{{ .content | markdownify }}</div>
+    <form>
+        <div class="row">
+            <div class="row col-7">
+                <div class="col-12">
+                    Your details
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label>First name*
+                            <input type="text" name="firstname" required/>
+                        </label>
+                        
+                    </div>
+                    <div class="col-6">
+                        <label>Surname*
+                            <input type="text" name="surname" required/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label>Primary affiliation*
+                            <input type="text" name="primary" required/>
+                        </label>
+                    </div>
+                    <div class="col-6">                    
+                        <label>Secondary affiliation
+                            <input type="text" name="secondary"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label>Email*
+                            <input type="text" name="email" required/>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>LinkedIn
+                            <input type="text" name="linkedin" />
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Anything else you’d like us to know
+                            <textarea name="freetext"></textarea>
+                        </label>
+                    </div>                
+                </div>
+                
+            </div>    
+
+
+            <div class="row col-5 checkboxes">
+                <div class="row col-12">                
+                    <div class="col-1">
+                        <input type="checkbox" name="join-community"  id="join-community"/>
+                    </div>
+                    <div class="col">
+                        <label for="join-community">
+                            Join community
+                        </label>
+                        <div>
+                            Receive updates and participate in the wider COMET network.
+                        </div>
+                    </div>
+                </div> 
+                <div class="row col-12">               
+                    <div class="col-1">               
+                        <input type="checkbox" name="participate"  id="participate"/>
+                    </div>
+                    <div class="col">
+                        <label for="participate">
+                            Participate in project collaborations
+                        </label>
+                        <div>Take part in pilot or enrichment work.</div>
+                    </div>
+                </div>  
+                <div class="row col-12">               
+                    <div class="col-1">               
+                        <input type="checkbox" name="support"  id="support"/>
+                    </div>
+                    <div class="col">
+                        <label for="support">
+                            Offer in-kind support
+                        </label>
+                        <div>Share expertise, infrastructure, or implementation help.</div>
+                    </div>
+                </div> 
+                <div class="row col-12">               
+                    <div class="col-1">               
+                        <input type="checkbox" name="financial"  id="financial"/>
+                    </div>
+                    <div class="col">
+                        <label for="financial">
+                            Offer financial support
+                        </label>
+                        <div>Support the ongoing development of COMET.</div>
+                    </div>
+                </div> 
+                <div class="row col-12">               
+                    <div class="col-1">               
+                        <input type="checkbox" name="other"  id="other"/>
+                    </div>
+                    <div class="col">
+                        <label for="other">
+                            Other
+                        </label>
+                        <div>Use the message field to describe another route to participate.</div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="row col-12">
+            <div class="col text-start">               
+                <input type="checkbox" name="confirm"  id="confirm"/>
+                <label for="confirm">
+                    I agree that COMET may store and process my personal data in order to contact me and respond to my submission. <a href='tandc'>Full terms and conditions.</a>
+                </label>
+                
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col text-end">
+                <input type="submit" />
+            </div>
+        </div>
+
+    </form>
+
+    </div>
+</section>

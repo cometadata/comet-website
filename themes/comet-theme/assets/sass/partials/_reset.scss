@@ -11,7 +11,7 @@ body {
 
 .row {
     display:flex;
-    padding: variables.$standard-padding 0;
+    
 
     @media (max-width: variables.$break-large) {
         .col {
