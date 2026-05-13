@@ -2,13 +2,29 @@
 .stacked-element-container {
     display:flex;
     background-color: #fff;
-    &.timeline {
+    &.grid {
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        gap:30px;
+        row-gap:15px;
+        > div {
+            border:1px dashed grey;
+        }
+    }
+
+    &.timeline,
+    &.stack {
         flex-direction:column;
     }
     .stacked-element {
         padding:20px;
-        margin-bottom:20px;
         background-color: #f1f2f4;
         border-radius: variables.$block-radius;
+        border:1px dashed grey;
     }
+}
+.portrait {
+    aspect-ratio: 0.9;
+    display:flex;
+    
 }

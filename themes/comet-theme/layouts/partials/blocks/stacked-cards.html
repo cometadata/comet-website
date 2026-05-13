@@ -31,8 +31,38 @@
                 </div>
             {{ end }}
 
-        {{ else if eq $tv "cta" }}
-            <i class="debug-info">cta layout invoked</i> 
+        {{ else if eq $lv "stack" }}
+            <i class="debug-info">stack layout invoked</i> 
+            
+            <h2>{{ .headline }}</h2>
+            <div>{{ .content | markdownify}}</div>
+
+            {{ if .elements }}
+                <div class="stacked-element-container {{ $lv }}">
+                
+                    {{ range .elements }}
+                        <div class="row stacked-element  {{ $lv }}">
+                            <div class="col">
+                                <h5>{{ .headline }}</h5>
+                                <p>{{ .content |markdownify}}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                
+                </div>
+            {{ end }}
+            {{ if eq $tv "with-table" }}
+            
+            <i class="debug-info" style="right:20px;">with-table sub layout invoked</i> 
+                <div class="{{ $tv }}">
+                
+                    {{ .table | markdownify}}
+                
+                </div>
+            {{ end }}
+
+        {{ else if eq $lv "three" }}
+            <i class="debug-info">three layout invoked</i> 
             
             <h2>{{ .headline }}</h2>
             <div>{{ .content | markdownify}}</div>
@@ -51,59 +81,93 @@
                 
                 </div>
             {{ end }}
-            <div class="row space-between">
-                <div class="col">
-                    {{ .cta_content }}
-                </div>
-                <div class="col-auto">
-                    <a href="{{ .cta_link_url }}">{{ .cta_link_text }}</a>
-                </div>
-            </div>
 
-        {{ else if eq $tv "principles" }}
-            <i class="debug-info">principles layout invoked</i> 
+            {{ if eq $tv "cta" }}
             
-            <h2>{{ .headline }}</h2>
-            <div>{{ .content | markdownify}}</div>
+            <i class="debug-info" style="right:20px;">cta sub layout invoked</i> 
+                <div class="row space-between">
+                    <div class="col">
+                        {{ .cta_content }}
+                    </div>
+                    <div class="col-auto">
+                        <a href="{{ .cta_link_url }}">{{ .cta_link_text }}</a>
+                    </div>
+                </div>
+            {{ end }}
 
-            {{ if .elements }}
-                <div class="stacked-element-container ">
-                
-                    {{ range .elements }}
-                        <div class="row stacked-element ">
-                            <div class="col">
-                                <h5>{{ .title }}</h5>
-                                <p>{{ .content |markdownify}}</p>
+        {{ else if eq $lv "grid" }}
+            <i class="debug-info">grid layout invoked</i> 
+            
+            {{ if eq $mv "organisers"}}
+                <h2>{{ .headline }}</h2>
+                <div>{{ .content | markdownify}}</div>
+
+                {{ if .orgs }}
+                    <div class="stacked-element-container grid">
+                    
+                        {{ range .orgs }}
+                            <div class="col row stacked-element ">
+                                <div class="">
+                                    <img src="{{ .media }}" class="img-fluid"/>
+                                </div>
+                                <div>
+                                    <a href="{{ .link }}">{{ .link_text}}</a>
+                                </div>
                             </div>
-                        </div>
-                    {{ end }}
+                        {{ end }}
+                    
+                    </div>
+                {{ end }}
                 
+                <div>{{ .split | markdownify}}</div>
+
+                {{ if .reps }}
+                    <div class="stacked-element-container grid">                    
+                        {{ range .reps }}
+                            {{ partial "blocks/person-4.html" . }}                            
+                        {{ end }}                    
+                    </div>
+                {{ end }}
+            
+            {{ else if eq $mv "advisors"}}
+                <div class="row">
+                    <div class="col-4">
+                        <h2>{{ .headline }}</h2>
+                        <div>{{ .content | markdownify}}</div>
+                    </div>
+                    <div class="col-8">
+                        {{ if .advisors }}
+                            <div class="stacked-element-container grid">                    
+                                {{ range .advisors }}
+                                    {{ partial "blocks/person-3.html" . }}                            
+                                {{ end }}                    
+                            </div>
+                        {{ end }}
+                    </div>
                 </div>
+            {{ else }}
+                {{ if .elements }}
+                    <div class="stacked-element-container grid">
+                    
+                        {{ range .elements }}
+                            <div class="col-4 row stacked-element ">
+                                <div class="">
+                                    <div class="status">
+                                        {{ .status }}
+                                    </div>
+                                    <h5>{{ .headline }}</h5>
+                                    <p>{{ .content |markdownify}}</p>
+                                </div>
+                                <div>
+                                    <a href="{{ .link }}">View project</a>
+                                </div>
+                            </div>
+                        {{ end }}
+                    
+                    </div>
+                {{ end }}
             {{ end }}
-            <div class="row space-between">
-                <div class="col">
-                    {{ .cta_content }}
-                </div>
-                <div class="col-auto">
-                    <a href="{{ .cta_link_url }}">{{ .cta_link_text }}</a>
-                </div>
-            </div>
-
-        {{ else if eq .variant "image-right" }}
-
-             {{ if .elements }}
-                <div class="stacked-element-container">
-                
-                    {{ range .elements }}
-                        <div class="stacked-element">
-                            <h5>{{ .title }}</h5>
-                            <p>{{ .content }}</p>
-                        </div>
-                    {{ end }}
-                
-                </div>
-            {{ end }}
-
+      
         {{ end }}
 
 

@@ -1,28 +1,35 @@
-testing: "Testing stacked cards"
 layout_variant: "stack"
-treatment_variant: "timeline"
-media_variant: "portrait"
+treatment_variant: "with-table"
+media_variant: ""
 
-headline: "COMET’s story so far"
-content: "COMET has moved from consultation to task-force definition, then pilot validation, and now into the work of building durable foundations for scale."
+headline: "Key elements"
+content: "We believe these shifts can be achieved by prioritising four key elements in the work we do."
 
 elements:
-  - title: "COMET’s story"
-    headline: "Seeding early momentum"
-    content: "COMET emerged from the recognition that the community-driven enrichment model proven by the Research Organization Registry (ROR) could be extended to address broader, systemic gaps in open research metadata. Building on ROR’s development history, early consultations at the FORCE11 Conference (June 2024) and the Paris Conference on Open Research Information (September 2024) brought together community stakeholders to identify the challenges and opportunities associated with PID metadata enrichment. These sessions revealed broad agreement that this work must become a shared, community-wide responsibility, rather than siloed within individual platforms or borne solely by its original creators."  
+  - headline: "1. Unite quality metadata sources and enrichment methods"
+    content: "COMET confronts one of the most persistent inefficiencies in scholarly communications: valuable, high-quality curation exists in isolated systems that never reaches the wider community. COMET brings these sources together, unlocking their collective value.
 
-  - title: "Task force phase"
-    headline: "Enabling community-driven enrichment"
-    content: "In response, a FORCE11 task force was established through an open call for participation, drawing members from major university and research systems, publishers, government agencies, and infrastructure providers. Across a series of focused sessions, the task force worked to define the product, technical, and governance requirements for implementing a more expansive, community-driven enrichment model within existing infrastructures. Building on the requirements defined in this task force phase, an open call was issued for organizations to contribute to building and testing a community-driven enrichment model.
-    
-    [link](link)"    
+Proven community enrichment methods also exist that we can build on. Where gaps remain, COMET acts as an innovative facilitator, developing new capabilities with community partners. The goal is to connect solutions across institutional and geographical boundaries to maximise the value of community investments."  
 
-  - title: "Pilot phase"
-    headline: "Validating through pilot projects"
-    content: "The California Digital Library (CDL), DataCite, Public Knowledge Project (PKP), and the Centre for Science and Technology Studies (CWTS) at Leiden University joined forces to organise and resource COMET's initial development, proving its model through a series of targeted pilot projects in collaboration with community partners. The results of this work validated COMET's core premise: when enrichment work is coordinated around shared methods, evaluation frameworks, and integration with infrastructures, it can produce trusted, reusable outputs that strengthen the scholarly record.
-    
-    [link](link)"    
+  - headline: "2. Target diverse content types and stakeholders"
+    content: "Inclusive design produces solutions that reflect genuine community needs. To ensure solutions are broadly applicable rather than narrowly useful, COMET addresses multiple content types across projects to develop flexible approaches that benefit the widest possible range of research outputs and the communities that produce them.
 
-  - title: "Next stage"
-    headline: "Building foundations for scale"
-    content: "With pilot projects already demonstrating impact, the focus shifts to solidifying the COMET Model’s coordinating role by enabling community-driven metadata enrichment and putting shared evaluation frameworks into practice, ensuring that enrichments are trustworthy and reliably integrated by authoritative sources and downstream platforms."
+Truly representing diverse stakeholders means fostering partnerships and collaborations in many geographies. COMET has already engaged over 200 organisations spanning research institutions, libraries, publishers, funders, infrastructure providers, and advocacy and policy groups."    
+
+  - headline: "3. Provide multiple round-tripping pathways"
+    content: "COMET creates both direct and platform-mediated mechanisms for community improvements to reach authoritative sources—for example through DOI registration agencies such as DataCite and submission and publishing platforms such as PKP's Open Journal Systems."    
+
+  - headline: "4. Treat metadata fields as features"
+    content: "Inspired by software development that makes systematic progress possible, the COMET model treats each metadata field as a discrete, improvable feature, enabling focused problem-solving and measurable progress. Each project we undertake as a community tackles one metadata field at a time.
+
+COMET is prioritising the following use cases:"
+
+table: "
+| Use case    | Metadata fields |
+| -------- | ------- |
+| Name and describe research outputs  | Title; Work/Resource Type; Language    |
+| Identify and connect people associated with research outputs | Author/Creator; Contributor     |
+| Identify and connect organisations associated with research outputs    | Affiliation; Funder/Funding    |
+| Identify and connect related research outputs    | References; Related Identifiers    |
+| Identify access policies associated with research outputs    | License/Rights    |
+"

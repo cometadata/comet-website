@@ -1,0 +1,5 @@
+variant: "cta-only"
+content: "Join our next COMET community. Tell us how you’d like to be involved and we’ll be in touch."
+
+cta_left_text: "left text"
+cta_left_url: "#left"
