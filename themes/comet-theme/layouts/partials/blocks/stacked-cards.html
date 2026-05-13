@@ -98,25 +98,74 @@
         {{ else if eq $lv "grid" }}
             <i class="debug-info">grid layout invoked</i> 
             
-            {{ if .elements }}
-                <div class="stacked-element-container grid">
-                
-                    {{ range .elements }}
-                        <div class="col-4 row stacked-element ">
-                            <div class="">
-                                <div class="status">
-                                    {{ .status }}
+            {{ if eq $mv "organisers"}}
+                <h2>{{ .headline }}</h2>
+                <div>{{ .content | markdownify}}</div>
+
+                {{ if .orgs }}
+                    <div class="stacked-element-container grid">
+                    
+                        {{ range .orgs }}
+                            <div class="col row stacked-element ">
+                                <div class="">
+                                    <img src="{{ .media }}" class="img-fluid"/>
                                 </div>
-                                <h5>{{ .headline }}</h5>
-                                <p>{{ .content |markdownify}}</p>
+                                <div>
+                                    <a href="{{ .link }}">{{ .link_text}}</a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="{{ .link }}">View project</a>
-                            </div>
-                        </div>
-                    {{ end }}
+                        {{ end }}
+                    
+                    </div>
+                {{ end }}
                 
+                <div>{{ .split | markdownify}}</div>
+
+                {{ if .reps }}
+                    <div class="stacked-element-container grid">                    
+                        {{ range .reps }}
+                            {{ partial "blocks/person-4.html" . }}                            
+                        {{ end }}                    
+                    </div>
+                {{ end }}
+            
+            {{ else if eq $mv "advisors"}}
+                <div class="row">
+                    <div class="col-4">
+                        <h2>{{ .headline }}</h2>
+                        <div>{{ .content | markdownify}}</div>
+                    </div>
+                    <div class="col-8">
+                        {{ if .advisors }}
+                            <div class="stacked-element-container grid">                    
+                                {{ range .advisors }}
+                                    {{ partial "blocks/person-3.html" . }}                            
+                                {{ end }}                    
+                            </div>
+                        {{ end }}
+                    </div>
                 </div>
+            {{ else }}
+                {{ if .elements }}
+                    <div class="stacked-element-container grid">
+                    
+                        {{ range .elements }}
+                            <div class="col-4 row stacked-element ">
+                                <div class="">
+                                    <div class="status">
+                                        {{ .status }}
+                                    </div>
+                                    <h5>{{ .headline }}</h5>
+                                    <p>{{ .content |markdownify}}</p>
+                                </div>
+                                <div>
+                                    <a href="{{ .link }}">View project</a>
+                                </div>
+                            </div>
+                        {{ end }}
+                    
+                    </div>
+                {{ end }}
             {{ end }}
       
         {{ end }}

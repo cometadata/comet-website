@@ -5,9 +5,11 @@
     &.grid {
         flex-wrap:wrap;
         justify-content: flex-start;
-        gap:35px;
+        gap:30px;
         row-gap:15px;
-        > div {border:1px dashed grey;}
+        > div {
+            border:1px dashed grey;
+        }
     }
 
     &.timeline,
@@ -20,4 +22,9 @@
         border-radius: variables.$block-radius;
         border:1px dashed grey;
     }
+}
+.portrait {
+    aspect-ratio: 0.9;
+    display:flex;
+    
 }
