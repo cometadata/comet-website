@@ -14,6 +14,7 @@
 @use "partials/stacked-cards";
 @use "partials/generic_page";
 @use "partials/form";
+@use "partials/blog";
 
 body::-webkit-scrollbar:horizontal {
     display: none;

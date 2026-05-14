@@ -1,0 +1,30 @@
+[
+  {{- range $index, $page := where .Site.RegularPages "Type" "posts" }}
+  {{- if $index }},{{ end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "permalink": {{ $page.RelPermalink | jsonify }},
+    "media": {{ or $page.Params.media "" | jsonify }},
+    "date": {{ $page.Date.Format "2006-01-02" | jsonify }},
+    "summary": {{ $page.Summary | jsonify }},
+    "authors": [
+      {{- range $author_index, $author := $page.Params.authors }}
+      {{- if $author_index }},{{ end }}
+      {{ $author | jsonify }}
+      {{- end }}
+    ],
+    "tags": [
+      {{- range $tag_index, $tag := $page.Params.tags }}
+      {{- if $tag_index }},{{ end }}
+      {{ $tag | jsonify }}
+      {{- end }}
+    ],
+    "categories": [
+      {{- range $cat_index, $category := $page.Params.categories }}
+      {{- if $cat_index }},{{ end }}
+      {{ $category | jsonify }}
+      {{- end }}
+    ]
+  }
+  {{- end }}
+]

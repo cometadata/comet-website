@@ -5,6 +5,14 @@ theme = 'comet-theme'
 
 canonifyURLs = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  authors = 'authors'
+  categories = 'categories'
+  tags = 'tags'
+
 # make better changes with our own styling in sass
 # this get added to the end of the main style file
 [params.custom_css]
