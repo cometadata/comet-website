@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.location.origin == "https://cometadata.github.io/") {
     indexLocation = "comet-website/index.json";
   }
-  fetch("/index.json")
+  fetch(indexLocation)
     .then(response => response.json())
     .then(data => {
       allPosts = data;
