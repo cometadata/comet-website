@@ -3,8 +3,8 @@
   {{- if $index }},{{ end }}
   {
     "title": {{ $page.Title | jsonify }},
-    "permalink": {{ $page.RelPermalink | jsonify }},
-    "media": {{ or $page.Params.media "" | jsonify }},
+    "permalink": {{ printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.RelPermalink | jsonify }},
+    "media": {{ or (printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.Params.media) "" | jsonify }},
     "date": {{ $page.Date.Format "2006-01-02" | jsonify }},
     "summary": {{ $page.Summary | jsonify }},
     "authors": [
