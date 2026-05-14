@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sortDropdown = document.getElementById("sort-dropdown");
 
   // 1. Fetch Hugo's pre-compiled JSON index
+  console.log(document.location.origin);
+  let indexLocation = '/index.json';
+  if (document.location.origin == "https://cometadata.github.io/") {
+    indexLocation = "comet-website/index.json";
+  }
   fetch("/index.json")
     .then(response => response.json())
     .then(data => {
