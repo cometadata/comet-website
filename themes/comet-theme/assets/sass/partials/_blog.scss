@@ -1,0 +1,9 @@
+#posts-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap: 15px;
+    & > div {
+        border:3px dotted grey;
+        flex-basis:30%;
+    }
+}

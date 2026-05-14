@@ -8,19 +8,69 @@
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
-        {{ end }}        
-      </div>
+        {{ end }} 
+
+        
+        <section class="section-block featured-post">
+          <div>
+            {{ range where (where .Site.RegularPages "Section" "posts") ".Params.featured" true }}
+              {{ partial "blocks/featured-post.html" . }}
+            {{ end }}
+          </div>
+        </section>
+
+
+        <section class="section-block other-posts">
+          <div class="row">
+            <div class='col-12' id="filter-controls">
+              <!-- Text Search Input -->
+              <input type="text" id="search-input" placeholder="Search titles or summary...">
+
+              <!-- Dynamic Tag Dropdown -->
+
+              <label for="cat-dropdown">Category</label>
+                <select id="cat-dropdown">
+                <option value="all">All Categories</option>
+                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                {{ end }}
+              </select>
+
+              <label for="tag-dropdown">Topic</label>
+              <select id="tag-dropdown">
+                <option value="all">All Topics</option>
+                {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                {{ end }}
+              </select>
+
+              <!-- Dynamic Author Dropdown -->
+              <label for="author-dropdown">Author</label>
+              <select id="author-dropdown">
+                <option value="all">All Authors</option>
+                {{ range $name, $taxonomy := .Site.Taxonomies.authors }}
+                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                {{ end }}
+              </select>
+            
+              <!-- Sort Order Dropdown -->
+              <select id="sort-dropdown">
+                <option value="desc">Newest to oldest</option>
+                <option value="asc">Oldest to newest</option>
+              </select>
+
+              <button type="button" id="clear-filters-btn">Clear Filters</button>
+            </div>
+            <!-- Dynamic Container for Results -->
+            <div class='col-12' id="posts-container"></div>
+            <!-- Pagination Controls Container -->
+            <div id="pagination-container"></div>
+          </div>
+
+
+
+        </section>
+
     </main>
-    
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {{ range .Paginator.Pages }}
-            {{ .Render "archive" }}
-        {{ end }}
-        {{ partial "pagination.html" . }}
-    </div>
-    </div>
-</div>
     
 {{ end }}
