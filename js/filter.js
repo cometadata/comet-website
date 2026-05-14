@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = posts.map(post => `
       <div class="post-card col-4">
 
-        <img src="${post.media}" class="img-fluid"/>
+        <a href="${post.permalink}"><img src="${post.media}" class="img-fluid"/></a>
         
         <h2><a href="${post.permalink}">${post.title}</a></h2>
         
