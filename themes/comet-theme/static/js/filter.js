@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Fetch Hugo's pre-compiled JSON index
   console.log(document.location.origin);
   let indexLocation = '/index.json';
-  if (document.location.origin == "https://cometadata.github.io/") {
-    indexLocation = "comet-website/index.json";
+  if (document.location.origin == "https://cometadata.github.io") {
+    indexLocation = "/comet-website/index.json";
   }
   fetch(indexLocation)
     .then(response => response.json())
