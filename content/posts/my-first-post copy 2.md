@@ -8,6 +8,10 @@ authors = ['Archie']
 media = "/images/demo/placeholder-media.svg"
 +++
 
+this is the summary 
+
+<!--more-->
+
 {{% article-intro %}}
 ### Unlocking Author-Affiliation Metadata for All of arXiv
 The COMET team is pleased to share results from an exciting line of work we have recently completed, focused on unlocking author-affiliation metadata from preprints. Specifically, we have trained a small, open-weight large language model (LLM) that achieves state-of-the-art performance on author-affiliation extraction for arXiv works.
