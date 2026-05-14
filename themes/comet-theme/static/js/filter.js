@@ -7,9 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedTag: "all",
     selectedAuthor: "all",
     selectedCategory: "all",
-    sortOrder: "desc" // Default sorting parameter
+    sortOrder: "desc",
+    currentPage: 1,
+    postsPerPage: 5 // Set your preferred items-per-page limit here
   };
 
+  const paginationContainer = document.getElementById("pagination-container");
   const container = document.getElementById("posts-container");
   const searchInput = document.getElementById("search-input");
   const tagDropdown = document.getElementById("tag-dropdown");
@@ -30,26 +33,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Event Listeners for Filter Controls
   searchInput.addEventListener("input", (e) => {
     filterState.searchQuery = e.target.value.toLowerCase().trim();
+    filterState.currentPage = 1; // Reset page on filter change
     applyFilters();
   });
 
   tagDropdown.addEventListener("change", (e) => {
     filterState.selectedTag = e.target.value;
+    filterState.currentPage = 1; // Reset page on filter change
     applyFilters();
   });
 
   authorDropdown.addEventListener("change", (e) => {
     filterState.selectedAuthor = e.target.value;
+    filterState.currentPage = 1; // Reset page on filter change
     applyFilters();
   });
 
   catDropdown.addEventListener("change", (e) => {
     filterState.selectedCategory = e.target.value;
+    filterState.currentPage = 1; // Reset page on filter change
     applyFilters();
   });
 
   sortDropdown.addEventListener("change", (e) => {
     filterState.sortOrder = e.target.value;
+    filterState.currentPage = 1; // Reset page on filter change
     applyFilters();
   });
 
@@ -61,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filterState.selectedCategory = "all";
     filterState.selectedAuthor = "all";
     filterState.sortOrder = "desc";
+    filterState.currentPage = 1;
 
     // Reset visual UI element positions
     searchInput.value = "";
@@ -125,7 +134,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    renderPosts(filteredResults);
+    // Pagination Step E: Slice array boundaries based on state counters
+    const totalItems = filteredResults.length;
+    const totalPages = Math.ceil(totalItems / filterState.postsPerPage);
+    
+    const startIndex = (filterState.currentPage - 1) * filterState.postsPerPage;
+    const endIndex = startIndex + filterState.postsPerPage;
+    const paginatedResults = filteredResults.slice(startIndex, endIndex);
+
+
+    renderPosts(paginatedResults);
+    renderPagination(totalPages);
   }
 
   // 4. Inject matching elements into the DOM
@@ -158,5 +177,41 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `).join("");
+  }
+
+  // 6. Generate dynamic pagination layout controls
+  function renderPagination(totalPages) {
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = ""; // No navigation markup needed for single pages
+      return;
+    }
+
+    let buttonsHtml = "";
+
+    // Prev Button
+    buttonsHtml += `<button class="page-btn" data-page="${filterState.currentPage - 1}" ${filterState.currentPage === 1 ? "disabled" : ""}>&laquo; Prev</button>`;
+
+    // Numeric Buttons Loop
+    for (let i = 1; i <= totalPages; i++) {
+      buttonsHtml += `<button class="page-btn ${filterState.currentPage === i ? "active" : ""}" data-page="${i}">${i}</button>`;
+    }
+
+    // Next Button
+    buttonsHtml += `<button class="page-btn" data-page="${filterState.currentPage + 1}" ${filterState.currentPage === totalPages ? "disabled" : ""}>Next &raquo;</button>`;
+
+    paginationContainer.innerHTML = buttonsHtml;
+
+    // Attach click events to freshly injected navigation elements
+    const pageButtons = paginationContainer.querySelectorAll(".page-btn");
+    pageButtons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        const targetPage = parseInt(e.target.getAttribute("data-page"), 10);
+        filterState.currentPage = targetPage;
+        applyFilters();
+        
+        // Optional: Scroll back to the top of the container smoothly on page turn
+        container.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   }
 });
