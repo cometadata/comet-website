@@ -35,3 +35,81 @@
         background-color:transparent;
     }
 }
+
+.single article {
+    border:1px dotted orange;
+    background-color:#fff;
+    border-radius:12px;
+    margin-bottom: 20px;
+    padding:20px;
+    & > div {   
+        gap: 20px; 
+        flex-wrap:nowrap;    
+        & > .blog-left {
+            flex-shrink:1;
+            background-color:#b1ebda;
+            border-radius:6px;
+            padding:20px;
+            .article-intro {
+                $fake-gap:40px;
+                $fake-bar-height:20px;
+
+                padding-left:20px;
+                padding-right:20px;
+                margin-left: -20px;
+                margin-right: -20px;
+
+                position:relative;
+                .article-intro-bottom{
+                    position:relative;
+                    height:calc($fake-gap + $fake-bar-height + $fake-bar-height);
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    background-color:#fff;
+                    &::before {
+                        content: "";
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        left:0;
+                        height:$fake-bar-height;
+                        display:block;
+                        background-color:#b1ebda;
+                        
+                        border-bottom-left-radius:6px;
+                        border-bottom-right-radius:6px;
+                    }
+                    &::after {
+                        content: "";
+                        position:absolute;
+                        bottom:0;
+                        right:0;
+                        left:0;
+                        height:$fake-bar-height;
+                        display:block;
+                        background-color:#b1ebda;
+                        border-top-left-radius:6px;
+                        border-top-right-radius:6px;
+                    }
+                }
+                
+               
+            }
+        }    
+        & > .blog-right {
+            flex:0 1 25%;
+            padding:0;
+            margin:0;
+            gap: 20px; 
+            align-content:start;
+            align-self:start;
+            position:sticky;
+            top:0;
+            & > div {                
+                background-color:#b1ebda;
+                border-radius:6px;
+                padding:20px;
+            }
+        }
+    }
+}

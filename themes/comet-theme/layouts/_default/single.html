@@ -4,12 +4,52 @@
 		</header>
 		<div class="page-content single">
 			<article>
-				<div>
-					{{ .Content }}
+				<div class="row">
+					<div class="blog-left">
+						<div>
+							Projects:
+							{{- range $cat_index, $category := .Params.categories }}
+								{{- if $cat_index }},{{ end }}
+								{{ $category }}
+							{{- end }}
+						</div>
+						<div>
+							Tags:
+							{{- range $tag_index, $tag := .Params.tags }}
+								{{- if $tag_index }},{{ end }}
+								{{ $tag }}
+							{{- end }}
+						</div>
+						<div>
+							Authors:
+							{{- range $author_index, $author := .Params.authors }}
+								{{- if $author_index }},{{ end }}
+								{{ $author }}
+							{{- end }}
+						</div>
+						
+						<div>
+							Date:
+							{{ .Date.Format "2006-01-02" }}
+						</div>
+						<div>
+							{{ .Content }}
+						</div>
+					</div>
+					<div class="blog-right row">
+						<div>
+							<h4>On this page</h4>
+						</div>
+						<div>
+							<h4>Other posts by this author</h4>
+						</div>
+						<div>
+							<h4>Related posts</h4>
+						</div>
+					</div>
 				</div>
 				
 			</article>
 		</div>
-        {{ partial "socials-side.html" . }}
 	</main>
 {{ end }}
