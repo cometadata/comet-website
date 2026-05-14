@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedCategory: "all",
     sortOrder: "desc",
     currentPage: 1,
-    postsPerPage: 5 // Set your preferred items-per-page limit here
+    postsPerPage: 6 // Set your preferred items-per-page limit here
   };
 
   const paginationContainer = document.getElementById("pagination-container");

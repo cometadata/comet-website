@@ -1,9 +1,37 @@
 #posts-container {
     display:flex;
     flex-wrap:wrap;
-    gap: 15px;
+    padding:0;
+    gap: 26px;
     & > div {
-        border:3px dotted grey;
-        flex-basis:30%;
+        flex-basis:32%;
+        background-color:#fff;
+        padding:10px;
+        border-radius: 10px;
+        
+    }
+}
+
+
+.section-block.blog {
+    #filter-controls {
+        padding:20px;
+        background-color:#fff;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom: 20px;
+        border-radius:6px;
+        select {
+            padding:5px;
+        }
+        & > * {
+            display:block;
+        }
+    }
+    
+    background-color:#b1ebda;
+    & > div {
+        background-color:transparent;
     }
 }

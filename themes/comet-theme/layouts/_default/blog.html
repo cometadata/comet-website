@@ -20,14 +20,17 @@
         </section>
 
 
-        <section class="section-block other-posts">
+        <section class="section-block blog">
           <div class="row">
             <div class='col-12' id="filter-controls">
-              <!-- Text Search Input -->
-              <input type="text" id="search-input" placeholder="Search titles or summary...">
+              <div>
+                <!-- Text Search Input -->
+                <input type="text" id="search-input" placeholder="Search titles or summary...">
+              </div>
 
               <!-- Dynamic Tag Dropdown -->
 
+              <div>
               <label for="cat-dropdown">Category</label>
                 <select id="cat-dropdown">
                 <option value="all">All Categories</option>
@@ -35,7 +38,9 @@
                   <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
                 {{ end }}
               </select>
+              </div>
 
+              <div>
               <label for="tag-dropdown">Topic</label>
               <select id="tag-dropdown">
                 <option value="all">All Topics</option>
@@ -43,7 +48,9 @@
                   <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
                 {{ end }}
               </select>
+              </div>
 
+              <div>
               <!-- Dynamic Author Dropdown -->
               <label for="author-dropdown">Author</label>
               <select id="author-dropdown">
@@ -52,14 +59,19 @@
                   <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
                 {{ end }}
               </select>
+              </div>
             
+              <div>
               <!-- Sort Order Dropdown -->
               <select id="sort-dropdown">
                 <option value="desc">Newest to oldest</option>
                 <option value="asc">Oldest to newest</option>
               </select>
+              </div>
 
+              <div>
               <button type="button" id="clear-filters-btn">Clear Filters</button>
+              </div>
             </div>
             <!-- Dynamic Container for Results -->
             <div class='col-12' id="posts-container"></div>
