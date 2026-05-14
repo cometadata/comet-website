@@ -1,0 +1,11 @@
+<section class="section-block tax-listing">
+    <div class="row">
+        {{ range .Pages }}
+            <div class="col">
+                <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+
+</section>

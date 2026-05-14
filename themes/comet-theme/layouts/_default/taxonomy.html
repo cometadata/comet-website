@@ -1,0 +1,15 @@
+{{ define "main" }}	
+	<main aria-role="main">
+      <header class="homepage-header">
+      </header>
+      <div class="homepage-content">
+        {{ hugo.Store.Set "taxTitle" .Title }}
+        {{ with hugo.Data.taxonomy }}
+            {{ with .hero }}            
+                {{ partial "blocks/hero-intro-tax.html" . }}
+            {{ end }}
+        {{ end }}
+		{{ partial "blocks/tax-listing.html" . }}
+      </div>
+    </main>
+{{ end }}

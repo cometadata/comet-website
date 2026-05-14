@@ -1,0 +1,7 @@
+variant: "media-right"
+headline: "Taxonomy"
+content: ""
+
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "placeholder image"

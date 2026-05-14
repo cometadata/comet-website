@@ -1,18 +1,13 @@
 {{ define "main" }}	
 	<main aria-role="main">
-		<header class="single-header">
-		</header>
-		{{ with .Params }}
-			{{ partial "single/top.html" . }}
+      <header class="homepage-header">
+      </header>
+      <div class="homepage-content">
+		<h1>{{ .Title }}</h1>
+		{{ .Content }}
+		{{ range .Pages }}
+			<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 		{{ end }}
-		<div class="page-content list">
-			<article>
-				<div>
-					{{ .Content }}
-				</div>
-				
-			</article>
-		</div>
-        {{ partial "socials-side.html" . }}
-	</main>
+      </div>
+    </main>
 {{ end }}
