@@ -1,4 +1,4 @@
-<section class="section-block stacked-cards">
+<section class="section-block stacked-cards {{ .layout_variant }}">
     <div>
 
         {{ $lv := .layout_variant }}
@@ -19,10 +19,10 @@
                     {{ range .elements }}
                         <div class="row stacked-element {{ $tv }}">
                             <div class="col-2">
-                                <h5>{{ .title }}</h5>
+                                <h3>{{ .title }}</h3>
                             </div>
                             <div class="col-10">
-                                <h5>{{ .headline }}</h5>
+                                <h3>{{ .headline }}</h3>
                                 <p>{{ .content |markdownify}}</p>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                     {{ range .elements }}
                         <div class="row stacked-element  {{ $lv }}">
                             <div class="col">
-                                <h5>{{ .headline }}</h5>
+                                <h3>{{ .headline }}</h3>
                                 <p>{{ .content |markdownify}}</p>
                             </div>
                         </div>
@@ -68,12 +68,15 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container ">
+                <div class="stacked-element-container {{ $lv }} mt-4 mb-4">
                 
                     {{ range .elements }}
-                        <div class="row stacked-element ">
+                        <div class="row stacked-element col-4 flex-column">
+                            <div class="media col-4">
+                                <img src="/here" />
+                            </div>
                             <div class="col">
-                                <h5>{{ .title }}</h5>
+                                <h3>{{ .title }}</h3>
                                 <p>{{ .content |markdownify}}</p>
                             </div>
                         </div>
@@ -155,7 +158,7 @@
                                     <div class="status">
                                         {{ .status }}
                                     </div>
-                                    <h5>{{ .headline }}</h5>
+                                    <h3>{{ .headline }}</h3>
                                     <p>{{ .content |markdownify}}</p>
                                 </div>
                                 <div>

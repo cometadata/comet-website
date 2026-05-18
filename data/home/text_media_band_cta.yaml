@@ -1,8 +1,8 @@
 variant: "cta-only"
 headline: "Enrichment dashboards"
-content: "COMET creates dashboards to visualise the value being added to the PID ecosystem. Explore examples of metadata enrichment impact below."
+content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor ullamcorper risus, quis lacinia velit ultricies in. Interdum  et malesuada fames ac ante ipsum primis in faucibus. Phasellus nec orci  quis leo consectetur rhoncus id posuere augue. Curabitur efficitur justo in ligula scelerisque imperdiet. In a efficitur quam, sit amet dictum  orci. Maecenas condimentum ante vitae elit fringilla consectetur quis ut massa."
 
-cta_left_text: "left text"
+cta_left_text: "left text - extra long "
 cta_left_url: "#left"
 
 cta_right_text: "right text"

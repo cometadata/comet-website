@@ -1,4 +1,4 @@
-<section class="section-block hero-intro">
+<section class="section-block hero-intro {{ .variant }}">
     <div>
         {{ if eq .variant "with-cta" }}
             <i>with-cta layout invoked</i>        
@@ -12,6 +12,23 @@
                 </div>    
                 <div class="media-col col-3">
                     <img src="{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
+                </div>
+            </div>
+         
+        {{ else if eq .variant "background" }}
+            <style>
+                section.hero-intro {
+                    background-image:url( {{ .media }} );
+                }
+            </style>
+            <i class="debug-info">background layout invoked</i>  
+            <div class="row">
+                <div class="col-7">
+                    <h1>{{ .headline }}</h1>
+                    <div>{{ .content | markdownify }}</div>
+                </div>    
+                <div class="media-col col-5">
+                    
                 </div>
             </div>
 

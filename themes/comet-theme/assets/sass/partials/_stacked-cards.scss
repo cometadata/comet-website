@@ -12,15 +12,39 @@
         }
     }
 
-    &.timeline,
+    &.timeline {
+        gap:30px; 
+        flex-direction:column;     
+        .row {
+            margin:0;
+                       
+        }
+
+    }
     &.stack {
         flex-direction:column;
     }
+    &.three { 
+        column-gap:30px;     
+        .row {
+            margin:0;
+                       
+        }
+        .stacked-element {
+            flex-shrink:1;
+            .media {
+                height:200px;
+            }
+        } 
+    }
+
     .stacked-element {
         padding:20px;
-        background-color: #f1f2f4;
-        border-radius: variables.$block-radius;
-        border:1px dashed grey;
+        background-color: variables.$comet-darkblue;
+        color: #fff;
+        h2,h3,h4,h5 {
+            color: #fff;
+        }
     }
 }
 .portrait {

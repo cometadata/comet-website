@@ -21,12 +21,25 @@ body::-webkit-scrollbar:horizontal {
     display: none;
 }
 body{
-    background-color:#f7f8fa;
+    background-color:#f5f5f5;
 }
 .debug-info {
     display:block;
     position:absolute;
     top:0px;
+}
+button {
+    white-space:nowrap;
+    border-radius:24px;
+    padding: 6px 50px;
+    background-color: variables.$comet-button-background;
+    color: variables.$comet-button-text-color;
+        transition:variables.$transition-time;
+     &:hover {
+        color: variables.$comet-button-background;
+        background-color: variables.$comet-button-text-color;
+        transition:variables.$transition-time;
+     }
 }
 
 .link {
