@@ -11,8 +11,11 @@ cta_link_url: "#link"
 
 elements:
   - title: "Join the COMET community"
-    content: "Sign-up for the newsletter, endorse our work, or showcase your enrichment project."    
+    content: "Sign-up for the newsletter, endorse our work, or showcase your enrichment project."   
+    media: "/images/icons/icon_1.svg" 
   - title: "Advance metadata enrichment"
     content: "Run metadata through our infrastructure, provide research outputs for data quality training, or share methods for plugin development."    
+    media: "/images/icons/icon_2.svg" 
   - title: "Offer your support"
     content: "There are many ways to support COMET, financially or with your knowledge and expertise."    
+    media: "/images/icons/icon_3.svg" 

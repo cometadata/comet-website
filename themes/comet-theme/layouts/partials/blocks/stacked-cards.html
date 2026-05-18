@@ -72,9 +72,11 @@
                 
                     {{ range .elements }}
                         <div class="row stacked-element col-4 flex-column">
+                            {{ if .media }}
                             <div class="media col-4">
-                                <img src="/here" />
+                                <img src="{{ .Site.BaseURL }}{{ .media }}"  class="img-fluid"/>
                             </div>
+                            {{ end }}
                             <div class="col">
                                 <h3>{{ .title }}</h3>
                                 <p>{{ .content |markdownify}}</p>
@@ -111,7 +113,7 @@
                         {{ range .orgs }}
                             <div class="col row stacked-element ">
                                 <div class="">
-                                    <img src="{{ .media }}" class="img-fluid"/>
+                                    <img src="{{ .Site.BaseURL }}{{ .media }}" class="img-fluid"/>
                                 </div>
                                 <div>
                                     <a href="{{ .link }}">{{ .link_text}}</a>
