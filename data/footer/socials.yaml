@@ -1,0 +1,13 @@
+socials:
+  - title: "LinkedIn"
+    icon: "<i class='fa-brands fa-fw fa-linkedin'></i>"
+    url: "https://www.linkedin.com/company/cometadata/"
+  - title: "Email"
+    icon: "<i class='fa-solid fa-fw fa-envelope'></i>"
+    url: "mailto:info@blah.org"
+  - title: "LinkedIn"
+    icon: "<i class='fa-brands fa-fw fa-linkedin'></i>"
+    url: "https://www.linkedin.com/company/cometadata/"
+  - title: "Email"
+    icon: "<i class='fa-solid fa-fw fa-envelope'></i>"
+    url: "mailto:info@blah.org"

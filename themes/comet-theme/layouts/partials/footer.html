@@ -3,51 +3,32 @@
 
 	<div class="row">
 		<div class="col logo">			
-			<a href="{{ .Site.BaseURL }}"><img class="header-logo" src="/images/logos/
-header_logo_cropped_registered.svg" /></a>	
+			<a href="{{ .Site.BaseURL }}">
+				<img class="header-logo" src="{{ .Site.BaseURL }}images/logos/
+COMET_Logo_2026_Colour_RGB 1.svg" />
+			</a>	
 		</div>
 	</div>
 	
-	<div class="navigation-container">
-		<div class="navx">
-			<nav>
-				<input type="checkbox" name="" id="">
-				<div class="hamburger-lines">
-					<span class="line line1"></span>
-					<span class="line line2"></span>
-					<span class="line line3"></span>
-				</div>
-				<ul class="menu-items">
-					{{ with .Site.Menus.main }}
-						{{ range . }}				
-
-							<li>
-								{{ if .Params.nolink }}
-								<span class='nolink'>{{ .Name }}</span>
-								<i class="fa-solid fa-fw fa-angle-down"></i>
-								{{ else }}
-								<a href="{{ .URL | relURL }}">{{ .Name }}</a>
-								{{ end }}
-    							{{ if .HasChildren }}
-									<ul class="submenu">
-										{{ range .Children }}
-											<li><a href="{{ .URL | relURL }}">{{ .Name }}</a>
-										{{ end }}
-									</ul>
-								{{ end }}
-							</li>
-						{{ end }}
-					{{ end }}
-				</ul>
-
-				
-			</nav>
+	
+	<div class="row">
+		<div class="address">
+			{{ hugo.Data.footer.address_text.text |markdownify }}
+		</div>
+		<div class='socials'>
+			<ul class="socials-side">
+				{{ range hugo.Data.footer.socials.socials }}				
+					<li><a href="{{ .url }}">{{ .icon | safeHTML }}</a></li>
+				{{ end }}
+			</ul>
 		</div>
 	</div>
-	<div class="address">Address</div>
-	<div class='social'>Socials</div>
-	
-	<div class="copy">&copy; COMET</div>
-	<div class='tandc'>terms & conditions</div>
-	<div class='privacy'>privacy</div>
+	<div class="row d-flex flex-row mt-0 pt-0">
+		<div class="col copy">&copy; COMET</div>
+		<div class="col"></div>
+		<div class="col d-flex flex-row text-end">
+			<div class='col tandc'><a href='#'>Terms & Conditions</a></div>
+			<div class='col privacy'><a href='#'>Privacy</a></div>
+		</div>
+	</div>
 </footer>
