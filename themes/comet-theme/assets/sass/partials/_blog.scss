@@ -1,3 +1,5 @@
+@use "partials/variables";
+
 #posts-container {
     display:flex;
     flex-wrap:wrap;
@@ -5,15 +7,17 @@
     gap: 26px;
     & > div {
         flex-basis:32%;
-        background-color:#fff;
-        padding:10px;
+        background-color:variables.$comet-darkblue;
+        padding:20px;
         border-radius: 10px;
+        color: #fff;
         
     }
 }
 
 
 .section-block.blog {
+    padding:20px;;
     #filter-controls {
         padding:20px;
         background-color:#fff;
@@ -29,16 +33,18 @@
             display:block;
         }
     }
-    
-    background-color:#b1ebda;
+
     & > div {
-        background-color:transparent;
+        margin:0;
+        padding:0;
+        background-color:#fff;
+        
     }
 }
 
 .single article {
     border:1px dotted orange;
-    background-color:#fff;
+    background-color:variables.$comet-blue;
     border-radius:12px;
     margin-bottom: 20px;
     padding:20px;
@@ -47,7 +53,7 @@
         flex-wrap:nowrap;    
         & > .blog-left {
             flex-shrink:1;
-            background-color:#b1ebda;
+            background-color:#fff;
             border-radius:6px;
             padding:20px;
             .article-intro {
@@ -65,7 +71,7 @@
                     height:calc($fake-gap + $fake-bar-height + $fake-bar-height);
                     margin-left: -20px;
                     margin-right: -20px;
-                    background-color:#fff;
+                    background-color:variables.$comet-blue;
                     &::before {
                         content: "";
                         position:absolute;
@@ -74,7 +80,7 @@
                         left:0;
                         height:$fake-bar-height;
                         display:block;
-                        background-color:#b1ebda;
+                        background-color:#fff;
                         
                         border-bottom-left-radius:6px;
                         border-bottom-right-radius:6px;
@@ -87,7 +93,7 @@
                         left:0;
                         height:$fake-bar-height;
                         display:block;
-                        background-color:#b1ebda;
+                        background-color:#fff;
                         border-top-left-radius:6px;
                         border-top-right-radius:6px;
                     }
@@ -106,10 +112,14 @@
             position:sticky;
             top:0;
             & > div {                
-                background-color:#b1ebda;
+                background-color:#fff;
                 border-radius:6px;
                 padding:20px;
             }
         }
     }
+}
+.page-btn {
+    padding:10px 20px;
+    border-radius:6px;
 }

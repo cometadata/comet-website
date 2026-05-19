@@ -138,7 +138,8 @@ dd {
 table {
     
     margin-left: 30px;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;  
+    border-color:variables.$comet-gold;  
     
     td, th {
         padding: 3px 8px;
@@ -147,8 +148,8 @@ table {
 
 
     thead tr, thead tr:hover {
-        background-color: variables.$background-blue;
-        border: 1px solid variables.$background-blue;
+        background-color: variables.$comet-darkblue;
+        border: 1px solid variables.$comet-darkblue;
         color: #fff;
     }
 
