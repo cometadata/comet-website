@@ -32,19 +32,41 @@
 							Date:
 							{{ .Date.Format "2006-01-02" }}
 						</div>
-						<div>
-							{{ .ContentWithoutSummary }}
+						<div class="the-content">
+							{{ .ContentWithoutSummary | markdownify }}
 						</div>
 					</div>
 					<div class="blog-right row">
 						<div>
 							<h4>On this page</h4>
+    						<ul id="toc-nav"></ul>
 						</div>
 						<div>
 							<h4>Other posts by this author</h4>
+							{{ with .Params.authors }}
+								<ul>
+									{{ $authorName := index . 0 }}
+									{{ range first 5 (where $.Site.RegularPages "Params.authors" "intersect" (slice $authorName)) }}
+									{{ if ne . $.Page }}
+										<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+									{{ end }}
+									{{ end }}
+								</ul>
+							{{ end }}
 						</div>
 						<div>
 							<h4>Related posts</h4>
+							
+							{{ with .Params.tags }}
+								<ul>
+									{{ $tagName := index . 0 }}
+									{{ range first 5 (where $.Site.RegularPages "Params.tags" "intersect" (slice $tagName)) }}
+									{{ if ne . $.Page }}
+										<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+									{{ end }}
+									{{ end }}
+								</ul>
+							{{ end }}
 						</div>
 					</div>
 				</div>

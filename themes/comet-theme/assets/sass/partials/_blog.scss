@@ -127,3 +127,23 @@
         border-radius:6px;
     }
 }
+#toc-nav {
+    padding:0;
+    margin:0;
+    li {
+        list-style:none;
+        display:inline-block;
+        font-size:0.8rem;
+        width:100%;
+
+    }
+    .nav-link {
+        color: darkgrey;
+    }
+    .nav-link.active {
+        color: black;
+        font-weight: bold;
+        border-left-color: #007bff;
+        background-color: #f8f9fa;
+    }
+}
