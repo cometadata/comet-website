@@ -48,8 +48,4 @@ name = "sass/_cometadata.scss"
     name       = "Blog"
     url        = "/posts"
     weight     = 50
-[[menu.main]]
-    name       = "Join Us"
-    url        = "/join-us"
-    weight     = 50
 
