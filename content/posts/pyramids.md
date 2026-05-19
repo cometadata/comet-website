@@ -1,26 +1,26 @@
 +++
 date = '2026-05-11T16:16:47+01:00'
 draft = false
-title = 'My First Post'
-tags = ['red', 'blue']
-categories = ['Category A', 'Category B']
-authors = ['Archie']
+title = 'Pyramids'
+tags = ['blue']
+categories = ['Category B']
+authors = ['Terry']
 media = "/images/demo/placeholder-media.svg"
 +++
 
-this is the summary 
+this is the summary not shown on the main page
 
 <!--more-->
 
 {{% article-intro %}}
-### Unlocking Author-Affiliation Metadata for All of arXiv
+## Unlocking Author-Affiliation Metadata for All of arXiv
 The COMET team is pleased to share results from an exciting line of work we have recently completed, focused on unlocking author-affiliation metadata from preprints. Specifically, we have trained a small, open-weight large language model (LLM) that achieves state-of-the-art performance on author-affiliation extraction for arXiv works.
 
 With this approach, we have for the first time produced open author-affiliation metadata for the full arXiv corpus as of December 2025, enabling community use and allowing for direct improvements to persistent identifier metadata. The trained model and dataset are openly available and free to use.
 {{% /article-intro %}}
 
 
-### Preprints outpacing their metadata
+#### Preprints outpacing their metadata
 Rapid research dissemination has become central to modern scientific practice. The rate of preprinting has risen dramatically in recent years, with preprints themselves now viewed as a first-class output in many fields. These trends have only been accelerated by major funders, often encouraging or mandating preprint deposition. However, the speed and openness of preprinting has, to date, come with tradeoffs for the completeness of their metadata.
 
 A recent analysis by Nees Van Eck and Ludo Waltman details the scale of this gap, finding that many major preprint servers fail to deposit basic elements such as author affiliations, ORCID IDs, funding information, or abstracts.
@@ -31,7 +31,7 @@ Preprint venues, by contrast, have often lacked the same resources necessary to 
 
 Even where more complete accounts of impact claim to exist, such as in proprietary bibliometric tools, we have limited visibility into how those metrics were produced or how reliably they reflect the underlying record. The implications for research assessment are stark. To paraphrase a rallying cry of the Barcelona Declaration: how can we fairly evaluate the contributions of researchers and institutions if the underlying metadata is incomplete or the product of opaque, closed systems?
 
-### Open, community-driven enrichment
+#### Open, community-driven enrichment
 The answer is to extend the same principle. Researchers have moved to preprints to take ownership of how their work is shared. Now the community has an opportunity to do the same for metadata, producing it openly, at its source in persistent identifier infrastructures, to a standard that rivals what closed venues and systems offer. This means building new pathways for metadata improvement that are transparent, comprehensible to all, and to which all stakeholders can contribute.
 
 This is precisely why we organized COMET, to bring the community together and improve metadata directly in open infrastructures. Building on prior work with both arXiv and DataCite, we set an ambitious goal: bring the affiliation metadata for arXiv preprints up to the standard the research community expects from traditional publishers and closed bibliometric tools, so that preprinted research can be discovered, assessed, and attributed with the same confidence as traditionally published work.
@@ -47,10 +47,10 @@ While GROBID performed well on author extraction for arXiv works, it underperfor
 
 We then evaluated structured extraction using large closed models, such as Anthropic's Claude, to establish a performance ceiling representing the frontier of what is technically possible for LLMs. What we also found was that while these models performed quite well and could handle full-document extraction, using them across arXiv's nearly 3 million works would cost an estimated $60,000-$100,000 for these large inputs. Beyond cost, this approach produces no durable or reusable artifacts and runs counter to COMET's aim of building free, open-source, and reproducible enrichment workflows, making it fundamentally unsustainable for ongoing work.
 
-### Fine-tuning a small open-weight model
+#### Fine-tuning a small open-weight model
 Given these findings, the approach we aligned on was to fine-tune a small, open-weight language model specifically for our task. We hypothesized that a smaller, task-specific model could approach the performance of larger models while being far more practical to deploy. A smaller model would also enable faster and more memory-efficient inference on long-context inputs, as fewer computations are required for a smaller model to generate each output.
 
-### Training methodology
+##### Training methodology
 After evaluating different training methods, we found that off-policy distillation yielded the best results. In practical terms, this means we used a large open-weight teacher model to produce author and affiliation extractions along with its reasoning traces, the intermediate steps leading to each output. We retained only those outputs where the extraction was correct, then used them as high-quality training examples to fine-tune a smaller student model to learn the same task.
 
 A diagram describing the student-teacher training method

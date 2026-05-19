@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Loop through all h2 and h3 headings inside the main content
-    $('.the-content h2, .the-content h3, .the-content h4').each(function(index) {
+    $('.the-content h2, .the-content h3, .the-content h4, .the-content h5').each(function(index) {
         
         // 1. Get the text of the heading
         var headingText = $(this).text();
@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         $(this).attr('id', uniqueId);
         
         // 4. Determine the heading level for styling (h2 or h3)
-        var headingLevel = this.tagName.toLowerCase();
-        headingLevel = '';
+        var headingLevel = "tag-level-" + this.tagName.toLowerCase();
+
         
         // 5. Build the navigation link and append it to the menu
         $('#toc-nav').append(
-            '<li><a href="#' + uniqueId + '" id="link-' + uniqueId + '" class="nav-link">' + headingText + '</a></li>'
+            '<li><a href="#' + uniqueId + '" id="link-' + uniqueId + '" class="nav-link ' + headingLevel + '">' + headingText + '</a></li>'
         );
     });
 
