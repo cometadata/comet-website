@@ -14,16 +14,19 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container {{ $tv }}">
+                <div class="stacked-element-container {{ $tv }}  color-{{ .color_variant }}">
                 
-                    {{ range .elements }}
+                    {{ range $index, $element := .elements }}
                         <div class="row stacked-element {{ $tv }}">
-                            <div class="col-2">
-                                <h3>{{ .title }}</h3>
+                            <div class="col-3">
+                                <h3 class="tag">{{ $element.title }}</h3>
+                                <div class="index">
+                                    {{ add $index 1 }}
+                                </div>
                             </div>
-                            <div class="col-10">
-                                <h3>{{ .headline }}</h3>
-                                <p>{{ .content |markdownify}}</p>
+                            <div class="col-9">
+                                <h3>{{ $element.headline }}</h3>
+                                <p>{{ $element.content |markdownify}}</p>
                             </div>
                         </div>
                     {{ end }}
