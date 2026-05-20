@@ -13,7 +13,6 @@ this is the summary not shown on the main page
 <!--more-->
 
 {{% article-intro %}}
-## Unlocking Author-Affiliation Metadata for All of arXiv
 The COMET team is pleased to share results from an exciting line of work we have recently completed, focused on unlocking author-affiliation metadata from preprints. Specifically, we have trained a small, open-weight large language model (LLM) that achieves state-of-the-art performance on author-affiliation extraction for arXiv works.
 
 With this approach, we have for the first time produced open author-affiliation metadata for the full arXiv corpus as of December 2025, enabling community use and allowing for direct improvements to persistent identifier metadata. The trained model and dataset are openly available and free to use.
@@ -53,13 +52,13 @@ Given these findings, the approach we aligned on was to fine-tune a small, open-
 ##### Training methodology
 After evaluating different training methods, we found that off-policy distillation yielded the best results. In practical terms, this means we used a large open-weight teacher model to produce author and affiliation extractions along with its reasoning traces, the intermediate steps leading to each output. We retained only those outputs where the extraction was correct, then used them as high-quality training examples to fine-tune a smaller student model to learn the same task.
 
-A diagram describing the student-teacher training method
-A diagram describing the student-teacher training method.
+{{< figure src="/images/blog/student-teacher.webp" alt="A diagram describing the student-teacher training method" caption="A diagram describing the student-teacher training method." class="my-custom-class" >}}
+
 We ordered the training examples according to a curriculum. Using the student model's surprisal, a measure of how unlikely each example is based on the model's current predictions, we began training with more straightforward examples and gradually introduced harder ones, interspersing both throughout later rounds to reinforce prior learning.
 
-A diagram describing student model surprisal
-A diagram describing the student model surprisal.
-Results
+{{< figure src="/images/blog/surprisal.webp" alt="A diagram describing student model surprisal" caption="A diagram describing the student model surprisal." class="my-custom-class" >}}
+
+### Results
 Through testing of a number of open-weight teacher-student model pairs, we found the best result came from distilling GLM-4.5-Air into Qwen3-8B. This combination, using our training regime, achieved 97% precision and 86% recall for authors, and 91% precision and 81% recall for affiliations. This performance approaches that of closed models in our benchmarks, while yielding an enrichment workflow the community can actually use, inspect, and build upon.
 
 ### Large-scale inference and affiliation matching

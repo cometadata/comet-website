@@ -57,7 +57,7 @@
             {{ if eq $tv "with-table" }}
             
             <i class="debug-info" style="right:20px;">with-table sub layout invoked</i> 
-                <div class="{{ $tv }}">
+                <div class=" row {{ $tv }}">
                 
                     {{ .table | markdownify}}
                 
@@ -161,13 +161,13 @@
                             <div class="col-4 row stacked-element ">
                                 <div class="">
                                     <div class="status">
-                                        {{ .status }}
+                                        {{ .icon |markdownify }} {{ .status }}
                                     </div>
                                     <h3>{{ .headline }}</h3>
                                     <p>{{ .content |markdownify}}</p>
                                 </div>
                                 <div>
-                                    <a href="{{ .link }}">View project</a>
+                                    <a href="{{ .link }}">View project <i class='fa-solid fa-fw fa-external-link'></i></a>
                                 </div>
                             </div>
                         {{ end }}

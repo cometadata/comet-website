@@ -7,33 +7,28 @@
 				<div class="row">
 					<div class="blog-left">
 						<div>
-							<h1>{{ .Title }}</h1>
-						</div>
-						<div>
-							Projects:
+							PROJECTS
 							{{- range $cat_index, $category := .Params.categories }}
 								{{- if $cat_index }},{{ end }}
 								{{ $category }}
 							{{- end }}
 						</div>
-						<div>
-							Tags:
+						<div class="mt-1">
+							TAGS
 							{{- range $tag_index, $tag := .Params.tags }}
 								{{- if $tag_index }},{{ end }}
 								{{ $tag }}
 							{{- end }}
 						</div>
-						<div>
-							Authors:
+						<div class="mt-5">
 							{{- range $author_index, $author := .Params.authors }}
 								{{- if $author_index }},{{ end }}
 								{{ $author }}
 							{{- end }}
-						</div>
-						
-						<div>
-							Date:
 							{{ .Date.Format "2006-01-02" }}
+						</div>
+						<div class="mt-1">
+							<h1>{{ .Title }}</h1>
 						</div>
 						
 						<div class="the-content">

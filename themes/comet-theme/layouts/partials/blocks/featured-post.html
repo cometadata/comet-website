@@ -2,7 +2,9 @@
 <div class="d-flex">
 
     <div class="media col-5">
-        <img src="{{ .Site.BaseURL }}{{ .Params.Media }}"  class="img-fluid"/>
+        <a href="{{ .Permalink }}">
+            <img src="{{ .Site.BaseURL }}{{ .Params.Media }}"  class="img-fluid"/>
+        </a>
     </div>
 
     <div class="col-7 post-entry text-secondary p-2">

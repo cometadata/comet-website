@@ -115,12 +115,18 @@ pre {
 }
 
 figure {
-  text-align: center;
+  margin:40px 0;
+  padding:20px;
+  text-align: center;     
+  box-shadow: 0px 0px 25px 4px rgba(75,141,150,0.58);
   
   figcaption h4 {
     font-size: 1em;
     font-style: italic;
     font-family: variables.$font-bold
+  }
+  img {
+    width:80%;
   }
 }
 

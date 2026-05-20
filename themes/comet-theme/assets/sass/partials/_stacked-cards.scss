@@ -107,9 +107,17 @@
 }
 
 .with-table {
-    width: 100%;
     table {
         width:100%;
         margin:20px 0;
     }
+}
+.status {
+    background:variables.$background-grey;
+    color: darkslategray;
+    padding:5px 10px;
+    border-radius:25px;
+    width:fit-content;
+    font-size:0.9rem;
+    margin-bottom:20px;
 }
