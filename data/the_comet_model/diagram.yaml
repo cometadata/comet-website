@@ -1,0 +1,9 @@
+headline: "Diagram Headline"
+content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  porttitor ullamcorper risus, quis lacinia velit ultricies in. Interdum  et malesuada fames ac ante ipsum primis in faucibus. Phasellus nec orci  quis leo consectetur rhoncus id posuere augue."
+
+mediaPrimary: "/images/demo/istockphoto-609809548-612x612.jpg"
+mediaSecondary: "/images/demo/server-room-at-the-facebook-data-center.jpg"
+
+
+mediaPrimaryMobile: "/images/demo/istockphoto-1387319351-640x640.jpg"
+mediaSecondaryMobile: "/images/demo/server-room-at-the-facebook-data-center.jpg"

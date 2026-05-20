@@ -12,7 +12,9 @@
             {{ partial "blocks/stacked-cards.html" . }}
           {{ end }}
           
-          {{ partial "blocks/diagram-stage.html" . }}
+          {{ with .diagram }}
+            {{ partial "blocks/diagram-stage.html" . }}
+          {{ end }}
 
           
           {{ with .stacked_cards_bottom }}

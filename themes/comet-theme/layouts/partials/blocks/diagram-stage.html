@@ -1,5 +1,25 @@
 <section class="section-block diagram-stage">
     <div>
-        <i>diagram stage layout</i>
+        <i class="debug-info">diagram stage layout</i>
+        <div class="d-flex">
+            <div class="col-4">
+                <h2>{{ .headline }}</h2>
+            </div>
+            <div>{{ .content | markdownify }}</div>
+        </div>
+        <div class="diagram">
+            <div class="line-wrapper">
+                <div class="line-background"></div>
+                <div class="drawing-line">
+                    <img src="{{ .Site.BaseURL }}/images/logos/comet-line-start.svg" />
+                </div>
+            </div>
+            <div class="medias">
+                <img class='desktop primary'   src="{{ .Site.BaseURL }}{{ .mediaPrimary }}" />
+                <img class='desktop secondary' src="{{ .Site.BaseURL }}{{ .mediaSecondary }}" />    
+                <img class='mobile primary'   src="{{ .Site.BaseURL }}{{ .mediaPrimaryMobile }}" />
+                <img class='mobile secondary' src="{{ .Site.BaseURL }}{{ .mediaSecondaryMobile }}" />              
+            </div>
+        </div>
     </div>
 </section>

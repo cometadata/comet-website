@@ -107,3 +107,88 @@ section.hero-intro.background {
         }
     }
 }
+
+
+.medias {
+  position: relative;
+  width: 100%;       /* Set your own width */
+  height: 650px;     /* Set your own height */
+  overflow: hidden;  /* Keeps everything clean inside the frame */
+}
+
+/* 2. Style both images to perfectly fill out the container box */
+.medias img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces images to fill the container without distorting */
+    transition: opacity 0.5s ease-in-out; /* Controls speed and smoothness of fade */
+    &.mobile {
+        display:none;
+    }   
+  
+    @media (max-width: variables.$break-large) {
+        &.mobile {
+            display:block;
+        }
+        &.desktop {
+            display:none;
+        }
+    }
+}
+
+/* 3. Hide the secondary overlay image by default */
+.secondary {
+  opacity: 0;
+  z-index: 2; /* Ensures it sits directly over the base image */
+}
+
+.secondary {
+  animation: automaticCrossfade 30s infinite;
+}
+
+.diagram {
+    
+    .line-wrapper {
+        position:relative;
+        width: 100%;
+        height:4px;
+        margin-bottom:30px;
+        margin-top:30px;
+
+        .line-background {  
+            position:absolute;  
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border-bottom:4px dashed variables.$comet-gold;
+
+        }
+        .drawing-line {
+            position:absolute;
+            
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+
+            width: 0%;
+            height: 4px;                  /* Change line thickness here */
+            background-color: variables.$comet-gold;    /* Change line colour here */
+
+            transform-origin: left center;
+
+            /* Triggers the drawing animation */
+            animation: drawLine 15s forwards linear infinite;
+            img {
+                position:absolute;
+                right: -22px;
+                top:-22px;
+                transform:rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+@use "partials/variables";
 .circle-line {
 
     .path.circle {
@@ -65,3 +66,31 @@ circle.circle-animation {
     to {  -moz-transform:rotate(360deg);}
 }
 
+@keyframes automaticCrossfade {
+  0% {
+    opacity: 0; /* Show Image 1 */
+  }
+  40% {
+    opacity: 0; /* Show Image 2 */
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;    
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Define the drawing motion */
+@keyframes drawLine {
+  from {
+    width:0%;
+  }
+  to {
+    width: 100%;
+  }
+}
