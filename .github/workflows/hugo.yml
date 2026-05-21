@@ -19,15 +19,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Install and Enable Snapd
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y snapd
-          sudo systemctl start snapd.service
-          sudo systemctl enable snapd.service
-          # Give the snap daemon a few seconds to fully initialize
-          sleep 5 
-          
       - name: Install Dart Sass Replacement for LibSass # Installs dart-sass
         run: sudo snap install dart-sass
 
