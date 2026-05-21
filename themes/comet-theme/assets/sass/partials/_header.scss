@@ -47,7 +47,7 @@ header {
         z-index:5;
     }    
     .row {
-        width: variables.$content-width;
+        width: variables.$section-width;
         margin:0 auto;
         display:flex;
         position:relative;
@@ -85,6 +85,7 @@ header {
             margin-top:-80px;
             margin-bottom:40px;
             z-index:30;
+            padding-right:17px;
 
 
             
@@ -92,11 +93,33 @@ header {
                 justify-content: flex-end;
                 margin-bottom:0;
             }
-            a {
-                color: variables.$main-font-color;
+            a:not(.no-underline) {
+                color: variables.$comet-nav-font-color;
                 text-decoration:none;
-                &:hover {
-                    text-decoration:underline;
+                position:relative;
+                display:inline-block;
+
+                /* Base state of the offset line */
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0; /* Starts flush with the bottom */
+                    border-bottom: 2px solid variables.$comet-nav-font-color;
+                    
+                    /* Hide the line initially */
+                    opacity: 0; 
+                    
+                    /* Smoothly animates the movement and opacity over 0.2 seconds */
+                    transition: transform 0.2s ease, opacity 0.2s ease; 
+                }
+
+                /* Hover state triggers the shift */
+                &:hover::after {
+                    opacity: 1;
+                    /* Smoothly shifts the line 10px downward on hover */
+                    transform: translateY(4px); 
                 }
             }
 
@@ -109,7 +132,7 @@ header {
                 li {
                     list-style:none;
                     display:inline-block;
-                    margin-left:60px;
+                    margin-left:30px;
                     span.nolink {
                         display:inline-block;
                         margin-bottom:10px;
@@ -126,9 +149,6 @@ header {
                             display: block;
                             margin:0;
                             padding:0;
-                            
-                            a {
-                            }
                         }
                     }
                 }
@@ -240,5 +260,5 @@ header {
 header .row {
     margin-top:20px;
     margin-bottom:20px;
-    border-radius:12px;
+    padding: 17px;// why?
 }

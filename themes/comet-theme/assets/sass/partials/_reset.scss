@@ -1,7 +1,7 @@
 @use "partials/variables";
 body {
     color: variables.$main-font-color;
-    font-size:18px;
+    font-size:16px;
     font-weight:300;
 }
 .homepage-header, .single-header {

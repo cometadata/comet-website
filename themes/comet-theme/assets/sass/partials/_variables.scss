@@ -15,6 +15,7 @@ $comet-green: #96c896;
 $comet-darkgreen: #799e77;
 $comet-button-background:$comet-darkblue;
 $comet-button-text-color:#fff;
+$comet-nav-font-color:$comet-darkblue;
 
 $comet-gold: #b59122;
 
@@ -45,9 +46,10 @@ $section-width: 80%;
 $section-div-padding: 20px;
 
 /* font variables */
-$font-default: 'Arial';
-$font-bold: 'Arial';
+$font-default: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-bold: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-h1: 72px;
+$font-default-size: 16px;
 
 $block-radius: 6px;
 

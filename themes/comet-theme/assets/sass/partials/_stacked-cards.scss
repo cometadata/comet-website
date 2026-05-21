@@ -2,6 +2,9 @@
 .stacked-element-container {
     display:flex;
     background-color: #fff;
+    p {
+        font-size: 14px;
+    }
     &.grid {
         flex-wrap:wrap;
         justify-content: flex-start;
@@ -88,6 +91,7 @@
             flex-shrink:1;
             .media {
                 height:140px;
+                padding-top:12px;
             }
         } 
     }

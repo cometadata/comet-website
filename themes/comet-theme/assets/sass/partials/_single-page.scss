@@ -1,7 +1,7 @@
 @use "partials/variables";
 body {
   font-family: variables.$font-default;
-  font-size: 18px;
+  font-size: variables.$font-default-size;
 }
 
 .page-content {

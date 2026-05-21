@@ -2,7 +2,6 @@
 
 @use "partials/variables";
 @use "partials/sections";
-@use "partials/fonts";
 @use "partials/reset";
 @use "partials/animations";
 @use "partials/top";
@@ -24,14 +23,14 @@ body{
     background-color:#f5f5f5;
 }
 .debug-info {
-    display:block;
+    display:none;
     position:absolute;
     top:0px;
 }
 button {
     white-space:nowrap;
     border-radius:24px;
-    padding: 6px 50px;
+    padding: 6px 25px;
     background-color: variables.$comet-button-background;
     color: variables.$comet-button-text-color;
         transition:variables.$transition-time;
