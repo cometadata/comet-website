@@ -7,11 +7,18 @@
     }
     &.grid {
         flex-wrap:wrap;
-        justify-content: flex-start;
         gap:30px;
-        row-gap:15px;
-        > div {
-            border:1px dashed grey;
+        > div.elements {
+            flex:1 0 30%;
+        }
+        > div.orgs {
+            flex:1 0 20%;
+        }
+        > div.reps {
+            flex:1 0 20%;
+        }
+        > div.advisors {
+            flex:0 0 31%;
         }
     }
 
@@ -27,8 +34,8 @@
                 h2,h3,h4,h5 {
                     color: variables.$comet-darkblue;
                 }
-                -webkit-box-shadow: 0px 0px 25px 4px rgba(75,141,150,0.58); 
-                box-shadow: 0px 0px 25px 4px rgba(75,141,150,0.58);
+                -webkit-box-shadow: 0px 0px 25px 2px rgba(75,141,150,.48);
+                box-shadow: 0px 0px 25px 2px rgba(75,141,150,.48);
             }
 
         }   
@@ -44,7 +51,8 @@
                 margin:0;
                 justify-content: space-between;
                 .tag {
-                    color:grey;
+                    color:#fff;
+                    opacity:0.5;
                 }
                 .index {
                     $size:45px;
@@ -70,7 +78,12 @@
                     }
                     
                 }
-            }                     
+            }    
+            div.content {
+                margin-top:-5px;
+                padding-right:30px;
+                padding-left: 30px;
+            }                 
         }
 
     }
@@ -97,7 +110,7 @@
     }
 
     .stacked-element {
-        padding:20px;
+        padding:30px;
         background-color: variables.$comet-darkblue;
         color: #fff;
         h2,h3,h4,h5 {
@@ -116,11 +129,10 @@
         margin:20px 0;
     }
 }
+
 .status {
-    background:variables.$background-grey;
-    color: darkslategray;
+    border: 1px solid variables.$comet-cat-box;
     padding:5px 10px;
-    border-radius:25px;
     width:fit-content;
     font-size:0.9rem;
     margin-bottom:20px;

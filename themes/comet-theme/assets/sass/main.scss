@@ -15,6 +15,7 @@
 @use "partials/form";
 @use "partials/blog";
 @use "partials/taxonomy";
+@use "partials/impact-band";
 
 body::-webkit-scrollbar:horizontal {
     display: none;
@@ -134,48 +135,41 @@ dd {
     padding-bottom: 30px;
 }
 
-table {
-    
-    margin-left: 30px;
-    margin-bottom: 30px;  
-    border-color:variables.$comet-gold;  
-    
-    td, th {
-        padding: 3px 8px;
-        vertical-align: top;
-    }
-
-
-    thead tr, thead tr:hover {
-        background-color: variables.$comet-darkblue;
-        border: 1px solid variables.$comet-darkblue;
-        color: #fff;
-    }
-
-    td {
-        border: 1px solid #d8d2c4;
-    }
-
-    th {
-        border: 1px solid #d8d2c4;
-    }
-
-    tr:nth-child(2n+2) {
-        background-color: variables.$background-grey;
-    }
-  
-    &.no-zebra {
-    
-        tr, td {
-            border: 0;
-        }
-    
-        tr:nth-child(2n+2) {
-            background-color: #fff;
-        }
-    }
-}
 
 .citation-link {
     font-family: variables.$font-default;
+}
+
+
+$table-headings: variables.$comet-darkblue;
+$table-color: variables.$comet-table-color; 
+$table-borders: variables.$comet-darkblue; 
+$table-lines: variables.$comet-table-lines;
+
+table {          
+        
+    margin-left: 30px;
+    margin-bottom: 30px;  
+    border: 2px solid $table-headings;
+    color: $table-color; 
+    tbody {
+        border-bottom: 2px solid $table-borders;
+        border-right: 2px solid $table-borders; 
+        border-left: 2px solid $table-borders;
+    }
+    
+    td, th {
+        padding: 3px 8px;
+    }
+
+    thead tr, thead tr:hover {
+        background-color: $table-headings;
+        color: #fff;
+    }   
+    tr {
+        border-bottom: 1px solid $table-lines;
+    }
+    tr:last-child {
+        border-bottom:none;
+    }
 }

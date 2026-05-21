@@ -35,6 +35,13 @@ footer {
         flex-basis:80%;
         font-size:0.9rem;
     }
+    .tandc,
+    .privacy {
+        white-space: nowrap;
+        a {
+            color: #fff;
+        }
+    }
     .socials {
         padding:0;
         margin:0;

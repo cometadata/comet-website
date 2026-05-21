@@ -1,0 +1,17 @@
+variant: "below"
+headline: "Impact Band Headline"
+content: "COMET has produced enriched metadata for over 6.2 million unique DOIs across three high-value metadata fields through our targeted enrichment projects.
+
+COMET treats gaps in high-value PID metadata fields as discrete, community-prioritised problems—each one tractable and measurable—demonstrating that collective action produces better outcomes than individual effort alone."
+
+table: "
+| Use case    | Metadata field | Number of unique DOIs
+| -------- | ------- | ------- |
+| Name and describe research outputs  | Research Type | 56474252    |
+| Identify and connect organisations associated with research outputs | Affiliations | 234234     |
+| Identify and connect related research outputs    | Related itentifier | 1234 |
+"
+
+cta_headline: "TOTAL"
+cta_text: "6,240,531"
+

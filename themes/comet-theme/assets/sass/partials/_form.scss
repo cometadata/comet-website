@@ -9,3 +9,14 @@ label {
 .checkboxes > div {
     padding-bottom: 10px;
 }
+button.reverse {
+    color:variables.$comet-darkblue;
+    background-color: variables.$comet-button-text-color;
+    border:1px solid variables.$comet-button-text-color;
+    &:hover{
+        
+        color:variables.$comet-button-text-color;
+        background-color: variables.$comet-darkblue;
+        border:1px solid variables.$comet-button-text-color;
+    }
+}

@@ -1,0 +1,104 @@
+@use "partials/variables";
+
+
+.section-block.impact-band {
+
+    $table-headings: variables.$comet-table-headings;
+    $table-color: variables.$comet-table-color; 
+    $table-borders: variables.$comet-table-border; 
+    $table-lines: variables.$comet-table-lines;
+
+    table {          
+            
+        margin-left: 30px;
+        margin-bottom: 30px;  
+        border: 2px solid $table-headings;
+        color: $table-color; 
+        tbody {
+            border-bottom: 2px solid $table-borders;
+            border-right: 2px solid $table-borders; 
+            border-left: 2px solid $table-borders;
+        }
+        
+        td, th {
+            padding: 3px 8px;
+        }
+
+        thead tr, thead tr:hover {
+            background-color: $table-headings;
+            color: #fff;
+        }   
+        tr {
+            border-bottom: 1px solid $table-lines;
+        }
+        tr:last-child {
+            border-bottom:none;
+        }
+    }
+
+    &.alt {
+        $table-headings: variables.$comet-darkblue;
+        $table-color: variables.$comet-table-color; 
+        $table-borders: variables.$comet-darkblue; 
+        $table-lines: variables.$comet-table-lines;
+
+        table {          
+            
+            margin-left: 30px;
+            margin-bottom: 30px;  
+            border: 2px solid $table-headings;
+            color: $table-color; 
+            tbody {
+                border-bottom: 2px solid $table-borders;
+                border-right: 2px solid $table-borders; 
+                border-left: 2px solid $table-borders;
+            }
+            
+            td, th {
+                padding: 3px 8px;
+            }
+
+            thead tr, thead tr:hover {
+                background-color: $table-headings;
+                color: #fff;
+            }   
+            tr {
+                border-bottom: 1px solid $table-lines;
+            }
+            tr:last-child {
+                border-bottom:none;
+            }
+        }
+    }
+    &.below {
+        table {
+            width:100%;
+            margin:0;
+            padding:30px;
+        }
+    }
+}
+.big-number {
+    font-size:60px;
+}
+.infos {
+    color:#fff;
+    padding:30px;
+}
+.cta-attached {
+    background-color: variables.$comet-table-headings;
+    &.alt {
+        background-color: variables.$comet-darkblue;
+    }
+    &.right {    
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    align-items:flex-end;
+    .comet-line {
+        padding-bottom:50px;
+    }
+    .right {
+
+    }
+}

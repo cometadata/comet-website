@@ -24,7 +24,7 @@
                                     {{ add $index 1 }}
                                 </div>
                             </div>
-                            <div class="col-9">
+                            <div class="content col-9">
                                 <h3>{{ $element.headline }}</h3>
                                 <p>{{ $element.content |markdownify}}</p>
                             </div>
@@ -111,10 +111,10 @@
                 <div>{{ .content | markdownify}}</div>
 
                 {{ if .orgs }}
-                    <div class="stacked-element-container grid">
+                    <div class="stacked-element-container grid mt-2 mb-2">
                     
                         {{ range .orgs }}
-                            <div class="col row stacked-element ">
+                            <div class="orgs col row stacked-element  gx-0 ">
                                 <div class="">
                                     <img src="{{ .Site.BaseURL }}{{ .media }}" class="img-fluid"/>
                                 </div>
@@ -130,7 +130,7 @@
                 <div>{{ .split | markdownify}}</div>
 
                 {{ if .reps }}
-                    <div class="stacked-element-container grid">                    
+                    <div class="stacked-element-container grid mt-2 mb-2">                    
                         {{ range .reps }}
                             {{ partial "blocks/person-4.html" . }}                            
                         {{ end }}                    
@@ -145,7 +145,7 @@
                     </div>
                     <div class="col-8">
                         {{ if .advisors }}
-                            <div class="stacked-element-container grid">                    
+                            <div class="stacked-element-container grid mb-2 mt-2">                    
                                 {{ range .advisors }}
                                     {{ partial "blocks/person-3.html" . }}                            
                                 {{ end }}                    
@@ -158,7 +158,7 @@
                     <div class="stacked-element-container grid">
                     
                         {{ range .elements }}
-                            <div class="col-4 row stacked-element ">
+                            <div class="elements col row stacked-element gx-0">
                                 <div class="">
                                     <div class="status">
                                         {{ .icon |markdownify }} {{ .status }}
@@ -166,8 +166,8 @@
                                     <h3>{{ .headline }}</h3>
                                     <p>{{ .content |markdownify}}</p>
                                 </div>
-                                <div>
-                                    <a href="{{ .link }}">View project <i class='fa-solid fa-fw fa-external-link'></i></a>
+                                <div class="link-out">
+                                    <a href="{{ .link }}"><button class="reverse">View project <i class='fa-solid fa-fw fa-external-link'></i></button></a>
                                 </div>
                             </div>
                         {{ end }}

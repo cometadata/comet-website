@@ -1,0 +1,7 @@
+variant: "media-right"
+headline: "Testing"
+content: "TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE."
+
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "placeholder image"
