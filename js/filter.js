@@ -164,22 +164,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <a href="${post.permalink}"><img src="${post.media}" class="img-fluid"/></a>
         
-        <h2><a href="${post.permalink}">${post.title}</a></h2>
-        
-        <small>${post.date} ${post.author ? `by ${post.author}` : ''}</small>
-        <p>${post.summary}</p>
         <div class="post-tags">
-        tags
-          ${post.tags ? post.tags.map(t => `<span class="tag-badge">${t}</span>`).join(",") : ""}
-        </div>
-        <div class="post-cats">
-        cats
-          ${post.categories ? post.categories.map(t => `<span class="cat-badge">${t}</span>`).join(",") : ""}
+            ${post.categories ? post.categories.map(t => `<span class="cat-badge">${t}</span>`).join("") : ""}
+        
+           ${post.tags ? post.tags.map(t => `<span class="tag-badge">${t}</span>`).join("") : ""}
         </div>
         <div class="post-authors">
-        authors
-          ${post.authors ? post.authors.map(t => `<span class="author-badge">${t}</span>`).join(",") : ""}
+        ${post.date} by 
+          ${post.authors ? post.authors.map(t => `<span class="author-badge">${t}</span>`).join("") : ""}
         </div>
+        
+        <h2><a href="${post.permalink}">${post.title}</a></h2>
+        
+        <p>${post.summary}</p>
       </div>
     `).join("");
   }
