@@ -4,6 +4,8 @@ content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam portt
 
 cta_left_text: "left text - extra long "
 cta_left_url: "#left"
+left_button_rank: "button-secondary"
 
 cta_right_text: "right text"
 cta_right_url: "#right"
+right_button_rank: "button-tertiary"

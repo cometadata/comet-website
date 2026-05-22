@@ -9,14 +9,44 @@ label {
 .checkboxes > div {
     padding-bottom: 10px;
 }
+
+$button-border: 2px;
 button.reverse {
     color:variables.$comet-darkblue;
     background-color: variables.$comet-button-text-color;
-    border:1px solid variables.$comet-button-text-color;
-    &:hover{
-        
+    border:$button-border solid variables.$comet-button-text-color;
+    &:hover{        
         color:variables.$comet-button-text-color;
         background-color: variables.$comet-darkblue;
-        border:1px solid variables.$comet-button-text-color;
+        border:$button-border solid variables.$comet-button-text-color;
     }
+}
+button.button-primary {
+    background-color: variables.$comet-button-primary;
+    border:$button-border solid variables.$comet-button-primary;
+    &:hover{        
+        color:variables.$comet-button-primary;
+        background-color: #fff;
+        border:$button-border solid variables.$comet-button-primary;
+    }
+}
+button.button-secondary {
+    background-color: variables.$comet-button-secondary;
+    border:$button-border solid variables.$comet-button-secondary;
+    &:hover{        
+        color:variables.$comet-button-secondary;
+        background-color: #fff;
+        border:$button-border solid variables.$comet-button-secondary;
+    }
+    
+}
+button.button-tertiary {
+    background-color: variables.$comet-button-tertiary;
+    border:$button-border solid variables.$comet-button-tertiary;
+    &:hover{        
+        color:variables.$comet-button-tertiary;
+        background-color: #fff;
+        border:$button-border solid variables.$comet-button-tertiary;
+    }
+    
 }
