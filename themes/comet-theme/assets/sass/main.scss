@@ -57,7 +57,7 @@ button {
     }
 }
 
-a {
+a:not(.no-underline) {
     color: variables.$main-font-color;
     border-bottom: 2px solid variables.$link-blue;
     text-decoration:none;

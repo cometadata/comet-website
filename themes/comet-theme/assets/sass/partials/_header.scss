@@ -98,6 +98,7 @@ header {
                 text-decoration:none;
                 position:relative;
                 display:inline-block;
+                border-bottom:0;
 
                 /* Base state of the offset line */
                 &::after {
