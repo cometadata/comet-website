@@ -8,14 +8,15 @@ content: "There is strength in numbers. In metadata. In collaborating. In sharin
 cta_content: "Willing to lend a hand? You can choose any one of these routes, or combine more than one."
 cta_link_text: "Get in touch"
 cta_link_url: "#link"
+button_rank: "button-tertiary"
 
 elements:
   - title: "Join the COMET community"
     content: "Sign-up for the newsletter, endorse our work, or showcase your enrichment project."   
-    media: "/images/icons/icon_1.svg" 
+    media: "/images/icons/join.svg" 
   - title: "Advance metadata enrichment"
     content: "Run metadata through our infrastructure, provide research outputs for data quality training, or share methods for plugin development."    
-    media: "/images/icons/icon_2.svg" 
+    media: "/images/icons/advance.svg" 
   - title: "Offer your support"
     content: "There are many ways to support COMET, financially or with your knowledge and expertise."    
-    media: "/images/icons/icon_3.svg" 
+    media: "/images/icons/offer.svg" 

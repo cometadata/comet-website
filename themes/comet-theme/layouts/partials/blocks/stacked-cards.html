@@ -93,13 +93,16 @@
             {{ if eq $tv "cta" }}
             
             <i class="debug-info" style="right:20px;">cta sub layout invoked</i> 
-                <div class="row space-between">
+                <div class="row space-between align-items-center mt-4 mb-4">
                     <div class="col">
                         {{ .cta_content }}
                     </div>
                     <div class="col-auto">
-                        <a href="{{ .cta_link_url }}">{{ .cta_link_text }}</a>
+                        <a href="{{ .cta_link_url }}"><button class="{{ .button_rank }}">{{ .cta_link_text }}</button></a>
                     </div>
+                </div>
+                <div>                    
+                    {{ partial "blocks/comet-line-left.html" }} 
                 </div>
             {{ end }}
 

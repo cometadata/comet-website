@@ -58,12 +58,13 @@ button {
 }
 
 a {
-    color: variables.$link-blue;
+    color: variables.$main-font-color;
+    border-bottom: 2px solid variables.$link-blue;
     text-decoration:none;
     font-family: variables.$font-default;
     &:hover {
         color: variables.$link-blue;
-        text-decoration:underline;
+        text-decoration:none;
     }
 }
 .link-alt {    

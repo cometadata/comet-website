@@ -2,6 +2,18 @@
 .stacked-element-container {
     display:flex;
     background-color: #fff;
+    &.color- {
+        a {
+            color: #fff;
+            border-bottom: 2px solid variables.$comet-lightgreen;
+            text-decoration:none;
+            font-family: variables.$font-default;
+                &:hover {
+                    color: variables.$comet-lightgreen;
+                    text-decoration:none;
+                }
+            }
+    }
     p {
         font-size: 14px;
     }
