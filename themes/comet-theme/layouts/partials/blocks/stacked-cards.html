@@ -98,7 +98,7 @@
                         {{ .cta_content }}
                     </div>
                     <div class="col-auto">
-                        <a href="{{ .cta_link_url }}"><button class="{{ .button_rank }}">{{ .cta_link_text }}</button></a>
+                        <a href="{{ .cta_link_url }}" class='no-underline'><button class="{{ .button_rank }}">{{ .cta_link_text }}</button></a>
                     </div>
                 </div>
                 <div>                    
@@ -170,7 +170,7 @@
                                     <p>{{ .content |markdownify}}</p>
                                 </div>
                                 <div class="link-out">
-                                    <a href="{{ .link }}"><button class="reverse">View project <i class='fa-solid fa-fw fa-external-link'></i></button></a>
+                                    <a href="{{ .link }}" class='no-underline'><button class="reverse">View project <i class='fa-solid fa-fw fa-external-link'></i></button></a>
                                 </div>
                             </div>
                         {{ end }}

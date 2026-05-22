@@ -18,13 +18,17 @@
                     <div class="row flex-wrap cta-row">
                         {{ if .cta_left_url }}
                         <div class="col ">
-                            <a href="{{ .cta_left_url }}"><button class="{{ .left_button_rank}}">{{ .cta_left_text }}</button></a>
+                            <a href="{{ .cta_left_url }}" class='no-underline'><button class="{{ .left_button_rank}}">{{ .cta_left_text }}</button></a>
                         </div>
                         {{ end }}
                         
                         {{ if .cta_right_url }}
                         <div class="col">
+<<<<<<< HEAD
                             <a href="{{ .cta_right_url }}"><button class="{{ .right_button_rank}}">{{ .cta_right_text }}</button></a>
+=======
+                            <a href="{{ .cta_right_url }}" class='no-underline'><button class="{{ .right_button_rank}}">{{ .cta_right_text }}</button></a>
+>>>>>>> development
                         </div>
                         {{ end }}
                     </div> 
