@@ -1,5 +1,5 @@
 variant: "media-right"
 headline: "Blog"
-media: "/images/demo/placeholder-media.svg"
-media_hover: "Placeholder image"
-media_alt: "placeholder image"
+media: "/images/blog/tributaries.jpg"
+media_hover: "Tributaries"
+media_alt: "River tributaries converging, representing knowledge streams flowing together"

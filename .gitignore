@@ -2,3 +2,6 @@ public/
 /resources/_gen/
 .hvm
 .hugo_build.lock
+
+# Local reference copy of ../comet (wireframes + docs); not tracked
+comet/
