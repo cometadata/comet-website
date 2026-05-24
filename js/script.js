@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const $tocNav = $('#toc-nav');
+    const $aside = $('.article-aside');
+
+    if (!$tocNav.length) {
+        return;
+    }
+
     // Loop through all h2 and h3 headings inside the main content
     $('.the-content h2, .the-content h3, .the-content h4, .the-content h5').each(function(index) {
         
@@ -50,4 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.the-content h2, .the-content h3, .the-content h4').each(function() {
         observer.observe(this);
     });
+
+    if ($tocNav.children().length === 0) {
+        $('#toc-aside-box').hide();
+    }
+
+    if ($aside.length && $aside.find('.aside-box:visible').length === 0) {
+        $aside.addClass('is-empty');
+    }
 });
