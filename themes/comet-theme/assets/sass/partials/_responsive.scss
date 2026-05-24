@@ -3,4 +3,16 @@
     .row {
         display:block;
     }
+
+    /* Stacked columns lose shared row height; give media bands a fixed proportion instead */
+    .text-media-band.image-left,
+    .text-media-band.image-right,
+    section.hero-intro.media-right,
+    section.hero-intro.media-left {
+        .media-col img {
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+    }
 }

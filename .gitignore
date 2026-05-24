@@ -1,7 +1,10 @@
 public/
-/resources/_gen/
+resources/
 .hvm
 .hugo_build.lock
+
+# macOS
+.DS_Store
 
 # Local reference copy of ../comet (wireframes + docs); not tracked
 comet/

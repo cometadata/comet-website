@@ -26,6 +26,35 @@
     align-items:center;
 }
 
+section.hero-intro {
+    &.media-right,
+    &.media-left {
+        /* Drop vertical padding from the card wrapper; apply it to the text column only */
+        & > div {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .row {
+            align-items: stretch;
+        }
+        .col-9 {
+            padding-top: variables.$section-div-padding;
+            padding-bottom: variables.$section-div-padding;
+        }
+        .media-col {
+            align-items: stretch;
+            padding: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
 section.hero-intro.background {
     background-size:cover;
     align-items:flex-end;
@@ -71,6 +100,20 @@ section.hero-intro.background {
     &.image-right {
         & > div {
             padding:0;
+        }
+        .row {
+            align-items: stretch;
+        }
+        .media-col {
+            align-items: stretch;
+            padding: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
         }
         .content-col {
             h2 {
