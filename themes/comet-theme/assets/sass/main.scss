@@ -141,6 +141,10 @@ dd {
     font-family: variables.$font-default;
 }
 
+.comet-doi {
+    /* Reserved for COMET DOI (10.7269/*) link styling */
+}
+
 
 $table-headings: variables.$comet-darkblue;
 $table-color: variables.$comet-table-color; 

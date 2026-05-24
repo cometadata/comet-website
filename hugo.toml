@@ -5,6 +5,9 @@ theme = 'comet-theme'
 
 canonifyURLs = true
 
+[permalinks]
+  posts = "/blog/:slug/"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
@@ -20,6 +23,9 @@ canonifyURLs = true
 # this get added to the end of the main style file
 [params.custom_css]
 name = "sass/_cometadata.scss"
+
+[params]
+  dateForm = "1/2/06"
 
 [menu]
 [[menu.main]]

@@ -3,7 +3,7 @@
 
     <div class="media col-5">
         <a href="{{ .Permalink }}">
-            <img src="{{ .Site.BaseURL }}{{ .Params.Media }}"  class="img-fluid"/>
+            <img src="{{ .Site.BaseURL }}{{ .Params.media }}"  class="img-fluid"/>
         </a>
     </div>
 
@@ -35,7 +35,7 @@
         
         <div>
             Date:
-            {{ .Date.Format "2006-01-02" }}
+            {{ .Date.Format (.Site.Params.dateForm | default "1/2/06") }}
         </div>
         {{ if .Summary }}
         {{ .Summary | plainify }}

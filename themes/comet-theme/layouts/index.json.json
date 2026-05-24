@@ -5,7 +5,7 @@
     "title": {{ $page.Title | jsonify }},
     "permalink": {{ printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.RelPermalink | jsonify }},
     "media": {{ or (printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.Params.media) "" | jsonify }},
-    "date": {{ $page.Date.Format "2006-01-02" | jsonify }},
+    "date": {{ $page.Date.Format ($.Site.Params.dateForm | default "1/2/06") | jsonify }},
     "summary": {{ $page.Summary | plainify | jsonify }},
     "authors": [
       {{- range $author_index, $author := $page.Params.authors }}
