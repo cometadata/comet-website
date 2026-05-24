@@ -80,6 +80,45 @@ def download_image(url: str, dest: Path) -> None:
     dest.write_bytes(data)
 
 
+def normalize_html_indent(body: str) -> str:
+    """Dedent indented HTML blocks so Goldmark does not render them as code."""
+    lines = body.split("\n")
+    out: list[str] = []
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+        if not line.strip():
+            out.append("")
+            i += 1
+            continue
+
+        if line.startswith((" ", "\t")) and "<" in line:
+            block: list[str] = []
+            while i < len(lines):
+                current = lines[i]
+                if not current.strip():
+                    block.append("")
+                    i += 1
+                    continue
+                if current.startswith((" ", "\t")) or (
+                    block and not current.lstrip().startswith("<") and block[-1].strip()
+                ):
+                    block.append(current)
+                    i += 1
+                    continue
+                break
+
+            for entry in block:
+                out.append(entry.lstrip() if entry.strip() else "")
+            continue
+
+        out.append(line.lstrip() if line.lstrip().startswith("<") else line)
+        i += 1
+
+    return "\n".join(out)
+
+
 def add_comet_doi_classes(content: str) -> str:
     def repl(match: re.Match[str]) -> str:
         tag = match.group(0)
@@ -192,6 +231,7 @@ def main() -> int:
         downloaded: dict[str, str] = {}
         body = localize_images(body, slug, downloaded)
         body = add_comet_doi_classes(body)
+        body = normalize_html_indent(body)
 
         write_post(
             slug=slug,

@@ -1,0 +1,58 @@
+{{ $authorPosts := slice }}
+{{- with .Params.authors -}}
+	{{ $authorName := index . 0 }}
+	{{ $authorPosts = where (where (where $.Site.RegularPages "Section" "posts") "Params.authors" "intersect" (slice $authorName)) "Permalink" "ne" $.Permalink }}
+{{- end -}}
+
+{{ $relatedPosts := slice }}
+{{- with .Params.related -}}
+	{{ range . }}
+		{{ with $.Site.GetPage (printf "/posts/%s" .) }}
+			{{ $relatedPosts = $relatedPosts | append . }}
+		{{ end }}
+	{{ end }}
+{{- end -}}
+
+{{ $hasAuthorPosts := gt (len $authorPosts) 0 }}
+{{ $hasRelatedPosts := gt (len $relatedPosts) 0 }}
+
+<aside class="article-aside" aria-label="Article supporting information">
+	<article class="article-box aside-box on-this-page-box" id="toc-aside-box">
+		<h2 class="aside-heading">On this page</h2>
+		<nav aria-label="On this page">
+			<ul id="toc-nav"></ul>
+		</nav>
+	</article>
+
+	{{ if $hasAuthorPosts }}
+	<article class="article-box aside-box">
+		<h2 class="aside-heading">Other posts by this author</h2>
+		<ul class="aside-post-list" id="author-nav">
+			{{ range first 5 $authorPosts }}
+			<li>
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+				{{ with index .Params.categories 0 }}
+				<span class="aside-post-meta">{{ . }}</span>
+				{{ end }}
+			</li>
+			{{ end }}
+		</ul>
+	</article>
+	{{ end }}
+
+	{{ if $hasRelatedPosts }}
+	<article class="article-box aside-box">
+		<h2 class="aside-heading">Related posts</h2>
+		<ul class="aside-post-list" id="related-nav">
+			{{ range $relatedPosts }}
+			<li>
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+				{{ with index .Params.categories 0 }}
+				<span class="aside-post-meta">{{ . }}</span>
+				{{ end }}
+			</li>
+			{{ end }}
+		</ul>
+	</article>
+	{{ end }}
+</aside>

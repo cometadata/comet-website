@@ -1,0 +1,48 @@
+{{ define "main" }}
+	<main aria-role="main">
+		<header class="homepage-header"></header>
+		<div class="homepage-content">
+			<section class="section-block blog-post">
+				<div>
+					<div class="article-layout">
+						<div class="article-main">
+							<article class="article-box article-header">
+								{{ if or .Params.categories .Params.tags }}
+								<div class="post-taxonomy">
+									{{- range .Params.categories -}}
+									<span class="cat-badge">{{ . }}</span>
+									{{- end -}}
+									{{- range .Params.tags -}}
+									<span class="tag-badge">{{ . }}</span>
+									{{- end -}}
+								</div>
+								{{ end }}
+
+								<div class="post-meta-row">
+									{{- with .Params.authors -}}
+									<span>{{ delimit . ", " }}</span>
+									{{- end -}}
+									<span>{{ .Date.Format (.Site.Params.dateForm | default "1/2/06") }}</span>
+								</div>
+
+								<h1>{{ .Title }}</h1>
+
+								{{ with .Summary }}
+								<div class="article-summary">{{ . }}</div>
+								{{ end }}
+							</article>
+
+							<article class="article-box article-body">
+								<div class="the-content">
+									{{ .Content }}
+								</div>
+							</article>
+						</div>
+
+						{{ partial "blog/post-aside.html" . }}
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+{{ end }}
