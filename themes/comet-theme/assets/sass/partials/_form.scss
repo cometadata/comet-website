@@ -50,3 +50,112 @@ button.button-tertiary {
     }
     
 }
+form {
+    [class*="col-"] {
+        width:100%;
+    }
+    label {
+        margin-top:25px;
+    }
+    input[type='text'] {
+        margin-top:10px;
+        border: 2px solid variables.$comet-button-secondary;
+        border-radius: 20px;
+        padding:5px 25px;
+    }
+    .checkboxes {        
+        label {
+            margin-top:0;
+            font-weight:normal;
+            float:left;
+        }
+    }
+    input[type='submit'] {
+        background-color: variables.$comet-button-secondary;
+        color:#fff;
+        border:2px solid #fff;
+        padding: 5px 25px;
+        border-radius: 20px;
+        transition: all variables.$transition-time;
+        &:hover {
+            background-color: #fff;
+            color:variables.$comet-button-secondary;
+            transition: all variables.$transition-time;
+            border:2px solid variables.$comet-button-secondary;
+        }
+    }
+    .comet {
+        .comet-line.down {
+            .comet-line-line {
+                margin-top:-100px;
+                margin-left:1px;
+            }
+        }
+    }
+}
+
+
+/* Container to align things vertically */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+}
+
+/* Hide the default native browser checkbox */
+.round-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Base style for the custom circle shape */
+.round-checkbox + label {
+  position: relative;
+  padding-left: 30px; /* Space for the custom circle */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Create the outer circle ring */
+.round-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid variables.$comet-button-secondary;
+  border-radius: 50%; /* Makes it perfectly round */
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Create the hidden checkmark icon inside the circle */
+.round-checkbox + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-55%) rotate(45deg); /* Rotates the lines into a checkmark */
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0; /* Creates the L-shape of a check */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease;
+}
+
+/* Active State: Fill the background circle on click/tick */
+.round-checkbox:checked + label::before {
+  background-color: variables.$comet-button-secondary; /* The fill colour */
+  border-color: variables.$comet-button-secondary;
+}
+
+/* Active State: Show the white checkmark on tick */
+.round-checkbox:checked + label::after {
+  opacity: 0;
+}

@@ -5,11 +5,11 @@
     <div>{{ .content | markdownify }}</div>
     <form>
         <div class="row">
-            <div class="row col-7">
-                <div class="col-12">
-                    Your details
+            <div class="row col-6 mt-3">
+                <div class="details col-12">
+                    <h3>Your details</h3>
                 </div>
-                <div class="row">
+                <div class="row m-0 p-0">
                     <div class="col-6">
                         <label>First name*
                             <input type="text" name="firstname" required/>
@@ -22,7 +22,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row m-0 p-0">
                     <div class="col-6">
                         <label>Primary affiliation*
                             <input type="text" name="primary" required/>
@@ -34,7 +34,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row m-0 p-0">
                     <div class="col-6">
                         <label>Email*
                             <input type="text" name="email" required/>
@@ -46,78 +46,49 @@
                         </label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <label>Anything else you’d like us to know
-                            <textarea name="freetext"></textarea>
-                        </label>
-                    </div>                
-                </div>
                 
-            </div>    
+            </div> 
+            
+            <div class="comet row col-1 m-0"> 
+                {{ partial "blocks/comet-line-down.html" }} 
+            </div>
 
 
-            <div class="row col-5 checkboxes">
-                <div class="row col-12">                
-                    <div class="col-1">
-                        <input type="checkbox" name="join-community"  id="join-community"/>
-                    </div>
-                    <div class="col">
-                        <label for="join-community">
-                            Join community
-                        </label>
+            <div class="row col-5 checkboxes align-content-start checkbox-container">
+                <div class="details col-12 mt-3">
+                    <h3>Areas of participation</h3>
+                </div>
+                <div class="row col-12 flex-column">                
+                    <div class="col-12 mt-3 m-0 p-0">
                         <div>
-                            Receive updates and participate in the wider COMET network.
+                            Join community
                         </div>
+                                               
+                    </div>
+                    <div class="d-flex align-items-center justify-content-flex-start gap-2 mt-2 m-0 p-0">
+                        <input type="checkbox" name="join-community"  id="join-community" class="round-checkbox"/>
+                        <label for="join-community">
+                            Receive updates
+                        </label> 
                     </div>
                 </div> 
-                <div class="row col-12">               
-                    <div class="col-1">               
-                        <input type="checkbox" name="participate"  id="participate"/>
+
+
+                <div class="row col-12 flex-column">               
+                    <div class="col-12 mt-3 m-0 p-0">  
+                        <div>Participate in project collaborations</div>             
                     </div>
-                    <div class="col">
+                    <div class="d-flex align-items-center justify-content-flex-start gap-2 mt-2 m-0 p-0">
+                        <input type="checkbox" name="participate"  id="participate" class="round-checkbox"/>
                         <label for="participate">
-                            Participate in project collaborations
+                            Receive updates
                         </label>
-                        <div>Take part in pilot or enrichment work.</div>
                     </div>
                 </div>  
-                <div class="row col-12">               
-                    <div class="col-1">               
-                        <input type="checkbox" name="support"  id="support"/>
-                    </div>
-                    <div class="col">
-                        <label for="support">
-                            Offer in-kind support
-                        </label>
-                        <div>Share expertise, infrastructure, or implementation help.</div>
-                    </div>
-                </div> 
-                <div class="row col-12">               
-                    <div class="col-1">               
-                        <input type="checkbox" name="financial"  id="financial"/>
-                    </div>
-                    <div class="col">
-                        <label for="financial">
-                            Offer financial support
-                        </label>
-                        <div>Support the ongoing development of COMET.</div>
-                    </div>
-                </div> 
-                <div class="row col-12">               
-                    <div class="col-1">               
-                        <input type="checkbox" name="other"  id="other"/>
-                    </div>
-                    <div class="col">
-                        <label for="other">
-                            Other
-                        </label>
-                        <div>Use the message field to describe another route to participate.</div>
-                    </div>
-                </div> 
+               
             </div>
         </div>
-        <div class="row col-12">
+        <!--<div class="row col-12">
             <div class="col text-start">               
                 <input type="checkbox" name="confirm"  id="confirm"/>
                 <label for="confirm">
@@ -126,7 +97,7 @@
                 
             </div>
             
-        </div>
+        </div>-->
         
         <div class="row">
             <div class="col text-end">
