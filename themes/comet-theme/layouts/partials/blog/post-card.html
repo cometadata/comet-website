@@ -1,0 +1,24 @@
+{{ $post := .post }}
+{{ $horizontal := .horizontal | default false }}
+<article class="media-card{{ if $horizontal }} horizontal{{ end }}">
+    <a class="media-card-image editorial no-underline" href="{{ $post.Permalink }}">
+        {{ with $post.Params.media }}
+        <img src="{{ . | absURL }}" alt="{{ $post.Title }}" loading="lazy">
+        {{ end }}
+    </a>
+    <div class="media-card-body">
+        {{ if or $post.Params.categories $post.Params.tags }}
+        {{ partial "blog/taxonomy-badges.html" (dict "categories" $post.Params.categories "tags" $post.Params.tags) }}
+        {{ end }}
+        <div class="post-meta-row">
+            {{- with $post.Params.authors -}}
+            <span>{{ delimit . ", " }}</span>
+            {{- end -}}
+            <span>{{ $post.Date.Format "January 2, 2006" }}</span>
+        </div>
+        <h3><a class="post-title-link no-underline" href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
+        {{ with $post.Summary }}
+        <p>{{ . | plainify }}</p>
+        {{ end }}
+    </div>
+</article>

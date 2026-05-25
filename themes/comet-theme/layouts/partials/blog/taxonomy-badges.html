@@ -1,0 +1,9 @@
+{{ $blogURL := "/posts/" | relURL }}
+<div class="post-taxonomy">
+    {{- range .categories -}}
+    <a href="{{ $blogURL }}?category={{ . | urlize }}" class="cat-badge no-underline">{{ . }}</a>
+    {{- end -}}
+    {{- range .tags -}}
+    <a href="{{ $blogURL }}?tag={{ . | urlize }}" class="tag-badge no-underline">{{ . }}</a>
+    {{- end -}}
+</div>

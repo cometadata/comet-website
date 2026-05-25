@@ -1,7 +1,7 @@
 <section class="section-block hero-intro {{ .variant }}">
     <div>
         {{ if eq .variant "with-cta" }}
-            <i>with-cta layout invoked</i>        
+            <i class="debug-info">with-cta layout invoked</i>
         {{ else if eq .variant "media-right" }}
         
             <i class="debug-info">media-right layout invoked</i>  
@@ -51,9 +51,9 @@
             </div>
 
         {{ else if eq .variant "with-bullets" }}
-            <i>with-bullets layout invoked</i>  
+            <i class="debug-info">with-bullets layout invoked</i>
         {{ else }}
-            <i>Default layout invoked</i>  
+            <i class="debug-info">Default layout invoked</i>
         {{ end }}
     </div>
 </section>

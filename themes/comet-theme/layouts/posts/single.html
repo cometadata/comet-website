@@ -8,14 +8,7 @@
 						<div class="article-main">
 							<article class="article-box article-header">
 								{{ if or .Params.categories .Params.tags }}
-								<div class="post-taxonomy">
-									{{- range .Params.categories -}}
-									<span class="cat-badge">{{ . }}</span>
-									{{- end -}}
-									{{- range .Params.tags -}}
-									<span class="tag-badge">{{ . }}</span>
-									{{- end -}}
-								</div>
+								{{ partial "blog/taxonomy-badges.html" (dict "categories" .Params.categories "tags" .Params.tags) }}
 								{{ end }}
 
 								<div class="post-meta-row">

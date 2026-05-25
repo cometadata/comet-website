@@ -6,6 +6,9 @@
     "permalink": {{ printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.RelPermalink | jsonify }},
     "media": {{ or (printf "%s%s" (strings.TrimRight "/" .Site.BaseURL) $page.Params.media) "" | jsonify }},
     "date": {{ $page.Date.Format ($.Site.Params.dateForm | default "1/2/06") | jsonify }},
+    "dateLong": {{ $page.Date.Format "January 2, 2006" | jsonify }},
+    "dateSort": {{ $page.Date.Unix }},
+    "featured": {{ $page.Params.featured | default false }},
     "summary": {{ $page.Summary | plainify | jsonify }},
     "authors": [
       {{- range $author_index, $author := $page.Params.authors }}

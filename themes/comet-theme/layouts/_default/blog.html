@@ -3,14 +3,12 @@
       <header class="homepage-header">
       </header>
       <div class="homepage-content">
-        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
         {{ with hugo.Data.blog }}
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
-        {{ end }} 
+        {{ end }}
 
-        
         <section class="section-block featured-post">
           <div>
             {{ range where (where .Site.RegularPages "Section" "posts") ".Params.featured" true }}
@@ -19,75 +17,58 @@
           </div>
         </section>
 
-
         <section class="section-block blog">
-          <div class="row">
-            <div class='col-12 d-flex flex-wrap' id="filter-controls">
-              <div class="col-sm-6 col-xl-4">
-                <!-- Text Search Input -->
-                <input type="text" id="search-input" placeholder="Search titles or summary...">
+          <div>
+            <div class="filter-bar" id="filter-controls" data-blog-url="{{ "/posts/" | relURL }}">
+              <div class="filter-group">
+                <label class="filter-label" for="cat-dropdown">Category</label>
+                <select id="cat-dropdown" class="filter-select">
+                  <option value="all">All categories</option>
+                  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                    <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                  {{ end }}
+                </select>
               </div>
 
-              <!-- Dynamic Tag Dropdown -->
-
-              
-              <div class="col-sm-6 col-xl-4">
-              <label for="cat-dropdown">Category</label>
-                <select id="cat-dropdown">
-                <option value="all">All Categories</option>
-                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
-                {{ end }}
-              </select>
+              <div class="filter-group">
+                <label class="filter-label" for="tag-dropdown">Topic</label>
+                <select id="tag-dropdown" class="filter-select">
+                  <option value="all">All topics</option>
+                  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                    <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                  {{ end }}
+                </select>
               </div>
 
-              
-              <div class="col-sm-6 col-xl-4">
-              <label for="tag-dropdown">Topic</label>
-              <select id="tag-dropdown">
-                <option value="all">All Topics</option>
-                {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
-                {{ end }}
-              </select>
+              <div class="filter-group">
+                <label class="filter-label" for="author-dropdown">Author</label>
+                <select id="author-dropdown" class="filter-select">
+                  <option value="all">All authors</option>
+                  {{ range $name, $taxonomy := .Site.Taxonomies.authors }}
+                    <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
+                  {{ end }}
+                </select>
               </div>
 
-              
-              <div class="col-sm-6 col-xl-4">
-              <!-- Dynamic Author Dropdown -->
-              <label for="author-dropdown">Author</label>
-              <select id="author-dropdown">
-                <option value="all">All Authors</option>
-                {{ range $name, $taxonomy := .Site.Taxonomies.authors }}
-                  <option value="{{ $name | urlize }}">{{ $name | humanize }}</option>
-                {{ end }}
-              </select>
-              </div>
-            
-              
-              <div class="col-sm-6 col-xl-4">
-              <!-- Sort Order Dropdown -->
-              <select id="sort-dropdown">
-                <option value="desc">Newest to oldest</option>
-                <option value="asc">Oldest to newest</option>
-              </select>
-              </div>
-
-              
-              <div class="col-sm-6 col-xl-4">
-              <button type="button" id="clear-filters-btn">Clear Filters</button>
+              <div class="filter-actions">
+                <div class="filter-group">
+                  <label class="filter-label" for="sort-dropdown">Date order</label>
+                  <select id="sort-dropdown" class="filter-select">
+                    <option value="desc">Newest to oldest</option>
+                    <option value="asc">Oldest to newest</option>
+                  </select>
+                </div>
+                <button type="button" id="clear-filters-btn" class="filter-chip clear">
+                  <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                  Clear filters
+                </button>
               </div>
             </div>
-            <!-- Dynamic Container for Results -->
-            <div class='col-12' id="posts-container"></div>
-            <!-- Pagination Controls Container -->
-            <div id="pagination-container"></div>
+
+            <div id="posts-container" class="media-grid three"></div>
+            <div id="pagination-container" class="pagination"></div>
           </div>
-
-
-
         </section>
-
+      </div>
     </main>
-    
 {{ end }}
