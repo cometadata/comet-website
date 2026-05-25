@@ -114,6 +114,19 @@ form {
     margin-bottom: 1em;
 }
 
+.form-stack {
+    .required-asterisk {
+        color: #c0392b;
+    }
+
+    .form-stack__required-note {
+        color: variables.$main-font-color;
+        font-weight: normal;
+        font-size: 0.95rem;
+        margin: 0.35em 0 0;
+    }
+}
+
 
 /* Container to align things vertically */
 .checkbox-container {
