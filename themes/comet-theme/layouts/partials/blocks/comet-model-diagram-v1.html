@@ -1,0 +1,14 @@
+<section class="section-block comet-model-diagram-v1">
+    <div>
+        <i class="debug-info">Comet Model Diagram v1</i>
+        <h2>{{ .headline }}</h2>
+        <div class="row comet-model-diagram-v1__row align-items-center">
+            <div class="comet-model-diagram-v1__media col-lg-9">
+                <img src="{{ .media | absURL }}" alt="{{ .media_alt }}" class="img-fluid">
+            </div>
+            <div class="comet-model-diagram-v1__content col-lg-3">
+                <div>{{ .content | markdownify }}</div>
+            </div>
+        </div>
+    </div>
+</section>

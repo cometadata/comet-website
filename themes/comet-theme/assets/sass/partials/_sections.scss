@@ -127,6 +127,50 @@ section.hero-intro.background {
 .cta-row {
     margin-top:1em;
 }
+
+.comet-model-diagram-v1 {
+    & > div {
+        padding: variables.$section-div-padding;
+    }
+
+    h2 {
+        margin-bottom: 1em;
+    }
+
+    &__row {
+        margin: 0;
+    }
+
+    &__media {
+        padding-right: 2rem;
+        background-color: #fff;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+        }
+    }
+
+    &__content {
+        color: variables.$main-font-color;
+
+        p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: variables.$break-large) {
+        &__media {
+            padding-right: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
 .text-media-band {
     &.image-left,
     &.image-right {
