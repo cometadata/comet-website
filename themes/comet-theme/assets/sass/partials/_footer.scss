@@ -1,4 +1,5 @@
 @use "partials/variables";
+
 footer {
 
     background: variables.$comet-darkblue;
@@ -17,47 +18,79 @@ footer {
     }    
       
     .row {
-        width: variables.$section-width;
-        margin:0 auto;
+        @include variables.site-container;
         display:flex;
         position:relative;
-        padding: 40px 20px;
+        padding: 40px 0;
 
         @media (max-width: variables.$break-large) {
         }
 
         @media (max-width: variables.$break-medium) {
             display:block;
-        }        
-    } 
+        }
 
-    .copyright {
+    }
+
+    .col.logo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-contact {
+        min-width: 0;
+    }
+
+    .address {
+        min-width: 0;
+    }
+
+    .copy {
         flex-basis:80%;
         font-size:0.9rem;
     }
-    .tandc,
-    .privacy {
-        white-space: nowrap;
-        a {
-            color: #fff;
-            border-bottom:0;
+
+    a {
+        color: #fff;
+        border-bottom: 0;
+        text-decoration: none;
+
+        &:hover {
+            color: variables.$comet-lightgreen;
+            border-bottom-color: transparent;
+            text-decoration: none;
         }
     }
+
     .socials {
-        padding:0;
-        margin:0;
-       
+        padding: 0;
+        margin: 1rem 0 0;
+
         ul {
-        padding:0;
-        margin:0;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+
             li {
-                list-style:none;
-                display:inline-block;
-                margin-left:10px;
-                font-size:1.5rem;
+                list-style: none;
+                display: inline-block;
+                margin: 0 10px 0 0;
+                font-size: 1.5rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
                 a {
-                    color:#fff;
-                    border-bottom:0;
+                    color: #fff;
+                    border-bottom: 0;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: variables.$comet-lightgreen;
+                        border-bottom: 0;
+                        text-decoration: none;
+                    }
                 }
             }
         }

@@ -11,7 +11,7 @@
                     <div>{{ .content | markdownify }}</div>
                 </div>    
                 <div class="media-col col-xl-3">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
+                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
             </div>
          
@@ -22,8 +22,8 @@
                 }
             </style>
             <i class="debug-info">background layout invoked</i>  
-            <div class="row ">
-                <div class="col-xl-6 p-1">
+            <div class="row">
+                <div class="col-xl-6">
                     <h1>{{ .headline }}</h1>
                     <div>{{ .content | markdownify }}</div>
                 </div>    
@@ -42,7 +42,7 @@
             <i class="debug-info">media-left layout invoked</i>  
             <div class="row"> 
                 <div class="media-col col-xl-3">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
+                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
                 <div class="col-xl-9">
                     <h1>{{ .headline }}</h1>

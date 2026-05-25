@@ -2,8 +2,7 @@
 
 .section-block {
     position:relative;
-    padding: variables.$section-padding;
-    width: variables.$section-width;
+    width: 100%;
     margin: 0 auto;
     margin-bottom:variables.$section-gap;
     display:flex;
@@ -74,8 +73,9 @@ section.hero-intro {
 
 section.hero-intro.background {
     background-size:cover;
+    background-position: center;
     align-items:flex-end;
-    border-radius:0;
+    border-radius: 0;
     width:100%;
     height: 60vh;
 
@@ -109,9 +109,10 @@ section.hero-intro.background {
             &:first-child {
                 align-items: flex-end;
             }
-            padding: 0;
-            width: variables.$section-width;
-            margin: 0 auto;
+            padding: variables.$section-div-padding;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
             .cta-col {
                 height: 55%;
                 text-align:center;
@@ -175,33 +176,61 @@ section.hero-intro.background {
     &.image-left,
     &.image-right {
         & > div {
-            padding:0;
-        }
-        .row {
-            align-items: stretch;
-        }
-        .media-col {
-            align-items: stretch;
             padding: 0;
+        }
+
+        .row {
+            display: flex;
+            align-items: stretch;
+            margin-left: 0;
+            margin-right: 0;
+            --bs-gutter-x: 0;
+            gap: 0;
+        }
+
+        .media-col,
+        .content-col {
+            flex: 1 1 0;
+            min-width: 0;
+            width: auto;
+            max-width: none;
+            padding: 0;
+        }
+
+        .media-col {
+            display: flex;
+            align-items: stretch;
+            min-height: 0;
             overflow: hidden;
+
             img {
+                flex: 1 1 auto;
                 width: 100%;
                 height: 100%;
+                min-height: 0;
                 object-fit: cover;
                 display: block;
             }
         }
+
         .content-col {
+            display: flex;
+            flex-direction: column;
+            padding: variables.$section-div-padding;
+
             h2 {
-                margin-top:variables.$section-div-padding;
-                margin-left:variables.$section-div-padding;
+                margin: 0 0 1rem;
             }
+
             & > div {
-                padding: variables.$section-padding;
-                background-color:#fff;
+                padding: 0;
+                background-color: transparent;
+            }
+
+            .comet-line {
+                margin-top: 1.5rem;
             }
         }
-        
     }
 }
 

@@ -48,7 +48,7 @@
 			"transpiler" "dartsass"
 		}}
 		{{ with . | toCSS $opts }}
-			{{ if hugo.IsProduction }}
+			{{ if and hugo.IsProduction (not hugo.IsServer) }}
 				{{ with . | fingerprint }}
 					<link rel="stylesheet" href="{{ .RelPermalink }}?v={{ .Data.Integrity }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 				{{ end }}

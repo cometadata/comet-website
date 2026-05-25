@@ -1,33 +1,30 @@
 
 <footer>
 
-	<div class="row">
+	<div class="row footer-brand">
 		<div class="col logo">			
 			<a href="{{ .Site.BaseURL }}">
-				<img class="header-logo" src="{{ .Site.BaseURL }}images/logos/
-COMET_Logo_2026_Colour_RGB 1.svg" />
+				<img class="header-logo" src="{{ "/images/logos/COMET_Logo_2026_Colour_RGB 1.svg" | relURL }}" alt="COMET" />
 			</a>	
 		</div>
 	</div>
 	
 	
-	<div class="row">
-		<div class="address">
-			{{ hugo.Data.footer.address_text.text |markdownify }}
-		</div>
-		<div class='socials'>
-			<ul class="socials-side">
-				{{ range hugo.Data.footer.socials.socials }}				
-					<li><a href="{{ .url }}">{{ .icon | safeHTML }}</a></li>
-				{{ end }}
-			</ul>
+	<div class="row footer-meta">
+		<div class="footer-contact">
+			<div class="address">
+				{{ hugo.Data.footer.address_text.text |markdownify }}
+			</div>
+			<div class="socials">
+				<ul class="socials-side">
+					{{ range hugo.Data.footer.socials.socials }}
+						<li><a href="{{ .url }}" class="no-underline">{{ .icon | safeHTML }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div class="row d-flex flex-row mt-0 pt-0 justify-content-between align-items-center">
-		<div class="col-3 copy">&copy; COMET</div>
-		<div class="col-auto d-flex flex-row flex-wrap-nowrap text-end">
-			<div class='col tandc m-3'><a href='#'>Terms & Conditions</a></div>
-			<div class='col privacy m-3'><a href='#'>Privacy</a></div>
-		</div>
+	<div class="row footer-bottom">
+		<div class="copy">&copy; COMET {{ now.Year }}</div>
 	</div>
 </footer>

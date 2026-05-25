@@ -9,10 +9,28 @@
     .text-media-band.image-right,
     section.hero-intro.media-right,
     section.hero-intro.media-left {
-        .media-col img {
-            height: auto;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+        .row {
+            display: block;
+            gap: 0;
+        }
+
+        .media-col,
+        .content-col {
+            flex: none;
+            width: 100%;
+        }
+
+        .media-col {
+            img {
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+            }
+        }
+
+        .content-col {
+            padding: variables.$section-div-padding;
         }
     }
 }

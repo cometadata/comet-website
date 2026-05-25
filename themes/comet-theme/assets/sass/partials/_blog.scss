@@ -324,9 +324,7 @@
 }
 
 .section-block.blog-post {
-    width: variables.$section-width;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 
     & > div {
         background-color: transparent;
@@ -336,8 +334,7 @@
 }
 
 .homepage-content {
-    width: variables.$section-width;
-    margin: 0 auto;
+    @include variables.site-container;
 }
 
 .article-layout {
