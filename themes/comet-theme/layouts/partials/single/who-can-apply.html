@@ -9,7 +9,7 @@
                 {{ range .keypoints }}
                     <div class="bullet-wrapper" >
                             <div class="icon-wrapper">
-                                <div class="icon" style="background-image: url({{ .icon }});"></div>
+                                <div class="icon" style="background-image: url('{{ .icon | relURL }}');"></div>
                             </div>
                             <div class="text">{{ .text }}</div>
                     </div>

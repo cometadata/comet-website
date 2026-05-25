@@ -3,7 +3,7 @@
 <article class="media-card{{ if $horizontal }} horizontal{{ end }}">
     <a class="media-card-image editorial no-underline" href="{{ $post.Permalink }}">
         {{ with $post.Params.media }}
-        <img src="{{ . | absURL }}" alt="{{ $post.Title }}" loading="lazy">
+        <img src="{{ . | relURL }}" alt="{{ $post.Title }}" loading="lazy">
         {{ end }}
     </a>
     <div class="media-card-body">

@@ -11,14 +11,14 @@
             <div class="line-wrapper">
                 <div class="line-background"></div>
                 <div class="drawing-line">
-                    <img src="{{ .Site.BaseURL }}/images/logos/comet-line-start.svg" />
+                    <img src="{{ "/images/logos/comet-line-start.svg" | relURL }}" />
                 </div>
             </div>
             <div class="medias">
-                <img class='desktop primary'   src="{{ .Site.BaseURL }}{{ .mediaPrimary }}" />
-                <img class='desktop secondary' src="{{ .Site.BaseURL }}{{ .mediaSecondary }}" />    
-                <img class='mobile primary'   src="{{ .Site.BaseURL }}{{ .mediaPrimaryMobile }}" />
-                <img class='mobile secondary' src="{{ .Site.BaseURL }}{{ .mediaSecondaryMobile }}" />              
+                <img class='desktop primary'   src="{{ .mediaPrimary | relURL }}" />
+                <img class='desktop secondary' src="{{ .mediaSecondary | relURL }}" />    
+                <img class='mobile primary'   src="{{ .mediaPrimaryMobile | relURL }}" />
+                <img class='mobile secondary' src="{{ .mediaSecondaryMobile | relURL }}" />              
             </div>
         </div>
     </div>

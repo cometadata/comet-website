@@ -39,7 +39,7 @@
             <i class="debug-info">image-left layout invoked</i>  
             <div class="row"> 
                 <div class="media-col col-xl-6">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
+                    <img src="{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
                 <div class="content-col col-xl-6">
                     <h2>{{ .headline }}</h2>
@@ -59,7 +59,7 @@
                     {{ partial "blocks/comet-line-right.html" }} 
                 </div> 
                 <div class="media-col col-xl-6">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
+                    <img src="{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>  
             </div>     
  

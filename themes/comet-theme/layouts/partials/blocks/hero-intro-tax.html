@@ -11,7 +11,7 @@
                     <div>{{ .content | markdownify }}</div>
                 </div>    
                 <div class="media-col col-3">
-                    <img src="{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
+                    <img src="{{ .media | relURL }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@
             <i class="debug-info">media-left layout invoked</i>  
             <div class="row"> 
                 <div class="media-col col-3">
-                    <img src="{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
+                    <img src="{{ .media | relURL }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>
                 <div class="col-9">
                     <h1>{{ hugo.Store.Get "taxTitle" }}</h1>

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     postsPerPage: 9
   };
 
-  const blogListURL = filterControls.dataset.blogUrl || "/posts/";
+  const blogListURL = filterControls.dataset.blogUrl || new URL("posts/", window.location.href).pathname;
   const paginationContainer = document.getElementById("pagination-container");
   const container = document.getElementById("posts-container");
   const tagDropdown = document.getElementById("tag-dropdown");
@@ -24,10 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearButton = document.getElementById("clear-filters-btn");
   const sortDropdown = document.getElementById("sort-dropdown");
 
-  let indexLocation = "/index.json";
-  if (document.location.origin == "https://cometadata.github.io") {
-    indexLocation = "/comet-website/index.json";
-  }
+  const indexLocation = filterControls.dataset.indexUrl || new URL("index.json", window.location.href).pathname;
 
   const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w\-]+/g, "");
 

@@ -1,5 +1,5 @@
 {{ with hugo.Data.home.resolver }}
-<section class="home-resolve" style="background-image:url({{ .image }});">
+<section class="home-resolve" style="background-image:url('{{ .image | relURL }}');">
     <div class="row">
         <div class="col left">
             <h2 class="title">{{ .title }}</h2>

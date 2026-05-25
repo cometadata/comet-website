@@ -11,14 +11,14 @@
                     <div>{{ .content | markdownify }}</div>
                 </div>    
                 <div class="media-col col-xl-3">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
+                    <img src="{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
             </div>
          
         {{ else if eq .variant "background" }}
             <style>
                 section.hero-intro {
-                    background-image:url('{{ printf "%s%s" (strings.TrimRight "/" site.BaseURL) .media }}');
+                    background-image:url('{{ .media | relURL }}');
                 }
             </style>
             <i class="debug-info">background layout invoked</i>  
@@ -42,7 +42,7 @@
             <i class="debug-info">media-left layout invoked</i>  
             <div class="row"> 
                 <div class="media-col col-xl-3">
-                    <img src="{{ .Site.BaseURL }}{{ .media }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
+                    <img src="{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
                 <div class="col-xl-9">
                     <h1>{{ .headline }}</h1>

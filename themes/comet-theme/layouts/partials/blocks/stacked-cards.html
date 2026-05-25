@@ -79,7 +79,7 @@
                         <div class="d-flex stacked-element flex-column gx-0">
                             {{ if .media }}
                             <div class="media col-lg-3">
-                                <img src="{{ .Site.BaseURL }}{{ .media }}"  class="img-fluid"/>
+                                <img src="{{ .media | relURL }}"  class="img-fluid"/>
                             </div>
                             {{ end }}
                             <div class="col">
@@ -121,7 +121,7 @@
                         {{ range .orgs }}
                             <div class="orgs stacked-element">
                                 <div class="org-logo">
-                                    <img src="{{ .Site.BaseURL }}{{ .media }}" class="img-fluid" alt="{{ .link_text }}">
+                                    <img src="{{ .media | relURL }}" class="img-fluid" alt="{{ .link_text }}">
                                 </div>
                                 <div class="link-out">
                                     <a href="{{ .link }}" class='no-underline' target="_blank" rel="noopener noreferrer"><button class="reverse">{{ .link_text }} <i class='fa-solid fa-fw fa-external-link'></i></button></a>

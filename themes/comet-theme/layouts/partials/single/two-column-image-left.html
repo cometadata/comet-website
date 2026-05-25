@@ -1,7 +1,7 @@
-<section class="single-two-column image-left" style="background-color:{{ .background_color }};background-image:url({{ .background_image }})">
+<section class="single-two-column image-left" style="background-color:{{ .background_color }};background-image:url('{{ .background_image | relURL }}')">
     <div class="row">
         <div class="col left image fadein">
-            <img src="{{ .image }}">
+            <img src="{{ .image | relURL }}">
         </div>
         <div class="col right">
             <h2 class="title">{{ .title }}</h2>

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col left">
             <h2 class='title'>WHAT IS THE</h2>
-            <img class='what-is-logo' src="/images/logos/DOI Logo-Landscape RGB cropped.svg" />
+            <img class='what-is-logo' src="{{ "/images/logos/DOI Logo-Landscape RGB cropped.svg" | relURL }}" />
         </div>
         <div class="col right">
             {{ range $index, $element := .points }}

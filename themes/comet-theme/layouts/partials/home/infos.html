@@ -4,7 +4,7 @@
 
     {{ range sort hugo.Data.home.infos "weight" }}
         <div class="col" >
-            <div class='icon'><img src="{{ .icon }}"/></div>
+            <div class='icon'><img src="{{ .icon | relURL }}"/></div>
             <h2 class="title">{{ .title }}</h2>
             <div class="maintext">{{ .maintext | markdownify }}</div>
 

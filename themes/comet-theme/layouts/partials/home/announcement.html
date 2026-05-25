@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col left">
             <div class="wrapper{{ if .imagestyle }} {{ .imagestyle }}{{ else }} round{{ end }}">
-                <img src="{{ .image }}" />
+                <img src="{{ .image | relURL }}" />
             </div>
         </div>
         <div class="col right">
