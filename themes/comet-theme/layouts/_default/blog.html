@@ -22,15 +22,16 @@
 
         <section class="section-block blog">
           <div class="row">
-            <div class='col-12' id="filter-controls">
-              <div>
+            <div class='col-12 d-flex flex-wrap' id="filter-controls">
+              <div class="col-sm-6 col-xl-4">
                 <!-- Text Search Input -->
                 <input type="text" id="search-input" placeholder="Search titles or summary...">
               </div>
 
               <!-- Dynamic Tag Dropdown -->
 
-              <div>
+              
+              <div class="col-sm-6 col-xl-4">
               <label for="cat-dropdown">Category</label>
                 <select id="cat-dropdown">
                 <option value="all">All Categories</option>
@@ -40,7 +41,8 @@
               </select>
               </div>
 
-              <div>
+              
+              <div class="col-sm-6 col-xl-4">
               <label for="tag-dropdown">Topic</label>
               <select id="tag-dropdown">
                 <option value="all">All Topics</option>
@@ -50,7 +52,8 @@
               </select>
               </div>
 
-              <div>
+              
+              <div class="col-sm-6 col-xl-4">
               <!-- Dynamic Author Dropdown -->
               <label for="author-dropdown">Author</label>
               <select id="author-dropdown">
@@ -61,7 +64,8 @@
               </select>
               </div>
             
-              <div>
+              
+              <div class="col-sm-6 col-xl-4">
               <!-- Sort Order Dropdown -->
               <select id="sort-dropdown">
                 <option value="desc">Newest to oldest</option>
@@ -69,7 +73,8 @@
               </select>
               </div>
 
-              <div>
+              
+              <div class="col-sm-6 col-xl-4">
               <button type="button" id="clear-filters-btn">Clear Filters</button>
               </div>
             </div>

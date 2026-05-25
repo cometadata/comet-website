@@ -28,8 +28,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-
+{{ if .Params.load_jquery }}
 	<script type="text/javascript" src="/js/filter.js"></script>
+{{ end }}
 	<script type="text/javascript" src="/js/script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<!-- fontawesome now locally hosted -->
@@ -41,7 +42,7 @@
 
 	{{ with resources.Get "sass/main.scss" }}
 		{{ $opts := dict
-			"enableSourceMap" (not hugo.IsProduction)
+			"enableSourceMap" true
 			"outputStyle" (cond hugo.IsProduction "compressed" "expanded")
 			"targetPath" "css/style.css"
 			"transpiler" "dartsass"

@@ -6,9 +6,18 @@
     padding:20px;
     gap: 26px;
     & > div {
-        flex-basis:30%;
         padding:20px;
         color: variables.$comet-darkblue; 
+    }
+
+    .post-card {
+        
+        @media (min-width: variables.$break-medium) {
+            flex:1 0 45%;
+        }
+        @media (min-width: variables.$break-large) {
+            flex:1 0 30%;
+        }
     }
     .post-tags {
         display:flex;
@@ -46,14 +55,25 @@
         background-color:#fff;
         display:flex;
         justify-content: space-between;
-        align-items:center;
+        align-items:flex-end;
         margin-bottom: 20px;
         border-radius:6px;
         select {
             padding:5px;
         }
-        & > * {
+        label {
             display:block;
+        }
+        & > div {
+            display:block;
+
+            text-align:right;
+            
+            @media (max-width: variables.$break-large) {
+                text-align:left;
+                flex: 1 0 100%;
+                margin-top:20px;
+            }
         }
     }
 
@@ -221,6 +241,9 @@
         &:first-child {
             padding-top: 0;
         }
+        a {
+            border-bottom:0;
+        }
     }
 
     a {
@@ -274,6 +297,7 @@
         border-left: 2px solid transparent;
         text-decoration: none;
         line-height: 1.35;
+        border-bottom:0;
 
         &.tag-level-h2 {
             margin-left: 0;

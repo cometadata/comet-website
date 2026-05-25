@@ -18,13 +18,13 @@
                 
                     {{ range $index, $element := .elements }}
                         <div class="row stacked-element {{ $tv }}">
-                            <div class="col-3">
+                            <div class="col-xl-3">
                                 <h3 class="tag">{{ $element.title }}</h3>
                                 <div class="index">
                                     {{ add $index 1 }}
                                 </div>
                             </div>
-                            <div class="content col-9">
+                            <div class="content col-xl-9">
                                 <h3>{{ $element.headline }}</h3>
                                 <p>{{ $element.content |markdownify}}</p>
                             </div>
@@ -71,12 +71,12 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container {{ $lv }} mt-4 mb-4">
+                <div class="stacked-element-container {{ $lv }} mt-4 mb-4 flex-wrap gap-3">
                 
                     {{ range .elements }}
-                        <div class="row stacked-element col-4 flex-column">
+                        <div class="d-flex stacked-element flex-column gx-0">
                             {{ if .media }}
-                            <div class="media col-4">
+                            <div class="media col-lg-3">
                                 <img src="{{ .Site.BaseURL }}{{ .media }}"  class="img-fluid"/>
                             </div>
                             {{ end }}
@@ -142,11 +142,11 @@
             
             {{ else if eq $mv "advisors"}}
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-xl-4">
                         <h2>{{ .headline }}</h2>
                         <div>{{ .content | markdownify}}</div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-xl-8">
                         {{ if .advisors }}
                             <div class="stacked-element-container grid mb-2 mt-2">                    
                                 {{ range .advisors }}

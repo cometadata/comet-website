@@ -6,11 +6,11 @@
         
             <i class="debug-info">media-right layout invoked</i>  
             <div class="row">
-                <div class="col-9">
+                <div class="col-xl-9">
                     <h1>{{ .headline }}</h1>
                     <div>{{ .content | markdownify }}</div>
                 </div>    
-                <div class="media-col col-3">
+                <div class="media-col col-xl-3">
                     <img src="{{ .Site.BaseURL }}{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>
             </div>
@@ -27,8 +27,13 @@
                     <h1>{{ .headline }}</h1>
                     <div>{{ .content | markdownify }}</div>
                 </div>    
-                <div class="media-col col-xl-6 p-0">
-                    
+                <div class="col-xl-6 p-0 d-flex flex-column justify-content-end">
+                    {{ if .cta_url }}
+                        <div class="cta-col flex-column d-flex">
+                            <a href="{{ .cta_url }}" class='no-underline'><button class="{{ .cta_button_rank}}">{{ .cta_text }}</button></a>
+                            {{ partial "blocks/comet-line-down.html" }} 
+                        </div>
+                    {{ end }} 
                 </div>
             </div>
 
@@ -36,10 +41,10 @@
 
             <i class="debug-info">media-left layout invoked</i>  
             <div class="row"> 
-                <div class="media-col col-3">
+                <div class="media-col col-xl-3">
                     <img src="{{ .Site.BaseURL }}{{ .media }}"  alt="{{ .media_alt }}" title="{{ .media_hover }}" class="img-fluid"/>
                 </div>
-                <div class="col-9">
+                <div class="col-xl-9">
                     <h1>{{ .headline }}</h1>
                     <div>{{ .content | markdownify }}</div>
                 </div>   

@@ -11,6 +11,8 @@ body {
 
 .row {
     display:flex;
+    margin-left:0;
+    margin-right:0;
     
 
     @media (max-width: variables.$break-large) {

@@ -29,11 +29,11 @@
                    
         {{ else }}
             <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4">
                     <h2>{{ .headline }}</h2>
                     <div>{{ .content | markdownify }}</div>
                 </div>    
-                <div class="col-8">                    
+                <div class="col-xl-8">                    
                     <div>{{ .table | markdownify }}</div>
                      {{ if .cta_text }}
                     <div class="cta-attached right d-flex {{ .color }}">

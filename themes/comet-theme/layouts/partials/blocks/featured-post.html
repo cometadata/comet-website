@@ -1,13 +1,13 @@
 <i>featured post</i>
-<div class="d-flex">
+<div class="d-flex flex-wrap">
 
-    <div class="media col-5">
+    <div class="media col-lg-5">
         <a href="{{ .Permalink }}">
             <img src="{{ .Site.BaseURL }}{{ .Params.media }}"  class="img-fluid"/>
         </a>
     </div>
 
-    <div class="col-7 post-entry text-secondary p-2">
+    <div class="col-lg-7 post-entry text-secondary p-2">
         <a href="{{ .Permalink }}">
             <h3>{{ .Title }} </h3>
         </a>
