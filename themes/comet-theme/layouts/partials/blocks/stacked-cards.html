@@ -168,7 +168,7 @@
                                     {{ end }}
                                     <h3>{{ .headline }}</h3>
                                     {{ with .collaborators }}
-                                    <p class="project-collaborators{{ if $.label }} project-collaborators-lead{{ end }}"><strong>Collaborators:</strong> {{ . }}</p>
+                                    <p class="project-collaborators"><strong>Collaborators:</strong> {{ . | safeHTML }}</p>
                                     {{ end }}
                                     <p>{{ .content |markdownify}}</p>
                                 </div>

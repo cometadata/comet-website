@@ -20,9 +20,8 @@ elements:
     link: "https://docs.google.com/document/d/1OXN8-ZxZwJrzwA6EraSwfCjXx0eFJx2jmzter1hgx6M/edit?usp=sharing"
 
   - status: "Planned"
-    label: "Lead"
     headline: "Posters.Science"
-    collaborators: "The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI2)"
+    collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI2) <span class="highlight">LEAD</span>'
     content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
 
   - status: "Complete"

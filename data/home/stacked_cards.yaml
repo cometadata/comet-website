@@ -7,7 +7,7 @@ content: "There is strength in numbers. In metadata. In collaborating. In sharin
 
 cta_content: "Willing to lend a hand? You can choose any one of these routes, or combine more than one."
 cta_link_text: "Get in touch"
-cta_link_url: "#link"
+cta_link_url: "/join-us/"
 button_rank: "button-tertiary"
 
 elements:

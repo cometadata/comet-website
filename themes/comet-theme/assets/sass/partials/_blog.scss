@@ -70,6 +70,7 @@
     background: #fff;
     overflow: hidden;
     height: 100%;
+    padding: 16px 18px 20px;
 
     a.media-card-image,
     a.post-title-link {
@@ -85,7 +86,8 @@
     &.horizontal {
         grid-template-rows: none;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 0;
+        gap: 0 20px;
+        padding: 24px 28px;
     }
 }
 
@@ -93,6 +95,7 @@
     display: block;
     overflow: hidden;
     background-color: #e8ecef;
+    margin-bottom: 12px;
 
     &.editorial {
         aspect-ratio: 16 / 9;
@@ -111,10 +114,11 @@
     aspect-ratio: auto;
     min-height: 220px;
     height: 100%;
+    margin-bottom: 0;
 }
 
 .media-card-body {
-    padding: 16px 18px 20px;
+    padding: 0;
     display: grid;
     gap: 0;
     align-content: start;
@@ -136,7 +140,7 @@
 }
 
 .media-card.horizontal .media-card-body {
-    padding: 24px 28px;
+    padding: 0;
 }
 
 .post-title-link {
