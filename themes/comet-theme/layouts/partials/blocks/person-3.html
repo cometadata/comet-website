@@ -1,17 +1,17 @@
-<div class="col-auto advisors row stacked-element gx-0">
+<div class="advisors stacked-element">
     <div class="portrait">
-        <img src="{{ .media }}" class="img-fluid"/>
+        <img src="{{ .media | absURL }}" alt="{{ .name }}">
     </div>
-    <div>
-        {{ .name }}
-    </div>
-    <div>
-        {{ .job_title }}
-    </div>
-    <div>
-        {{ .company }}
-    </div>
-    <div>
-        <a href="{{ .linked_in }}">LinkedIn <i class='fa-solid fa-fw fa-external-link'></i></a>
+    <div class="person-body">
+        <h3>{{ .name }}</h3>
+        {{ with .job_title }}
+        <div class="person-role">{{ . }}</div>
+        {{ end }}
+        {{ with .company }}
+        <div class="person-company">
+            {{ if $.company_link }}<a href="{{ $.company_link }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+        </div>
+        {{ end }}
+        {{ partial "blocks/person-link.html" . }}
     </div>
 </div>

@@ -4,6 +4,8 @@
         {{ $lv := .layout_variant }}
         {{ $tv := .treatment_variant }}
         {{ $mv := .media_variant }}
+        {{ $cv := .color_variant }}
+        {{ $colorClass := cond (ne $cv "") (printf "color-%s" $cv) "" }}
 
         
         {{ if eq $tv "timeline" }} 
@@ -14,7 +16,7 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container {{ $tv }}  color-{{ .color_variant }}">
+                <div class="stacked-element-container {{ $tv }} {{ $colorClass }}">
                 
                     {{ range $index, $element := .elements }}
                         <div class="row stacked-element {{ $tv }}">
@@ -41,7 +43,7 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container {{ $lv }}">
+                <div class="stacked-element-container {{ $lv }} {{ $colorClass }}">
                 
                     {{ range .elements }}
                         <div class="row stacked-element  {{ $lv }}">
@@ -71,7 +73,7 @@
             <div>{{ .content | markdownify}}</div>
 
             {{ if .elements }}
-                <div class="stacked-element-container {{ $lv }} mt-4 mb-4 flex-wrap gap-3">
+                <div class="stacked-element-container {{ $lv }} {{ $colorClass }} mt-4 mb-4 flex-wrap gap-3">
                 
                     {{ range .elements }}
                         <div class="d-flex stacked-element flex-column gx-0">
@@ -111,18 +113,18 @@
             
             {{ if eq $mv "organisers"}}
                 <h2>{{ .headline }}</h2>
-                <div>{{ .content | markdownify}}</div>
+                <div class="organisers-intro">{{ .content | markdownify}}</div>
 
                 {{ if .orgs }}
-                    <div class="stacked-element-container grid mt-2 mb-2">
+                    <div class="stacked-element-container grid organiser-orgs {{ $colorClass }} mb-2">
                     
                         {{ range .orgs }}
-                            <div class="orgs col row stacked-element  gx-0 ">
-                                <div class="">
-                                    <img src="{{ .Site.BaseURL }}{{ .media }}" class="img-fluid"/>
+                            <div class="orgs stacked-element">
+                                <div class="org-logo">
+                                    <img src="{{ .Site.BaseURL }}{{ .media }}" class="img-fluid" alt="{{ .link_text }}">
                                 </div>
-                                <div>
-                                    <a href="{{ .link }}">{{ .link_text}}</a>
+                                <div class="link-out">
+                                    <a href="{{ .link }}" class='no-underline' target="_blank" rel="noopener noreferrer"><button class="reverse">{{ .link_text }} <i class='fa-solid fa-fw fa-external-link'></i></button></a>
                                 </div>
                             </div>
                         {{ end }}
@@ -130,10 +132,10 @@
                     </div>
                 {{ end }}
                 
-                <div>{{ .split | markdownify}}</div>
+                <div class="organisers-split">{{ .split | markdownify}}</div>
 
                 {{ if .reps }}
-                    <div class="stacked-element-container grid mt-2 mb-2">                    
+                    <div class="stacked-element-container grid organiser-reps mb-2">                    
                         {{ range .reps }}
                             {{ partial "blocks/person-4.html" . }}                            
                         {{ end }}                    
@@ -141,24 +143,19 @@
                 {{ end }}
             
             {{ else if eq $mv "advisors"}}
-                <div class="row">
-                    <div class="col-xl-4">
-                        <h2>{{ .headline }}</h2>
-                        <div>{{ .content | markdownify}}</div>
-                    </div>
-                    <div class="col-xl-8">
-                        {{ if .advisors }}
-                            <div class="stacked-element-container grid mb-2 mt-2">                    
-                                {{ range .advisors }}
-                                    {{ partial "blocks/person-3.html" . }}                            
-                                {{ end }}                    
-                            </div>
+                <h2>{{ .headline }}</h2>
+                <div class="advisors-intro">{{ .content | markdownify}}</div>
+
+                {{ if .advisors }}
+                    <div class="stacked-element-container grid advisor-cards {{ $colorClass }} mt-2 mb-2">
+                        {{ range .advisors }}
+                            {{ partial "blocks/person-3.html" . }}
                         {{ end }}
                     </div>
-                </div>
+                {{ end }}
             {{ else }}
                 {{ if .elements }}
-                    <div class="stacked-element-container grid">
+                    <div class="stacked-element-container grid {{ $colorClass }}">
                     
                         {{ range .elements }}
                             <div class="elements col row stacked-element gx-0">

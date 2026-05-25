@@ -1,0 +1,11 @@
+{{ $person := . }}
+{{ with .link }}
+<div class="person-link link-out">
+    <a href="{{ . }}" class="no-underline" target="_blank" rel="noopener noreferrer"><button class="reverse">
+        {{ if eq $person.link_type "linkedin" }}LinkedIn <i class="fa-brands fa-fw fa-linkedin-in"></i>
+        {{ else if $person.link_text }}{{ $person.link_text }} <i class="fa-solid fa-fw fa-external-link"></i>
+        {{ else }}Link <i class="fa-solid fa-fw fa-external-link"></i>
+        {{ end }}
+    </button></a>
+</div>
+{{ end }}

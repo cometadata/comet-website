@@ -27,9 +27,13 @@
             }
         }
         > div.orgs {
-            flex:1 0 20%;
+            flex: 1 1 calc(25% - 23px);
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
             @media (max-width: variables.$break-large) {
-                flex-basis:100%;
+                flex-basis: 100%;
             }
         }
         > div.reps {
@@ -50,27 +54,13 @@
         gap:30px; 
         flex-direction:column;  
         margin-top:20px;
-        &.color-white {
-            .stacked-element {
-                padding:20px;
-                background-color: #fff;
+
+        &.color-white .stacked-element div:first-child {
+            .tag {
                 color: variables.$comet-darkblue;
-                h2,h3,h4,h5 {
-                    color: variables.$comet-darkblue;
-                }
-                -webkit-box-shadow: 0px 0px 25px 2px rgba(75,141,150,.48);
-                box-shadow: 0px 0px 25px 2px rgba(75,141,150,.48);
-
-                
-                div:first-child {
-                    .tag {
-                        color: variables.$comet-darkblue;
-                        opacity:0.5;
-                    }
-                }
+                opacity:0.5;
             }
-
-        }   
+        }
         .row {
             margin:0;  
             div:first-child {
@@ -153,10 +143,267 @@
             color: #fff;
         }
     }
+
+    &.color-gold .stacked-element {
+        background-color: variables.$comet-gold-pale;
+        color: variables.$comet-darkblue;
+
+        h2, h3, h4, h5 {
+            color: variables.$comet-darkblue;
+        }
+    }
+
+    &.color-light-green .stacked-element {
+        background-color: variables.$comet-lightgreen;
+        color: variables.$comet-darkblue;
+
+        h2, h3, h4, h5 {
+            color: variables.$comet-darkblue;
+        }
+    }
+
+    &.color-white .stacked-element {
+        padding: 20px;
+        background-color: #fff;
+        color: variables.$comet-darkblue;
+
+        h2, h3, h4, h5 {
+            color: variables.$comet-darkblue;
+        }
+
+        -webkit-box-shadow: 0px 0px 25px 2px rgba(75, 141, 150, .48);
+        box-shadow: 0px 0px 25px 2px rgba(75, 141, 150, .48);
+
+        a {
+            color: variables.$comet-darkblue;
+            border-bottom: 2px solid variables.$comet-lightgreen;
+            text-decoration: none;
+
+            &:hover {
+                color: variables.$comet-lightgreen;
+                text-decoration: none;
+            }
+        }
+
+        .person-link button.reverse {
+            color: #fff;
+            background-color: variables.$comet-darkblue;
+        }
+    }
+
+    &.organiser-orgs {
+        align-items: stretch;
+
+        .stacked-element.orgs {
+            .org-logo {
+                background-color: #fff;
+                border-radius: variables.$block-radius;
+                padding: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 140px;
+                flex-shrink: 0;
+
+                img {
+                    display: block;
+                    width: auto;
+                    height: auto;
+                    max-height: 64px;
+                    max-width: 180px;
+                    object-fit: contain;
+                }
+            }
+
+            .link-out {
+                margin-top: auto;
+                padding-top: 1.25rem;
+
+                a {
+                    display: block;
+                }
+
+                button.reverse {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 .portrait {
-    aspect-ratio: 0.9;
-    display:flex;   
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.stacked-element-container.organiser-reps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: stretch;
+
+    @media (max-width: variables.$break-large) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: variables.$break-medium) {
+        grid-template-columns: 1fr;
+    }
+
+    > .stacked-element.reps {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+
+        .person-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 30px;
+
+            h3 {
+                margin: 0 0 1em;
+            }
+        }
+
+        .person-role,
+        .person-company {
+            font-size: 0.95rem;
+        }
+
+        .person-link {
+            margin-top: auto;
+            padding-top: 1.25rem;
+
+            a {
+                display: block;
+            }
+
+            button.reverse {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.stacked-element-container.advisor-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: stretch;
+
+    @media (max-width: variables.$break-xlarge) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    @media (max-width: variables.$break-large) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: variables.$break-medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: variables.$break-small) {
+        grid-template-columns: 1fr;
+    }
+
+    > .stacked-element.advisors {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+
+        .portrait {
+            height: 140px;
+        }
+
+        .person-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 16px;
+
+            h3 {
+                margin: 0 0 0.65em;
+                font-size: 0.95rem;
+                line-height: 1.25;
+            }
+        }
+
+        .person-role,
+        .person-company {
+            font-size: 0.8rem;
+            line-height: 1.35;
+        }
+
+        .person-link {
+            margin-top: auto;
+            padding-top: 1rem;
+
+            a {
+                display: block;
+            }
+
+            button.reverse {
+                width: 100%;
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        @media (max-width: variables.$break-large) {
+            .portrait {
+                height: 180px;
+            }
+
+            .person-body {
+                padding: 24px;
+
+                h3 {
+                    font-size: 1.05rem;
+                }
+            }
+
+            .person-role,
+            .person-company {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: variables.$break-medium) {
+            .portrait {
+                height: 200px;
+            }
+
+            .person-body {
+                padding: 30px;
+
+                h3 {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .person-role,
+            .person-company {
+                font-size: 0.95rem;
+            }
+        }
+    }
 }
 
 .with-table {
@@ -192,5 +439,17 @@
     &.project-collaborators-lead {
         font-weight: 600;
         opacity: 1;
+    }
+}
+
+.section-block.stacked-cards.grid {
+    .organisers-intro,
+    .organisers-split,
+    .advisors-intro {
+        margin-bottom: 1em;
+    }
+
+    .organisers-split {
+        margin-top: 1em;
     }
 }
