@@ -51,8 +51,11 @@ button.button-tertiary {
     
 }
 form {
-    [class*="col-"] {
-        width:100%;
+    
+    @media (max-width: variables.$break-large) {
+        [class*="col-"] {
+            width:100%;
+        }
     }
     label {
         margin-top:25px;
