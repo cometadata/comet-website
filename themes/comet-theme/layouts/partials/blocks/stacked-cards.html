@@ -166,12 +166,20 @@
                                     <div class="status">
                                         {{ .icon |markdownify }} {{ .status }}
                                     </div>
+                                    {{ with .label }}
+                                    <div class="project-label">{{ . }}</div>
+                                    {{ end }}
                                     <h3>{{ .headline }}</h3>
+                                    {{ with .collaborators }}
+                                    <p class="project-collaborators{{ if $.label }} project-collaborators-lead{{ end }}"><strong>Collaborators:</strong> {{ . }}</p>
+                                    {{ end }}
                                     <p>{{ .content |markdownify}}</p>
                                 </div>
+                                {{ with .link }}
                                 <div class="link-out">
-                                    <a href="{{ .link }}" class='no-underline' target="_blank" rel="noopener noreferrer"><button class="reverse">Go to project hub <i class='fa-solid fa-fw fa-external-link'></i></button></a>
+                                    <a href="{{ . }}" class='no-underline' target="_blank" rel="noopener noreferrer"><button class="reverse">View project <i class='fa-solid fa-fw fa-external-link'></i></button></a>
                                 </div>
+                                {{ end }}
                             </div>
                         {{ end }}
                     

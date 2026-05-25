@@ -6,5 +6,8 @@ resources/
 # macOS
 .DS_Store
 
+# Local Hugo overrides (e.g. baseURL for localhost); not tracked
+hugo.local.toml
+
 # Local reference copy of ../comet (wireframes + docs); not tracked
 comet/

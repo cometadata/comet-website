@@ -1,8 +1,6 @@
 variant: "media-right"
-headline: "Enrichment Projects"
-content: "The COMET enrichment projects are real-world demonstrations of collaborative metadata improvement in action. Each project addresses critical challenges in scholarly metadata whilst testing and refining the COMET Model through practical application.
-
-These projects serve as proof-of-concept initiatives that evaluate the effectiveness, accuracy, cost, and scalability of community-driven metadata enrichment approaches. By focusing on high-impact problems with measurable consequences, we're building the evidence base needed to transform how the scholarly community maintains and improves research metadata."
+headline: "Projects"
+content: "COMET organisers and community members conduct projects that produce shared, durable assets such as enrichment methods, gold-standard benchmarks, and enriched datasets for round-tripping into the PID ecosystem. View the project below and get in touch to collaborate."
 
 media: "/images/projects/data-tree.jpg"
 media_hover: "Data tree"
