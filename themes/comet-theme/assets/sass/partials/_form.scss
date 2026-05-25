@@ -63,7 +63,8 @@ form {
                 width:100%;
             }
     }
-    input[type='text'] {
+    input[type='text'],
+    input[type='email'] {
         margin-top:10px;
         border: 2px solid variables.$comet-button-secondary;
         border-radius: 20px;
@@ -107,6 +108,10 @@ form {
             }
         }
     }
+}
+
+.form-stack__intro {
+    margin-bottom: 1em;
 }
 
 

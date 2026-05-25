@@ -1,2 +1,25 @@
-headline: "Join Us"
 content: "Please take a minute to let us know how you’d like to be involved and we’ll be in touch."
+
+# Replace placeholder values with IDs from Mailchimp:
+# Audience → Signup forms → Embedded forms → View form source
+mailchimp:
+  post_url: "https://comet.us21.list-manage.com/subscribe/post"
+  user_id: "000000000000000000000000"
+  list_id: "0000000000"
+  fields:
+    email: "EMAIL"
+    first_name: "FNAME"
+    last_name: "LNAME"
+    primary_affiliation: "MMERGE3"
+    secondary_affiliation: "MMERGE4"
+    linkedin: "MMERGE5"
+    join_community: "MMERGE6"
+    project_collaborations: "MMERGE7"
+
+participation:
+  - label: "Join community"
+    checkbox_label: "Receive updates"
+    field: "join_community"
+  - label: "Participate in project collaborations"
+    checkbox_label: "Receive updates"
+    field: "project_collaborations"

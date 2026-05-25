@@ -1,9 +1,24 @@
 <section class="section-block form-stack">
 <div>
-    <i class="debug-info">form-stack layout invoked</i>  
-    <h1>{{ .headline }}</h1>
-    <div>{{ .content | markdownify }}</div>
-    <form>
+    <i class="debug-info">form-stack layout invoked</i>
+    {{ with .content }}
+    <div class="form-stack__intro">{{ . | markdownify }}</div>
+    {{ end }}
+
+    {{ $mc := .mailchimp }}
+    {{ $fields := $mc.fields }}
+    <form
+        action="{{ $mc.post_url }}?u={{ $mc.user_id }}&amp;id={{ $mc.list_id }}"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate form-stack__form"
+        target="_blank"
+        novalidate
+    >
+        <input type="hidden" name="u" value="{{ $mc.user_id }}">
+        <input type="hidden" name="id" value="{{ $mc.list_id }}">
+
         <div class="row">
             <div class="row col-6 mt-3">
                 <div class="details col-12">
@@ -11,101 +26,103 @@
                 </div>
                 <div class="row m-0 p-0">
                     <div class="col-6">
-                        <label>First name*
-                            <input type="text" name="firstname" required/>
+                        <label for="mce-FNAME">First name*
+                            <input type="text" name="{{ index $fields "first_name" }}" id="mce-FNAME" class="required text" required>
                         </label>
-                        
                     </div>
                     <div class="col-6">
-                        <label>Surname*
-                            <input type="text" name="surname" required/>
+                        <label for="mce-LNAME">Surname*
+                            <input type="text" name="{{ index $fields "last_name" }}" id="mce-LNAME" class="required text" required>
                         </label>
                     </div>
                 </div>
                 <div class="row m-0 p-0">
                     <div class="col-6">
-                        <label>Primary affiliation*
-                            <input type="text" name="primary" required/>
+                        <label for="mce-PRIMARY">Primary affiliation*
+                            <input type="text" name="{{ index $fields "primary_affiliation" }}" id="mce-PRIMARY" class="required text" required>
                         </label>
                     </div>
-                    <div class="col-6">                    
-                        <label>Secondary affiliation
-                            <input type="text" name="secondary"/>
+                    <div class="col-6">
+                        <label for="mce-SECONDARY">Secondary affiliation
+                            <input type="text" name="{{ index $fields "secondary_affiliation" }}" id="mce-SECONDARY" class="text">
                         </label>
                     </div>
                 </div>
                 <div class="row m-0 p-0">
                     <div class="col-6">
-                        <label>Email*
-                            <input type="text" name="email" required/>
+                        <label for="mce-EMAIL">Email*
+                            <input type="email" name="{{ index $fields "email" }}" id="mce-EMAIL" class="required email" autocapitalize="off" autocorrect="off" required>
                         </label>
                     </div>
                     <div class="col-6">
-                        <label>LinkedIn
-                            <input type="text" name="linkedin" />
+                        <label for="mce-LINKEDIN">LinkedIn
+                            <input type="text" name="{{ index $fields "linkedin" }}" id="mce-LINKEDIN" class="text">
                         </label>
                     </div>
                 </div>
-                
-            </div> 
-            
-            <div class="comet row col-1 m-0"> 
-                {{ partial "blocks/comet-line-down.html" }} 
             </div>
 
+            <div class="comet row col-1 m-0">
+                {{ partial "blocks/comet-line-down.html" }}
+            </div>
 
             <div class="row col-5 checkboxes align-content-start checkbox-container">
                 <div class="details col-12 mt-3">
                     <h3>Areas of participation</h3>
                 </div>
-                <div class="row col-12 flex-column">                
+
+                {{ range .participation }}
+                {{ $fieldName := index $fields .field }}
+                <div class="row col-12 flex-column form-stack__participation">
                     <div class="col-12 mt-3 m-0 p-0">
-                        <div>
-                            Join community
-                        </div>
-                                               
+                        <div>{{ .label }}</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-flex-start gap-2 mt-2 m-0 p-0">
-                        <input type="checkbox" name="join-community"  id="join-community" class="round-checkbox"/>
-                        <label for="join-community">
-                            Receive updates
-                        </label> 
-                    </div>
-                </div> 
-
-
-                <div class="row col-12 flex-column">               
-                    <div class="col-12 mt-3 m-0 p-0">  
-                        <div>Participate in project collaborations</div>             
-                    </div>
-                    <div class="d-flex align-items-center justify-content-flex-start gap-2 mt-2 m-0 p-0">
-                        <input type="checkbox" name="participate"  id="participate" class="round-checkbox"/>
-                        <label for="participate">
-                            Receive updates
+                        <input type="hidden" name="{{ $fieldName }}" value="No" class="form-stack__yes-no-field">
+                        <input
+                            type="checkbox"
+                            id="participation-{{ .field }}"
+                            class="round-checkbox form-stack__yes-no-toggle"
+                            data-field-name="{{ $fieldName }}"
+                            aria-describedby="participation-{{ .field }}-label"
+                        >
+                        <label for="participation-{{ .field }}" id="participation-{{ .field }}-label">
+                            {{ .checkbox_label }}
                         </label>
                     </div>
-                </div>  
-               
+                </div>
+                {{ end }}
             </div>
         </div>
-        <!--<div class="row col-12">
-            <div class="col text-start">               
-                <input type="checkbox" name="confirm"  id="confirm"/>
-                <label for="confirm">
-                    I agree that COMET may store and process my personal data in order to contact me and respond to my submission. <a href='tandc'>Full terms and conditions.</a>
-                </label>
-                
-            </div>
-            
-        </div>-->
-        
+
+        <div class="position-absolute" style="left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_{{ $mc.user_id }}_{{ $mc.list_id }}" tabindex="-1" value="">
+        </div>
+
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+
         <div class="row">
             <div class="col text-end">
-                <input type="submit" />
+                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe">
             </div>
         </div>
-
     </form>
-
-    </div>
+</div>
 </section>
+
+<script>
+(function () {
+    document.querySelectorAll(".form-stack__yes-no-toggle").forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            var fieldName = checkbox.getAttribute("data-field-name");
+            var hidden = checkbox.closest(".form-stack__participation").querySelector('input[name="' + fieldName + '"]');
+            if (hidden) {
+                hidden.value = checkbox.checked ? "Yes" : "No";
+            }
+        });
+    });
+})();
+</script>
