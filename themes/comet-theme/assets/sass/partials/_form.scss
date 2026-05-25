@@ -52,25 +52,33 @@ button.button-tertiary {
 }
 form {
     
-    @media (max-width: variables.$break-large) {
+    @media (max-width: variables.$break-xlarge) {
         [class*="col-"] {
             width:100%;
         }
     }
     label {
         margin-top:25px;
+        @media (max-width: variables.$break-xlarge) {
+                width:100%;
+            }
     }
     input[type='text'] {
         margin-top:10px;
         border: 2px solid variables.$comet-button-secondary;
         border-radius: 20px;
         padding:5px 25px;
+        @media (max-width: variables.$break-xlarge) {
+                width:100%;
+            }
     }
     .checkboxes {        
         label {
             margin-top:0;
             font-weight:normal;
             float:left;
+
+            
         }
     }
     input[type='submit'] {
@@ -85,9 +93,13 @@ form {
             color:variables.$comet-button-secondary;
             transition: all variables.$transition-time;
             border:2px solid variables.$comet-button-secondary;
-        }
+        }        
     }
     .comet {
+        
+        @media (max-width: variables.$break-xlarge) {
+            display:none;
+        }
         .comet-line.down {
             .comet-line-line {
                 margin-top:-100px;
