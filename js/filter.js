@@ -1,109 +1,145 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const filterControls = document.getElementById("filter-controls");
+  if (!filterControls) {
+    return;
+  }
+
   let allPosts = [];
-  
-  // Track all active filters globally
+
   const filterState = {
-    searchQuery: "",
     selectedTag: "all",
     selectedAuthor: "all",
     selectedCategory: "all",
     sortOrder: "desc",
     currentPage: 1,
-    postsPerPage: 6 // Set your preferred items-per-page limit here
+    postsPerPage: 9
   };
 
+  const blogListURL = filterControls.dataset.blogUrl || "/posts/";
   const paginationContainer = document.getElementById("pagination-container");
   const container = document.getElementById("posts-container");
-  const searchInput = document.getElementById("search-input");
   const tagDropdown = document.getElementById("tag-dropdown");
   const catDropdown = document.getElementById("cat-dropdown");
   const authorDropdown = document.getElementById("author-dropdown");
   const clearButton = document.getElementById("clear-filters-btn");
   const sortDropdown = document.getElementById("sort-dropdown");
 
-  // 1. Fetch Hugo's pre-compiled JSON index
-  console.log(document.location.origin);
-  let indexLocation = '/index.json';
+  let indexLocation = "/index.json";
   if (document.location.origin == "https://cometadata.github.io") {
     indexLocation = "/comet-website/index.json";
   }
+
+  const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w\-]+/g, "");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasUrlFilters = urlParams.has("category") || urlParams.has("tag");
+
+  function scrollToFilterControls() {
+    requestAnimationFrame(() => {
+      filterControls.scrollIntoView({ behavior: "auto", block: "start" });
+    });
+  }
+
+  if (hasUrlFilters) {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    scrollToFilterControls();
+  }
+
+  function blogFilterUrl(type, name) {
+    const param = type === "category" ? "category" : "tag";
+    return `${blogListURL}?${param}=${encodeURIComponent(slugify(name))}`;
+  }
+
+  function initFiltersFromURL() {
+    const category = urlParams.get("category");
+    const tag = urlParams.get("tag");
+    let appliedFromUrl = false;
+
+    if (category && catDropdown.querySelector(`option[value="${CSS.escape(category)}"]`)) {
+      filterState.selectedCategory = category;
+      catDropdown.value = category;
+      appliedFromUrl = true;
+    }
+
+    if (tag && tagDropdown.querySelector(`option[value="${CSS.escape(tag)}"]`)) {
+      filterState.selectedTag = tag;
+      tagDropdown.value = tag;
+      appliedFromUrl = true;
+    }
+
+    return appliedFromUrl;
+  }
+
+  function syncUrlFromFilters() {
+    const params = new URLSearchParams();
+    if (filterState.selectedCategory !== "all") {
+      params.set("category", filterState.selectedCategory);
+    }
+    if (filterState.selectedTag !== "all") {
+      params.set("tag", filterState.selectedTag);
+    }
+
+    const query = params.toString();
+    const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+    window.history.replaceState({}, "", newUrl);
+  }
+
   fetch(indexLocation)
     .then(response => response.json())
     .then(data => {
-      allPosts = data;
-      applyFilters(); // Initial render
+      allPosts = data.filter(post => !post.featured);
+      const appliedFromUrl = initFiltersFromURL();
+      applyFilters();
+      if (appliedFromUrl) {
+        scrollToFilterControls();
+      }
     })
     .catch(err => console.error("Error fetching index:", err));
 
-  // 2. Event Listeners for Filter Controls
-  searchInput.addEventListener("input", (e) => {
-    filterState.searchQuery = e.target.value.toLowerCase().trim();
-    filterState.currentPage = 1; // Reset page on filter change
-    applyFilters();
-  });
-
   tagDropdown.addEventListener("change", (e) => {
     filterState.selectedTag = e.target.value;
-    filterState.currentPage = 1; // Reset page on filter change
+    filterState.currentPage = 1;
     applyFilters();
   });
 
   authorDropdown.addEventListener("change", (e) => {
     filterState.selectedAuthor = e.target.value;
-    filterState.currentPage = 1; // Reset page on filter change
+    filterState.currentPage = 1;
     applyFilters();
   });
 
   catDropdown.addEventListener("change", (e) => {
     filterState.selectedCategory = e.target.value;
-    filterState.currentPage = 1; // Reset page on filter change
+    filterState.currentPage = 1;
     applyFilters();
   });
 
   sortDropdown.addEventListener("change", (e) => {
     filterState.sortOrder = e.target.value;
-    filterState.currentPage = 1; // Reset page on filter change
+    filterState.currentPage = 1;
     applyFilters();
   });
 
-  // 3. Clear Filters Click Event Listener
   clearButton.addEventListener("click", () => {
-    // Reset global logical state object
-    filterState.searchQuery = "";
     filterState.selectedTag = "all";
     filterState.selectedCategory = "all";
     filterState.selectedAuthor = "all";
     filterState.sortOrder = "desc";
     filterState.currentPage = 1;
 
-    // Reset visual UI element positions
-    searchInput.value = "";
     tagDropdown.value = "all";
     catDropdown.value = "all";
     authorDropdown.value = "all";
     sortDropdown.value = "desc";
 
-    // Run cascade filter engine to restore all items
     applyFilters();
   });
 
-  // Helper function to format strings for comparison (slugify)
-  const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
-
-  // 3. Overlapping Filter Logic Engine
   function applyFilters() {
     let filteredResults = allPosts;
 
-    // Filter Step A: Text Search
-    if (filterState.searchQuery !== "") {
-      filteredResults = filteredResults.filter(post => {
-        const matchesTitle = post.title?.toLowerCase().includes(filterState.searchQuery);
-        const matchesSummary = post.summary?.toLowerCase().includes(filterState.searchQuery);
-        return matchesTitle || matchesSummary;
-      });
-    }
-
-    // Filter Step B: Tag Dropdown Selection
     if (filterState.selectedTag !== "all") {
       filteredResults = filteredResults.filter(post => {
         if (!post.tags) return false;
@@ -111,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Filter Step B: Tag Dropdown Selection
     if (filterState.selectedCategory !== "all") {
       filteredResults = filteredResults.filter(post => {
         if (!post.categories) return false;
@@ -119,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Filter Step C: Author Dropdown Selection
     if (filterState.selectedAuthor !== "all") {
       filteredResults = filteredResults.filter(post => {
         if (!post.authors) return false;
@@ -127,32 +161,24 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Sort Step D: Sort by string/date sequence order
     filteredResults.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
-      
       if (filterState.sortOrder === "asc") {
-        return dateA - dateB; // Oldest first
-      } else {
-        return dateB - dateA; // Newest first
+        return a.dateSort - b.dateSort;
       }
+      return b.dateSort - a.dateSort;
     });
 
-    // Pagination Step E: Slice array boundaries based on state counters
     const totalItems = filteredResults.length;
     const totalPages = Math.ceil(totalItems / filterState.postsPerPage);
-    
     const startIndex = (filterState.currentPage - 1) * filterState.postsPerPage;
     const endIndex = startIndex + filterState.postsPerPage;
     const paginatedResults = filteredResults.slice(startIndex, endIndex);
 
-
     renderPosts(paginatedResults);
     renderPagination(totalPages);
+    syncUrlFromFilters();
   }
 
-  // 4. Inject matching elements into the DOM
   function renderPosts(posts) {
     if (posts.length === 0) {
       container.innerHTML = "<p class='no-results'>No matching posts found.</p>";
@@ -160,59 +186,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     container.innerHTML = posts.map(post => `
-      <div class="post-card">
-
-        <a href="${post.permalink}"><img src="${post.media}" class="img-fluid"/></a>
-        
-        <div class="post-tags">
-            ${post.categories ? post.categories.map(t => `<span class="cat-badge">${t}</span>`).join("") : ""}
-        
-           ${post.tags ? post.tags.map(t => `<span class="tag-badge">${t}</span>`).join("") : ""}
+      <article class="media-card">
+        <a class="media-card-image editorial no-underline" href="${post.permalink}">
+          ${post.media ? `<img src="${post.media}" alt="${post.title}" loading="lazy">` : ""}
+        </a>
+        <div class="media-card-body">
+          ${post.categories || post.tags ? `
+          <div class="post-taxonomy">
+            ${post.categories ? post.categories.map(c => `<a href="${blogFilterUrl("category", c)}" class="cat-badge no-underline">${c}</a>`).join("") : ""}
+            ${post.tags ? post.tags.map(t => `<a href="${blogFilterUrl("tag", t)}" class="tag-badge no-underline">${t}</a>`).join("") : ""}
+          </div>` : ""}
+          <div class="post-meta-row">
+            ${post.authors ? `<span>${post.authors.join(", ")}</span>` : ""}
+            <span>${post.dateLong || post.date}</span>
+          </div>
+          <h3><a class="post-title-link no-underline" href="${post.permalink}">${post.title}</a></h3>
+          <p>${post.summary || ""}</p>
         </div>
-        <div class="post-authors">
-        ${post.date} by 
-          ${post.authors ? post.authors.map(t => `<span class="author-badge">${t}</span>`).join("") : ""}
-        </div>
-        
-        <h2><a href="${post.permalink}">${post.title}</a></h2>
-        
-        <p>${post.summary}</p>
-      </div>
+      </article>
     `).join("");
   }
 
-  // 6. Generate dynamic pagination layout controls
   function renderPagination(totalPages) {
     if (totalPages <= 1) {
-      paginationContainer.innerHTML = ""; // No navigation markup needed for single pages
+      paginationContainer.innerHTML = "";
       return;
     }
 
     let buttonsHtml = "";
-
-    // Prev Button
     buttonsHtml += `<button class="page-btn" data-page="${filterState.currentPage - 1}" ${filterState.currentPage === 1 ? "disabled" : ""}>&laquo; Prev</button>`;
 
-    // Numeric Buttons Loop
     for (let i = 1; i <= totalPages; i++) {
-      buttonsHtml += `<button class="page-btn ${filterState.currentPage === i ? "active" : ""}" data-page="${i}">${i}</button>`;
+      buttonsHtml += `<button class="page-btn ${filterState.currentPage === i ? "active-page" : ""}" data-page="${i}">${i}</button>`;
     }
 
-    // Next Button
     buttonsHtml += `<button class="page-btn" data-page="${filterState.currentPage + 1}" ${filterState.currentPage === totalPages ? "disabled" : ""}>Next &raquo;</button>`;
 
     paginationContainer.innerHTML = buttonsHtml;
 
-    // Attach click events to freshly injected navigation elements
-    const pageButtons = paginationContainer.querySelectorAll(".page-btn");
-    pageButtons.forEach(button => {
+    paginationContainer.querySelectorAll(".page-btn").forEach(button => {
       button.addEventListener("click", (e) => {
         const targetPage = parseInt(e.target.getAttribute("data-page"), 10);
         filterState.currentPage = targetPage;
         applyFilters();
-        
-        // Optional: Scroll back to the top of the container smoothly on page turn
-        container.scrollIntoView({ behavior: 'smooth' });
+        container.scrollIntoView({ behavior: "smooth" });
       });
     });
   }
