@@ -1,4 +1,5 @@
 baseURL = 'https://example.org/'
+# baseURL define in build command line for flexibility
 locale = 'en-us'
 title = 'Cometadata development website'
 theme = 'comet-theme'
