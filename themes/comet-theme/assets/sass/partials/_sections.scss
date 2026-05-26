@@ -3,6 +3,7 @@
 .section-block {
     position:relative;
     width: 100%;
+    max-width: variables.$site-max-width;
     margin: 0 auto;
     margin-bottom:variables.$section-gap;
     display:flex;

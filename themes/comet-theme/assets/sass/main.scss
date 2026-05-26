@@ -41,6 +41,9 @@ button {
         transition:variables.$transition-time;
      }
 }
+strong {
+    font-weight:600;
+}
 
 .link {
     a {

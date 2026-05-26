@@ -3,6 +3,7 @@ content: "COMET has produced enriched metadata for over 6.2 million unique DOIs 
 
 COMET treats gaps in high-value PID metadata fields as discrete, community-prioritised problems—each one tractable and measurable—demonstrating that collective action produces better outcomes than individual effort alone."
 
+color: "alt"
 table: "
 | Use case    | Metadata field | Number of unique DOIs
 | -------- | ------- | ------- |

@@ -3,9 +3,9 @@ treatment_variant: "principles"
 media_variant: ""
 
 elements:
-  - title: "1. Collective stewardship"
+  - title: "Collective stewardship"
     content: "The COMET model shifts the responsibility of metadata quality from individual depositors to a distributed community partnership. Crucially, this does not undermine source authority—it complements it. The model recognises that source authority and metadata quality are distinct, and that research outputs are the product of many actors whose collective expertise should be empowered to produce a complete and accurate scholarly record."    
-  - title: "2. Collective benefit"
+  - title: "Collective benefit"
     content: "The COMET model addresses the fragmented benefits that result when organisations tackle metadata problems in isolation. Independent fixes by universities, funders, and service providers solve local problems but result in duplicated, conflicting metadata that never reaches the authoritative source. COMET provides a collective framework for community-contributed improvements, structured as open assertions with clear provenance, machine-actionable and scalable. Enrichments flow back to authoritative sources."    
-  - title: "3. Trust through transparency"
+  - title: "Trust through transparency"
     content: "The COMET model establishes trust through open processes. Traditional PID workflows root trust in who registered the metadata. COMET extends this by rooting trust in process with evidence—comprehensive provenance documentation and publicly shared evaluative frameworks provide a more rigorous and robust foundation for a system the research community depends on."    

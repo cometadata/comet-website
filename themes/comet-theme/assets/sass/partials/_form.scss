@@ -31,22 +31,24 @@ button.button-primary {
     }
 }
 button.button-secondary {
-    background-color: variables.$comet-button-secondary;
+    background-color: #fff;
     border:$button-border solid variables.$comet-button-secondary;
+    color:variables.$comet-button-secondary;
     &:hover{        
-        color:variables.$comet-button-secondary;
-        background-color: #fff;
-        border:$button-border solid variables.$comet-button-secondary;
+        color:#fff;
+        background-color: variables.$comet-button-primary;
+        border:$button-border solid variables.$comet-button-primary;
     }
     
 }
 button.button-tertiary {
-    background-color: variables.$comet-button-tertiary;
+    background-color: #fff;
     border:$button-border solid variables.$comet-button-tertiary;
+    color: variables.$comet-button-tertiary;;
     &:hover{        
-        color:variables.$comet-button-tertiary;
-        background-color: #fff;
-        border:$button-border solid variables.$comet-button-tertiary;
+        color:#fff;
+        background-color: variables.$comet-button-primary;
+        border:$button-border solid variables.$comet-button-primary;
     }
     
 }
