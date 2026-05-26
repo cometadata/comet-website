@@ -3,8 +3,8 @@
 
 	<div class="row footer-brand">
 		<div class="col logo">			
-			<a href="{{ .Site.BaseURL }}">
-				<img class="header-logo" src="{{ "/images/logos/COMET_Logo_2026_Colour_RGB 1.svg" | relURL }}" alt="COMET" />
+			<a class='no-underline' href="{{ .Site.BaseURL }}">
+				<img class="footer-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-White.svg" | relURL }}" alt="COMET" />
 			</a>	
 		</div>
 	</div>
@@ -25,6 +25,7 @@
 		</div>
 	</div>
 	<div class="row footer-bottom">
-		<div class="copy">&copy; COMET {{ now.Year }}</div>
+		<div class="col copy">&copy; COMET {{ now.Year }}</div>
+		<div class="col"><a href='http://www.cdlib.org/about/accessibility.html'>Accessibility</a></div>
 	</div>
 </footer>
