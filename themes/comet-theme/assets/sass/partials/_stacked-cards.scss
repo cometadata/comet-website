@@ -260,9 +260,9 @@
 }
 .portrait {
     width: 100%;
-    height: 220px;
     overflow: hidden;
     flex-shrink: 0;
+    aspect-ratio:1;
 
     img {
         display: block;
@@ -270,6 +270,8 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        border-radius:50%;
+        padding:40px;
     }
 }
 
@@ -356,9 +358,9 @@
         padding: 0;
         overflow: hidden;
 
-        .portrait {
+        /*.portrait {
             height: 140px;
-        }
+        }*/
 
         .person-body {
             display: flex;
