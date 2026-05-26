@@ -437,7 +437,9 @@
 }
 
 .with-table {
-    table {
+    margin-top: calc(-1 * variables.$section-div-padding);
+    table {        
+        border-top:1px solid variables.$comet-gold-pale;
         width:100%;
         margin:20px 0;
     }
