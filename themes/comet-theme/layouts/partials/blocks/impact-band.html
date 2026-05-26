@@ -11,7 +11,7 @@
                 </div> 
             </div>
             <div class="row">
-                <div class="col-12">{{ .table | markdownify }}</div>
+                <div class="col-12 bignumbers">{{ .table | markdownify }}</div>
             </div>
             {{ if .cta_text }}
             <div class="cta-attached d-flex {{ .color }}">
@@ -34,7 +34,7 @@
                     <div>{{ .content | markdownify }}</div>
                 </div>    
                 <div class="col-xl-8">                    
-                    <div>{{ .table | markdownify }}</div>
+                    <div class="bignumbers">{{ .table | markdownify }}</div>
                      {{ if .cta_text }}
                     <div class="cta-attached right d-flex {{ .color }}">
                         {{ partial "blocks/comet-line-right.html" }} 
