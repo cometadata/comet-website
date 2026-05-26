@@ -20,6 +20,12 @@
                 section.hero-intro {
                     background-image:url('{{ site.BaseURL }}{{ .media | relURL }}');
                 }
+                
+                {{ if .background_height }}
+                section.hero-intro.background{
+                    height:{{ .background_height}};
+                }
+                {{ end }}
             </style>
             <i class="debug-info">background layout invoked</i>  
             <div class="row">
