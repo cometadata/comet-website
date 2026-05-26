@@ -66,3 +66,28 @@ document.addEventListener("DOMContentLoaded", () => {
         $aside.addClass('is-empty');
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Select absolutely every table cell on the page
+  const allCells = document.querySelectorAll(".bignumbers td");
+
+  allCells.forEach(cell => {
+    const text = cell.textContent.trim();
+    
+    // 2. Skip completely empty cells
+    if (text === "") return;
+
+    // 3. Convert text to a number
+    const num = Number(text);
+
+    // 4. If it is a valid pure number, format it with commas
+    if (!isNaN(num)) {
+      cell.textContent = num.toLocaleString('en-UK');
+      
+      // Optional: Automatically right-align the cell via JS
+      cell.style.textAlign = "right"; 
+    }
+  });
+});
+
