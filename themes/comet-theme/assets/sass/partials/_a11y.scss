@@ -1,0 +1,44 @@
+@use "partials/variables";
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 1000;
+    padding: 0.75rem 1.25rem;
+    background: variables.$comet-darkblue;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 0;
+
+    &:focus {
+        top: 0;
+        outline: 2px solid variables.$link-blue;
+        outline-offset: 2px;
+    }
+}
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid variables.$link-blue;
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid variables.$link-blue;
+    outline-offset: 2px;
+}
+
+button.menu-toggle:focus-visible,
+button.submenu-toggle:focus-visible {
+    outline-color: variables.$comet-darkblue;
+}

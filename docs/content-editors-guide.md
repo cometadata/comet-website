@@ -19,7 +19,7 @@ Practical reference for editing the COMET Hugo site. Assumes basic familiarity w
 9. [Publishing and deployment](#publishing-and-deployment)
 10. [Local preview](#local-preview)
 11. [Git workflow](#git-workflow)
-12. [Accessibility checklist](#accessibility-checklist)
+12. [Accessibility for content editors](#accessibility-for-content-editors)
 13. [Appendix: file lookup](#appendix-file-lookup)
 
 ---
@@ -49,6 +49,7 @@ Practical reference for editing the COMET Hugo site. Assumes basic familiarity w
 | Join Us form copy | `data/join_us/form.yaml`, `data/join_us/hero.yaml` |
 | Thank-you page | `data/join_us/thank_you.yaml` (hero is shared with Join Us) |
 | Blog post | `content/posts/{slug}.md` + images in `static/images/blog/{slug}/` |
+| Image alt text / accessibility | See [Accessibility for content editors](#accessibility-for-content-editors); `media_alt` in YAML |
 | Site menu labels / order | `hugo.toml` → `[menu]` section |
 | Page URL or layout | Matching file in `content/` (e.g. `content/about.md`) |
 
@@ -261,6 +262,8 @@ Decorative **comet-line** elements are included automatically by other blocks �
 3. Set `draft = false` when ready to publish.
 4. Preview at `/blog/my-post-slug/` locally.
 
+Use a **descriptive `title`** (it becomes the featured-image alt text on listings). For images in the body, use Markdown `![alt text](url)` — see [Accessibility for content editors](#accessibility-for-content-editors).
+
 ### Front matter example
 
 ```toml
@@ -332,7 +335,7 @@ All site images go in **`static/images/`**, referenced as `/images/...` in YAML 
 | Logos | Max 400 px wide | PNG or SVG |
 | Diagrams | As authored | SVG preferred |
 
-Always set **`media_alt`** in YAML for accessibility. Use descriptive filenames (`gold-padlock.jpg`, not `IMG_0042.jpg`).
+Always set **`media_alt`** when you add or change an image in YAML. See [Accessibility for content editors](#accessibility-for-content-editors) for alt-text guidance, link wording, and a pre-publish checklist.
 
 ---
 
@@ -461,15 +464,137 @@ Avoid committing directly to `main` when review is desired.
 
 ---
 
-## Accessibility checklist
+## Accessibility for content editors
 
-Before publishing content changes:
+Accessible content helps everyone — including people using keyboards, screen readers, or zoom. Most of what visitors experience is **your copy and images** in `data/` and `content/posts/`. The theme adds site-wide navigation aids (skip link, focus styles, labelled menus, form labels on Join Us), but **editors still need to write good alt text, links, and headings**.
 
-- [ ] Every image has meaningful **`media_alt`** text in YAML (or alt text in blog Markdown).
-- [ ] Link text is descriptive (`Explore the COMET model`, not `click here`).
-- [ ] Headings follow a logical order on the page (one main `h1` per page via the hero).
-- [ ] Colour contrast is acceptable — avoid putting critical information only in colour-coded status labels without text.
-- [ ] Form labels on Join Us match their fields (do not rename labels without checking the form still makes sense).
+### Images and alt text
+
+Alt text describes an image for people who cannot see it. Screen readers read it aloud; it also appears when an image fails to load.
+
+**Rule of thumb:** If the image conveys information, add a short description. If it is purely decorative and the nearby text already says everything, leave alt empty — but only when the theme supports that explicitly (see below).
+
+#### Block pages (`data/` YAML)
+
+Many blocks pair a `media` path with **`media_alt`**. Always set both when you add or change a photo or diagram:
+
+```yaml
+media: "/images/home/dandelion.jpg"
+media_hover: "Dandelion"
+media_alt: "Dandelion seed head with seeds dispersing in the wind"
+```
+
+| Field | Purpose |
+|---|---|
+| `media` | Image path (`/images/...`) |
+| `media_alt` | **Accessibility description** — required for informative images |
+| `media_hover` | Optional tooltip on hover — **not** a substitute for `media_alt` |
+
+**Blocks that use `media_alt` in YAML:**
+
+| Block / file | Alt field | Editor action |
+|---|---|---|
+| **hero-intro** | `media_alt` | Set whenever `media` is set (homepage, about, community, join-us, blog index, etc.) |
+| **text-media-band** | `media_alt` | Set for each band image |
+| **comet-model-diagram-v1** | `media_alt` | Describe the diagram for someone who cannot see it |
+| **diagram** (single SVG on model page) | `media_alt` | Same as above — see `data/the_comet_model/diagram.yaml` for a good example |
+
+**Blocks where alt is derived from other fields** (keep those fields accurate):
+
+| Block | How alt is built | Editor action |
+|---|---|---|
+| **stacked-cards — organisers** | Org logo: `link_text` (e.g. `"CDL"`); portraits: `name` | Use clear organisation names and full person names |
+| **stacked-cards — advisors** | Portrait: `name` | Use full names; add role in `job_title` / `company` nearby |
+| **stacked-cards — three-column** (e.g. homepage “Join the evolution”) | Icons currently have no alt in the theme | Write clear **`title`** text for each column — ask a developer if icons need explicit alt later |
+| **diagram-stage** (multi-image carousel) | Alt not yet configurable in YAML | Describe key visuals in the block **`content`** until alt fields are added |
+
+#### Blog posts (`content/posts/`)
+
+| Image type | Where to set alt | Notes |
+|---|---|---|
+| **Featured / listing image** | Front matter `title` | The theme uses the post title as alt on cards and listings — write a descriptive title, not only a name |
+| **Images in the article body** | Markdown syntax | `![Description of the image](/images/blog/my-post/photo.jpg)` |
+| **Legacy Squarespace HTML** | `alt` attribute on `<img>` | Many imported posts have `alt=""`. When you edit a post, replace broken HTML with clean Markdown, or add a meaningful `alt="..."` |
+
+**Good alt examples for blog posts:**
+
+```markdown
+![Cristina Huidiu, metadata specialist](/images/blog/participant-perspectives-cristina-huidiu/picture.jpg)
+
+![Chart showing growth in enrichment events from 2022 to 2024](/images/blog/my-post/chart.png)
+```
+
+**Avoid:**
+
+- `alt=""` on informative photos (portraits, charts, screenshots)
+- `"image"`, `"photo"`, or `"screenshot"` alone
+- Repeating the entire caption word-for-word if the caption sits right below the image — summarise instead
+
+#### How to write useful alt text
+
+| Do | Don't |
+|---|---|
+| Describe what matters for the surrounding content | List every visual detail |
+| Mention people’s names in portrait alt when they are the subject | Use filenames (`IMG_0042.jpg`) as alt |
+| For diagrams, summarise the idea (“Padlock opening to show shared stewardship”) | Say “diagram” with no explanation |
+| Keep it to one or two short sentences | Paste the full paragraph next to the image |
+
+**Decorative images** (pure ornament, no information): leave alt empty only when confirmed decorative. When in doubt, write brief alt text — it is rarely harmful.
+
+When adding images, use **descriptive filenames** (`gold-padlock.jpg`, not `IMG_0042.jpg`) — this helps editors and developers find assets, even though filenames are not shown to visitors.
+
+### Links and call-to-action text
+
+Link text should make sense out of context — screen reader users often hear a list of links without surrounding prose.
+
+| Prefer | Avoid |
+|---|---|
+| `Explore the COMET model` | `Click here` |
+| `Read the enrichment projects announcement` | `More` |
+| `Get in touch` (Join Us CTA) | `Link` |
+
+In YAML, **`cta_text`**, **`cta_link_text`**, and Markdown links inside `content:` fields should follow the same rule.
+
+External links in blocks (e.g. organiser websites) use visible button text like `CDL` — keep **`link_text`** meaningful.
+
+### Headings
+
+- Each public page gets **one main heading (`h1`)** from the hero block — you do not add another `h1` in YAML body text.
+- In blog posts, the post **title** is the `h1`; start the body at **`##` (h2)** for major sections, then `###` for subsections.
+- Do not skip levels (e.g. `h2` straight to `h4`) — it confuses outline navigation.
+
+### Tables and data
+
+Impact-band and stacked-card **tables** are Markdown inside YAML. Use a header row so columns are labelled. Do not rely on colour alone to convey meaning — include the status or value in text (e.g. “Active”, not only a green cell).
+
+### Join Us form copy
+
+Field labels in `data/join_us/form.yaml` must stay aligned with what the form asks for. If you rename a label, check that the question is still clear. Participation groups (“Join community”, “Project collaborations”) should read as plain questions — avoid jargon without explanation.
+
+Do not rename YAML keys that map to Mailchimp (`email`, `first_name`, etc.) without developer help — see [Join Us form](#join-us-form).
+
+### Pre-publish checklist
+
+Before merging content changes:
+
+- [ ] Every **informative** image in YAML has **`media_alt`** (where the block supports it).
+- [ ] Blog **titles** describe the post; inline images use **`![alt](url)`** or fixed `alt` on `<img>`.
+- [ ] **Link text** is descriptive (`Explore the COMET model`, not `click here`).
+- [ ] **Headings** follow a logical order (one `h1` per page; blog body starts at `h2`).
+- [ ] **Tables** have header rows; critical info is not colour-only.
+- [ ] **Org / person names** in stacked-cards grids are spelled correctly (they become image alt text).
+- [ ] Preview locally and tab through the page — focus should be visible on links and buttons.
+
+### What developers handle
+
+Ask a developer when you need:
+
+- Alt text fields on **diagram-stage** or other blocks that do not yet expose `media_alt`
+- Changes to **form structure**, validation, or Mailchimp field mapping
+- **Navigation**, skip-link, or focus behaviour (theme templates)
+- Fixing **imported blog HTML** in bulk
+
+A longer technical accessibility plan (phases 2–4) lives in the local **`comet/accessibility-plan.md`** reference copy (not published with the site).
 
 ---
 

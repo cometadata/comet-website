@@ -2,34 +2,39 @@
 
 	<div class="row ">
 		<div class="col logo">			
-			<a class="no-underline" href="{{ .Site.BaseURL }}"><img class="header-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" /></a>
+			<a class="no-underline" href="{{ .Site.BaseURL }}"><img class="header-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="{{ .Site.Title | default "COMET" }}" /></a>
 		</div>
 	</div>
 	
 	<div class="navigation-container">
 		<div class="nav">
-			<nav>
-				<input type="checkbox" name="" id="">
-				<div class="hamburger-lines">
-					<span class="line line1"></span>
-					<span class="line line2"></span>
-					<span class="line line3"></span>
-				</div>
-				<ul class="menu-items">
+			<nav aria-label="Primary">
+				<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
+					<span class="hamburger-lines" aria-hidden="true">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</span>
+				</button>
+				<ul class="menu-items" id="primary-menu">
 					{{ with .Site.Menus.main }}
 						{{ range . }}				
 
-							<li>
-								{{ if .Params.nolink }}
-								<span class='nolink'>{{ .Name }}</span>
-								<i class="fa-solid fa-fw fa-angle-down"></i>
-								{{ else }}
+							<li{{ if .HasChildren }} class="has-submenu"{{ end }}>
+								{{ if .HasChildren }}
+									{{ if .Params.nolink }}
+									<button type="button" class="submenu-toggle nolink" aria-expanded="false" aria-haspopup="true">{{ .Name }} <i class="fa-solid fa-fw fa-angle-down" aria-hidden="true"></i></button>
+									{{ else }}
+									<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+									<i class="fa-solid fa-fw fa-angle-down" aria-hidden="true"></i>
+									{{ end }}
+    							{{ else }}
 								<a href="{{ .URL | relURL }}">{{ .Name }}</a>
 								{{ end }}
     							{{ if .HasChildren }}
 									<ul class="submenu">
 										{{ range .Children }}
-											<li><a href="{{ .URL | relURL }}">{{ .Name }}</a>
+											<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 										{{ end }}
 									</ul>
 								{{ end }}

@@ -8,9 +8,9 @@ header {
     .navigation-container .nav:hover {
         background:white;
         box-shadow: 0 10px 6px -6px rgba(0,0,0,0.15);
-
     }
-    .navigation-container .nav:hover {
+    .navigation-container .nav:hover,
+    .navigation-container .nav:focus-within {
         background:white;
         .menu-items {
             z-index:200;
@@ -135,6 +135,20 @@ header {
                         display:inline-block;
                         margin-bottom:10px;
                     }
+                    button.submenu-toggle {
+                        background: none;
+                        border: 0;
+                        padding: 0;
+                        color: variables.$comet-nav-font-color;
+                        font: inherit;
+                        cursor: pointer;
+                        display: inline-block;
+                        margin-bottom: 10px;
+                    }
+                    &.has-submenu:focus-within > .submenu,
+                    &.submenu-open > .submenu {
+                        display: block;
+                    }
                     span.more {
                         font-size: 16px;
                     }
@@ -151,8 +165,15 @@ header {
                     }
                 }
             }
-            input[type="checkbox"], .hamburger-lines {
+            .menu-toggle,
+            .hamburger-lines {
                 display:none;
+            }
+            .menu-toggle {
+                background: none;
+                border: 0;
+                padding: 0;
+                cursor: pointer;
             }
             @media (max-width: variables.$break-large) {
                 position:absolute;
@@ -163,28 +184,21 @@ header {
                 height:100%;
                 margin-left: 0; 
 
-                input[type="checkbox"], .hamburger-lines {                    
-                    right: 20px;
-                }
-                input[type="checkbox"] {
+                .menu-toggle {
                     position: absolute;
                     display: block;
                     height: 32px;
-                    width: 30px;
-                    top:0;
+                    width: 35px;
+                    top: 0;
+                    right: 20px;
                     z-index: 501;
-                    opacity: 0;
-                    border:3px solid red;
                     cursor: pointer;
                 }
                 .hamburger-lines {
-                    display: block;
+                    display: flex;
                     height: 23px;
                     width: 35px;
-                    position: absolute;
-                    top: -3px;
-                    z-index: 500;
-                    display: flex;
+                    position: relative;
                     flex-direction: column;
                     justify-content: space-between;
                     .line {
@@ -229,26 +243,30 @@ header {
                         width:auto;;
                         margin-left:0;
                     }
-                    &:hover {
+                    &:hover,
+                    &:focus-within {
                         .submenu {
                             display:block !important;
                         }
                     }
+                    li.has-submenu.submenu-open > .submenu {
+                        display: block !important;
+                    }
                 }
                 
-                input[type="checkbox"]:checked ~ .menu-items {
+                nav.menu-open .menu-items {
                     transform: translateX(0vw);                    
                 }
                 
-                input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+                nav.menu-open .hamburger-lines .line1 {
                     transform: rotate(35deg);
                 }
             
-                input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+                nav.menu-open .hamburger-lines .line2 {
                     transform: scaleY(0);
                 }
             
-                input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+                nav.menu-open .hamburger-lines .line3 {
                     transform: rotate(-35deg);
                 }
             }
