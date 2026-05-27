@@ -10,5 +10,8 @@ table: "
 | Name and describe research outputs  | Research type | 3340593    |
 | Identify and connect organisations associated with research outputs | Affiliations | 2799081     |
 | Identify and connect related research outputs    | Related identifier | 890779 |
-| TOTAL    || 6240531    |
 "
+
+
+cta_headline: "TOTAL"
+cta_text: "6,240,531"

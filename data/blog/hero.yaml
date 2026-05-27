@@ -1,4 +1,5 @@
-variant: "media-right"
+variant: "background"
+background_height: "50vh"
 headline: "Blog"
 media: "/images/blog/tributaries.jpg"
 media_hover: "Tributaries"

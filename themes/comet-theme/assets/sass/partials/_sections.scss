@@ -87,7 +87,11 @@ section.hero-intro.background {
 
     h1 {
         font-size: variables.$font-h1;
+        @media (max-width: variables.$break-large) {
+            font-size: variables.$font-h1-small;
+        }
     }
+    
     &:before { 
         content: "";
         position: absolute;

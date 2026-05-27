@@ -216,7 +216,7 @@ form {
   width: 20px;
   height: 20px;
   border: 2px solid variables.$comet-button-secondary;
-  border-radius: 50%; /* Makes it perfectly round */
+  /* border-radius: 50%; Makes it perfectly round */
   background-color: #fff;
   transition: all 0.2s ease;
 }
