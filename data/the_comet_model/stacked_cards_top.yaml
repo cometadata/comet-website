@@ -2,6 +2,8 @@ layout_variant: "three"
 treatment_variant: "principles"
 media_variant: ""
 
+headline: "Foundational principles"
+
 elements:
   - title: "Collective stewardship"
     content: "The COMET model shifts the responsibility of metadata quality from individual depositors to a distributed community partnership. Crucially, this does not undermine source authority—it complements it. The model recognises that source authority and metadata quality are distinct, and that research outputs are the product of many actors whose collective expertise should be empowered to produce a complete and accurate scholarly record."    
