@@ -1,0 +1,11 @@
+headline: "Diagram stage — multi-image carousel"
+content: |
+  Animated image carousel with an auto-crossfading secondary image and COMET line progress indicator. Previously used on The COMET model page; retained here as a reference for future use.
+
+  Separate desktop and mobile image pairs are supported via `mediaPrimary`, `mediaSecondary`, `mediaPrimaryMobile`, and `mediaSecondaryMobile`.
+
+mediaPrimary: "/images/the-comet-model/gold-padlock.jpg"
+mediaSecondary: "/images/home/dandelion.jpg"
+
+mediaPrimaryMobile: "/images/about/spiderweb.jpg"
+mediaSecondaryMobile: "/images/about/geese.png"

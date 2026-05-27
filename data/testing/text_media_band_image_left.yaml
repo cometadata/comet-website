@@ -1,0 +1,9 @@
+variant: "image-left"
+headline: "Text-media band — image left"
+content: |
+  Two-column section with image on the left and narrative copy on the right.
+
+  Markdown links work: [Explore the COMET model](/the-comet-model)
+media: "/images/home/gold-padlock.jpg"
+media_hover: "Gold padlock"
+media_alt: "Golden padlock symbolizing collective stewardship of metadata"

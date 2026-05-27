@@ -181,3 +181,34 @@ table {
         border-bottom:none;
     }
 }
+
+.testing-gallery-intro {
+    margin-bottom: 1rem;
+}
+
+.testing-section-heading {
+    background: variables.$comet-darkblue;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    margin: 0;
+
+    h2 {
+        color: #fff;
+        font-size: 1.1rem;
+        margin: 0 0 0.35rem;
+    }
+
+    &__file,
+    &__note {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    code {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.12);
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+    }
+}

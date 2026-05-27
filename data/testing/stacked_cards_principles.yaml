@@ -1,0 +1,14 @@
+layout_variant: "three"
+treatment_variant: "principles"
+media_variant: ""
+
+headline: "Stacked cards — principles"
+content: "Three principle cards without icons, used on the COMET model page."
+
+elements:
+  - title: "Collective stewardship"
+    content: "Metadata quality is a shared community responsibility."
+  - title: "Collective benefit"
+    content: "Coordinated enrichment produces reusable, authoritative outputs."
+  - title: "Trust through transparency"
+    content: "Open processes and provenance build confidence in enrichments."

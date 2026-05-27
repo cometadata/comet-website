@@ -1,0 +1,22 @@
+layout_variant: "three"
+treatment_variant: "cta"
+media_variant: ""
+
+headline: "Stacked cards — three columns with CTA"
+content: "Three action lanes with icons, used on the homepage."
+
+cta_content: "Example call-to-action row beneath the three columns."
+cta_link_text: "Get in touch"
+cta_link_url: "/join-us/"
+button_rank: "button-tertiary"
+
+elements:
+  - title: "Join the community"
+    content: "Sign up for updates and community news."
+    media: "/images/icons/join.svg"
+  - title: "Advance enrichment"
+    content: "Share methods, data, or infrastructure expertise."
+    media: "/images/icons/advance.svg"
+  - title: "Offer support"
+    content: "Contribute financially or in kind."
+    media: "/images/icons/offer.svg"

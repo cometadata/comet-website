@@ -1,0 +1,6 @@
+variant: "background"
+headline: "Hero — background image"
+content: "Example of the full-width background hero used on the homepage and several landing pages."
+media: "/images/home/dandelion.jpg"
+media_hover: "Dandelion"
+media_alt: "Dandelion seed head with seeds dispersing in the wind"

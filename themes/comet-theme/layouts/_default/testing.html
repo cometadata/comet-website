@@ -1,32 +1,114 @@
 {{ define "main" }}
-    <main aria-role="main">
-      <header class="homepage-header">
-      </header>
+    <main aria-role="main" class="testing-gallery">
+      <header class="homepage-header"></header>
       <div class="homepage-content">
-        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        <div class="testing-gallery-intro section-block">
+          <div>
+            <h1>Block gallery</h1>
+            <p>Live examples of every content block and colour variant used on the COMET site. For editors only — this page is not in the menu and is excluded from search indexing.</p>
+            <p>See <code>docs/content-editors-guide.md</code> for how to edit copy in YAML.</p>
+          </div>
+        </div>
+
         {{ with hugo.Data.testing }}
-          {{ with .hero }}
-            {{ partial "blocks/hero-intro.html" . }}
-          {{ end }}
-          {{ with .impact_band }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-          {{ with .impact_band_alt }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-          {{ with .impact_band_cta }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-          {{ with .impact_band_alt_cta }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-          {{ with .impact_band_one }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-          {{ with .impact_band_one_alt }}
-            {{ partial "blocks/impact-band.html" . }}
-          {{ end }}
-        {{ end }}        
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "hero-intro — background" "file" "hero_background" "anchor" "hero-background") }}
+          {{ with .hero_background }}{{ partial "blocks/hero-intro.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "hero-intro — media-right" "file" "hero" "anchor" "hero-media-right") }}
+          {{ with .hero }}{{ partial "blocks/hero-intro.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "hero-intro — media-left" "file" "hero_media_left" "anchor" "hero-media-left") }}
+          {{ with .hero_media_left }}{{ partial "blocks/hero-intro.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "hero-intro — with-cta" "file" "hero_with_cta" "anchor" "hero-with-cta" "note" "Template stub only — not used on live pages yet.") }}
+          {{ with .hero_with_cta }}{{ partial "blocks/hero-intro.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "hero-intro — with-bullets" "file" "hero_with_bullets" "anchor" "hero-with-bullets" "note" "Template stub only — not used on live pages yet.") }}
+          {{ with .hero_with_bullets }}{{ partial "blocks/hero-intro.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "text-media-band — image-left" "file" "text_media_band_image_left" "anchor" "text-media-image-left") }}
+          {{ with .text_media_band_image_left }}{{ partial "blocks/text-media-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "text-media-band — image-right" "file" "text_media_band_image_right" "anchor" "text-media-image-right") }}
+          {{ with .text_media_band_image_right }}{{ partial "blocks/text-media-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "text-media-band — text-only" "file" "text_media_band_text_only" "anchor" "text-media-text-only") }}
+          {{ with .text_media_band_text_only }}{{ partial "blocks/text-media-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "text-media-band — cta-only" "file" "text_media_band_cta_only" "anchor" "text-media-cta-only") }}
+          {{ with .text_media_band_cta_only }}{{ partial "blocks/text-media-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — default" "file" "impact_band" "anchor" "impact-default") }}
+          {{ with .impact_band }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — alt colour" "file" "impact_band_alt" "anchor" "impact-alt") }}
+          {{ with .impact_band_alt }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — with CTA" "file" "impact_band_cta" "anchor" "impact-cta") }}
+          {{ with .impact_band_cta }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — alt colour with CTA" "file" "impact_band_alt_cta" "anchor" "impact-alt-cta") }}
+          {{ with .impact_band_alt_cta }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — below layout" "file" "impact_band_one" "anchor" "impact-below") }}
+          {{ with .impact_band_one }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "impact-band — below layout, alt colour" "file" "impact_band_one_alt" "anchor" "impact-below-alt") }}
+          {{ with .impact_band_one_alt }}{{ partial "blocks/impact-band.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — three-column with CTA" "file" "stacked_cards_three_cta" "anchor" "stacked-three-cta") }}
+          {{ with .stacked_cards_three_cta }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — principles (three-column)" "file" "stacked_cards_principles" "anchor" "stacked-principles") }}
+          {{ with .stacked_cards_principles }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — timeline (default / dark blue)" "file" "stacked_cards_timeline" "anchor" "stacked-timeline-default") }}
+          {{ with .stacked_cards_timeline }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — timeline, gold" "file" "stacked_cards_timeline_gold" "anchor" "stacked-timeline-gold") }}
+          {{ with .stacked_cards_timeline_gold }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — timeline, white" "file" "stacked_cards_timeline_white" "anchor" "stacked-timeline-white") }}
+          {{ with .stacked_cards_timeline_white }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — timeline, light green" "file" "stacked_cards_timeline_light_green" "anchor" "stacked-timeline-light-green") }}
+          {{ with .stacked_cards_timeline_light_green }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — stack with table" "file" "stacked_cards_with_table" "anchor" "stacked-with-table") }}
+          {{ with .stacked_cards_with_table }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — project grid (status cards)" "file" "stacked_cards_grid_status" "anchor" "stacked-grid-status") }}
+          {{ with .stacked_cards_grid_status }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — organisers grid, gold" "file" "stacked_cards_organisers" "anchor" "stacked-organisers") }}
+          {{ with .stacked_cards_organisers }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "stacked-cards — advisors grid, white" "file" "stacked_cards_advisors" "anchor" "stacked-advisors") }}
+          {{ with .stacked_cards_advisors }}{{ partial "blocks/stacked-cards.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "diagram-stage — multi-image carousel" "file" "diagram_stage" "anchor" "diagram-stage" "note" "Auto-crossfades between primary and secondary images. Separate desktop and mobile image pairs.") }}
+          {{ with .diagram_stage }}{{ partial "blocks/diagram-stage.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "comet-model-diagram-v1" "file" "diagram" "anchor" "diagram") }}
+          {{ with .diagram }}{{ partial "blocks/comet-model-diagram-v1.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "form-stack (demo — does not submit)" "file" "form_stack" "anchor" "form-stack") }}
+          {{ with .form_stack }}{{ partial "blocks/form-stack.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "form-stack-text" "file" "form_stack_text" "anchor" "form-stack-text") }}
+          {{ with .form_stack_text }}{{ partial "blocks/form-stack-text.html" . }}{{ end }}
+
+          {{ partial "blocks/testing-section-heading.html" (dict "title" "featured-post" "file" "" "anchor" "featured-post" "note" "Rendered from whichever blog post has featured = true in front matter.") }}
+          <section class="section-block featured-post">
+            <div>
+              {{ range where (where $.Site.RegularPages "Section" "posts") ".Params.featured" true }}
+                {{ partial "blocks/featured-post.html" . }}
+              {{ end }}
+            </div>
+          </section>
+
+        {{ end }}
       </div>
-    </main>        
+    </main>
 {{ end }}

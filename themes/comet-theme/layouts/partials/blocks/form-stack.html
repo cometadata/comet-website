@@ -7,8 +7,17 @@
 
     {{ $mc := .mailchimp }}
     {{ $fields := $mc.fields }}
+    {{ $demo := .demo }}
+    {{ if $demo }}
+    <p class="form-stack__demo-note" role="note"><strong>Demo only.</strong> This form does not submit on the block gallery page.</p>
+    {{ end }}
     <form
+        {{ if $demo }}
+        action="#"
+        data-demo="true"
+        {{ else }}
         action="{{ $mc.post_url }}?u={{ $mc.user_id }}&amp;id={{ $mc.list_id }}{{ with $mc.form_id }}&amp;f_id={{ . }}{{ end }}"
+        {{ end }}
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
@@ -192,6 +201,10 @@
 
     form.addEventListener("submit", function (event) {
         if (!validateOnSubmit()) {
+            event.preventDefault();
+            return;
+        }
+        if (form.getAttribute("data-demo") === "true") {
             event.preventDefault();
         }
     });

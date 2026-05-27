@@ -1,0 +1,4 @@
+variant: "text-only"
+headline: "Text-media band — text only"
+content: |
+  Full-width text section with no accompanying image. Useful for longer narrative passages between visual blocks.

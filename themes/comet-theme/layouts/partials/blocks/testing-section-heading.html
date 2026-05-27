@@ -1,0 +1,5 @@
+<div class="testing-section-heading" id="{{ .anchor }}">
+  <h2>{{ .title }}</h2>
+  {{ with .file }}<p class="testing-section-heading__file"><code>data/testing/{{ . }}.yaml</code></p>{{ end }}
+  {{ with .note }}<p class="testing-section-heading__note">{{ . }}</p>{{ end }}
+</div>

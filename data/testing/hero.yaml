@@ -1,6 +1,6 @@
 variant: "media-right"
-headline: "Testing"
-content: "TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE. TEXT SUGGESTED HERE."
+headline: "Hero — media right"
+content: "Example of a hero with headline copy on the left and a supporting image on the right."
 
 media: "/images/demo/placeholder-media.svg"
 media_hover: "Placeholder image"

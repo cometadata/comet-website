@@ -1,0 +1,15 @@
+layout_variant: "stack"
+treatment_variant: "timeline"
+media_variant: "portrait"
+color_variant: "light-green"
+
+headline: "Stacked cards — timeline, light green"
+content: "Same timeline layout with color_variant: \"light-green\"."
+
+elements:
+  - title: "Phase one"
+    headline: "Consultation"
+    content: "Community listening sessions identify shared priorities."
+  - title: "Phase two"
+    headline: "Pilot projects"
+    content: "Targeted enrichments validate the model in practice."

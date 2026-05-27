@@ -1,0 +1,6 @@
+variant: "image-right"
+headline: "Text-media band — image right"
+content: "Two-column section with copy on the left and image on the right."
+media: "/images/about/geese.png"
+media_hover: "Geese formation"
+media_alt: "Geese flying in formation"

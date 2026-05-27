@@ -169,6 +169,14 @@ form {
     margin-bottom: 1em;
 }
 
+.form-stack__demo-note {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: variables.$comet-gold-pale;
+    color: variables.$comet-darkblue;
+    border-radius: variables.$block-radius;
+}
+
 .form-stack__cta {
     margin-top: 2rem;
 }

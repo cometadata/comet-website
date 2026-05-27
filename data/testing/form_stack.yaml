@@ -1,0 +1,25 @@
+demo: true
+content: "Example form block. Fields and layout match Join Us; submissions are disabled on this gallery page."
+
+mailchimp:
+  post_url: "https://cometadata.us3.list-manage.com/subscribe/post"
+  user_id: "78fa394ea2abf3f9cdd9157c5"
+  list_id: "b6e6ea4a46"
+  form_id: "0033e5e3f0"
+  fields:
+    email: "EMAIL"
+    first_name: "FNAME"
+    last_name: "LNAME"
+    primary_affiliation: "MMERGE9"
+    secondary_affiliation: "MMERGE10"
+    linkedin: "MMERGE11"
+    join_community: "MMERGE12"
+    project_collaborations: "MMERGE13"
+
+participation:
+  - label: "Join community"
+    checkbox_label: "Receive updates"
+    field: "join_community"
+  - label: "Participate in project collaborations"
+    checkbox_label: "Receive updates"
+    field: "project_collaborations"

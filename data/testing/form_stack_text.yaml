@@ -1,0 +1,7 @@
+headline: "Thank you"
+content: |
+  Example thank-you / confirmation message block used after form submission.
+
+  We respect your privacy and time. Newsletters are published no more than twice a month.
+cta_text: "Return to home"
+cta_url: "/"

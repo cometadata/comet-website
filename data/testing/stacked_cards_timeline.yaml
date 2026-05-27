@@ -1,0 +1,17 @@
+layout_variant: "stack"
+treatment_variant: "timeline"
+media_variant: "portrait"
+
+headline: "Stacked cards — timeline (default colour)"
+content: "Vertical timeline with dark blue cards. Default when no color_variant is set."
+
+elements:
+  - title: "Phase one"
+    headline: "Consultation"
+    content: "Community listening sessions identify shared priorities."
+  - title: "Phase two"
+    headline: "Pilot projects"
+    content: "Targeted enrichments validate the model in practice."
+  - title: "Phase three"
+    headline: "Scale"
+    content: "Shared infrastructure supports ongoing community work."

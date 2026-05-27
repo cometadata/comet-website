@@ -1,0 +1,19 @@
+layout_variant: "stack"
+treatment_variant: "with-table"
+media_variant: ""
+
+headline: "Stacked cards — stack with table"
+content: "Stacked narrative elements followed by a markdown table."
+
+elements:
+  - headline: "Element one"
+    content: "First stacked element with supporting copy."
+  - headline: "Element two"
+    content: "Second stacked element with supporting copy."
+
+table: "
+| Column A | Column B |
+| -------- | -------- |
+| Row 1    | Value    |
+| Row 2    | Value    |
+"

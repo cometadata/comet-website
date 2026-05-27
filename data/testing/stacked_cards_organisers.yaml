@@ -1,0 +1,22 @@
+layout_variant: "grid"
+treatment_variant: "media"
+media_variant: "organisers"
+color_variant: "gold"
+
+headline: "Stacked cards — organisers, gold"
+content: "Partner organisation logos with representative portraits."
+
+split: "Representatives from each partner organisation."
+
+orgs:
+  - link_text: "CDL"
+    link: "https://cdlib.org/"
+    media: "/images/community/cdl.jpg"
+  - link_text: "DataCite"
+    link: "https://datacite.org/"
+    media: "/images/community/datacite.png"
+
+reps:
+  - name: "Example Representative"
+    company: "Partner organisation"
+    media: "/images/community/people/john-chodacki.jpg"

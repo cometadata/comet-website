@@ -1,0 +1,6 @@
+variant: "media-left"
+headline: "Hero — media left"
+content: "Example of a hero with a supporting image on the left and headline copy on the right."
+media: "/images/demo/placeholder-media.svg"
+media_hover: "Placeholder image"
+media_alt: "Decorative placeholder image"

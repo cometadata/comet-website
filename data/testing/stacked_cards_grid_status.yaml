@@ -1,0 +1,22 @@
+layout_variant: "grid"
+treatment_variant: "status"
+media_variant: ""
+
+headline: "Stacked cards — project grid"
+content: "Status cards used on the Projects page."
+
+elements:
+  - status: "In progress"
+    headline: "Example in-progress project"
+    content: "Short description of an active enrichment project."
+    link: "https://example.com"
+    icon: "<i class='fa-solid fa-spinner'></i>"
+  - status: "Planned"
+    headline: "Example planned project"
+    content: "Short description of a planned enrichment project."
+    icon: '<i class="fa-solid fa-calendar-days"></i>'
+  - status: "Complete"
+    headline: "Example completed project"
+    content: "Short description of a completed enrichment project."
+    link: "https://example.com"
+    icon: '<i class="fa-solid fa-check"></i>'

@@ -1,0 +1,8 @@
+variant: "with-cta"
+headline: "Hero — with CTA"
+content: "Placeholder for the with-cta hero variant. The template is not yet fully implemented on live pages."
+media: "/images/demo/placeholder-media.svg"
+media_alt: "Decorative placeholder image"
+cta_url: "/join-us/"
+cta_text: "Example CTA"
+cta_button_rank: "button-secondary"

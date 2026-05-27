@@ -1,0 +1,17 @@
+layout_variant: "grid"
+treatment_variant: "media"
+media_variant: "advisors"
+color_variant: "white"
+
+headline: "Stacked cards — advisors, white"
+content: "Advisor portrait grid with white card styling."
+
+advisors:
+  - name: "Example Advisor"
+    company: "Example institution"
+    company_link: "https://example.com/"
+    media: "/images/community/advisors/cameron-neylon.jpg"
+  - name: "Another Advisor"
+    company: "Another institution"
+    company_link: "https://example.com/"
+    media: "/images/community/advisors/howard-ratner.jpeg"
