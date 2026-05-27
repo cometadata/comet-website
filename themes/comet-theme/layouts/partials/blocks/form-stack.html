@@ -8,12 +8,12 @@
     {{ $mc := .mailchimp }}
     {{ $fields := $mc.fields }}
     <form
-        action="{{ $mc.post_url }}?u={{ $mc.user_id }}&amp;id={{ $mc.list_id }}"
+        action="{{ $mc.post_url }}?u={{ $mc.user_id }}&amp;id={{ $mc.list_id }}{{ with $mc.form_id }}&amp;f_id={{ . }}{{ end }}"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         class="validate form-stack__form"
-        target="_blank"
+        target="_self"
         novalidate
     >
         <input type="hidden" name="u" value="{{ $mc.user_id }}">
@@ -26,38 +26,38 @@
                     <p class="form-stack__required-note"><span class="required-asterisk" aria-hidden="true">*</span> = required field</p>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col-6">
+                    <div class="col-6 form-stack__field" data-field="mce-FNAME">
                         <label for="mce-FNAME">First name<span class="required-asterisk" aria-hidden="true">*</span>
-                            <input type="text" name="{{ index $fields "first_name" }}" id="mce-FNAME" class="required text" required>
+                            <input type="text" name="{{ index $fields "first_name" }}" id="mce-FNAME" class="required text" required autocomplete="given-name">
                         </label>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 form-stack__field" data-field="mce-LNAME">
                         <label for="mce-LNAME">Surname<span class="required-asterisk" aria-hidden="true">*</span>
-                            <input type="text" name="{{ index $fields "last_name" }}" id="mce-LNAME" class="required text" required>
+                            <input type="text" name="{{ index $fields "last_name" }}" id="mce-LNAME" class="required text" required autocomplete="family-name">
                         </label>
                     </div>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col-6">
-                        <label for="mce-PRIMARY">Primary affiliation<span class="required-asterisk" aria-hidden="true">*</span>
-                            <input type="text" name="{{ index $fields "primary_affiliation" }}" id="mce-PRIMARY" class="required text" required>
+                    <div class="col-6 form-stack__field" data-field="mce-MMERGE9">
+                        <label for="mce-MMERGE9">Primary affiliation<span class="required-asterisk" aria-hidden="true">*</span>
+                            <input type="text" name="{{ index $fields "primary_affiliation" }}" id="mce-MMERGE9" class="required text" required>
                         </label>
                     </div>
-                    <div class="col-6">
-                        <label for="mce-SECONDARY">Secondary affiliation
-                            <input type="text" name="{{ index $fields "secondary_affiliation" }}" id="mce-SECONDARY" class="text">
+                    <div class="col-6 form-stack__field" data-field="mce-MMERGE10">
+                        <label for="mce-MMERGE10">Secondary affiliation
+                            <input type="text" name="{{ index $fields "secondary_affiliation" }}" id="mce-MMERGE10" class="text">
                         </label>
                     </div>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col-6">
+                    <div class="col-6 form-stack__field" data-field="mce-EMAIL">
                         <label for="mce-EMAIL">Email<span class="required-asterisk" aria-hidden="true">*</span>
-                            <input type="email" name="{{ index $fields "email" }}" id="mce-EMAIL" class="required email" autocapitalize="off" autocorrect="off" required>
+                            <input type="email" name="{{ index $fields "email" }}" id="mce-EMAIL" class="required email" autocapitalize="off" autocorrect="off" required autocomplete="email">
                         </label>
                     </div>
-                    <div class="col-6">
-                        <label for="mce-LINKEDIN">LinkedIn
-                            <input type="text" name="{{ index $fields "linkedin" }}" id="mce-LINKEDIN" class="text">
+                    <div class="col-6 form-stack__field" data-field="mce-MMERGE11">
+                        <label for="mce-MMERGE11">LinkedIn
+                            <input type="text" name="{{ index $fields "linkedin" }}" id="mce-MMERGE11" class="text">
                         </label>
                     </div>
                 </div>
@@ -105,8 +105,11 @@
             <div class="response" id="mce-success-response" style="display:none"></div>
         </div>
 
-        <div class="row">
-            <div class="col text-end">
+        <div class="row flex-nowrap align-items-center form-stack__submit-row">
+            <div class="col form-stack__submit-message">
+                <p class="form-stack__error-message" id="form-stack-error-message" role="alert" aria-live="polite" hidden></p>
+            </div>
+            <div class="col-auto text-end form-stack__submit-action">
                 <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe">
             </div>
         </div>
@@ -116,6 +119,83 @@
 
 <script>
 (function () {
+    var form = document.getElementById("mc-embedded-subscribe-form");
+    if (!form) {
+        return;
+    }
+
+    var errorMessage = document.getElementById("form-stack-error-message");
+    var requiredFields = [
+        { id: "mce-FNAME" },
+        { id: "mce-LNAME" },
+        { id: "mce-MMERGE9" },
+        { id: "mce-EMAIL", type: "email" }
+    ];
+
+    function getFieldWrapper(input) {
+        return input ? input.closest(".form-stack__field") : null;
+    }
+
+    function validateOnSubmit() {
+        var missingRequired = false;
+        var invalidEmail = false;
+        var firstInvalidInput = null;
+
+        requiredFields.forEach(function (field) {
+            var input = document.getElementById(field.id);
+            if (!input) {
+                return;
+            }
+
+            var value = input.value.trim();
+            var isEmpty = !value;
+            var isEmailInvalid = field.type === "email" && value && !input.checkValidity();
+            var showError = isEmpty || isEmailInvalid;
+
+            if (isEmpty) {
+                missingRequired = true;
+            }
+            if (isEmailInvalid) {
+                invalidEmail = true;
+            }
+
+            if (showError && !firstInvalidInput) {
+                firstInvalidInput = input;
+            }
+
+            var wrapper = getFieldWrapper(input);
+            if (wrapper) {
+                wrapper.classList.toggle("form-stack__field--invalid", showError);
+            }
+            input.setAttribute("aria-invalid", showError ? "true" : "false");
+        });
+
+        var messages = [];
+        if (missingRequired) {
+            messages.push("Please complete required fields.");
+        }
+        if (invalidEmail) {
+            messages.push("Please enter a valid email address.");
+        }
+
+        if (errorMessage) {
+            errorMessage.textContent = messages.join(" ");
+            errorMessage.hidden = messages.length === 0;
+        }
+
+        if (firstInvalidInput) {
+            firstInvalidInput.focus();
+        }
+
+        return messages.length === 0;
+    }
+
+    form.addEventListener("submit", function (event) {
+        if (!validateOnSubmit()) {
+            event.preventDefault();
+        }
+    });
+
     document.querySelectorAll(".form-stack__yes-no-toggle").forEach(function (checkbox) {
         checkbox.addEventListener("change", function () {
             var fieldName = checkbox.getAttribute("data-field-name");

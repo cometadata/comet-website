@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <main aria-role="main">
+      <header class="homepage-header">
+      </header>
+      <div class="homepage-content">
+        {{ with hugo.Data.join_us }}
+          {{ with .hero }}
+            {{ partial "blocks/hero-intro.html" . }}
+          {{ end }}
+          {{ with .thank_you }}
+            {{ partial "blocks/form-stack-text.html" . }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </main>
+{{ end }}

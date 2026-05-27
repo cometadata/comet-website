@@ -91,12 +91,19 @@ form {
         padding: 5px 25px;
         border-radius: 20px;
         transition: all variables.$transition-time;
-        &:hover {
+        &:hover:not(:disabled) {
             background-color: #fff;
             color:variables.$comet-button-secondary;
             transition: all variables.$transition-time;
             border:2px solid variables.$comet-button-secondary;
-        }        
+        }
+        &:disabled {
+            background-color: #b0b0b0;
+            border-color: #b0b0b0;
+            color: #fff;
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
     }
     .comet {
         
@@ -112,13 +119,11 @@ form {
     }
 }
 
-.form-stack__intro {
-    margin-bottom: 1em;
-}
-
 .form-stack {
+    $form-error-color: #c0392b;
+
     .required-asterisk {
-        color: #c0392b;
+        color: $form-error-color;
     }
 
     .form-stack__required-note {
@@ -127,6 +132,45 @@ form {
         font-size: 0.95rem;
         margin: 0.35em 0 0;
     }
+
+    .form-stack__field--invalid label {
+        color: $form-error-color;
+    }
+
+    .form-stack__field--invalid input[type='text'],
+    .form-stack__field--invalid input[type='email'] {
+        border-color: $form-error-color;
+    }
+
+    .form-stack__submit-row {
+        flex-wrap: nowrap;
+        margin-top: 1.5rem;
+    }
+
+    .form-stack__submit-message {
+        min-width: 0;
+        padding-right: 1.5rem;
+    }
+
+    .form-stack__error-message {
+        margin: 0;
+        color: $form-error-color;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .form-stack__submit-action {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+
+.form-stack__intro {
+    margin-bottom: 1em;
+}
+
+.form-stack__cta {
+    margin-top: 2rem;
 }
 
 

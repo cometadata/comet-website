@@ -1,0 +1,6 @@
+{{- $path := . -}}
+{{- if hugo.IsServer -}}
+{{- $path -}}
+{{- else -}}
+{{- $path | relURL -}}
+{{- end -}}

@@ -1,0 +1,3 @@
+# Local dev overrides (used automatically by `hugo server`).
+baseURL = "http://localhost:1313/"
+canonifyURLs = false

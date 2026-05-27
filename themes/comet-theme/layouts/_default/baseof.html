@@ -29,14 +29,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 {{ if .Params.load_jquery }}
-	<script type="text/javascript" src="{{ "/js/filter.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ partial "local-asset.html" "/js/filter.js" }}"></script>
 {{ end }}
-	<script type="text/javascript" src="{{ "/js/script.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ partial "local-asset.html" "/js/script.js" }}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<!-- fontawesome now locally hosted -->
-	<link rel="stylesheet" href="{{ "/css/fontawesome-free-7.2.0-web/css/fontawesome.min.css" | relURL }}">
-	<link rel="stylesheet" href="{{ "/css/fontawesome-free-7.2.0-web/css/solid.min.css" | relURL }}">
-	<link rel="stylesheet" href="{{ "/css/fontawesome-free-7.2.0-web/css/brands.min.css" | relURL }}">
+	<link rel="stylesheet" href="{{ partial "local-asset.html" "/css/fontawesome-free-7.2.0-web/css/fontawesome.min.css" }}">
+	<link rel="stylesheet" href="{{ partial "local-asset.html" "/css/fontawesome-free-7.2.0-web/css/solid.min.css" }}">
+	<link rel="stylesheet" href="{{ partial "local-asset.html" "/css/fontawesome-free-7.2.0-web/css/brands.min.css" }}">
 	
 
 
@@ -53,7 +53,13 @@
 					<link rel="stylesheet" href="{{ .RelPermalink }}?v={{ .Data.Integrity }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 				{{ end }}
 			{{ else }}
-				<link rel="stylesheet" href="{{ .RelPermalink }}">
+				{{ $cssHref := .RelPermalink }}
+				{{ if hugo.IsServer }}
+					{{ $cssHref = replaceRE "^https?://[^/]+" "" $cssHref }}
+				{{ else }}
+					{{ $cssHref = .RelPermalink | relURL }}
+				{{ end }}
+				<link rel="stylesheet" href="{{ $cssHref }}">
 			{{ end }}
 		{{ end }}
 	{{ end }}
@@ -63,13 +69,13 @@
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 
-	<link rel="icon" sizes="48x48" href="{{ "/images/favicons/favicon.ico" | relURL }}">
-	<link rel="icon" sizes="32x32" href="{{ "/images/favicons/favicon-32x32.png" | relURL }}">
-	<link rel="icon" sizes="16x16" href="{{ "/images/favicons/favicon-16x16.png" | relURL }}">
-	<link rel="apple-touch-icon-precomposed" href="{{ "/images/favicons/apple-touch-icon.png" | relURL }}">
-	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="{{ "/images/favicons/android-chrome-192x192.png" | relURL }}">
-	<link rel="apple-touch-icon-precomposed" sizes="512x512" href="{{ "/images/favicons/android-chrome-512x512.png" | relURL }}">
-    <!--[if IE]><link rel="shortcut icon" href="{{ "/images/favicons/favicon.ico" | relURL }}"><![endif]-->
+	<link rel="icon" sizes="48x48" href="{{ partial "local-asset.html" "/images/favicons/favicon.ico" }}">
+	<link rel="icon" sizes="32x32" href="{{ partial "local-asset.html" "/images/favicons/favicon-32x32.png" }}">
+	<link rel="icon" sizes="16x16" href="{{ partial "local-asset.html" "/images/favicons/favicon-16x16.png" }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ partial "local-asset.html" "/images/favicons/apple-touch-icon.png" }}">
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="{{ partial "local-asset.html" "/images/favicons/android-chrome-192x192.png" }}">
+	<link rel="apple-touch-icon-precomposed" sizes="512x512" href="{{ partial "local-asset.html" "/images/favicons/android-chrome-512x512.png" }}">
+    <!--[if IE]><link rel="shortcut icon" href="{{ partial "local-asset.html" "/images/favicons/favicon.ico" }}"><![endif]-->
 </head>
 <body>
 	{{ partial "header" . }}

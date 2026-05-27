@@ -8,12 +8,55 @@ This guide explains how to connect the `/join-us/` page form to a Mailchimp audi
 |---|---|
 | Page | `/join-us/` |
 | Form content & Mailchimp IDs | `data/join_us/form.yaml` |
+| Thank-you page copy | `data/join_us/thank_you.yaml` |
+| Hero copy | `data/join_us/hero.yaml` |
 | Form template | `themes/comet-theme/layouts/partials/blocks/form-stack.html` |
 | Page layout | `themes/comet-theme/layouts/_default/join-us.html` |
 
 The form block does **not** display a “Join Us” heading. The page hero (`data/join_us/hero.yaml`) provides the main page title. The form block shows only the intro paragraph and the form itself.
 
-Submissions open in a new tab (`target="_blank"`) and are handled by Mailchimp’s standard signup flow.
+Submissions are handled by Mailchimp’s standard signup flow. After a successful submission, Mailchimp redirects the browser to the site thank-you page at `/thank-you/` (see **Thank-you page** below).
+
+## Thank-you page
+
+After a successful signup, users are redirected to **`/thank-you/`** on this site.
+
+### Edit thank-you copy
+
+Edit `data/join_us/thank_you.yaml`:
+
+```yaml
+headline: "Thank you"
+content: |
+  We've received your details and will be in touch soon.
+cta_text: "Return to home"
+cta_url: "/"
+mailchimp_redirect_url: "https://cometadata.github.io/comet-website/thank-you/"
+```
+
+Markdown is supported in `content`. The `mailchimp_redirect_url` value is a reference for Mailchimp setup — it is not sent automatically by the form.
+
+### Mailchimp redirect (required)
+
+Configure Mailchimp to send users to the site thank-you page after signup. The exact menu labels vary by account, but the current Mailchimp UI is typically:
+
+1. In the left sidebar, click **Forms** → **Other forms**.
+2. Under **Form builder**, click **Manage forms**.
+3. Choose your audience from the **Audience** drop-down (if prompted).
+4. Open the **Forms and response emails** drop-down and select **Confirmation thank you page**.
+5. Choose the option to redirect subscribers to another URL (wording may be “Instead of showing this thank you page, send subscribers to another URL”).
+6. Enter the full production URL, e.g. `https://cometadata.github.io/comet-website/thank-you/`
+7. Save.
+
+If your audience uses **double opt-in**, repeat steps 4–7 for **Signup thank you page** as well (that is the page shown immediately after form submit; the confirmation thank-you page appears after they click the email link).
+
+**Alternative path (older UI):** **Audience** → select audience → **Signup forms** → **Form builder** → same **Forms and response emails** drop-down.
+
+Until this redirect is saved in Mailchimp, users will see Mailchimp’s default thank-you page instead of the site page.
+
+The form submits in the same browser tab (`target="_self"`), so the redirect lands on your Hugo thank-you page.
+
+Mailchimp help: [Design and Host Your Own Thank You Pages](https://mailchimp.com/help/design-and-host-your-own-thank-you-pages/)
 
 ## Step 1: Create or choose a Mailchimp audience
 
