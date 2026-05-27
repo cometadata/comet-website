@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cometadata.github.io/comet-website/sitemap.xml
