@@ -11,8 +11,7 @@
 	<meta name="ahrefs-site-verification" content="a4d19d13d080685e48094a2591188be35d7b5db05918a5eb84828500a14f3c5e">
 	
 	{{ partial "head/title.html" . }}
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ partial "head/seo.html" . }}
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
 		  rel="stylesheet" 

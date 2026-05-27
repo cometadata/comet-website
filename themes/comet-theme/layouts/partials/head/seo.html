@@ -1,0 +1,35 @@
+{{- $description := .Params.description | default .Description | default .Summary | default .Site.Params.description -}}
+{{- $description = $description | plainify | strings.TrimSpace | truncate 160 -}}
+{{- $ogImage := .Site.Params.defaultOgImage -}}
+{{- with .Params.media }}{{ $ogImage = . }}{{ end -}}
+{{- with .Params.image }}{{ $ogImage = . }}{{ end -}}
+{{- $ogType := cond (eq .Section "posts") "article" "website" -}}
+{{- $pageTitle := cond .IsHome "Home" .Title -}}
+{{- $tagline := .Site.Params.titleTagline | default "COMET Richer Metadata. Together." -}}
+{{- $fullTitle := printf "%s - %s" $pageTitle $tagline -}}
+
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:site_name" content="COMET">
+<meta property="og:title" content="{{ $fullTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:locale" content="{{ .Site.Language.Lang | default "en_US" }}">
+{{- with $ogImage }}
+{{- $ogImageUrl := urls.JoinPath $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
+<meta property="og:image" content="{{ $ogImageUrl }}">
+{{- end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $fullTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with $ogImage }}
+{{- $ogImageUrl := urls.JoinPath $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
+<meta name="twitter:image" content="{{ $ogImageUrl }}">
+{{- end }}
+
+{{- if .IsHome }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "WebSite" "name" "COMET" "url" .Site.BaseURL "description" .Site.Params.description | jsonify | safeJS }}</script>
+{{- end }}

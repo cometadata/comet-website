@@ -1,0 +1,38 @@
+old_path,new_path,status,notes
+/home,/,confirmed,Legacy Squarespace homepage URL
+/about,/about,confirmed,Same path
+/the-comet-model,/the-comet-model,confirmed,Same path
+/join-us,/join-us,confirmed,Same path (live page title was Contact)
+/our-vision,/about,provisional,Former vision page; content may map to About or The COMET model — review
+/people,/community,provisional,Former people/organisers page; mapped to Community — review
+/resources,/posts,provisional,Former resources hub; mapped to blog index — review
+/enrichment-projects,/projects,provisional,Mapped to Projects — review
+/contribute-enrichments,/join-us,provisional,Mapped to Join Us — review
+/blog,/posts,confirmed,Live blog index; new site uses /posts/ for index and /blog/{slug}/ for posts
+/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,confirmed,Same slug
+/blog/crossrefs-perspective-on-open-metadata-enrichment,/blog/crossrefs-perspective-on-open-metadata-enrichment,confirmed,Same slug
+/blog/enrichment-projects,/blog/enrichment-projects,confirmed,Same slug
+/blog/cwts,/blog/cwts,confirmed,Same slug
+/blog/public-knowledge-project,/blog/public-knowledge-project,confirmed,Same slug
+/blog/cdls-comet-organizational-perspective,/blog/cdls-comet-organizational-perspective,confirmed,Same slug
+/blog/comet-in-action,/blog/comet-in-action,confirmed,Same slug
+/blog/participant-perspectives-embl,/blog/participant-perspectives-embl,confirmed,Same slug
+/blog/participant-perspectives-bhavesh-patel,/blog/participant-perspectives-bhavesh-patel,confirmed,Same slug
+/blog/participant-perspectives-cameron-neylon-curtin-university,/blog/participant-perspectives-cameron-neylon-curtin-university,confirmed,Same slug
+/blog/participant-perspectives-howard-ratner-chorus,/blog/participant-perspectives-howard-ratner-chorus,confirmed,Same slug
+/blog/participant-perspectives-cristina-huidiu,/blog/participant-perspectives-cristina-huidiu,confirmed,Same slug
+/blog/participant-perspectives-kyle-demes,/blog/participant-perspectives-kyle-demes,confirmed,Same slug
+/blog/participant-perspectives-hannah-hope,/blog/participant-perspectives-hannah-hope,confirmed,Same slug
+/blog/call-to-action-comet,/blog/call-to-action-comet,confirmed,Same slug
+/blog/summary-reportcomet-implementation-scenario,/blog/summary-reportcomet-implementation-scenario,confirmed,Same slug
+/blog/summary-comet-governance-listening-sessions,/blog/summary-comet-governance-listening-sessions,confirmed,Same slug
+/blog/force11-working-group,/blog/force11-working-group,confirmed,Same slug
+/blog/comet-product-development-listening-sessions,/blog/comet-product-development-listening-sessions,confirmed,Same slug
+/blog/summary-report-comet-introductory-sessions-november-7-2024,/blog/summary-report-comet-introductory-sessions-november-7-2024,confirmed,Same slug
+/blog/blog-post-four-5gxpx,/posts,provisional,Placeholder post on live site; not migrated — review destination
+/blog/category/Announcement,/categories/announcement,confirmed,Category URL structure changed
+/blog/category/Resources,/categories/resources,confirmed,Category URL structure changed
+/blog/category/Community Perspectives,/categories/community-perspectives,confirmed,Category URL structure changed (live URL uses + for spaces)
+/blog/tag/Call to Action,/posts,provisional,No matching tag archive on new site — review
+/blog/tag/implementation,/posts,provisional,No matching tag archive on new site — review
+/blog/tag/listening session,/tags/listening-sessions,provisional,Mapped to closest tag slug — review

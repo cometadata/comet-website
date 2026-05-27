@@ -1,3 +1,4 @@
-{{ range .Site.Params.robots }}
-{{- . }}
-{{ end }}
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
