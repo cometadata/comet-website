@@ -1,20 +1,7 @@
 variant: "background"
-background_height: ""
+background_height: "50vh"
 headline: "Community"
-content: "COMET is a community initiative driven by the needs of diverse stakeholders committed to the collective stewardship of quality, trustworthy, and open scholarly metadata.
-
-We recognise that research outputs are the product of many actors whose collective expertise should be empowered to create a complete and accurate scholarly record.
-
-The members in our community represent organisations such as:
-
-- research institutes and labs
-- national, public, and institutional libraries
-- publishers and publishing technology providers
-- PID and bibliographic service providers
-- government agencies and policy makers
-- research councils and funders
-- repositories and archives
-- open science advocacy groups"
+content: "COMET is a community initiative driven by the needs of diverse stakeholders committed to the collective stewardship of quality, trustworthy, and open scholarly metadata."
 media: "/images/community/fish.png"
 media_hover: "School of fish"
 media_alt: "School of fish"

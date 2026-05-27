@@ -8,6 +8,9 @@
           {{ with .hero }}
             {{ partial "blocks/hero-intro.html" . }}
           {{ end }}
+          {{ with .text_media_band_overflow }}
+            {{ partial "blocks/text-media-band.html" . }}
+          {{ end }}
           {{ with .text_media_band_cta }}
             {{ partial "blocks/text-media-band.html" . }}
           {{ end }}

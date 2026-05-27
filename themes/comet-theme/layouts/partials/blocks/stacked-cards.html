@@ -59,11 +59,9 @@
             {{ if eq $tv "with-table" }}
             
             <i class="debug-info" style="right:20px;">with-table sub layout invoked</i> 
-                <div class=" row {{ $tv }}">
-                
-                    {{ .table | markdownify}}
-                
-                </div>vc
+                <div class=" row {{ $tv }}">                
+                    {{ .table | markdownify}}                
+                </div>
             {{ end }}
 
         {{ else if eq $lv "three" }}
