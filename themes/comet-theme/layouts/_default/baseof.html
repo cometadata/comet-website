@@ -69,12 +69,14 @@
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 
-	<link rel="icon" sizes="48x48" href="{{ partial "local-asset.html" "/images/favicons/favicon.ico" }}">
-	<link rel="icon" sizes="32x32" href="{{ partial "local-asset.html" "/images/favicons/favicon-32x32.png" }}">
-	<link rel="icon" sizes="16x16" href="{{ partial "local-asset.html" "/images/favicons/favicon-16x16.png" }}">
-	<link rel="apple-touch-icon-precomposed" href="{{ partial "local-asset.html" "/images/favicons/apple-touch-icon.png" }}">
-	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="{{ partial "local-asset.html" "/images/favicons/android-chrome-192x192.png" }}">
-	<link rel="apple-touch-icon-precomposed" sizes="512x512" href="{{ partial "local-asset.html" "/images/favicons/android-chrome-512x512.png" }}">
+	<meta name="theme-color" content="#0b2545">
+
+	<link rel="icon" href="{{ partial "local-asset.html" "/images/favicons/favicon.ico" }}" sizes="48x48">
+	<link rel="icon" type="image/svg+xml" href="{{ partial "local-asset.html" "/images/favicons/favicon.svg" }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ partial "local-asset.html" "/images/favicons/favicon-32x32.png" }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ partial "local-asset.html" "/images/favicons/favicon-16x16.png" }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ partial "local-asset.html" "/images/favicons/apple-touch-icon.png" }}">
+	<link rel="manifest" href="{{ partial "local-asset.html" "/images/favicons/site.webmanifest" }}">
     <!--[if IE]><link rel="shortcut icon" href="{{ partial "local-asset.html" "/images/favicons/favicon.ico" }}"><![endif]-->
 </head>
 <body>
