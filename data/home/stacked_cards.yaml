@@ -16,7 +16,8 @@ elements:
     media: "/images/icons/join.svg" 
   - title: "Advance metadata enrichment"
     content: "Run metadata through our infrastructure, provide research outputs for data quality training, or share methods for plugin development."    
-    media: "/images/icons/advance.svg" 
-  - title: "Offer your support"
-    content: "There are many ways to support COMET, financially or with your knowledge and expertise."    
     media: "/images/icons/offer.svg" 
+  - title: "Offer your support"
+    content: "There are many ways to support COMET, financially or with your knowledge and expertise."
+    media: "/images/icons/advance.svg"     
+    
