@@ -1,4 +1,5 @@
-variant: "media-right"
+variant: "background"
+background_height: "50vh"
 headline: "Projects"
 content: "COMET organisers and community members conduct projects that produce shared, durable assets such as enrichment methods, gold-standard benchmarks, and enriched datasets for round-tripping into the PID ecosystem. View the project below and get in touch to collaborate."
 
