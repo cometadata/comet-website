@@ -8,9 +8,14 @@
     $table-borders: variables.$comet-table-border; 
     $table-lines: variables.$comet-table-lines;
 
-    table {          
-            
+    table {         
+        width:calc(100% - 20px);
         margin-left: 30px;
+        
+        @media (max-width: variables.$break-large) {
+            width:calc(100%);
+            margin-left: 0;
+        }
         margin-bottom: 30px;  
         border: 2px solid $table-headings;
         color: $table-color; 
@@ -44,7 +49,12 @@
 
         table {          
             
+            width:calc(100% - 20px);
             margin-left: 30px;
+            @media (max-width: variables.$break-large) {
+                width:calc(100%);
+                margin-left: 0;
+            }
             margin-bottom: 30px;  
             border: 2px solid $table-headings;
             color: $table-color; 
@@ -72,14 +82,22 @@
     }
     &.below {
         table {
-            width:100%;
-            margin:0;
+            margin-left:-12px;
+            margin-bottom:0;
+            width:calc(100% + 24px);
             padding:30px;
+            @media (max-width: variables.$break-large) {
+                width:calc(100%);
+                margin-left: 0;
+            }
         }
     }
 }
 .big-number {
     font-size:60px;
+    @media (max-width: variables.$break-large) {
+        font-size:48px;
+    }
 }
 .infos {
     color:#fff;
@@ -87,12 +105,24 @@
 }
 .cta-attached {
     background-color: variables.$comet-table-headings;
+    margin-bottom:10px;
+
+    @media (max-width: variables.$break-large) {
+            width:calc(100% - 24px);
+            margin-left: 12px;
+        }
+
     &.alt {
         background-color: variables.$comet-darkblue;
     }
     &.right {    
         margin-top:-30px;
         margin-left:30px;
+        margin-right: -10px;
+        @media (max-width: variables.$break-large) {
+                width:calc(100%);
+                margin-left: 0;
+            }
     }
     align-items:flex-end;
     .comet-line {
