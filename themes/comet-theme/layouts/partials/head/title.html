@@ -1,0 +1,3 @@
+{{- $tagline := .Site.Params.titleTagline | default "COMET Richer Metadata. Together." -}}
+{{- $pageTitle := cond .IsHome "Home" .Title -}}
+<title>{{ $pageTitle }} - {{ $tagline }}</title>

@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 # baseURL define in build command line for flexibility
 locale = 'en-us'
-title = 'Cometadata development website'
+title = 'COMET'
 theme = 'comet-theme'
 
 canonifyURLs = true
@@ -27,6 +27,8 @@ name = "sass/_cometadata.scss"
 
 [params]
   dateForm = "1/2/06"
+  titleTagline = "COMET Richer Metadata. Together."
+  description = "The COMET community is setting the standards for collaborative metadata enrichment practices and creating the shared infrastructure needed for trustworthy quality metadata to flow into the persistent identifier (PID) ecosystem we all rely on."
 
 [menu]
 [[menu.main]]
