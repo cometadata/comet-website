@@ -66,7 +66,8 @@ form {
             }
     }
     input[type='text'],
-    input[type='email'] {
+    input[type='email'],
+    textarea {
         margin-top:10px;
         border: 2px solid variables.$comet-button-secondary;
         border-radius: 20px;
@@ -74,6 +75,10 @@ form {
         @media (max-width: variables.$break-xlarge) {
                 width:100%;
             }
+    }
+    textarea {
+        min-height: 6rem;
+        resize: vertical;
     }
     .checkboxes {        
         label {
@@ -138,7 +143,8 @@ form {
     }
 
     .form-stack__field--invalid input[type='text'],
-    .form-stack__field--invalid input[type='email'] {
+    .form-stack__field--invalid input[type='email'],
+    .form-stack__field--invalid textarea {
         border-color: $form-error-color;
     }
 
@@ -162,6 +168,82 @@ form {
     .form-stack__submit-action {
         flex: 0 0 auto;
         white-space: nowrap;
+    }
+
+    .form-stack__participation-fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+    }
+
+    .form-stack__participation-heading {
+        padding: 0;
+        margin: 0 0 0.35rem;
+        font-size: inherit;
+        font-weight: bold;
+        color: inherit;
+        float: none;
+        display: block;
+    }
+
+    .form-stack__participation-help {
+        margin: 0 0 0.75rem;
+        font-weight: normal;
+        font-size: 0.95rem;
+        color: variables.$main-font-color;
+    }
+
+    .form-stack__participation-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-stack__participation-item {
+        margin: 0 0 0.85rem;
+        padding: 0;
+
+        label {
+            margin-top: 0;
+            float: none;
+        }
+    }
+
+    .form-stack__field--notes {
+        margin-top: 1.25rem;
+        width: 100%;
+        clear: both;
+
+        label {
+            margin-top: 0;
+            float: none;
+            display: block;
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .form-stack__field-hint {
+        margin: 0.35rem 0 0;
+        font-size: 0.9rem;
+        font-weight: normal;
+        color: variables.$main-font-color;
+    }
+
+    .form-stack__char-count--limit,
+    .form-stack__field-hint--limit {
+        color: $form-error-color;
+        font-weight: 600;
+    }
+
+    .form-stack__participation-fieldset--invalid .form-stack__participation-help {
+        color: $form-error-color;
     }
 }
 

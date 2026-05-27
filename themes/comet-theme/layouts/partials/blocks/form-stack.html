@@ -78,30 +78,47 @@
 
             <div class="row col-5 checkboxes align-content-start checkbox-container">
                 <div class="details col-12 mt-3">
-                    <h3>Areas of participation</h3>
+                    <fieldset class="form-stack__participation-fieldset">
+                        <legend class="form-stack__participation-heading">Areas of participation</legend>
+                        <p class="form-stack__participation-help" id="participation-help">Select all that apply.</p>
+                        <ul class="form-stack__participation-list" aria-describedby="participation-help">
+                            {{ range $index, $option := .participation.options }}
+                            {{ $optionId := printf "participation-%d" $index }}
+                            <li class="form-stack__participation-item">
+                                <input
+                                    type="checkbox"
+                                    id="{{ $optionId }}"
+                                    class="round-checkbox form-stack__participation-toggle"
+                                    value="{{ $option }}"
+                                >
+                                <label for="{{ $optionId }}">{{ $option }}</label>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        <input
+                            type="hidden"
+                            name="{{ index $fields "participation_areas" }}"
+                            id="mce-participation-areas"
+                            value=""
+                        >
+                    </fieldset>
                 </div>
 
-                {{ range .participation }}
-                {{ $fieldName := index $fields .field }}
-                <div class="row col-12 flex-column form-stack__participation">
-                    <div class="col-12 mt-3 m-0 p-0">
-                        <div>{{ .label }}</div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-flex-start gap-2 mt-2 m-0 p-0">
-                        <input type="hidden" name="{{ $fieldName }}" value="No" class="form-stack__yes-no-field">
-                        <input
-                            type="checkbox"
-                            id="participation-{{ .field }}"
-                            class="round-checkbox form-stack__yes-no-toggle"
-                            data-field-name="{{ $fieldName }}"
-                            aria-describedby="participation-{{ .field }}-label"
-                        >
-                        <label for="participation-{{ .field }}" id="participation-{{ .field }}-label">
-                            {{ .checkbox_label }}
-                        </label>
-                    </div>
+                <div class="col-12 form-stack__field form-stack__field--notes">
+                    <label for="mce-additional-notes">{{ .additional_notes.label }}
+                        <textarea
+                            name="{{ index $fields "additional_notes" }}"
+                            id="mce-additional-notes"
+                            class="text"
+                            rows="4"
+                            maxlength="255"
+                            aria-describedby="additional-notes-hint"
+                        ></textarea>
+                    </label>
+                    <p class="form-stack__field-hint" id="additional-notes-hint">
+                        <span class="form-stack__char-count" id="additional-notes-count">0</span> / 255 characters. Additional text cannot be saved beyond this limit.
+                    </p>
                 </div>
-                {{ end }}
             </div>
         </div>
 
@@ -134,6 +151,10 @@
     }
 
     var errorMessage = document.getElementById("form-stack-error-message");
+    var notesField = document.getElementById("mce-additional-notes");
+    var notesCount = document.getElementById("additional-notes-count");
+    var participationField = document.getElementById("mce-participation-areas");
+    var maxMergeFieldLength = 255;
     var requiredFields = [
         { id: "mce-FNAME" },
         { id: "mce-LNAME" },
@@ -145,9 +166,38 @@
         return input ? input.closest(".form-stack__field") : null;
     }
 
+    function setFieldInvalid(input, isInvalid) {
+        var wrapper = getFieldWrapper(input);
+        if (wrapper) {
+            wrapper.classList.toggle("form-stack__field--invalid", isInvalid);
+        }
+        input.setAttribute("aria-invalid", isInvalid ? "true" : "false");
+    }
+
+    function updateNotesCount() {
+        if (!notesField || !notesCount) {
+            return;
+        }
+        var length = notesField.value.length;
+        notesCount.textContent = String(length);
+        notesCount.classList.toggle("form-stack__char-count--limit", length >= maxMergeFieldLength);
+    }
+
+    function warnIfNotesTruncated(previousLength, nextLength) {
+        var hint = document.getElementById("additional-notes-hint");
+        if (!hint || nextLength < maxMergeFieldLength) {
+            return;
+        }
+        if (previousLength < maxMergeFieldLength && nextLength >= maxMergeFieldLength) {
+            hint.classList.add("form-stack__field-hint--limit");
+        }
+    }
+
     function validateOnSubmit() {
         var missingRequired = false;
         var invalidEmail = false;
+        var notesTooLong = false;
+        var participationTooLong = false;
         var firstInvalidInput = null;
 
         requiredFields.forEach(function (field) {
@@ -172,12 +222,23 @@
                 firstInvalidInput = input;
             }
 
-            var wrapper = getFieldWrapper(input);
-            if (wrapper) {
-                wrapper.classList.toggle("form-stack__field--invalid", showError);
-            }
-            input.setAttribute("aria-invalid", showError ? "true" : "false");
+            setFieldInvalid(input, showError);
         });
+
+        if (notesField) {
+            notesTooLong = notesField.value.length > maxMergeFieldLength;
+            if (notesTooLong && !firstInvalidInput) {
+                firstInvalidInput = notesField;
+            }
+            setFieldInvalid(notesField, notesTooLong);
+        }
+
+        if (participationField) {
+            participationTooLong = participationField.value.length > maxMergeFieldLength;
+            if (participationTooLong && !firstInvalidInput) {
+                firstInvalidInput = participationField;
+            }
+        }
 
         var messages = [];
         if (missingRequired) {
@@ -185,6 +246,12 @@
         }
         if (invalidEmail) {
             messages.push("Please enter a valid email address.");
+        }
+        if (notesTooLong) {
+            messages.push("Additional notes must be 255 characters or fewer.");
+        }
+        if (participationTooLong) {
+            messages.push("Your participation selections are too long to submit. Please choose fewer options.");
         }
 
         if (errorMessage) {
@@ -199,7 +266,58 @@
         return messages.length === 0;
     }
 
+    document.querySelectorAll(".form-stack__participation-toggle").forEach(function (checkbox) {
+        checkbox.addEventListener("change", updateParticipationAreas);
+    });
+
+    function updateParticipationAreas() {
+        var hidden = document.getElementById("mce-participation-areas");
+        if (!hidden) {
+            return;
+        }
+
+        var selected = Array.prototype.slice.call(
+            document.querySelectorAll(".form-stack__participation-toggle:checked")
+        ).map(function (checkbox) {
+            return checkbox.value;
+        });
+
+        hidden.value = selected.join(", ");
+        if (participationField && participationField.value.length > maxMergeFieldLength) {
+            var participationWrapper = participationField.closest(".form-stack__participation-fieldset");
+            if (participationWrapper) {
+                participationWrapper.classList.add("form-stack__participation-fieldset--invalid");
+            }
+        } else {
+            var participationWrapper = participationField ? participationField.closest(".form-stack__participation-fieldset") : null;
+            if (participationWrapper) {
+                participationWrapper.classList.remove("form-stack__participation-fieldset--invalid");
+            }
+        }
+    }
+
+    if (notesField) {
+        notesField.addEventListener("input", function () {
+            var previousLength = Number(notesCount ? notesCount.textContent : 0);
+            updateNotesCount();
+            warnIfNotesTruncated(previousLength, notesField.value.length);
+            if (notesField.value.length <= maxMergeFieldLength) {
+                setFieldInvalid(notesField, false);
+            }
+        });
+        notesField.addEventListener("paste", function () {
+            window.setTimeout(function () {
+                updateNotesCount();
+                if (notesField.value.length >= maxMergeFieldLength) {
+                    warnIfNotesTruncated(maxMergeFieldLength - 1, notesField.value.length);
+                }
+            }, 0);
+        });
+        updateNotesCount();
+    }
+
     form.addEventListener("submit", function (event) {
+        updateParticipationAreas();
         if (!validateOnSubmit()) {
             event.preventDefault();
             return;
@@ -207,16 +325,6 @@
         if (form.getAttribute("data-demo") === "true") {
             event.preventDefault();
         }
-    });
-
-    document.querySelectorAll(".form-stack__yes-no-toggle").forEach(function (checkbox) {
-        checkbox.addEventListener("change", function () {
-            var fieldName = checkbox.getAttribute("data-field-name");
-            var hidden = checkbox.closest(".form-stack__participation").querySelector('input[name="' + fieldName + '"]');
-            if (hidden) {
-                hidden.value = checkbox.checked ? "Yes" : "No";
-            }
-        });
     });
 })();
 </script>

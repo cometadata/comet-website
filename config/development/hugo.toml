@@ -1,3 +1,3 @@
-# Local dev overrides (used automatically by `hugo server`).
-baseURL = "http://localhost:1313/"
+# Local dev overrides (used with --environment development).
+baseURL = "http://127.0.0.1:1313/"
 canonifyURLs = false

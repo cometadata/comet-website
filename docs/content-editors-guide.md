@@ -90,7 +90,8 @@ Edit `data/home/impact_band.yaml` — the metrics table is Markdown inside the `
 |---|---|
 | Hero (shared by both pages) | `data/join_us/hero.yaml` |
 | Intro above the form | `data/join_us/form.yaml` → `content` |
-| Checkbox labels | `data/join_us/form.yaml` → `participation` |
+| Participation options | `data/join_us/form.yaml` → `participation.options` |
+| Additional notes label | `data/join_us/form.yaml` → `additional_notes.label` |
 | Thank-you message | `data/join_us/thank_you.yaml` |
 
 **Note:** Join Us and thank-you share the same hero YAML. Changing the hero affects both URLs.
@@ -349,7 +350,8 @@ The form at `/join-us/` posts directly to Mailchimp. No API key is stored in the
 |---|---|
 | Page hero | `data/join_us/hero.yaml` (shared with thank-you) |
 | Intro above the form | `data/join_us/form.yaml` → `content` |
-| Participation checkbox labels | `data/join_us/form.yaml` → `participation` |
+| Participation options | `data/join_us/form.yaml` → `participation.options` |
+| Additional notes label | `data/join_us/form.yaml` → `additional_notes.label` |
 | Thank-you copy | `data/join_us/thank_you.yaml` |
 
 ### What needs developer help
@@ -373,10 +375,10 @@ Production thank-you URL: `https://cometadata.github.io/comet-website/thank-you/
 | Primary affiliation | `primary_affiliation` | `MMERGE9` |
 | Secondary affiliation | `secondary_affiliation` | `MMERGE10` |
 | LinkedIn | `linkedin` | `MMERGE11` |
-| Join community | `join_community` | `MMERGE12` |
-| Project collaborations | `project_collaborations` | `MMERGE13` |
+| Areas of participation (comma-separated selections) | `participation_areas` | `MMERGE12` |
+| Additional notes | `additional_notes` | `MMERGE13` |
 
-Participation checkboxes submit **`Yes`** or **`No`** (unchecked = `No`).
+Participation selections are submitted as a comma-separated list in `MMERGE12`. The additional notes field maps to `MMERGE13`. Both Mailchimp text merge fields are limited to **255 characters** — the form enforces this on the notes field and blocks over-length submissions.
 
 ---
 
@@ -569,7 +571,7 @@ Impact-band and stacked-card **tables** are Markdown inside YAML. Use a header r
 
 ### Join Us form copy
 
-Field labels in `data/join_us/form.yaml` must stay aligned with what the form asks for. If you rename a label, check that the question is still clear. Participation groups (“Join community”, “Project collaborations”) should read as plain questions — avoid jargon without explanation.
+Field labels in `data/join_us/form.yaml` must stay aligned with what the form asks for. If you rename a label or participation option, check that the question is still clear. Participation options are a simple list under `participation.options`.
 
 Do not rename YAML keys that map to Mailchimp (`email`, `first_name`, etc.) without developer help — see [Join Us form](#join-us-form).
 

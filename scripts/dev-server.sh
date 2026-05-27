@@ -22,11 +22,12 @@ if lsof -nP -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; then
 fi
 
 echo "Running initial development build (compiles Sass to public/css/style.css)..."
-hugo --environment development
+hugo --environment development --baseURL "$URL"
 
 echo "Starting Hugo dev server at $URL"
 exec hugo server -D \
   --port "$PORT" \
   --bind "$BIND" \
+  --baseURL "$URL" \
   --disableFastRender \
   --environment development
