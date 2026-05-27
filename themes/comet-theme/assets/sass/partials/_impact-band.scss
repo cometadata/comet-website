@@ -127,6 +127,10 @@
     align-items:flex-end;
     .comet-line {
         padding-bottom:50px;
+        @media (max-width: variables.$break-msmall) {
+            visibility: hidden;
+        }
+
     }
     .right {
 

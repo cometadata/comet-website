@@ -8,8 +8,10 @@
                 <div class="col-xl-6 d-flex align-items-end flex-column justify-content-between">
                     <div class='col-12'>
                         <h2>{{ .headline }}</h2>
+                        <div class="d-none d-xl-block">
+                            {{ partial "blocks/comet-line-right.html" }} 
+                        </div> 
                     </div>
-                    {{ partial "blocks/comet-line-right.html" }} 
                 </div>
                 <div class="col-xl-6">
                     
@@ -25,7 +27,11 @@
                         {{ if .cta_right_url }}
                         <div class="col-sm-12 col-lg-6">
                             <a href="{{ .cta_right_url }}" class='no-underline'><button class="{{ .right_button_rank}}">{{ .cta_right_text }}</button></a>
+                            
                         </div>
+                        <div class="col-12 d-xl-none mt-3">
+                            {{ partial "blocks/comet-line-right.html" }} 
+                            </div>
                         {{ end }}
                     </div> 
                     

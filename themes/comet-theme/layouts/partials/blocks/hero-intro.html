@@ -11,14 +11,14 @@
                     <div>{{ .content | markdownify }}</div>
                 </div>    
                 <div class="media-col col-xl-3">
-                    <img src="{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
+                    <img src="{{ site.BaseURL}}{{ .media | relURL }}" alt="{{ .media_alt }}" title="{{ .media_hover }}" />
                 </div>
             </div>
          
         {{ else if eq .variant "background" }}
             <style>
                 section.hero-intro {
-                    background-image:url('{{ .media | relURL }}');
+                    background-image:url('{{ site.BaseURL}}{{ .media | relURL }}');
                 }
                 
                 {{ if .background_height }}

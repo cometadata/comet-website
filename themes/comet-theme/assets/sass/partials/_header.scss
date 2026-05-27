@@ -254,21 +254,6 @@ header {
                     }
                 }
                 
-                nav.menu-open .menu-items {
-                    transform: translateX(0vw);                    
-                }
-                
-                nav.menu-open .hamburger-lines .line1 {
-                    transform: rotate(35deg);
-                }
-            
-                nav.menu-open .hamburger-lines .line2 {
-                    transform: scaleY(0);
-                }
-            
-                nav.menu-open .hamburger-lines .line3 {
-                    transform: rotate(-35deg);
-                }
             }
         }
     }
@@ -278,6 +263,26 @@ header {
         padding-left: 0;
     }
 }
+
+
+nav.menu-open {
+    .menu-items {
+        transform: translateX(0vw) !important;                    
+    }
+
+    .hamburger-lines .line1 {
+        transform: rotate(35deg);
+    }
+
+    .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
+}
+
 header .row {
     margin-top:20px;
     margin-bottom:20px;
