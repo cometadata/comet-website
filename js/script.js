@@ -1,4 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("header nav");
+    if (nav) {
+        const menuToggle = nav.querySelector(".menu-toggle");
+        const submenuToggles = nav.querySelectorAll(".submenu-toggle");
+
+        const setMenuOpen = (open) => {
+            nav.classList.toggle("menu-open", open);
+            if (menuToggle) {
+                menuToggle.setAttribute("aria-expanded", String(open));
+                menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+            }
+        };
+
+        if (menuToggle) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = nav.classList.contains("menu-open");
+                setMenuOpen(!isOpen);
+            });
+        }
+
+        submenuToggles.forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+                const item = toggle.closest("li");
+                const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+                submenuToggles.forEach((otherToggle) => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.setAttribute("aria-expanded", "false");
+                        otherToggle.closest("li")?.classList.remove("submenu-open");
+                    }
+                });
+
+                toggle.setAttribute("aria-expanded", String(!isOpen));
+                item?.classList.toggle("submenu-open", !isOpen);
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape") {
+                return;
+            }
+
+            if (nav.classList.contains("menu-open")) {
+                setMenuOpen(false);
+                menuToggle?.focus();
+                return;
+            }
+
+            const openSubmenu = nav.querySelector(".submenu-toggle[aria-expanded='true']");
+            if (openSubmenu) {
+                openSubmenu.setAttribute("aria-expanded", "false");
+                openSubmenu.closest("li")?.classList.remove("submenu-open");
+                openSubmenu.focus();
+            }
+        });
+    }
+
     const $tocNav = $('#toc-nav');
     const $aside = $('.article-aside');
 
