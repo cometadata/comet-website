@@ -1,5 +1,6 @@
 variant: "cta-only"
-content: "**Join our next COMET community. Tell us how you’d like to be involved and we’ll be in touch.**"
+content: "**Join our next COMET community meeting.**"
 
-cta_left_text: "Join us"
-cta_left_url: "/join-us"
+cta_left_text: "Register now"
+cta_left_url: "https://datacite.zoom.us/meeting/register/S0kqI3SOSvOQCVBJwBVHjw#/registration"
+cta_left_target: "_blank"

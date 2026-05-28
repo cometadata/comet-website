@@ -81,14 +81,20 @@ header {
             margin-bottom:40px;
             z-index:30;
             padding-right:0;
-            width: 100%;
-
-
+            width: 100%;           
             
             .menu-items {
                 justify-content: flex-end;
                 margin-bottom:0;
                 width: 100%;
+                .logolink {
+                    display:none;                    
+                    margin-top:30px;
+                    margin-bottom:0;
+                    img {
+                        width:150px;
+                    }
+                }
             }
             a:not(.no-underline) {
                 color: variables.$comet-nav-font-color;
@@ -184,6 +190,7 @@ header {
                 height:100%;
                 margin-left: 0; 
 
+                
                 .menu-toggle {
                     position: absolute;
                     display: block;
@@ -242,6 +249,9 @@ header {
                         font-weight: 500;
                         width:auto;;
                         margin-left:0;
+                    }
+                    .logolink {
+                        display:block;
                     }
                     &:hover,
                     &:focus-within {

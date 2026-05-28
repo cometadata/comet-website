@@ -42,9 +42,12 @@
 						{{ end }}
 					{{ end }}
 					<li><a class='no-underline' href='/join-us'><button>Join us</button></a></li>
+					<li class="logolink d-lg-none">
+						<a class="no-underline" href="{{ .Site.BaseURL }}">
+							<img class="" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="{{ .Site.Title | default "COMET" }}" />
+						</a>
+					</li>
 				</ul>
-
-				
 			</nav>
 		</div>
 	</div>
