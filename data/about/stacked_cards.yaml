@@ -7,22 +7,18 @@ headline: "COMET’s story so far"
 content: "COMET has moved from consultation to task-force definition, then pilot validation, and now into the work of building durable foundations for scale."
 
 elements:
-  - title: "COMET’s story"
+  - title: "Conference beginnings"
     headline: "Seeding early momentum"
     content: "COMET emerged from the recognition that the community-driven enrichment model proven by the Research Organization Registry (ROR) could be extended to address broader, systemic gaps in open research metadata. Building on ROR’s development history, early consultations at the FORCE11 Conference (June 2024) and the Paris Conference on Open Research Information (September 2024) brought together community stakeholders to identify the challenges and opportunities associated with PID metadata enrichment. These sessions revealed broad agreement that this work must become a shared, community-wide responsibility, rather than siloed within individual platforms or borne solely by its original creators."  
 
-  - title: "Task force phase"
-    headline: "Enabling community-driven enrichment"
-    content: "In response, a FORCE11 task force was established through an open call for participation, drawing members from major university and research systems, publishers, government agencies, and infrastructure providers. Across a series of focused sessions, the task force worked to define the product, technical, and governance requirements for implementing a more expansive, community-driven enrichment model within existing infrastructures. Building on the requirements defined in this task force phase, an open call was issued for organizations to contribute to building and testing a community-driven enrichment model.
-    
-    [link](link)"    
+  - title: "Task force consultation"
+    headline: "Designing community-driven enrichment"
+    content: "In response, a FORCE11 task force was established through an open call for participation, drawing members from major university and research systems, publishers, government agencies, and infrastructure providers. Across a series of focused sessions, the task force worked to define the product, technical, and governance requirements for implementing a more expansive, community-driven enrichment model within existing infrastructures. Building on the requirements defined in this task force phase, an open call was issued for organizations to contribute to building and testing a community-driven enrichment model."    
 
-  - title: "Pilot phase"
+  - title: "Testing approaches"
     headline: "Validating through pilot projects"
-    content: "The California Digital Library (CDL), DataCite, Public Knowledge Project (PKP), and the Centre for Science and Technology Studies (CWTS) at Leiden University joined forces to organise and resource COMET's initial development, proving its model through a series of targeted pilot projects in collaboration with community partners. The results of this work validated COMET's core premise: when enrichment work is coordinated around shared methods, evaluation frameworks, and integration with infrastructures, it can produce trusted, reusable outputs that strengthen the scholarly record.
-    
-    [link](link)"    
+    content: "The California Digital Library (CDL), DataCite, Public Knowledge Project (PKP), and the Centre for Science and Technology Studies (CWTS) at Leiden University joined forces to organise and resource COMET's initial development, proving its model through a series of targeted pilot projects in collaboration with community partners. The results of this work validated COMET's core premise: when enrichment work is coordinated around shared methods, evaluation frameworks, and integration with infrastructures, it can produce trusted, reusable outputs that strengthen the scholarly record."    
 
-  - title: "Next stage"
+  - title: "Current work"
     headline: "Building foundations for scale"
     content: "With pilot projects already demonstrating impact, the focus shifts to solidifying the COMET Model’s coordinating role by enabling community-driven metadata enrichment and putting shared evaluation frameworks into practice, ensuring that enrichments are trustworthy and reliably integrated by authoritative sources and downstream platforms."

@@ -43,5 +43,6 @@ reps:
     company: "California Digital Library"
     media: "/images/community/people/adam-buttrick.jpg"
   - name: "Parth Sarin"
-    job_title: "COMET Data Analyst"
+    company: "Stanford University"
+    job_title: "COMET Researcher"
     media: "/images/community/people/parth-sarin.jpg"
