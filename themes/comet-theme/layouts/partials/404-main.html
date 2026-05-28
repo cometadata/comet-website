@@ -1,0 +1,16 @@
+<main id="main-content">
+  <header class="homepage-header"></header>
+  <div class="homepage-content">
+    <section class="section-block form-stack">
+      <div>
+        <div class="details">
+          <h1>{{ .Title }}</h1>
+        </div>
+        <div class="form-stack__intro">{{ .Content }}</div>
+        <div class="form-stack__cta">
+          <a href="{{ "/" | relURL }}" class="no-underline"><button>Return to home</button></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

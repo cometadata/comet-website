@@ -21,6 +21,9 @@ if lsof -nP -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; then
   exit 1
 fi
 
+echo "Clearing stale build output (avoids serving a production build from disk)..."
+rm -rf public resources/_gen
+
 echo "Running initial development build (compiles Sass to public/css/style.css)..."
 hugo --environment development --baseURL "$URL"
 
