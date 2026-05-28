@@ -17,7 +17,10 @@ footer {
     }    
     .footer-bottom {
         a {
-            color:#fff;
+            color:#fff;        
+            &:hover {
+                color:#fff;
+            }
         }
     }
       
