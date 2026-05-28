@@ -1,12 +1,3 @@
-$link-color: #000;
-$link-arrow: #FAB70C;
-$background-grey: #f4f4f4;
-$background-blue: #5c7292;
-$background-orange: #FAB70C;
-$main-font-color: #707070;
-$sub-font-color:#8ca19c;
-$link-blue: #0B2698;
-
 $comet-white: #f5f5f5;
 $comet-darkblue: #0b2644;
 $comet-blue: #4b8d96;
@@ -16,6 +7,15 @@ $comet-darkgreen: #799e77;
 $comet-button-background:$comet-darkblue;
 $comet-button-text-color:#fff;
 $comet-nav-font-color:$comet-darkblue;
+
+$link-color: #000;
+$link-arrow: #FAB70C;
+$background-grey: #f4f4f4;
+$background-blue: #5c7292;
+$background-orange: #FAB70C;
+$main-font-color: $comet-darkblue;;
+$sub-font-color:#8ca19c;
+$link-blue: #0B2698;
 
 $comet-button-primary: #164257;
 $comet-button-secondary: #4b8d96;
@@ -28,7 +28,7 @@ $comet-cat-box: #4b8d95;
 $comet-table-headings: #4b8d95;
 $comet-table-lines: #B1EBDA;
 $comet-table-border: #87acae;
-$comet-table-color: #0B2545;
+$comet-table-color: $comet-darkblue;
 
 $comet-comet-alt-color:#b1edda;
 $transition-time: 0.2s;

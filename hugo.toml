@@ -39,11 +39,6 @@ name = "sass/_cometadata.scss"
     identifier = "menu.home"
     url        = "/"
     weight     = 1
-
-[[menu.main]]
-    name       = "About"
-    url        = "/about"
-    weight     = 10
 [[menu.main]]
     name       = "The COMET model"
     url        = "/the-comet-model"
@@ -60,4 +55,8 @@ name = "sass/_cometadata.scss"
     name       = "Blog"
     url        = "/posts"
     weight     = 50
+[[menu.main]]
+    name       = "About"
+    url        = "/about"
+    weight     = 60
 
