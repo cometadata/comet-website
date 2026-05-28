@@ -72,7 +72,7 @@ and how EMBL’s effort supports and extends the COMET model.’
 
 
 
-<figure class="
+<figure class="profile
       sqs-block-image-figure
       intrinsic
     "
@@ -82,13 +82,6 @@ and how EMBL’s effort supports and extends the COMET model.’
 
 
 
-<a data-sqsp-image-classic-block-image-link class="
-sqs-block-image-link
-
-
-
-" href="https://www.embl.org" target="_blank"
->
 
 
 

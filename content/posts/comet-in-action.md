@@ -128,7 +128,7 @@ enrichment and curation workflows with initial partners and respondents.
 
 
 
-<figure class="
+<figure class="profile
       sqs-block-image-figure
       intrinsic
     "

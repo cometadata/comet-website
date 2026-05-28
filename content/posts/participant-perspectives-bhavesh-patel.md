@@ -64,7 +64,7 @@ Interview with COMET participant, Bhavesh Patel.
 
 
 
-<figure class="
+<figure class="profile
       sqs-block-image-figure
       intrinsic
     "

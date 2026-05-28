@@ -65,7 +65,7 @@ Research.
 
 
 
-<figure class="
+<figure class="profile
       sqs-block-image-figure
       intrinsic
     "

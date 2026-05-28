@@ -6,123 +6,20 @@ slug = "crossrefs-perspective-on-open-metadata-enrichment"
 authors = ["Dione Mentis"]
 categories = ["News"]
 media = "/images/blog/crossrefs-perspective-on-open-metadata-enrichment/featured-Ginny_headshot.png"
+media_format = 'profile'
 +++
-
 As one of the largest open scholarly infrastructures and metadata 
 registries, Crossref offers a unique perspective on collaborative metadata 
 enrichment and how initiatives like COMET align with its development 
 roadmap, driven by the goals of its diverse community—by Ginny Hendricks, 
 Chief Program Officer at Crossref.
-
 <!--more-->
-
 <p class=""><em>As one of the largest open scholarly infrastructures and metadata registries, Crossref offers a unique perspective on collaborative metadata enrichment and how initiatives like COMET align with its development roadmap, driven by the goals of its diverse community</em>—by Ginny Hendricks, Chief Program Officer at Crossref. </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure class="
+<figure class="profile
 sqs-block-image-figure
 intrinsic
 "
 >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/crossrefs-perspective-on-open-metadata-enrichment/Ginny_headshot.png" width="600" height="600" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/c06c1972-49d0-45ae-a526-2f592ae1bada/Ginny_headshot.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
 </figure>
-
-
-
-
-
-
-
-
-
-
-
 <h2><strong>Why Metadata Matters</strong></h2><p class="">At Crossref, we've been stewarding metadata for 25 years, growing to 175 million records from 23,500 organisations across 163 countries. This scale gives us a front-row seat to both the incredible potential and the ongoing challenges of metadata enrichment at scale.</p><p class="">We believe that metadata is communication; it can tell a story about research and paint a picture for others to respond to and learn from, across the world and throughout the forthcoming generations. Our work is guided by the <a href="https://www.crossref.org/documentation/research-nexus/"><span>Research Nexus</span></a> vision—a rich, reusable open network connecting research organisations, people, things, and actions. This goes beyond persistent identifiers to focus on relationships and context within the research ecosystem.</p><p class="">We try to strike a balance between persistence and accessibility by maintaining low membership barriers while encouraging best metadata practices. We conduct multiple global and collaborative engagement activities, such as frequent online 'metadata health checks' using <a href="https://www.crossref.org/documentation/reports/"><span>Participation Reports</span></a>, as well as supporting multiple open metadata initiatives over the years. This approach enables broad participation but creates the metadata gaps that we work hard to fill in and that initiatives like COMET also aim to address.</p><h2><strong>The Promise and Challenges of Collaborative Enrichment</strong></h2><p class="">We observe collaborative enrichment happening in real-time within our system, as Crossref metadata is updated several times more frequently than new records are added, largely due to community assertions and feedback. This demonstrates the research community's commitment to improving discoverability and completeness of the scholarly record.&nbsp;</p><p class="">Over the years, we've also increased the ways in which we ourselves enrich the metadata in our system, for example, by inserting <a href="https://www.crossref.org/services/funder-registry/"><span>Open Funder Registry</span></a> IDs based on often very messy strings, or by adding reciprocal relationships so that when one member asserts “finances” in grant metadata, we add “isFinancedBy” to the accompanying publication metadata. This also applies to relationships like preprints and articles, versions, peer reviews, and data citation. So we see the enrichment of metadata occurring frequently, both manually and programmatically, within the Crossref ecosystem.</p><p class="">Our experience in building community-enriched services has revealed both additional opportunities and multiple challenges. The Open Funder Registry has enabled publishers to standardise funding metadata through community curation, as has <a href="https://ror.org/"><span>ROR</span></a> for affiliations, while <a href="https://www.crossref.org/services/crossmark/"><span>Crossmark</span></a> allows publishers and readers to signal and discover post-publication changes to research. Because we established (with CDL and DataCite) a more collaborative curation and governance approach for ROR, this registry will soon usurp the Open Funder Registry as the primary funder identifier. More recently, our collaboration with <a href="https://www.crossref.org/blog/news-crossref-and-retraction-watch/"><span>Retraction Watch</span></a> demonstrates how community-gathered data can supplement member-provided metadata to create a more complete picture of the integrity of the scholarly record.</p><p class="">The primary challenge is developing scalable, automated validation and quality control. Our current mechanisms are low-tech, relying on manual processes that are difficult to manage at high volumes. A second challenge is related to awareness, reach, adoption, and, often, even willingness. Another area is around provenance and assertion tracking.</p><p class="">Crossref policies stipulate that metadata stewards (members) should retain ultimate responsibility for metadata accuracy, while also enabling community contributions and our own system assertions. A balance between openness and accountability is crucial for collaborative metadata initiatives. Authentication, identity management, and validating third-party assertions represent considerable technical and governance challenges for collaborative enrichment projects, as do truly global communication and support structures.</p><p class="">This necessary combination of human and system involvement makes metadata enrichment a doubly challenging endeavour. How can we build and maintain participative systems that serve the needs of people doing or analysing the science? And in reverse, how can we help people understand, agree with, and engage with the systems we have designed for them?</p><h2><strong>Learning from Community Collaborations</strong></h2><p class="">The scholarly infrastructure landscape offers several successful models of community collaboration. Our 25-year journey demonstrates how member-driven governance fosters sustainable infrastructure when organisations commit to shared responsibilities.</p><p class="">The success of initiatives like <a href="https://orcid.org/"><span>ORCID</span></a> and <a href="https://ror.org/"><span>ROR</span></a> demonstrates how openly governed systems and collaborative advocacy can achieve broad adoption by balancing community needs with technical reliability. Establishing the <a href="https://metadata2020.org/"><span>Metadata 20/20</span></a> initiative in 2018 enabled various stakeholders to articulate problem statements and share best practices that are still in use today. Crossref also supports the <a href="https://barcelona-declaration.org/"><span>Barcelona Declaration on Open Research Information</span></a>, which advocates for making openness of research information the norm and working with services that enable open research information. Event Data began as a collaborative initiative between Crossref and DataCite, based on work by PLOS, before the reality set in that sharing metadata between two entirely different systems is inherently complex, needs proper resourcing, and an overarching agreement on a strategic and technical approach. The two organisations’ versions diverged several years ago, and Crossref will be <a href="https://community.crossref.org/t/an-update-on-event-data-and-data-citations/14203"><span>deprecating Event Data</span></a> in favour of upgrading its existing metadata system and production API.</p><p class="">These examples suggest that successful collaboration in scholarly infrastructure—whether building systems or advocating for change—requires transparent governance, capacity, shared principles, good planning, and sustained engagement.</p><h2><strong>The Benefits of Better Metadata</strong></h2><p class="">Enhanced metadata directly supports our mission and the Research Nexus vision. Richer, more comprehensive metadata creates more value for Crossref members, 50% of whom are based in Asia, and 40% of whom self-identify as university-based. Our API is also one of the most heavily used in scholarly communications and beyond, with over 1.6 billion requests a month. They definitely want more complete metadata!</p><p class="">For our global community, enriched metadata means a more accurate representation of diverse, interconnected scholarly work spanning articles, books, grants, standards, datasets, protocols, dissertations, and more.&nbsp;</p><p class="">Enriched metadata provides a more comprehensive view of scholarship and its outcomes. It enhances discoverability across disciplines and regions, enables accurate and more transparent evaluation, assessment, impact tracking, and better reflects the global, collaborative nature of research.</p><h2><strong>Our Approach to Collaborative Development</strong></h2><p class="">While Crossref isn't directly involved in COMET yet—we're busy upgrading our systems to be fully open-source and more flexible to enable and adopt better metadata workflows—we recognise the value of community collaboration on shared challenges, and we are certainly interested in anything that improves the metadata and the systems we all rely on.</p><p class="">Our current <a href="https://roadmap.productboard.com/e6fdeba8-a5b3-4aef-8104-d48863ba975e"><span>roadmap</span></a> addresses similar problems identified by COMET, including the development of <a href="https://www.crossref.org/community/special-programs/metadata-matching/"><span>matching services</span></a> (with our methodologies and outputs open to everyone for reuse), the implementation of automated metadata quality feedback loops, and the integration of additional third-party data sources. Better metadata results directly from our matching services for references, funding, grants, preprints, and affiliations—work we're actively pursuing.&nbsp;</p><p class="">As different metadata initiatives emerge and learn from one another, they collectively improve the overall effort. While Crossref continues to rebuild its systems to enable further scalability of open metadata enrichment, we're following COMET's work as it addresses our shared challenges in building a more connected scholarly record. Multiple approaches to collaborative metadata enrichment—from technical infrastructure to community advocacy—benefit the entire ecosystem.&nbsp;</p>

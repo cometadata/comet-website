@@ -12,7 +12,7 @@ Interview with COMET participant Howard Ratner from CHORUS.
 
 <!--more-->
 
-<figure class="
+<figure class="profile
               sqs-block-image-figure
               intrinsic
             "

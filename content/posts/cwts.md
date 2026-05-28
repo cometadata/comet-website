@@ -15,7 +15,7 @@ and participating in COMET.
 
 <!--more-->
 
-<figure class="
+<figure class="profile
               sqs-block-image-figure
               intrinsic
             "
@@ -108,7 +108,7 @@ and participating in COMET.
 
 
 
-<figure class="
+<figure class="profile
       sqs-block-image-figure
       intrinsic
     "
