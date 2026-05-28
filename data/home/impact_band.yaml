@@ -9,7 +9,7 @@ color: "alt"
 table: "
 | Use case    | Metadata field | Number of unique DOIs
 | -------- | ------- | ------- |
-| Name and describe research outputs  | Research type | 3340593    |
+| Name and describe research outputs  | Resource type | 3340593    |
 | Identify and connect organisations associated with research outputs | Affiliations | 2799081     |
 | Identify and connect related research outputs    | Related identifier | 890779 |
 "
