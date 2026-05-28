@@ -20,7 +20,7 @@
                     <div class="d-flex flex-wrap cta-row">
                         {{ if .cta_left_url }}
                         <div class=" col-sm-12 col-lg-6 mb-2">
-                            <a href="{{ .cta_left_url }}" class='no-underline'><button class="{{ .left_button_rank}}">{{ .cta_left_text }}</button></a>
+                            <a target="{{ .cta_left_target }}" href="{{ .cta_left_url }}" class='no-underline'><button class="{{ .left_button_rank}}">{{ .cta_left_text }}</button></a>
                         </div>
                         {{ end }}
                         

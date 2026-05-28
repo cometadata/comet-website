@@ -3,3 +3,4 @@ content: "**Join our next COMET community meeting.**"
 
 cta_left_text: "Register now"
 cta_left_url: "https://datacite.zoom.us/meeting/register/S0kqI3SOSvOQCVBJwBVHjw#/registration"
+cta_left_target: "_blank"
