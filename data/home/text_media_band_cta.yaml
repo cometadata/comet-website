@@ -1,6 +1,6 @@
 variant: "cta-only"
-headline: "Enrichment dashboards"
-content: "COMET creates dashboards to visualise the value being added to the PID ecosystem. Explore examples of metadata enrichment impact below."
+headline: "Enrichments showcase"
+content: "COMET creates dashboards to showcase the value being added to the PID ecosystem. Explore examples of metadata enrichment impact below."
 
 cta_left_text: "Explore arXiv research"
 cta_left_url: "https://telescope.huixing.dev/"
