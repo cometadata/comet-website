@@ -8,6 +8,7 @@
 {{- $tagline := .Site.Params.titleTagline | default "COMET Richer Metadata. Together." -}}
 {{- $fullTitle := printf "%s - %s" $pageTitle $tagline -}}
 
+{{- if not .Params.noindex }}
 <meta name="description" content="{{ $description }}">
 <link rel="canonical" href="{{ .Permalink }}">
 
@@ -32,4 +33,5 @@
 
 {{- if .IsHome }}
 <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "WebSite" "name" "COMET" "url" .Site.BaseURL "description" .Site.Params.description | jsonify | safeJS }}</script>
+{{- end }}
 {{- end }}

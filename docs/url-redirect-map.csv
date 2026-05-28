@@ -1,15 +1,15 @@
 old_path,new_path,status,notes
-/home,/,confirmed,Legacy Squarespace homepage URL
+/home,/,confirmed,Legacy Squarespace homepage URL; Hugo alias on home page
 /about,/about,confirmed,Same path
 /the-comet-model,/comet-model,confirmed,Renamed on new site; Hugo alias on comet-model page
 /join-us,/join-us,confirmed,Same path (live page title was Contact)
-/our-vision,/about,provisional,Former vision page; content may map to About or The COMET model — review
-/people,/community,provisional,Former people/organisers page; mapped to Community — review
-/resources,/posts,provisional,Former resources hub; mapped to blog index — review
-/enrichment-projects,/projects,provisional,Mapped to Projects — review
-/contribute-enrichments,/join-us,provisional,Mapped to Join Us — review
-/blog,/posts,confirmed,Live blog index; new site uses /posts/ for index and /blog/{slug}/ for posts
-/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,confirmed,Same slug
+/our-vision,/about,confirmed,Former vision page; Hugo alias on about page
+/people,/community,confirmed,Former people/organisers page; Hugo alias on community page
+/resources,/posts,confirmed,Former resources hub; Hugo alias on blog index
+/enrichment-projects,/projects,confirmed,Former projects page; Hugo alias on projects page
+/contribute-enrichments,/join-us,confirmed,Former contribute page; Hugo alias on join-us page
+/blog,/posts,confirmed,Former blog index; Hugo alias on blog index (/posts/)
+/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv,confirmed,Same slug; posts permalink is /blog/:slug/
 /blog/crossrefs-perspective-on-open-metadata-enrichment,/blog/crossrefs-perspective-on-open-metadata-enrichment,confirmed,Same slug
 /blog/enrichment-projects,/blog/enrichment-projects,confirmed,Same slug
 /blog/cwts,/blog/cwts,confirmed,Same slug
@@ -29,10 +29,10 @@ old_path,new_path,status,notes
 /blog/force11-working-group,/blog/force11-working-group,confirmed,Same slug
 /blog/comet-product-development-listening-sessions,/blog/comet-product-development-listening-sessions,confirmed,Same slug
 /blog/summary-report-comet-introductory-sessions-november-7-2024,/blog/summary-report-comet-introductory-sessions-november-7-2024,confirmed,Same slug
-/blog/blog-post-four-5gxpx,/posts,provisional,Placeholder post on live site; not migrated — review destination
-/blog/category/Announcement,/categories/announcement,confirmed,Category URL structure changed
-/blog/category/Resources,/categories/resources,confirmed,Category URL structure changed
-/blog/category/Community Perspectives,/categories/community-perspectives,confirmed,Category URL structure changed (live URL uses + for spaces)
-/blog/tag/Call to Action,/posts,provisional,No matching tag archive on new site — review
-/blog/tag/implementation,/posts,provisional,No matching tag archive on new site — review
-/blog/tag/listening session,/tags/listening-sessions,provisional,Mapped to closest tag slug — review
+/blog/blog-post-four-5gxpx,/posts,confirmed,Placeholder post not migrated; redirect stub in content/legacy/
+/blog/category/Announcement,/categories/announcement,confirmed,Category URL structure changed; redirect stub in content/legacy/
+/blog/category/Resources,/categories/resources,confirmed,Category URL structure changed; redirect stub in content/legacy/
+/blog/category/Community Perspectives,/categories/community-perspectives,confirmed,Category URL structure changed; redirect stub includes + alias for spaces
+/blog/tag/Call to Action,/posts,confirmed,No tag archive on new site; redirect stub includes + alias for spaces
+/blog/tag/implementation,/posts,confirmed,No tag archive on new site; redirect stub in content/legacy/
+/blog/tag/listening session,/tags/listening-sessions,confirmed,Mapped to listening-sessions tag; redirect stub includes + alias for spaces
