@@ -13,14 +13,14 @@ A fast, static website built using the [Hugo](https://gohugo.io/) framework.
 This site automatically deploys to **GitHub Pages** via GitHub Actions when changes merge to `main`.
 
 - Workflow: `.github/workflows/hugo.yml`
-- Production URL: [https://www.cometdata.org/](https://www.cometdata.org/)
-- Custom domain: `static/CNAME` → `www.cometdata.org`
+- Production URL: [https://www.cometadata.org/](https://www.cometadata.org/)
+- Custom domain: `static/CNAME` → `www.cometadata.org`
 - Deployment status: **Actions** tab on this repository
 
 Production builds use:
 
 ```bash
-hugo --minify -b 'https://www.cometdata.org/'
+hugo --minify -b 'https://www.cometadata.org/'
 ```
 
 Local preview: `./scripts/dev-server.sh` (see `docs/content-editors-guide.md`).
