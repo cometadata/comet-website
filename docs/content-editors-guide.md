@@ -2,7 +2,7 @@
 
 Practical reference for editing the COMET Hugo site. Assumes basic familiarity with Git, YAML, and Markdown.
 
-**Live site:** https://cometadata.github.io/comet-website/
+**Live site:** https://www.cometdata.org/
 
 ---
 
@@ -28,7 +28,7 @@ Practical reference for editing the COMET Hugo site. Assumes basic familiarity w
 
 | Item | Detail |
 |---|---|
-| **Production URL** | https://cometadata.github.io/comet-website/ |
+| **Production URL** | https://www.cometdata.org/ |
 | **What triggers a deploy** | Merging (or pushing) to the `main` branch |
 | **Where to watch deploys** | GitHub → **Actions** tab → **GitHub Pages** workflow |
 | **Typical deploy time** | A few minutes after the workflow starts; refresh the live site when the run shows a green checkmark |
@@ -53,7 +53,7 @@ Practical reference for editing the COMET Hugo site. Assumes basic familiarity w
 | Site menu labels / order | `hugo.toml` → `[menu]` section |
 | Page URL or layout | Matching file in `content/` (e.g. `content/about.md`) |
 
-Data folders use **underscores** (`join_us`, `the_comet_model`); public URLs use **hyphens** (`/join-us/`, `/the-comet-model/`).
+Data folders use **underscores** (`join_us`, `comet_model`); public URLs use **hyphens** (`/join-us/`, `/comet-model/`).
 
 ---
 
@@ -234,7 +234,7 @@ Preview locally after YAML edits. If the build fails, Hugo usually reports the f
 
 The live site uses a fixed **block library** (hero, text-media bands, impact band, stacked cards, diagram, forms, featured post). Each block is one YAML file plus a theme template.
 
-**See every block live:** https://cometadata.github.io/comet-website/test-page/
+**See every block live:** https://www.cometdata.org/test-page/
 
 The block gallery (`/test-page/`) shows one example of each block type and all supported colour variants. It is excluded from the site menu and search indexing (`noindex` + sitemap disabled). Use it when choosing variants for new copy.
 
@@ -245,7 +245,7 @@ The block gallery (`/test-page/`) shows one example of each block type and all s
 | **impact-band** | Metrics table + intro | Default; `color: "alt"`; optional CTA; `variant: "below"` |
 | **stacked-cards** | Timelines, principles, projects, people | `layout_variant`: `three`, `stack`, `grid`; `color_variant`: (default dark blue), `gold`, `white`, `light-green` |
 | **diagram-stage** | Multi-image carousel with animated line | `mediaPrimary`, `mediaSecondary`, `mediaPrimaryMobile`, `mediaSecondaryMobile`; auto-crossfade between images |
-| **comet-model-diagram-v1** | Model page diagram | Used on `/the-comet-model/` |
+| **comet-model-diagram-v1** | Model page diagram | Used on `/comet-model/` |
 | **form-stack** | Join Us signup form | Live form at `/join-us/`; demo (non-submitting) on test page |
 | **form-stack-text** | Thank-you / confirmation message | `/thank-you/` |
 | **featured-post** | Highlighted blog card | Set `featured = true` on one post |
@@ -321,7 +321,7 @@ All site images go in **`static/images/`**, referenced as `/images/...` in YAML 
 | `static/images/community/` | Community; `people/` and `advisors/` for portraits |
 | `static/images/join-us/` | Join Us hero |
 | `static/images/projects/` | Projects page |
-| `static/images/the-comet-model/` | Model diagram |
+| `static/images/comet-model/` | Model diagram |
 | `static/images/blog/{post-slug}/` | One folder per blog post |
 | `static/images/icons/` | Small SVG icons |
 | `static/images/logos/` | COMET logos |
@@ -363,7 +363,7 @@ The form at `/join-us/` posts directly to Mailchimp. No API key is stored in the
 | Form template / validation | Theme templates |
 | Mailchimp redirect URL | Set in Mailchimp admin (Forms → Form builder → Signup thank you page). **Changing it affects all forms on that audience**, not just Join Us |
 
-Production thank-you URL: `https://cometadata.github.io/comet-website/thank-you/`
+Production thank-you URL: `https://www.cometdata.org/thank-you/`
 
 ### Field mapping
 
@@ -389,7 +389,7 @@ Participation selections are submitted as a comma-separated list in `MMERGE12`. 
 1. Changes merge into **`main`** (via pull request or direct push).
 2. GitHub Actions runs the **GitHub Pages** workflow (`.github/workflows/hugo.yml`).
 3. The workflow installs Hugo, runs a production build, and publishes the `public/` output to GitHub Pages.
-4. The live site updates at https://cometadata.github.io/comet-website/ once the workflow completes.
+4. The live site updates at https://www.cometdata.org/ once the workflow completes.
 
 ### Checking deploy status
 
@@ -410,9 +410,9 @@ You can edit YAML or Markdown files directly on GitHub:
 3. Open a pull request into `main`.
 4. Merge when ready — deploy starts automatically.
 
-### GitHub Pages URL structure
+### Production URL
 
-The site is served from a **project subpath**: `/comet-website/`. Internal links in YAML should be root-relative (`/about/`, `/join-us/`) — Hugo resolves them correctly in production.
+The site is served at the domain root: `https://www.cometdata.org/`. Internal links in YAML should stay root-relative (`/about/`, `/join-us/`) — Hugo resolves them correctly in production.
 
 ---
 
@@ -438,7 +438,7 @@ pkill -f "hugo server"
 **Production build** (matches CI — stop the dev server first):
 
 ```bash
-hugo --minify -b 'https://cometadata.github.io/comet-website/'
+hugo --minify -b 'https://www.cometdata.org/'
 ```
 
 Output goes to `public/`. Do not run a production build while the dev server is running.
@@ -608,7 +608,7 @@ A longer technical accessibility plan (phases 2–4) lives in the local **`comet
 |---|---|---|
 | Home | `content/_index.md` | `home/hero`, `text_media_band_top`, `impact_band`, `text_media_band_cta`, `stacked_cards` |
 | About | `about.md` | `about/hero`, `text_media_band_top`, `text_media_band_middle`, `stacked_cards`, `text_media_band_bottom` |
-| The COMET model | `the-comet-model.md` | `the_comet_model/hero`, `stacked_cards_top`, `diagram`, `stacked_cards_bottom` |
+| COMET model | `comet-model.md` | `comet_model/hero`, `stacked_cards_top`, `diagram`, `stacked_cards_bottom` |
 | Projects | `projects.md` | `projects/hero`, `stacked_cards` |
 | Community | `community.md` | `community/hero`, `text_media_band_cta`, `stacked_cards_organisers`, `stacked_cards_advisors` |
 | Join Us | `join-us.md` | `join_us/hero`, `join_us/form` |

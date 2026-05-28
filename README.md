@@ -8,28 +8,25 @@
 # COMET website
 A fast, static website built using the [Hugo](https://gohugo.io/) framework.
 
-## 🚀 Deployment
+## Deployment
 
-This site automatically deploys to **GitHub Pages** via GitHub Actions upon pushing to the `main` branch. 
-* The workflow file is located at `.github/workflows/hugo.yml`.
-* Deployment status can be checked under the **Actions** tab of this repository.
+This site automatically deploys to **GitHub Pages** via GitHub Actions when changes merge to `main`.
 
+- Workflow: `.github/workflows/hugo.yml`
+- Production URL: [https://www.cometdata.org/](https://www.cometdata.org/)
+- Custom domain: `static/CNAME` → `www.cometdata.org`
+- Deployment status: **Actions** tab on this repository
 
-## The URL...
-**Current URL is a github pages supplied sub.**
+Production builds use:
 
+```bash
+hugo --minify -b 'https://www.cometdata.org/'
+```
 
-When the proper site URL is setup then someone will need to edit /workflows/hugo.yaml and change the URL at line 32 from 
-https://cometadata.github.io/comet-website/ \
-to \
-https://properdomain.name.org/
-
-Site currenltly available to view at [https://cometadata.github.io/comet-website/](https://cometadata.github.io/comet-website/)
-
+Local preview: `./scripts/dev-server.sh` (see `docs/content-editors-guide.md`).
 
 [githubissues]: https://img.shields.io/github/issues-raw/cometadata/comet-website
 [githublastcommitmain]: https://img.shields.io/github/last-commit/cometadata/comet-website/main?label=last%20commit%20main
 [githublastcommitdevelopment]: https://img.shields.io/github/last-commit/cometadata/comet-website/development?label=last%20commit%20development
 [release]: https://img.shields.io/github/v/release/cometadata/comet-website
 [releasetag]: https://img.shields.io/github/v/tag/cometadata/comet-website
-

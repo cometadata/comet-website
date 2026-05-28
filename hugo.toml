@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
-# baseURL define in build command line for flexibility
+baseURL = 'https://www.cometdata.org/'
+# Overridden locally by config/development/; CI passes -b explicitly in hugo.yml
 locale = 'en-us'
 title = 'COMET'
 theme = 'comet-theme'

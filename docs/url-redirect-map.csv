@@ -1,7 +1,7 @@
 old_path,new_path,status,notes
 /home,/,confirmed,Legacy Squarespace homepage URL
 /about,/about,confirmed,Same path
-/the-comet-model,/the-comet-model,confirmed,Same path
+/the-comet-model,/comet-model,confirmed,Renamed on new site; Hugo alias on comet-model page
 /join-us,/join-us,confirmed,Same path (live page title was Contact)
 /our-vision,/about,provisional,Former vision page; content may map to About or The COMET model — review
 /people,/community,provisional,Former people/organisers page; mapped to Community — review

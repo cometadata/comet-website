@@ -4,4 +4,4 @@ content: |
 cta_text: "Return to home"
 cta_url: "/"
 # Set this URL in Mailchimp: Audience → Signup forms → Form builder → Settings → Signup thank you page → Redirect to URL
-mailchimp_redirect_url: "https://cometadata.github.io/comet-website/thank-you/"
+mailchimp_redirect_url: "https://www.cometdata.org/thank-you/"
