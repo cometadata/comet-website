@@ -17,9 +17,14 @@ footer {
     }    
     .footer-bottom {
         a {
-            color:#fff;        
+            color: #fff;
+            border-bottom: 0;
+            text-decoration: none;
+
             &:hover {
-                color:#fff;
+                color: variables.$comet-lightgreen;
+                border-bottom: 0;
+                text-decoration: none;
             }
         }
     }
