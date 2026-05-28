@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cometdata.org/sitemap.xml
+Sitemap: https://www.cometadata.org/sitemap.xml
