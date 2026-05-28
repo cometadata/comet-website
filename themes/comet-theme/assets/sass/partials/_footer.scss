@@ -15,6 +15,11 @@ footer {
             left:0;
         }
     }    
+    .footer-bottom {
+        a {
+            color:#fff;
+        }
+    }
       
     .row {
         @include variables.site-container;

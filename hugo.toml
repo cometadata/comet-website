@@ -35,7 +35,7 @@ name = "sass/_cometadata.scss"
 
 [menu]
 [[menu.main]]
-    name       = "COMET model"
+    name       = "COMET Model"
     url        = "/comet-model"
     weight     = 20
 [[menu.main]]
