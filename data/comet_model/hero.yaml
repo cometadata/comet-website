@@ -3,6 +3,6 @@ background_height: "50vh"
 headline: "The COMET Model"
 content: "The COMET Model proposes an evolution in metadata quality grounded in three fundamental shifts that align with the open science movement."
 
-media: "/images/the-comet-model/gold-padlock.jpg"
+media: "/images/comet-model/gold-padlock.jpg"
 media_hover: "Gold padlock"
 media_alt: "Golden padlock symbolizing secure, trustworthy metadata stewardship"
