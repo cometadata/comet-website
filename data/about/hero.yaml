@@ -1,7 +1,7 @@
 variant: "background"
 background_height: "70vh"
-headline: "Metadata quality: Why collaboration matters"
-content: "Knowledge creation relies on a collaborative, always evolving, research ecosystem. In this ecosystem ideas are spread through reliable persistent identifiers (PIDs) that connect research to researchers, institutions, funders, communities, and society at large"
+headline: "Collaborative metadata enrichment"
+content: "A community approach to improving scholarly metadata. "
 
 media: "/images/about/butterfly.jpg"
 media_hover: "Butterfly"
