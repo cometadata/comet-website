@@ -27,6 +27,7 @@ elements:
     collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI2) <span class="highlight">LEAD</span>'
     content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
     icon: '<i class="fa-solid fa-calendar-days"></i>'
+    link: 'https://docs.google.com/document/d/1pp86lVtqpwZ51QsacRZMEbTbKlqi8hNe7_Zae6fUEa8/edit?usp=drive_link'
 
   - status: "Complete"
     headline: "Match preprints to published articles"
