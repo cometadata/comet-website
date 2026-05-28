@@ -5,14 +5,14 @@ media_variant: ""
 headline: "Join the evolution"
 content: "There is strength in numbers. In metadata. In collaborating. In sharing. There are many ways you can contribute. Here’s how:"
 
-cta_content: "Willing to lend a hand? You can choose any one of these routes, or combine more than one."
+cta_content: "Join us in shaping the quality and completeness of the scholarly record."
 cta_link_text: "Get in touch"
 cta_link_url: "/join-us/"
 button_rank: "button-primary"
 
 elements:
   - title: "Join the COMET community"
-    content: "Sign-up for the newsletter, endorse our work, or showcase your enrichment project."   
+    content: "Sign-up for the newsletter, join community meetings, endorse our work, or showcase your enrichment project."   
     media: "/images/icons/join.svg" 
   - title: "Advance metadata enrichment"
     content: "Run metadata through our infrastructure, provide research outputs for data quality training, or share methods for plugin development."    
