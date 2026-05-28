@@ -3,8 +3,8 @@
 
 	<div class="row footer-brand">
 		<div class="col logo">			
-			<a class='no-underline' href="{{ .Site.BaseURL }}">
-				<img class="footer-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-White.svg" | relURL }}" alt="COMET" />
+			<a class='no-underline' href="{{ .Site.BaseURL }}" aria-label="{{ printf "%s home" (.Site.Title | default "COMET") }}">
+				<img class="footer-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-White.svg" | relURL }}" alt="" />
 			</a>	
 		</div>
 	</div>

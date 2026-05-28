@@ -1,8 +1,9 @@
 <header>
+{{ $homeLabel := printf "%s home" (.Site.Title | default "COMET") }}
 
 	<div class="row ">
 		<div class="col logo">			
-			<a class="no-underline" href="{{ .Site.BaseURL }}"><img class="header-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="{{ .Site.Title | default "COMET" }}" /></a>
+			<a class="no-underline" href="{{ .Site.BaseURL }}" aria-label="{{ $homeLabel }}"><img class="header-logo" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="" /></a>
 		</div>
 	</div>
 	
@@ -43,8 +44,8 @@
 					{{ end }}
 					<li><a class='no-underline' href='/join-us'><button>Join us</button></a></li>
 					<li class="logolink">
-						<a class="no-underline" href="{{ .Site.BaseURL }}">
-							<img class="" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="{{ .Site.Title | default "COMET" }}" />
+						<a class="no-underline" href="{{ .Site.BaseURL }}" aria-label="{{ $homeLabel }}">
+							<img class="" src="{{ "/images/logos/COMET_logo_accessible-Change-Colour.svg" | relURL }}" alt="" />
 						</a>
 					</li>
 				</ul>
