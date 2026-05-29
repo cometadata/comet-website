@@ -10,7 +10,7 @@ A fast, static website built using the [Hugo](https://gohugo.io/) framework.
 
 ## Deployment
 
-This site automatically deploys to **GitHub Pages** via GitHub Actions when changes merge to `main`.
+This site automatically deploys to **GitHub Pages** via **GitHub Actions** when changes merge to `main`.
 
 - Workflow: `.github/workflows/hugo.yml`
 - Production URL: [https://www.cometadata.org/](https://www.cometadata.org/)
