@@ -431,9 +431,14 @@
         img {
             margin: 0 auto;
         }
-        &.profile {
-            max-width:50%;
-            margin: 2rem auto;
+        @media (min-width: variables.$break-small) {
+            &.profile {
+                max-width:50%;
+                margin: 2rem auto;
+                .article-aside {
+                    display: none;
+                }
+            }
         }
     }
 
