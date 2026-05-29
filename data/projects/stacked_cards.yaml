@@ -16,18 +16,18 @@ elements:
     link: "https://docs.google.com/document/d/1P0XerKhGqAwzGMVPwuq0tBMqd7Po-g7rh0T8BzxUjPg/edit?usp=sharing"
     icon: "<i class='fa-solid fa-spinner'></i>"
 
+  - status: "In progress"
+    headline: "Posters.science"
+    collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI²) <span class="highlight">LEAD</span>'
+    content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
+    icon: '<i class="fa-solid fa-spinner"></i>'
+    link: 'https://docs.google.com/document/d/1pp86lVtqpwZ51QsacRZMEbTbKlqi8hNe7_Zae6fUEa8/edit?usp=drive_link'
+
   - status: "Planned"
     headline: "Improve affiliations parsing of multilingual articles"
     content: "Assessing current approaches to affiliations parsing and developing new methods for extracting accurate institutional information from a multilingual corpus. Piloting the approach with open-access articles from the PKP Beacon Journal."
     link: "https://docs.google.com/document/d/1OXN8-ZxZwJrzwA6EraSwfCjXx0eFJx2jmzter1hgx6M/edit?usp=sharing"
     icon: '<i class="fa-solid fa-calendar-days"></i>'
-
-  - status: "Planned"
-    headline: "Posters.Science"
-    collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI2) <span class="highlight">LEAD</span>'
-    content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
-    icon: '<i class="fa-solid fa-calendar-days"></i>'
-    link: 'https://docs.google.com/document/d/1pp86lVtqpwZ51QsacRZMEbTbKlqi8hNe7_Zae6fUEa8/edit?usp=drive_link'
 
   - status: "Complete"
     headline: "Match preprints to published articles"
