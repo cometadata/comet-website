@@ -19,7 +19,9 @@
 								</div>
 
 								<h1>{{ .Title }}</h1>
-
+								{{ with .Summary }}
+									<div class="article-summary">{{ . }}</div>
+								{{ end }}
 							</article>
 
 							<article class="article-box article-body">

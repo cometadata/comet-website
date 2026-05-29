@@ -8,13 +8,9 @@ categories = ["News"]
 media = "/images/blog/crossrefs-perspective-on-open-metadata-enrichment/featured-Ginny_headshot.png"
 media_format = 'profile'
 +++
-As one of the largest open scholarly infrastructures and metadata 
-registries, Crossref offers a unique perspective on collaborative metadata 
-enrichment and how initiatives like COMET align with its development 
-roadmap, driven by the goals of its diverse community—by Ginny Hendricks, 
-Chief Program Officer at Crossref.
-<!--more-->
 <p class=""><em>As one of the largest open scholarly infrastructures and metadata registries, Crossref offers a unique perspective on collaborative metadata enrichment and how initiatives like COMET align with its development roadmap, driven by the goals of its diverse community</em>—by Ginny Hendricks, Chief Program Officer at Crossref. </p>
+<!--more-->
+
 <figure class="profile
 sqs-block-image-figure
 intrinsic
