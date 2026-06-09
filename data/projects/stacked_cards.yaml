@@ -6,50 +6,50 @@ elements:
   - status: "In progress"
     headline: "Improve funding metadata"
     content: "Developing a parsing model for funding statements to address information gaps within scholarly metadata. Piloting with arXiv preprints."
-    link: "https://docs.google.com/document/d/1Secq8-wVkPcy8aY1kYY_OzdAYleUKY6yDqzG-9lryrw/edit?usp=sharing"
+    link: "https://doi.org/10.82461/gc3p-n671"
     icon: "<i class='fa-solid fa-spinner'></i>"
 
   - status: "In progress"
     headline: "Improve parsing of ETDs"
     collaborators: "University of Oklahoma"
     content: "Creating approaches for parsing author, advisor and degree metadata from electronic theses and dissertations (ETDs), recognising the distinct challenges and opportunities presented by this important type of scholarly output."
-    link: "https://docs.google.com/document/d/1P0XerKhGqAwzGMVPwuq0tBMqd7Po-g7rh0T8BzxUjPg/edit?usp=sharing"
+    link: "https://doi.org/10.82461/8h43-hp06"
     icon: "<i class='fa-solid fa-spinner'></i>"
+
+  - status: "In progress"
+    headline: "Posters.science"
+    collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI²) <span class="highlight">LEAD</span>'
+    content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
+    icon: '<i class="fa-solid fa-spinner"></i>'
+    link: 'https://docs.google.com/document/d/1pp86lVtqpwZ51QsacRZMEbTbKlqi8hNe7_Zae6fUEa8/edit?usp=drive_link'
 
   - status: "Planned"
     headline: "Improve affiliations parsing of multilingual articles"
     content: "Assessing current approaches to affiliations parsing and developing new methods for extracting accurate institutional information from a multilingual corpus. Piloting the approach with open-access articles from the PKP Beacon Journal."
-    link: "https://docs.google.com/document/d/1OXN8-ZxZwJrzwA6EraSwfCjXx0eFJx2jmzter1hgx6M/edit?usp=sharing"
+    link: "https://doi.org/10.82461/wzq3-s974"
     icon: '<i class="fa-solid fa-calendar-days"></i>'
-
-  - status: "Planned"
-    headline: "Posters.Science"
-    collaborators: 'The FAIR Data Innovations Hub at California Medical Innovations Institute (CalMI2) <span class="highlight">LEAD</span>'
-    content: "Collaborating on a scientific poster classification model, developing standards for converting posters to json, and roundtripping enriched metadata to DataCite DOI records."
-    icon: '<i class="fa-solid fa-calendar-days"></i>'
-    link: 'https://docs.google.com/document/d/1pp86lVtqpwZ51QsacRZMEbTbKlqi8hNe7_Zae6fUEa8/edit?usp=drive_link'
 
   - status: "Complete"
     headline: "Match preprints to published articles"
     content: "Developing a matching strategy to connect preprints to published articles, improving knowledge of how research moves from early sharing to formal publication. Piloting with arXiv preprints."
-    link: "https://docs.google.com/document/d/1oQ2VUdRz2affr2AnogmLx4hjOGf0SldkGVI0n7HIFBE/edit?usp=sharing"
+    link: "https://doi.org/10.82461/m8a8-m211"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
     headline: "Leverage affiliations from CRIS systems"
     collaborators: "European Molecular Biology Lab (EMBL); Wageningen University & Research (WUR)"
     content: "Exploring pathways to integrate high-quality affiliation metadata maintained by institutional Current Research Information Systems (CRIS) into the scholarly metadata ecosystem."
-    link: "https://docs.google.com/document/d/1iihySZjcSqFigW2YC09-zwz4IusCpbY1xluqtxm6d9k/edit?usp=sharing"
+    link: "https://doi.org/10.82461/8h43-hp06"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
     headline: "Improve resource type classification"
     content: "Enhancing research outputs discoverability by developing a classifier. Piloting the approach with a subset of DataCite DOI records registered with generic resource types."
-    link: "https://docs.google.com/document/d/1DZlLLCZjMvuowO9oxZG8EvBq2zES6eSDASTGicQ9wd0/edit?usp=sharing"
+    link: "https://doi.org/10.82461/bpzr-jd55"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
     headline: "Improve affiliations parsing of preprints"
     content: "Assessing current approaches to affiliations parsing and developing new methods for extracting accurate institutional information from preprint documents. Piloting with arXiv preprints."
-    link: "https://docs.google.com/document/d/1yaXIKgIO4fbtF_o2rJRpTawiOD9Re6YLgtdIm_RcJkc/edit?usp=sharing"
+    link: "https://doi.org/10.82461/160e-8q92"
     icon: '<i class="fa-solid fa-check"></i>'
