@@ -32,7 +32,7 @@ elements:
   - status: "Complete"
     headline: "Match preprints to published articles"
     content: "Developing a matching strategy to connect preprints to published articles, improving knowledge of how research moves from early sharing to formal publication. Piloting with arXiv preprints."
-    link: "https://doi.org/10.82461/m8a8-m211"
+    link: "https://zenodo.org/records/20811849"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
