@@ -6,7 +6,7 @@ slug = "summary-comet-governance-listening-sessions"
 authors = ["Clare Dean"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
-media = "/images/blog/summary-comet-governance-listening-sessions/featured-COMET-image-4.png"
+media = "/images/blog/dunes-dawn.jpg"
 +++
 
 The following was provided as a read-ahead to the listening sessions 

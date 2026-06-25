@@ -6,7 +6,7 @@ slug = "call-to-action-comet"
 authors = ["Clare Dean"]
 categories = [""]
 tags = ["Taskforce"]
-media = "/images/blog/call-to-action-comet/featured-COMET-abstract-1.png"
+media = "/images/blog/trees-dawn.jpg"
 +++
 
 Through extensive stakeholder consultation, COMET has identified the 

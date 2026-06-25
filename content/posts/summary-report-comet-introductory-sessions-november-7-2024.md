@@ -7,7 +7,7 @@ authors = ["Clare Dean"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
 related = ["comet-product-development-listening-sessions", "summary-comet-governance-listening-sessions", "call-to-action-comet"]
-media = "/images/blog/summary-report-comet-introductory-sessions-november-7-2024/featured-COMET-image-3.png"
+media = "/images/blog/trees-dawn.jpg"
 +++
 
 The introductory sessions for the Collaborative Metadata Enrichment 

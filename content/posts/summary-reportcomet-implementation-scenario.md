@@ -6,7 +6,7 @@ slug = "summary-reportcomet-implementation-scenario"
 authors = ["Clare Dean"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
-media = "/images/blog/summary-reportcomet-implementation-scenario/featured-COMET-image-6.png"
+media = "/images/blog/waves-dawn.jpg"
 +++
 
 The following was provided as a read-ahead to the listening sessions 

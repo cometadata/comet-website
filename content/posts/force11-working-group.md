@@ -6,7 +6,7 @@ slug = "force11-working-group"
 authors = ["Clare Dean"]
 categories = [""]
 tags = ["Taskforce"]
-media = "/images/blog/force11-working-group/featured-COMET-image-5.png"
+media = "/images/blog/waves-dawn.jpg"
 +++
 
 We’re excited to share that the Collaborative Metadata Enrichment Taskforce 

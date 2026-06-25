@@ -6,7 +6,7 @@ slug = "comet-product-development-listening-sessions"
 authors = ["Adam Buttrick and Clare Dean"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
-media = "/images/blog/comet-product-development-listening-sessions/featured-COMET-abstract-1.png"
+media = "/images/blog/dunes-dawn.jpg"
 +++
 
 This post includes a Product Development Outline by COMET convener, Adam 
