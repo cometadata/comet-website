@@ -3,7 +3,7 @@ date = '2025-05-14T13:36:22Z'
 draft = false
 title = "Participant Perspectives |  European Molecular Biology Laboratory (EMBL)"
 slug = "participant-perspectives-embl"
-authors = ["Clare Dean"]
+authors = ["Melissa Harrison"]
 categories = ["Community Perspectives"]
 media = "/images/blog/participant-perspectives-embl/featured-Screenshot-2025-05-14-at-9.37.38-AM.png"
 +++

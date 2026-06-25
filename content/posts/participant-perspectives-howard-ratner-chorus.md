@@ -3,7 +3,7 @@ date = '2025-03-20T09:25:26Z'
 draft = false
 title = "Participant Perspectives | Howard Ratner, CHORUS"
 slug = "participant-perspectives-howard-ratner-chorus"
-authors = ["Clare Dean"]
+authors = ["Howard Ratner"]
 categories = ["Community Perspectives"]
 media = "/images/blog/participant-perspectives-howard-ratner-chorus/featured-Screenshot-2025-03-18-at-10.41.59-AM.png"
 +++

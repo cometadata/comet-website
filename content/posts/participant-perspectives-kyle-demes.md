@@ -3,7 +3,7 @@ date = '2025-03-07T10:57:30Z'
 draft = false
 title = "Participant Perspectives | Kyle Demes from OurResearch"
 slug = "participant-perspectives-kyle-demes"
-authors = ["Clare Dean"]
+authors = ["Kyle Demes"]
 categories = ["Community Perspectives"]
 media = "/images/blog/participant-perspectives-kyle-demes/featured-Screenshot-2025-03-07-at-6.00.37-AM.png"
 +++

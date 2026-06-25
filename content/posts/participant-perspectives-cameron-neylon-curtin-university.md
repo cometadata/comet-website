@@ -3,7 +3,7 @@ date = '2025-03-27T14:49:23Z'
 draft = false
 title = "Participant Perspectives | Cameron Neylon, Curtin Open Knowledge Initiative"
 slug = "participant-perspectives-cameron-neylon-curtin-university"
-authors = ["Clare Dean"]
+authors = ["Cameron Neylon"]
 categories = ["Community Perspectives"]
 media = "/images/blog/participant-perspectives-cameron-neylon-curtin-university/featured-Screenshot-2025-03-27-at-7.50.30-AM.png"
 +++

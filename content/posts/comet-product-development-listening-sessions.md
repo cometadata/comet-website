@@ -3,7 +3,7 @@ date = '2025-01-13T10:44:02Z'
 draft = false
 title = "Summary Report COMET Product Development Listening Sessions | December 19, 2024"
 slug = "comet-product-development-listening-sessions"
-authors = ["Clare Dean"]
+authors = ["Adam Buttrick and Clare Dean"]
 categories = ["Resources"]
 media = "/images/blog/comet-product-development-listening-sessions/featured-COMET-abstract-1.png"
 +++

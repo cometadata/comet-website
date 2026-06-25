@@ -3,7 +3,7 @@ date = '2025-04-04T12:40:52Z'
 draft = false
 title = "Participant Perspectives | Bhavesh Patel, Research Professor"
 slug = "participant-perspectives-bhavesh-patel"
-authors = ["Clare Dean"]
+authors = ["Bhavesh Patel"]
 categories = ["Community Perspectives"]
 media = "/images/blog/participant-perspectives-bhavesh-patel/featured-Screenshot-2025-04-01-at-7.20.34-AM.png"
 +++

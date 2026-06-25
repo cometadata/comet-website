@@ -3,7 +3,7 @@ date = '2025-07-17T14:07:12Z'
 draft = false
 title = "Driving open research information forward: Why metadata enrichment matters for us at CWTS"
 slug = "cwts"
-authors = ["Clare Dean"]
+authors = ["Nees Jan van Eck"]
 categories = ["News"]
 media = "/images/blog/cwts/featured-Screenshot-2025-07-17-at-10.02.01-AM.png"
 +++
