@@ -5,6 +5,7 @@ title = "COMET in Action: Pilots, Progress, and What Comes Next"
 slug = "comet-in-action"
 authors = ["Clare Dean"]
 categories = ["Announcement"]
+tags = ["Pilot projects"]
 media = "/images/blog/comet-in-action/featured-COMET-image-4.png"
 +++
 

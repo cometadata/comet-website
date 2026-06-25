@@ -4,7 +4,8 @@ draft = false
 title = "Participant Perspectives | Cameron Neylon, Curtin Open Knowledge Initiative"
 slug = "participant-perspectives-cameron-neylon-curtin-university"
 authors = ["Cameron Neylon"]
-categories = ["Community Perspectives"]
+categories = [""]
+tags = ["Taskforce, Community perspectives"]
 media = "/images/blog/participant-perspectives-cameron-neylon-curtin-university/featured-Screenshot-2025-03-27-at-7.50.30-AM.png"
 +++
 

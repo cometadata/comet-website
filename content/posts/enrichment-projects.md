@@ -5,6 +5,7 @@ title = "COMET Enrichment Projects: From Ideas to Action"
 slug = "enrichment-projects"
 authors = ["Dione Mentis"]
 categories = ["Announcement"]
+tags = ["Pilot projects"]
 media = "/images/blog/enrichment-projects/featured-COMET-image-4.jpg"
 +++
 

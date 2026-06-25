@@ -5,6 +5,7 @@ title = "Summary Report COMET Implementation Scenario Listening Sessions | Febr
 slug = "summary-reportcomet-implementation-scenario"
 authors = ["Clare Dean"]
 categories = ["Resources"]
+tags = ["Taskforce"]
 media = "/images/blog/summary-reportcomet-implementation-scenario/featured-COMET-image-6.png"
 +++
 

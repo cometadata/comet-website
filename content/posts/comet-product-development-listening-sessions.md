@@ -5,6 +5,7 @@ title = "Summary Report COMET Product Development Listening Sessions | December 
 slug = "comet-product-development-listening-sessions"
 authors = ["Adam Buttrick and Clare Dean"]
 categories = ["Resources"]
+tags = ["Taskforce"]
 media = "/images/blog/comet-product-development-listening-sessions/featured-COMET-abstract-1.png"
 +++
 

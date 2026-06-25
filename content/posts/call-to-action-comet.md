@@ -5,6 +5,7 @@ title = "Call to Action from the Collaborative Metadata Enrichment Taskforce (CO
 slug = "call-to-action-comet"
 authors = ["Clare Dean"]
 categories = ["Announcement"]
+tags = ["Taskforce"]
 media = "/images/blog/call-to-action-comet/featured-COMET-abstract-1.png"
 +++
 

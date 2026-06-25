@@ -5,6 +5,7 @@ title = "Unlocking Author-Affiliation Metadata for All of arXiv"
 slug = "unlocking-author-affiliation-metadata-for-all-of-arxiv"
 authors = ["Adam Buttrick"]
 categories = ["News"]
+tags = ["Pilot projects"]
 media = "/images/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv/featured-student-teacher.png"
 featured = true
 +++
