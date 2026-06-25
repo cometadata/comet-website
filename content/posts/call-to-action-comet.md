@@ -4,7 +4,7 @@ draft = false
 title = "Call to Action from the Collaborative Metadata Enrichment Taskforce (COMET)"
 slug = "call-to-action-comet"
 authors = ["Clare Dean"]
-categories = ["Announcement"]
+categories = [""]
 tags = ["Taskforce"]
 media = "/images/blog/call-to-action-comet/featured-COMET-abstract-1.png"
 +++

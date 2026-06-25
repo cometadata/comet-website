@@ -4,7 +4,7 @@ draft = false
 title = "Summary Report COMET Governance Listening Sessions | January 23, 2025"
 slug = "summary-comet-governance-listening-sessions"
 authors = ["Clare Dean"]
-categories = ["Resources"]
+categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
 media = "/images/blog/summary-comet-governance-listening-sessions/featured-COMET-image-4.png"
 +++

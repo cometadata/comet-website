@@ -4,7 +4,7 @@ draft = false
 title = "Participant Perspectives | Bhavesh Patel, Research Professor"
 slug = "participant-perspectives-bhavesh-patel"
 authors = ["Bhavesh Patel"]
-categories = [""]
+categories = ["Insights & Analysis"]
 tags = ["Taskforce, Community perspectives"]
 media = "/images/blog/participant-perspectives-bhavesh-patel/featured-Screenshot-2025-04-01-at-7.20.34-AM.png"
 +++

@@ -4,7 +4,7 @@ draft = false
 title = "Summary Report COMET Implementation Scenario Listening Sessions | February 18, 2025"
 slug = "summary-reportcomet-implementation-scenario"
 authors = ["Clare Dean"]
-categories = ["Resources"]
+categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
 media = "/images/blog/summary-reportcomet-implementation-scenario/featured-COMET-image-6.png"
 +++

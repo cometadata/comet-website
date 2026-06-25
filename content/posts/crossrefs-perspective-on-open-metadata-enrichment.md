@@ -4,7 +4,8 @@ draft = false
 title = "Crossref's Perspective on Open Metadata Enrichment"
 slug = "crossrefs-perspective-on-open-metadata-enrichment"
 authors = ["Ginny Hendricks"]
-categories = ["News"]
+categories = ["Insights & Analysis"]
+tags = ["Community perspectives"]
 media = "/images/blog/crossrefs-perspective-on-open-metadata-enrichment/featured-Ginny_headshot.png"
 media_format = 'profile'
 +++

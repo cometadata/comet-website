@@ -4,7 +4,7 @@ draft = false
 title = "Summary Report COMET Product Development Listening Sessions | December 19, 2024"
 slug = "comet-product-development-listening-sessions"
 authors = ["Adam Buttrick and Clare Dean"]
-categories = ["Resources"]
+categories = ["Insights & Analysis"]
 tags = ["Taskforce"]
 media = "/images/blog/comet-product-development-listening-sessions/featured-COMET-abstract-1.png"
 +++

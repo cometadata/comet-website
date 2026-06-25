@@ -4,7 +4,8 @@ draft = false
 title = "Why Metadata Enrichment Matters for the Public Knowledge Project"
 slug = "public-knowledge-project"
 authors = ["Juan Pablo Alperin"]
-categories = ["News"]
+categories = ["Insights & Analysis"]
+tags = ["Community perspectives"]
 media = "/images/blog/public-knowledge-project/featured-Screenshot-2025-07-11-at-5.16.07-AM.png"
 +++
 
