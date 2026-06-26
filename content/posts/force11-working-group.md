@@ -118,36 +118,7 @@ intrinsic
 "
 >
 
-
-
-
-
-<a data-sqsp-image-classic-block-image-link class="
-sqs-block-image-link
-
-
-
-" href="https://force11.org/group/the-collaborative-metadata-enrichment-taskforce-comet/" target="_blank"
->
-
-
-
-
-
-
-
-
-
-
 <img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png" data-image-dimensions="422x72" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/force11-working-group/force11-logo-09072021-8CBFD0-272727.png" width="422" height="72" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/3bc88688-701a-4597-8394-1564945447b4/force11-logo-09072021-8CBFD0-272727.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-</a>
-
-
-
 
 </figure>
 
