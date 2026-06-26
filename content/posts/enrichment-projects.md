@@ -4,7 +4,7 @@ draft = false
 title = "COMET Enrichment Projects: From Ideas to Action"
 slug = "enrichment-projects"
 authors = ["Dione Mentis"]
-categories = [""]
+categories = ["Announcement"]
 tags = ["Pilot projects"]
 media = "/images/blog/trees-dawn.jpg"
 +++

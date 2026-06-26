@@ -4,7 +4,7 @@ draft = false
 title = "COMET is now a FORCE11 Working Group"
 slug = "force11-working-group"
 authors = ["Clare Dean"]
-categories = [""]
+categories = ["Announcement"]
 tags = ["Taskforce"]
 media = "/images/blog/waves-dawn.jpg"
 +++
