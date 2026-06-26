@@ -5,7 +5,7 @@ title = "Participant Perspectives | Hannah Hope from Wellcome"
 slug = "participant-perspectives-hannah-hope"
 authors = ["Hannah Hope"]
 categories = ["Insights & Analysis"]
-tags = ["Taskforce, Community perspectives"]
+tags = ["Taskforce", "Community perspectives"]
 media = "/images/blog/participant-perspectives-hannah-hope/featured-Screenshot-2025-03-07-at-5.59.51-AM.png"
 +++
 

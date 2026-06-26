@@ -5,7 +5,7 @@ title = "Participant Perspectives |  European Molecular Biology Laboratory (EMB
 slug = "participant-perspectives-embl"
 authors = ["Melissa Harrison"]
 categories = ["Insights & Analysis"]
-tags = ["Taskforce, Community perspectives"]
+tags = ["Taskforce", "Community perspectives"]
 media = "/images/blog/participant-perspectives-embl/featured-Screenshot-2025-05-14-at-9.37.38-AM.png"
 +++
 

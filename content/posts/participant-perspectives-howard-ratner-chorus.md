@@ -5,7 +5,7 @@ title = "Participant Perspectives | Howard Ratner, CHORUS"
 slug = "participant-perspectives-howard-ratner-chorus"
 authors = ["Howard Ratner"]
 categories = ["Insights & Analysis"]
-tags = ["Taskforce, Community perspectives"]
+tags = ["Taskforce", "Community perspectives"]
 media = "/images/blog/participant-perspectives-howard-ratner-chorus/featured-Screenshot-2025-03-18-at-10.41.59-AM.png"
 +++
 
