@@ -22,47 +22,6 @@ Project); and Clare Dean (COMET).
 
 <!--more-->
 
-<figure class="
-              sqs-block-image-figure
-              intrinsic
-            "
-        >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png" data-image-dimensions="1920x1080" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/summary-report-comet-introductory-sessions-november-7-2024/COMET-image-3.png" width="1920" height="1080" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
-</figure>
-
-
-
-
-
-
-
-
-
 
 
 <p class=""><strong>By Adam Buttrrick, John Chodacki, Juan Pablo Alperin, Maria Praetzellis and Clare Dean</strong></p><p class=""><a href="https://doi.org/10.7269/C14W2B" target="_blank" class="citation-link comet-doi">DOI 10.7269/C14W2B</a></p><p class="">The introductory sessions for the Collaborative Metadata Enrichment Taskforce (COMET) were held on November 7, 2024. To accommodate different time zones, two sessions were held, hosting the same presentations at each and including a break for group discussion. The following provides a summary of the presented content and summarizes the discussions for both sessions. The sessions were convened and presented by John Chodacki (California Digital Library); Adam Buttrick (California Digital Library/ROR); Juan Pablo Alperin (Simon Fraser University/Public Knowledge Project); and Clare Dean (COMET).</p><p class="">Over 30 attendees participated in the initial meeting, including representatives from universities, publishers, government organizations, and service providers. For the full list of COMET participants, visit the “<a href="https://www.cometadata.org/people" target="_blank">People</a>” section of the COMET website.&nbsp;</p><p data-rte-preserve-empty="true" class=""></p><h3>Summary</h3><p class="">The introductory meeting was held to outline the scope of COMET and what it aims to achieve, describing how the Taskforce itself will operate, as well as its goals, timeline, and scope.&nbsp;</p><p class="">The session provided context on how the project came into being, its overarching ideas and principles, and more concrete details on deadlines, deliverables, and expectations for participant involvement.</p><p class="">Group discussion was incorporated to clarify scope and intent, including what kinds of organizations are represented among the Taskforce participants and questions pertaining to the proposed workflows.&nbsp;</p><p class="">Based on initial community discussion, a draft vision statement was prepared for review during the meeting, allowing participants to orient their understanding of the goals of the Taskforce and the product it seeks to define.</p><p data-rte-preserve-empty="true" class=""></p><h3>Presentations</h3><p class="">After a brief welcome to the session by the COMET Community Outreach Manager, Clare Dean, Juan Pablo Alperin provided an introduction to the scope of COMET.</p><p data-rte-preserve-empty="true" class=""></p><h4>Introduction: Juan Pablo Alperin</h4><p class="">Juan began the session by identifying the fact that everyone involved with COMET has a love of PID metadata. He identified that all of COMET’s participants are also involved in building and using scholarly infrastructure in some way and have faced problems from this metadata being incorrect or incomplete.&nbsp;</p><p class="">Juan stressed that the presenters of today’s sessions are the conveners of COMET, whose role it is to bring the community together, facilitating, rather than directing, the course of discussions.</p><p class="">He then next framed the discussion using an overarching problem statement: “The current system for the maintenance and enrichment of PID metadata is inefficient and disconnected.” Juan stressed the reason that he and others are acting as conveners for this Taskforce is because they believe that addressing this problem is a shared responsibility, and not that of any one user, metadata creator, or service.</p><p class="">To provide further context about the origins of the Collaborative Metadata Enrichment Taskforce (COMET) Juan explained that it emerged from conversations had by many of the participants over the years. These conversations culminated in representatives from CDL organizing an initial, formal discussion to frame and better define these problems at the <a href="https://force11.org/"><span>FORCE11</span></a> Conference, held over two days at the University of California Los Angeles in August of this year. This discussion was followed by an additional meeting in Paris as part of the <a href="https://barcelona-declaration.org/conference_2024_paris/"><span>Paris Conference on Open Research Information</span></a> in September. The aim of both meetings was to solidify the community’s understanding of these shared challenges with metadata completeness and quality, so that they could work on a collaborative solution to resolve them. A summary of these conversations and the ideas that resulted from them led to the publication of two blog posts on the FORCE11 Upstream blog (the <a href="https://www.cometadata.org/blog/blog-post-four-5gxpx" target="_blank">second</a> also hosted on the COMET site) and, ultimately, the formation of COMET itself.&nbsp;&nbsp;</p>
