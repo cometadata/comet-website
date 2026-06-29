@@ -5,7 +5,8 @@ title = "COMET in Action: Pilots, Progress, and What Comes Next"
 slug = "comet-in-action"
 authors = ["Clare Dean"]
 categories = ["Announcement"]
-media = "/images/blog/comet-in-action/featured-COMET-image-4.png"
+tags = ["Taskforce", "Pilot projects"]
+media = "/images/blog/waves-dawn.jpg"
 +++
 
 We’re excited to share that the overwhelmingly positive response to this 

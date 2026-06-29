@@ -4,8 +4,9 @@ draft = false
 title = "Summary Report COMET Governance Listening Sessions | January 23, 2025"
 slug = "summary-comet-governance-listening-sessions"
 authors = ["Clare Dean"]
-categories = ["Resources"]
-media = "/images/blog/summary-comet-governance-listening-sessions/featured-COMET-image-4.png"
+categories = ["Insights & Analysis"]
+tags = ["Taskforce"]
+media = "/images/blog/dunes-dawn.jpg"
 +++
 
 The following was provided as a read-ahead to the listening sessions 
@@ -14,54 +15,6 @@ those from the listening session and summarized in the participant comments
 section.
 
 <!--more-->
-
-<figure class="
-              sqs-block-image-figure
-              intrinsic
-            "
-        >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png" data-image-dimensions="1920x1080" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/summary-comet-governance-listening-sessions/COMET-image-4.png" width="1920" height="1080" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/80b57ae2-2b1a-4e4c-80fd-73d2438f8d1b/COMET+image+4.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
-<figcaption data-sqsp-image-classic-block-caption-container class="image-caption-wrapper">
-<p data-rte-preserve-empty="true"><strong>By Adam Buttrrick, John Chodacki, Juan Pablo Alperin, Maria Praetzellis and Clare Dean</strong></p>
-</figcaption>
-
-
-</figure>
-
-
-
-
-
-
-
-
-
-
 
 <p class=""><a href="https://doi.org/10.7269/C1RP44" target="_blank" class="citation-link comet-doi"><strong>DOI 10.7269/C1RP44</strong></a> </p><ul data-rte-list="default"><li><p class="">Governance Outline by COMET convener, Adam Buttrick</p></li></ul><ul data-rte-list="default"><li><p class="">Comments aggregated from COMET participant read-ahead feedback and listening sessions on January 23, 2025</p></li></ul><h2>Governance Outline</h2><p class=""><em>The following was provided as a read-ahead to the listening sessions conducted on January 23, 2025. Comments on the document are combined with those from the listening session and summarized in the participant comments section.&nbsp;</em></p><h3>Introduction</h3><p class="">Initial taskforce discussions have established that successful implementation of the proposed COMET model requires a robust governance framework to ensure accountability, sustainability, and equitable participation from diverse stakeholders worldwide. We now need to further scope and identify what would constitute a viable governance structure and organizational form. What follows is a discussion framework that presents potential organizational forms and related questions to help guide the development of this governance model.</p><p class="">We are inviting wide participation in these governance discussions. Even if your expertise is not in organizational governance, your perspectives and experiences of different organizational structures will help shape our approach to community inclusion as the governance model evolves. Any and all feedback is welcome!</p><h3>Overview</h3><p class="">The following organizational forms present different pathways for establishing COMET's organizational structure, each with distinct implications for community engagement, operational efficiency, and long-term sustainability. Each presents discrete opportunities and risks and should be assessed relative to both their overall viability and needs exposed in discussions to date. They are not intended to be limiting or exhaustive, but instead meant as a starting point for gathering feedback.</p><h3>Potential Organizational Forms</h3><h4>1. New Organization</h4><p class="sqsrte-large">Structure Overview</p><p class="">The proposed COMET model is established as a fully independent nonprofit organization with its own governance structure and staff. This organization is solely responsible for providing its ongoing resource and development needs and is accountable to stakeholders through a board structure, membership model, or similar configuration.</p><p class="sqsrte-large">Opportunities</p><ul data-rte-list="default"><li><p class="">Maximizes autonomy in decision-making</p></li><li><p class="">Direct grant eligibility through nonprofit structure</p></li><li><p class="">Independent organizational and brand identity</p></li></ul><p class="sqsrte-large">Challenges</p><ul data-rte-list="default"><li><p class="">Much higher startup costs, both in financial and operational terms</p></li><li><p class="">Long and uncertain path to sustainability</p></li><li><p class="">Competes for resources and attention with organizations operating in the same space</p></li><li><p class="">Has to newly establish its reputation and ability to deliver on goals</p></li></ul><h4>2. Joint Project</h4><p class="sqsrte-large">Structure Overview</p><p class="">The proposed COMET model is operated as a joint project by two or more organizations. It uses a structure like an independent advisory body to establish project autonomy and attend to community needs, composed of both project partners and outside representatives. Host organizations provide most, if not all, staff and operational resources, but may pursue independent funding as is needed or allowed.</p><p class="sqsrte-large">Opportunities</p><ul data-rte-list="default"><li><p class="">Lower initial overhead costs</p></li><li><p class="">Faster operational startup</p></li><li><p class="">Leverages credibility of parent organizations</p></li><li><p class="">Reduces initial risk</p></li><li><p class="">Establish feasibility</p></li></ul><p class="sqsrte-large">Challenges</p><ul data-rte-list="default"><li><p class="">Requires navigation of complex stakeholder relationships with parent organizations</p></li><li><p class="">Reconcile competing priorities, both internally at host organizations&nbsp;</p></li><li><p class="">More fragile resourcing model. Requires parent organizations continuously honor commitments as well as pursue ongoing assessment and renewal in the face of changing circumstances or market trends.</p></li></ul><h4>3. Existing Organization</h4><p class="sqsrte-large">Structure Overview</p><p class="">The COMET model is established as a service offering at an existing organization aligned with its goals. The organization dedicates or leverages existing resources to support its development and is responsible to its community and stakeholders through existing or newly developed accountability mechanisms.</p><p class="sqsrte-large">Opportunities</p><ul data-rte-list="default"><li><p class="">Immediate operational capability.&nbsp;</p></li><li><p class="">Can leverage existing parent organizations reputation and relationships to establish its imprimatur</p></li><li><p class="">Low startup costs</p></li></ul><p class="sqsrte-large">Challenges</p><ul data-rte-list="default"><li><p class="">More limited autonomy. Service development competes with other internal priorities and resource constraints.</p></li><li><p class="">Resource competition with other services and initiatives at the parent organization</p></li></ul><h3><br>Overall Governance Goals</h3><ul data-rte-list="default"><li><p class="">Enables broad community participation and lasting trust</p></li><li><p class="">Ensures operational efficiency and long-term sustainability</p></li><li><p class="">Fosters global representation and equity<br></p></li></ul><p data-rte-preserve-empty="true" class=""></p><h3>Open Questions - Questions posed both by COMET Conveners and Participants</h3><h4>Organizational Structure</h4><ul data-rte-list="default"><li><p class="">Who has ultimate authority over the proposed model's policies, procedures, and their evolution?</p></li><li><p class="">How are different stakeholder perspectives (technical, domain expertise, geographic) incorporated into governance decisions?</p></li><li><p class="">What is the chain of responsibility for addressing issues or disputes that arise?</p></li><li><p class="">How much formal governance structure is there, and what form does it take?</p></li><li><p class="">Can we identify a structure that allows COMET to be nimble/able to pivot in its early stages but can then grow as more stakeholders become involved?&nbsp;</p></li><li><p class="">Should we start out with one structure and (at a predetermined milestone) transition to a structure more appropriate for a larger organization/movement?</p></li><li><p class="">Who is invited/selected to participate in the governance of the organization and how are those decisions made?</p></li><li><p class="">How difficult / costly would it be to switch from one option to another (eg. start with an existing org and reach autonomy through a new organization after that) ?</p></li></ul><h4>Community and Equity</h4><ul data-rte-list="default"><li><p class="">How do we ensure enrichment policies and standards reflect diverse global needs and contexts?</p></li><li><p class="">What structures enable broad community input into governance decisions?</p></li><li><p class="">How can we prevent dominance by any one party in decision-making?</p></li><li><p class="">How do we balance efficiency of decision-making with inclusive participation?</p></li><li><p class="">What support is needed to enable meaningful participation from underrepresented groups?</p></li></ul><h4>Operations and Sustainability</h4><ul data-rte-list="default"><li><p class="">How are operational priorities determined and resources allocated?</p></li><li><p class="">Who is responsible for maintaining the technical infrastructure and operations of the proposed model?</p></li><li><p class="">What is needed for effective oversight of day-to-day operations?</p></li><li><p class="">How will the model be funded sustainably? How does COMET define financial sustainability?</p></li><li><p class="">How are operational risks assessed and managed?</p></li><li><p class="">What level of staffing/resourcing is necessary to accomplish COMET’s initial goals within the scope of an MVP framework?</p></li><li><p class="">Is the level of resourcing necessary for the MVPpilot something that can be cobbled together from existing sources (i.e. committed percentage of staff time or volunteer time), or is start-up funding necessary, i.e. concerted fundraising or a grant?</p></li></ul><h4>Quality and Trust</h4><ul data-rte-list="default"><li><p class="">What processes ensure consistent application of policies and procedures?</p></li><li><p class="">What forms of oversight will ensure the model is deemed trustworthy?</p></li><li><p class="">How is compliance with established standards monitored and enforced?</p></li><li><p class="">What transparency requirements should exist around enrichment decisions?</p></li></ul>
 

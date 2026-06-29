@@ -4,10 +4,10 @@ draft = false
 title = "Summary Report COMET Introductory Sessions | November 7, 2024"
 slug = "summary-report-comet-introductory-sessions-november-7-2024"
 authors = ["Clare Dean"]
-categories = ["Resources"]
-tags = ["COMET", "Listening sessions", "Metadata enrichment", "Community"]
+categories = ["Insights & Analysis"]
+tags = ["Taskforce"]
 related = ["comet-product-development-listening-sessions", "summary-comet-governance-listening-sessions", "call-to-action-comet"]
-media = "/images/blog/summary-report-comet-introductory-sessions-november-7-2024/featured-COMET-image-3.png"
+media = "/images/blog/trees-dawn.jpg"
 +++
 
 The introductory sessions for the Collaborative Metadata Enrichment 
@@ -21,47 +21,6 @@ Library/ROR); Juan Pablo Alperin (Simon Fraser University/Public Knowledge
 Project); and Clare Dean (COMET).
 
 <!--more-->
-
-<figure class="
-              sqs-block-image-figure
-              intrinsic
-            "
-        >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png" data-image-dimensions="1920x1080" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/summary-report-comet-introductory-sessions-november-7-2024/COMET-image-3.png" width="1920" height="1080" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/b6c9c1d1-9f2a-4622-b103-0b3973b5a7c5/COMET+image+3.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
-</figure>
-
-
-
-
-
-
-
-
 
 
 

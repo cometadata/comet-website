@@ -5,7 +5,8 @@ title = "Call to Action from the Collaborative Metadata Enrichment Taskforce (CO
 slug = "call-to-action-comet"
 authors = ["Clare Dean"]
 categories = ["Announcement"]
-media = "/images/blog/call-to-action-comet/featured-COMET-abstract-1.png"
+tags = ["Taskforce"]
+media = "/images/blog/trees-dawn.jpg"
 +++
 
 Through extensive stakeholder consultation, COMET has identified the 

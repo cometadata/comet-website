@@ -4,7 +4,8 @@ draft = false
 title = "California Digital Library’s COMET Organizational Perspective"
 slug = "cdls-comet-organizational-perspective"
 authors = ["John Chodacki"]
-categories = ["News"]
+categories = ["Insights & Analysis"]
+tags = ["Community perspectives"]
 media = "/images/blog/cdls-comet-organizational-perspective/featured-cdl_logo_1200_630.png"
 +++
 

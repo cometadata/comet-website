@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const indexLocation = filterControls.dataset.indexUrl || new URL("index.json", window.location.href).pathname;
 
-  const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w\-]+/g, "");
+  const slugify = (text) => text.toLowerCase().replace(/\s*&\s*/g, "-").replace(/\s+/g, "-").replace(/[^a-z0-9\-]+/g, "").replace(/--+/g, "-");
 
   const urlParams = new URLSearchParams(window.location.search);
   const hasUrlFilters = urlParams.has("category") || urlParams.has("tag");

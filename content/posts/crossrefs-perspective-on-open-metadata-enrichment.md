@@ -3,8 +3,9 @@ date = '2025-11-07T12:10:37Z'
 draft = false
 title = "Crossref's Perspective on Open Metadata Enrichment"
 slug = "crossrefs-perspective-on-open-metadata-enrichment"
-authors = ["Dione Mentis"]
-categories = ["News"]
+authors = ["Ginny Hendricks"]
+categories = ["Insights & Analysis"]
+tags = ["Community perspectives"]
 media = "/images/blog/crossrefs-perspective-on-open-metadata-enrichment/featured-Ginny_headshot.png"
 media_format = 'profile'
 +++

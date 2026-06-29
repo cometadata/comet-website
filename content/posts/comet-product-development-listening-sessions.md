@@ -3,9 +3,10 @@ date = '2025-01-13T10:44:02Z'
 draft = false
 title = "Summary Report COMET Product Development Listening Sessions | December 19, 2024"
 slug = "comet-product-development-listening-sessions"
-authors = ["Clare Dean"]
-categories = ["Resources"]
-media = "/images/blog/comet-product-development-listening-sessions/featured-COMET-abstract-1.png"
+authors = ["Adam Buttrick", "Clare Dean"]
+categories = ["Insights & Analysis"]
+tags = ["Taskforce"]
+media = "/images/blog/dunes-dawn.jpg"
 +++
 
 This post includes a Product Development Outline by COMET convener, Adam 
@@ -13,54 +14,6 @@ Buttrick; and aggregated comments from COMET participant read-ahead
 feedback and listening sessions on December 19, 2024.
 
 <!--more-->
-
-<figure class="
-              sqs-block-image-figure
-              intrinsic
-            "
-        >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png" data-image-dimensions="1920x1080" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/comet-product-development-listening-sessions/COMET-abstract-1.png" width="1920" height="1080" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/d664f955-44f1-459a-bfd1-3c39be290c7f/COMET+abstract+1.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
-<figcaption data-sqsp-image-classic-block-caption-container class="image-caption-wrapper">
-<p data-rte-preserve-empty="true"><strong>By Adam Buttrrick, John Chodacki, Juan Pablo Alperin, Maria Praetzellis and Clare Dean</strong></p>
-</figcaption>
-
-
-</figure>
-
-
-
-
-
-
-
-
-
-
 
 <p class=""><a href="https://doi.org/10.7269/C1159D" target="_blank" class="citation-link comet-doi">DOI 10.7269/C1159D</a></p><ul data-rte-list="default"><li><p class="">Product Development Outline by COMET convener, Adam Buttrick</p></li></ul><ul data-rte-list="default"><li><p class="">Comments aggregated from COMET participant read-ahead feedback and listening sessions on December 19, 2024</p></li></ul><h2>Product Development Outline</h2><p class=""><em>The following was provided as a read-ahead to the listening sessions conducted on December 19, 2024. Comments on the document are combined with those from the listening session and summarized in the participant comments section.&nbsp;</em></p><h3>Introduction</h3><p class="">Initial stakeholder consultation at the FORCE11 conference in Los Angeles and the Paris Conference on Open Research Information, combined with lessons learned from ROR (Research Organization Registry), suggest a basic structure for incorporating community enrichments into DOI metadata. While a good starting point, we now need to refine this structure within COMET as a community, developing it from more general ideas to product definitions that can inform both technical discussions and an eventual community call-to-action. What follows is a sketch of this workflow as a starting point for further discussion. Please suggest revisions, add (or answer!) questions, propose new goals, and make revisions or supplementary diagrams. This work will inform future meeting discussions and asynchronous efforts.</p><p class="">We are inviting wide participation in the discussion around product development. Even if your expertise is not technical, your perspectives will help shape our direction and approach to community inclusion as the product development plan evolves. Any and all feedback is welcome!</p><h3>Diagram</h3>
 

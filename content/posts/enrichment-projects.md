@@ -5,7 +5,8 @@ title = "COMET Enrichment Projects: From Ideas to Action"
 slug = "enrichment-projects"
 authors = ["Dione Mentis"]
 categories = ["Announcement"]
-media = "/images/blog/enrichment-projects/featured-COMET-image-4.jpg"
+tags = ["Pilot projects"]
+media = "/images/blog/trees-dawn.jpg"
 +++
 
 The COMET demonstration projects are in full swing! Read more about the 

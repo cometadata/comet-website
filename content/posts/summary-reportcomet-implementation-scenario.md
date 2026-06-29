@@ -4,8 +4,9 @@ draft = false
 title = "Summary Report COMET Implementation Scenario Listening Sessions | February 18, 2025"
 slug = "summary-reportcomet-implementation-scenario"
 authors = ["Clare Dean"]
-categories = ["Resources"]
-media = "/images/blog/summary-reportcomet-implementation-scenario/featured-COMET-image-6.png"
+categories = ["Insights & Analysis"]
+tags = ["Taskforce"]
+media = "/images/blog/waves-dawn.jpg"
 +++
 
 The following was provided as a read-ahead to the listening sessions 
@@ -14,53 +15,6 @@ those from the listening session and summarized in the participant comments
 section.
 
 <!--more-->
-
-<figure class="
-              sqs-block-image-figure
-              intrinsic
-            "
-        >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img data-stretch="false" data-image="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png" data-image-dimensions="1920x1080" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="/images/blog/summary-reportcomet-implementation-scenario/COMET-image-6.png" width="1920" height="1080" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/670562e5ff78885fef59c918/4d149dad-ac70-4684-8f09-3a02bb683289/COMET+image+6.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-
-
-
-
-
-
-
-
-<figcaption data-sqsp-image-classic-block-caption-container class="image-caption-wrapper">
-<p data-rte-preserve-empty="true"><strong>By Adam Buttrrick, John Chodacki, Juan Pablo Alperin, Maria Praetzellis and Clare Dean</strong></p>
-</figcaption>
-
-
-</figure>
-
-
-
-
-
-
-
-
-
 
 
 <p class=""><a href="https://doi.org/10.7269/C1CC7B" target="_blank" class="citation-link comet-doi"><span><strong>DOI&nbsp;</strong></span><strong> 10.7269/C1CC7B</strong></a></p><ul data-rte-list="default"><li><p class="">Implementation Scenario Outline by COMET convener, Adam Buttrick</p></li></ul><ul data-rte-list="default"><li><p class="">Comments aggregated from COMET participant read-ahead feedback and listening sessions on February 18, 2025</p></li></ul><h2>Implementation Scenario Outline</h2><p class=""><em>The following was provided as a read-ahead to the listening sessions conducted on&nbsp;</em></p><p class=""><em>February 18, 2025. Comments on the document are combined with those from the listening session and summarized in the participant comments section.&nbsp;</em></p><p class="">The following scenario outlines how a metadata enrichment service could process and manage enrichments from external providers (i.e. those other than the owners of DOI records) through structured workflows and community-driven governance. While this scenario is one of many possible approaches, it focuses specifically on how the proposed COMET model could evaluate, handle, and validate third-party enrichments from an initial set of providers, rather than prescribing how the enrichments themselves should be generated or the full scope of who should participate in this work.&nbsp; This scenario is one of many that are possible and is provided to help us consider how the proposed COMET model could work in practice.</p><p class="">Taskforce discussions have helped shape this scenario's core elements, which include:</p><ul data-rte-list="default"><li><p class="">The service is structured as a joint initiative between a membership organization, a university, and a scholarly communications nonprofit.&nbsp;&nbsp;</p></li><li><p class="">Adherence to the<a href="https://openscholarlyinfrastructure.org/"><span> Principles of Open Scholarly Infrastructure (POSI)</span></a> to guarantee the service operates with openness, transparency, and pursues long-term sustainability.&nbsp;</p></li><li><p class="">Governance through a supervisory board drawn from the partner organizations, alongside a global advisory group, who guide its priorities and ensure broad community participation.</p></li><li><p class="">An initial focus on addressing gaps in affiliation metadata and the usage of institutional identifiers (e.g., ROR IDs) in DOI records.&nbsp;</p></li></ul><h3>Implementation of a Service</h3><p class="">A new service could implement the proposed COMET model through a joint initiative between three partners made up of community members (membership organizations, universities, scholarly communications nonprofits, etc.) that consults an advisory group. The group will solicit metadata from outside sources to enrich DOI records, benefiting from the combined reach and networks of all three organizations. The partners would ideally already be committed to the Principles of Open Scholarly Infrastructure (POSI) and the shared agreement to establish the project should also adhere to POSI. Following these principles, all code and data for the project will be open source and available via permissive licenses (e.g. MIT, CC0).</p><h3>Setting up governance</h3><p class="">From there, the project builds upon existing governance structures of its parent organizations, establishing a supervisory body composed of representatives from each organization. It also sets up a separate, community-focused steering group. Using an open nomination process, it draws from a global pool of experts and stakeholders, who inform the service’s strategic direction. The group also serves a capacity building function, proactively seeking opportunities to support regions and communities that are underserved in the current ecosystem.&nbsp;</p><h3>The road to a minimum viable product (MVP)</h3><p class="">At the outset, the project leverages existing in-kind contributions (product, outreach, and technical) from its parent organizations to conduct a landscape analysis of current approaches to DOI metadata enrichment and technical feasibility of integrating these sources. This review identifies that pursuing enrichments through a “fields as features” framework - where incremental changes to specific metadata fields are pursued instead of full record updates - is best suited to an expedient, minimum viable product (MVP) rollout.&nbsp;</p><p class="">As its initial focus, the service could decide to target affiliations, relative to several strategic considerations. Affiliations represent a priority metadata field whose quality and completeness enable tracking of institutional research outputs, collaboration patterns, and funding impacts. In current DOI records from both Crossref and DataCite, affiliation metadata suffers from wide scale gaps and inaccuracies, particularly when it comes to the assignment of persistent identifiers, such as ROR IDs. The field also benefits from extensive and long-standing use of diverse extraction methods from full text sources, including the corresponding production of gold standard test datasets to assess their performance. This makes both comparative and consensus forms of analysis of these methods possible and provides a practical starting point for large-scale, automated enrichment. The same is true for ROR ID matching processes, where the performance for multiple ROR ID matching methods is known, and whose use in supplementing each new or corrected affiliation string multiplies the enrichment’s value. These factors, combined with the relatively bounded scope of affiliation data compared to other metadata fields, make it an ideal starting point for the service's development.</p><p class="">After using affiliations to create an MVP, continued, iterative development would then aim to encompass and enrich additional fields. The same analysis also identifies several operational, technical, and resourcing needs, stemming from the diversity of potential external data sources and the need to address equity and research integrity considerations.</p><h3>Involving the community in curation</h3><p class="">To establish policies, procedures, and assist in the overall operation of the service, and with counsel from the advisory and community groups, the project puts forth a global, open call for participation in a volunteer curation group through their existing membership network and communication channels. This call seeks volunteers - ranging from librarians and repository managers to staff at publishers, government and funding organizations - who have a vested interest in the quality and completeness of DOI metadata and that each bring their own specialized regional or domain expertise to the curation process. An initial group of volunteers is identified. With the community advisory group, they participate in a series of policy development meetings, establishing baseline rules for curation of submitted data, which are then formalized in the form of public facing documentation. Subsequently, new curators can be onboarded through a minimal, but standardized training process that makes use of said documentation and which describes various curation tasks. As the project develops, these policies will then be continuously refined by the project’s curation volunteers, relative to user feedback and operational needs exposed through the real-world processing of submitted data.</p><h3>Beyond the MVP</h3><p class="">Although the parent organizations of the project can repurpose some of their resources for its initial development, it is identified that scaling the project beyond an MVP state will require additional investments. The project will thus apply for external funding to resource its long term data science work, outreach activities, and curation needs where it is identified that the parent organizations cannot provide these resources on a recurring basis.</p><h2>Receiving Data Enrichments from External Sources</h2><p class="">Multiple independent services regularly process large volumes of PDFs to extract affiliation metadata, with each service using its own unique parsing methods and workflows. Each service expresses an intent to contribute enrichments to the project. To begin doing so, they undergo a structured onboarding process.&nbsp;</p><p class="">The first step involves establishing their organizational identity within the service. Each provider is assigned a profile entry that captures their basic details, described using persistent identifiers (typically a ROR ID for their organization, ORCIDs for any responsible staff) (Figure 1). This profile is then referenced in all submissions.</p><p class="">Next, for any enrichments derived from automated processes, providers must also open source, document, and archive their methodology, deposit their code, models, and benchmarking data in a repository with a corresponding DOI registration. These details are captured in an enrichment service record that is associated with the profile (Figure 2). The enrichment service profile ID is used in all submissions.</p><p class="">Finally, the performance of the enrichment method itself is verified relative to the provided benchmark data and its independent performance on gold-standard datasets for the task. If the enrichment method fails to meet the minimum performance standards, feedback is provided to the external service. If it meets or exceeds the requirements, it is notified and approved and permitted to contribute data to the service. The benchmark datasets used to produce the extraction method are then also reviewed for inclusion in the gold standard sets for the field-specific enrichment task.</p>

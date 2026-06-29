@@ -1,10 +1,11 @@
 +++
 date = '2025-03-14T09:30:43Z'
 draft = false
-title = "Participant Perspectives | Cristina Huidiu, Wageningen University & Research Library"
-slug = "participant-perspectives-cristina-huidiu"
-authors = ["Clare Dean"]
-categories = ["Community Perspectives"]
+title = "Taskforce Participant Perspectives | Cristina Huidiu, Wageningen University & Research Library"
+slug = "taskforce-participant-perspectives-cristina-huidiu"
+authors = ["Cristina Huidiu"]
+categories = ["Insights & Analysis"]
+tags = ["Taskforce", "Community perspectives"]
 media = "/images/blog/participant-perspectives-cristina-huidiu/featured-Screenshot-2025-03-14-at-5.31.53-AM.png"
 +++
 

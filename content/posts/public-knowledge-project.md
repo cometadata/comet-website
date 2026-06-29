@@ -3,8 +3,9 @@ date = '2025-07-11T19:30:58Z'
 draft = false
 title = "Why Metadata Enrichment Matters for the Public Knowledge Project"
 slug = "public-knowledge-project"
-authors = ["Clare Dean"]
-categories = ["News"]
+authors = ["Juan Pablo Alperin"]
+categories = ["Insights & Analysis"]
+tags = ["Community perspectives"]
 media = "/images/blog/public-knowledge-project/featured-Screenshot-2025-07-11-at-5.16.07-AM.png"
 +++
 
