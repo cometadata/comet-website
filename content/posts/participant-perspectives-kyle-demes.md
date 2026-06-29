@@ -1,8 +1,8 @@
 +++
 date = '2025-03-07T10:57:30Z'
 draft = false
-title = "Participant Perspectives | Kyle Demes from OurResearch"
-slug = "participant-perspectives-kyle-demes"
+title = "Taskforce Participant Perspectives | Kyle Demes from OurResearch"
+slug = "taskforce-participant-perspectives-kyle-demes"
 authors = ["Kyle Demes"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

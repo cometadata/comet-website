@@ -1,8 +1,8 @@
 +++
 date = '2025-03-20T09:25:26Z'
 draft = false
-title = "Participant Perspectives | Howard Ratner, CHORUS"
-slug = "participant-perspectives-howard-ratner-chorus"
+title = "Taskforce Participant Perspectives | Howard Ratner, CHORUS"
+slug = "taskforce-participant-perspectives-howard-ratner-chorus"
 authors = ["Howard Ratner"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

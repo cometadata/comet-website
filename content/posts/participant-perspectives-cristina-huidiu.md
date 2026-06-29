@@ -1,8 +1,8 @@
 +++
 date = '2025-03-14T09:30:43Z'
 draft = false
-title = "Participant Perspectives | Cristina Huidiu, Wageningen University & Research Library"
-slug = "participant-perspectives-cristina-huidiu"
+title = "Taskforce Participant Perspectives | Cristina Huidiu, Wageningen University & Research Library"
+slug = "taskforce-participant-perspectives-cristina-huidiu"
 authors = ["Cristina Huidiu"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

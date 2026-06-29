@@ -1,8 +1,8 @@
 +++
 date = '2025-04-04T12:40:52Z'
 draft = false
-title = "Participant Perspectives | Bhavesh Patel, Research Professor"
-slug = "participant-perspectives-bhavesh-patel"
+title = "Taskforce Participant Perspectives | Bhavesh Patel, Research Professor"
+slug = "taskforce-participant-perspectives-bhavesh-patel"
 authors = ["Bhavesh Patel"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

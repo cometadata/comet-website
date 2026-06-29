@@ -1,8 +1,8 @@
 +++
 date = '2025-03-27T14:49:23Z'
 draft = false
-title = "Participant Perspectives | Cameron Neylon, Curtin Open Knowledge Initiative"
-slug = "participant-perspectives-cameron-neylon-curtin-university"
+title = "Taskforce Participant Perspectives | Cameron Neylon, Curtin Open Knowledge Initiative"
+slug = "taskforce-participant-perspectives-cameron-neylon-curtin-university"
 authors = ["Cameron Neylon"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

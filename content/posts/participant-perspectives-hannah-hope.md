@@ -1,8 +1,8 @@
 +++
 date = '2025-02-28T14:55:43Z'
 draft = false
-title = "Participant Perspectives | Hannah Hope from Wellcome"
-slug = "participant-perspectives-hannah-hope"
+title = "Taskforce Participant Perspectives | Hannah Hope from Wellcome"
+slug = "taskforce-participant-perspectives-hannah-hope"
 authors = ["Hannah Hope"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]

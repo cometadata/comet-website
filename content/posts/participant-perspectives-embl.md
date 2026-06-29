@@ -1,8 +1,8 @@
 +++
 date = '2025-05-14T13:36:22Z'
 draft = false
-title = "Participant Perspectives |  European Molecular Biology Laboratory (EMBL)"
-slug = "participant-perspectives-embl"
+title = "Taskforce Participant Perspectives |  European Molecular Biology Laboratory (EMBL)"
+slug = "taskforce-participant-perspectives-embl"
 authors = ["Melissa Harrison"]
 categories = ["Insights & Analysis"]
 tags = ["Taskforce", "Community perspectives"]
