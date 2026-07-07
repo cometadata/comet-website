@@ -1,0 +1,12 @@
+{{ with hugo.Data.announcement }}
+{{ if .enabled }}
+<section class="announcement-banner" aria-label="Announcement">
+	<div class="announcement-inner">
+		<div class="announcement-text">{{ .text | markdownify }}</div>
+		{{ if and .linktext .linkurl }}
+		<a class="no-underline" href="{{ .linkurl }}">{{ .linktext | markdownify }}</a> <i class="fa-solid fa-arrow-right-long hover-move-right" aria-hidden="true"></i>
+		{{ end }}
+	</div>
+</section>
+{{ end }}
+{{ end }}

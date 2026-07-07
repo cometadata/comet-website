@@ -1,0 +1,63 @@
+@use "partials/variables";
+
+.announcement-banner {
+    background-color: variables.$comet-darkblue;
+    color: #fff;
+    font-family: variables.$font-default;
+    margin-bottom: variables.$section-gap;
+
+    .announcement-inner {
+        @include variables.site-container;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 0.5em;
+        row-gap: 4px;
+        padding: 14px 0;
+        text-align: center;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    a {
+        color: variables.$link-arrow;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color variables.$transition-time;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    i {
+        color: variables.$link-arrow;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    a + .hover-move-right {
+        transition: transform variables.$transition-time ease-in-out;
+    }
+
+    a:hover + .hover-move-right {
+        transform: translateX(8px);
+    }
+
+    @media (max-width: variables.$break-medium) {
+        .announcement-inner {
+            padding: 12px 0;
+        }
+    }
+
+    @media (max-width: variables.$break-small) {
+        font-size: 0.95rem;
+
+        .announcement-inner {
+            padding: 10px 0;
+        }
+    }
+}

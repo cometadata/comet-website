@@ -46,6 +46,7 @@ Practical reference for editing the COMET Hugo site. Assumes basic familiarity w
 | Projects list | `data/projects/stacked_cards.yaml` |
 | Community organisers / advisors | `data/community/stacked_cards_organisers.yaml`, `stacked_cards_advisors.yaml` |
 | Footer address or social links | `data/footer/address_text.yaml`, `data/footer/socials.yaml` |
+| Site-wide announcement banner (below the header, every page) | `data/announcement.yaml` |
 | Join Us form copy | `data/join_us/form.yaml`, `data/join_us/hero.yaml` |
 | Thank-you page | `data/join_us/thank_you.yaml` (hero is shared with Join Us) |
 | Blog post | `content/posts/{slug}.md` + images in `static/images/blog/{slug}/` |
@@ -79,6 +80,22 @@ See [Blog posts](#blog-posts) for the full workflow.
 
 1. `data/footer/address_text.yaml` — postal address and contact lines.
 2. `data/footer/socials.yaml` — social network links and icons.
+
+### Turn the announcement banner on or off
+
+The banner appears directly below the header on **every page** of the site.
+
+1. Open `data/announcement.yaml`.
+2. Set `enabled: true` to show it, or `enabled: false` to hide it.
+3. Edit `text` (supports Markdown — keep it to one short sentence). Optionally set `linktext` and `linkurl` for a call-to-action link; leave both empty for no link.
+4. Preview locally, then merge to `main` to deploy.
+
+```yaml
+enabled: true
+text: "COMET enrichment metadata is now available."
+linktext: "Read the announcement"
+linkurl: "/blog/enrichment-projects/"
+```
 
 ### Change impact numbers on the homepage
 
@@ -616,6 +633,7 @@ A longer technical accessibility plan (phases 2–4) lives in the local **`comet
 | Blog index | `posts/_index.md` | `blog/hero` |
 | Block gallery | `test-page.md` | `testing/*` |
 | Footer (global) | — | `footer/address_text`, `footer/socials` |
+| Announcement banner (global) | — | `announcement` |
 
 ### Menu configuration
 
