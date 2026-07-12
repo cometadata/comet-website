@@ -3,26 +3,24 @@ treatment_variant: "with-table"
 media_variant: ""
 
 headline: "Key elements"
-content: "We believe these shifts can be achieved by prioritising four key elements in the work we do."
+content: "The COMET community puts these principles into action by prioritising four key elements:"
 
 elements:
-  - headline: "Unite quality metadata sources and enrichment methods"
-    content: "COMET confronts one of the most persistent inefficiencies in scholarly communications: valuable, high-quality curation exists in isolated systems that never reaches the wider community. COMET brings these sources together, unlocking their collective value.
+  - headline: "Unite quality metadata curation assets"
+    content: "The COMET Model confronts one of the most persistent inefficiencies in scholarly communications: valuable, high-quality curation in isolated systems never reaches the wider community. From institutionally verified datasets to proven, scalable enrichment methods—the COMET community brings these assets together, unlocking their collective value.
 
-Proven community enrichment methods also exist that we can build on. Where gaps remain, COMET acts as an innovative facilitator, developing new capabilities with community partners. The goal is to connect solutions across institutional and geographical boundaries to maximise the value of community investments."  
+   Where gaps remain, the COMET organisers act as facilitators, developing innovative capabilities with community partners. The goal is to connect solutions across institutional and geographical boundaries to maximise the value of community investments."  
 
-  - headline: "Target diverse content types and stakeholders"
-    content: "Inclusive design produces solutions that reflect genuine community needs. To ensure solutions are broadly applicable rather than narrowly useful, COMET addresses multiple content types across projects to develop flexible approaches that benefit the widest possible range of research outputs and the communities that produce them.
-
-Truly representing diverse stakeholders means fostering partnerships and collaborations in many geographies. COMET has already engaged over 200 organisations spanning research institutions, libraries, publishers, funders, infrastructure providers, and advocacy and policy groups."    
+  - headline: "Target diverse research outputs and stakeholders"
+    content: "Inclusive design produces solutions that reflect genuine community needs. The COMET Model addresses metadata quality gaps across research outputs, from datasets and software to posters and articles, ensuring solutions benefit a wide range of stakeholders, such as research institutions, libraries, publishers, and funders."    
 
   - headline: "Enable multiple round-tripping pathways"
-    content: "COMET sees successful round-tripping as enrichments flowing back into the systems that maintain and disseminate scholarly metadata. Achieving this requires multiple, complementary pathways. For example, PID-first pathways, such as direct integration with DOI registration agencies, are crucial because they prevent improvements from fragmenting across the ecosystem, while platform-supported pathways, such as connections with submission and publishing systems, offer opportunities to improve metadata as part of communities' existing workflows."    
+    content: "The COMET community sees successful round-tripping as enrichments flowing back into the systems that maintain and disseminate scholarly metadata. Achieving this requires multiple, complementary pathways. For example, PID-first pathways, such as direct integration with DOI registration agencies, are crucial because they prevent improvements from fragmenting across the ecosystem, while platform-supported pathways, such as connections with submission and publishing systems, offer opportunities to improve metadata as part of communities' existing workflows."    
 
-  - headline: "Treat metadata fields as features"
-    content: "Inspired by software development that makes systematic progress possible, the COMET Model treats each metadata field as a discrete, improvable feature, enabling focused problem-solving and measurable progress. Each project we undertake as a community tackles one metadata field at a time.
+  - headline: "Treat metadata fields as product features"
+    content: "Inspired by software development that makes systematic progress possible, the COMET Model treats each metadata field as a discrete, improvable feature, enabling focused problem-solving and measurable progress. Each project the COMET community undertakes focuses on a single metadata field, producing improvements that can be implemented at scale. 
 
-COMET is prioritising the following use cases:"
+The COMET community prioritises the following use cases:"
 
 table: "
 | Use case    | Metadata fields |
