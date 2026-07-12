@@ -3,7 +3,7 @@ treatment_variant: "with-table"
 media_variant: ""
 
 headline: "Key elements"
-content: "The COMET community puts these principles into action by prioritising four key elements:"
+content: "COMET puts these principles into action by prioritising four key elements:"
 
 elements:
   - headline: "Unite quality metadata curation assets"
@@ -20,7 +20,7 @@ elements:
   - headline: "Treat metadata fields as product features"
     content: "Inspired by software development that makes systematic progress possible, the COMET Model treats each metadata field as a discrete, improvable feature, enabling focused problem-solving and measurable progress. Each project the COMET community undertakes focuses on a single metadata field, producing improvements that can be implemented at scale. 
 
-The COMET community prioritises the following use cases:"
+COMET prioritises the following use cases:"
 
 table: "
 | Use case    | Metadata fields |
