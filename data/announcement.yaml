@@ -2,7 +2,7 @@
 # Set enabled: true to show the banner, enabled: false to hide it.
 # text supports Markdown. Keep it to one short sentence.
 # linktext and linkurl are optional; leave both empty for no link.
-enabled: true
+enabled: false
 text: "Join our next COMET community meeting on 14 July."
 linktext: "Register now"
 linkurl: "https://datacite.zoom.us/meeting/register/S0kqI3SOSvOQCVBJwBVHjw#/registration"
