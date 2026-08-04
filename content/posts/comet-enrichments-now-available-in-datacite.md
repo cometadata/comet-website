@@ -6,7 +6,7 @@ slug = "comet-enrichments-now-available-in-datacite"
 authors = ["Dione Mentis"]
 categories = ["Results & Impact"]
 tags = ["Round-tripping"]
-media = ""
+media = "/images/blog/comet-enrichments-now-available-in-datacite/comet-to-datacite-pipeline-diagram.svg"
 +++
 
 One of the key elements of the [COMET Model](https://www.cometadata.org/comet-model/) is enabling round-tripping: the flow of open metadata enrichments into the systems that maintain and disseminate scholarly metadata. Round-tripping is important because it prevents enrichment work from fragmenting across the ecosystem. For the first time, provenanced community enrichments are now available directly from a PID provider—through [DataCite’s new enrichments API features](https://support.datacite.org/docs/metadata-enrichments)—showcasing round-tripping in a live production system.
@@ -25,8 +25,7 @@ The diagram below shows DataCite’s current enrichment pipeline. DataCite inges
 
 Enrichments are stored in a separate datastore so that their application is additive, allowing granular comparisons to the metadata submitted by DOI record owners.
 
-![Diagram of the COMET-to-DataCite enrichment pipeline]()  
-\[caption\]The COMET-to-DataCite enrichment pipeline
+![Four-lane workflow diagram showing how a COMET enrichment record flows through the DataCite enrichments pipeline into the metadata store, then out via the DataCite REST API.](/images/blog/comet-enrichments-now-available-in-datacite/comet-to-datacite-pipeline-diagram.svg)  
 
 For a walkthrough of the pipeline, view the [22 April COMET Community Meeting recording](https://www.youtube.com/watch?v=Uds5RPFyAVU&t=1620s). To find out more about DataCite’s metadata enrichments service and how to use the API endpoint, visit the [support documentation on metadata enrichments](https://support.datacite.org/docs/metadata-enrichments).
 
