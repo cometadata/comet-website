@@ -18,7 +18,7 @@ One of the key elements of the [COMET Model](https://www.cometadata.org/comet-mo
 
 COMET’s [first pilot project](https://doi.org/10.82461/m8a8-m211) matched preprints from the arXiv repository (registered with DataCite DOIs) to their corresponding published articles (registered with Crossref DOIs) in various journals. The resulting dataset—over 850,000 new preprint-to-article connections—fills a gap in the scholarly record, enabling a better understanding of the research timeline and its impact.
 
-Following the release of [ROR’s updated matching strategy](https://doi.org/10.71938/zz90-g810), COMET and DataCite embarked on a project to [match author affiliations to ROR IDs in DataCite](https://doi.org/10.82461/q6gh-3c48). The enriched dataset includes over 20 million matches across 5,812,774 unique DOIs in the `affiliation` field of Creators (as of April 2026).
+Following the release of [ROR’s updated matching strategy](https://doi.org/10.71938/zz90-g810), COMET and DataCite embarked on a project to [match author affiliations to ROR IDs in DataCite](https://doi.org/10.82461/q6gh-3c48). The enriched dataset includes over 20 million matches across 5,812,774 unique DOIs in the affiliation field of the creator property (as of April 2026).
 
 ## How does the enrichment service work?
 
