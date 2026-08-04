@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Swim lane separators -->
+  <line x1="320" y1="60" x2="320" y2="620" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="640" y1="60" x2="640" y2="620" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="960" y1="60" x2="960" y2="620" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Swim lane headers -->
+  <rect x="0" y="0" width="320" height="60" fill="#0b2545"/>
+  <text x="160" y="38" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="600">COMET</text>
+
+  <rect x="320" y="0" width="320" height="60" fill="#1ba39c"/>
+  <text x="480" y="38" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600">DataCite enrichments pipeline</text>
+
+  <rect x="640" y="0" width="320" height="60" fill="#5fa6a3"/>
+  <text x="800" y="38" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600">DataCite metadata store</text>
+
+  <rect x="960" y="0" width="320" height="60" fill="#4a5862"/>
+  <text x="1120" y="38" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600">DataCite REST API</text>
+
+  <!-- COMET: Enrichment project -->
+  <rect x="80" y="105" width="200" height="70" rx="4" fill="#0b2545"/>
+  <text x="180" y="148" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="600">Enrichment project</text>
+
+  <!-- arrow: Enrichment project → Enrichment records data file -->
+  <line x1="180" y1="175" x2="180" y2="208" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- COMET: Enrichment records data file (stacked document) -->
+  <path d="M 100 215 L 280 215 L 280 305 Q 235 297 190 305 Q 145 313 100 305 Z" fill="#3392c8" opacity="0.45"/>
+  <path d="M 90 222 L 270 222 L 270 312 Q 225 304 180 312 Q 135 320 90 312 Z" fill="#3392c8" opacity="0.7"/>
+  <path d="M 80 230 L 260 230 L 260 320 Q 215 312 170 320 Q 125 328 80 320 Z" fill="#3392c8"/>
+  <text x="170" y="270" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Enrichment records</text>
+  <text x="170" y="290" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">data file</text>
+
+  <!-- Cross-lane arrow: data file → Valid? -->
+  <path d="M 260 275 L 340 275 L 340 150 L 378 150" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline: Valid? diamond -->
+  <polygon points="480,100 580,150 480,200 380,150" fill="#f5b800" stroke="#d99800" stroke-width="1"/>
+  <text x="480" y="157" text-anchor="middle" fill="#0b2545" font-size="18" font-weight="700">Valid?</text>
+
+  <!-- arrow: Valid? → data store -->
+  <line x1="480" y1="200" x2="480" y2="224" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline: Enrichment data store (cylinder) -->
+  <path d="M 380 240 L 380 310 A 100 14 0 0 0 580 310 L 580 240" fill="#3392c8"/>
+  <ellipse cx="480" cy="240" rx="100" ry="14" fill="#2c7fb5"/>
+  <text x="480" y="284" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Enrichment data store</text>
+
+  <!-- arrow: data store → Apply enrichments -->
+  <line x1="480" y1="324" x2="480" y2="378" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline: Apply enrichments (hexagon) -->
+  <polygon points="405,380 555,380 590,420 555,460 405,460 370,420" fill="#3392c8"/>
+  <text x="480" y="425" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Apply enrichments</text>
+
+  <!-- arrow: Apply enrichments → Enriched DOI record -->
+  <line x1="480" y1="460" x2="480" y2="488" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline: Enriched DOI record (dashed border document) -->
+  <path d="M 380 490 L 580 490 L 580 580 Q 530 572 480 580 Q 430 588 380 580 Z" fill="#3392c8" stroke="#0b2545" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="480" y="540" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Enriched DOI record</text>
+
+  <!-- Caption: generated on request -->
+  <text x="480" y="605" text-anchor="middle" fill="#6b7280" font-size="12" font-style="italic">(generated on request)</text>
+
+  <!-- Metadata store: Original DOI record (document) -->
+  <path d="M 700 380 L 900 380 L 900 470 Q 850 462 800 470 Q 750 478 700 470 Z" fill="#3392c8"/>
+  <text x="800" y="425" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Original DOI record</text>
+
+  <!-- arrow: Original DOI record → Apply enrichments -->
+  <line x1="698" y1="420" x2="592" y2="420" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- REST API: User requests header -->
+  <text x="1120" y="142" text-anchor="middle" fill="#0b2545" font-size="20" font-weight="700">User requests</text>
+  <line x1="1020" y1="160" x2="1220" y2="160" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- REST API: Enrichment records -->
+  <rect x="1000" y="250" width="240" height="50" rx="4" fill="#0b2545"/>
+  <text x="1120" y="281" text-anchor="middle" fill="#ffffff" font-size="15" font-style="italic">Enrichment records</text>
+
+  <!-- arrow: data store → Enrichment records -->
+  <line x1="580" y1="275" x2="998" y2="275" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- REST API: Original DOI record -->
+  <rect x="1000" y="395" width="240" height="50" rx="4" fill="#0b2545"/>
+  <text x="1120" y="426" text-anchor="middle" fill="#ffffff" font-size="15" font-style="italic">Original DOI record</text>
+
+  <!-- arrow: Original DOI record → Original DOI record (REST API) -->
+  <line x1="900" y1="420" x2="998" y2="420" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- REST API: Enriched DOI record -->
+  <rect x="1000" y="510" width="240" height="50" rx="4" fill="#0b2545"/>
+  <text x="1120" y="541" text-anchor="middle" fill="#ffffff" font-size="15" font-style="italic">Enriched DOI record</text>
+
+  <!-- arrow: Enriched DOI record → Enriched DOI record (REST API) -->
+  <line x1="580" y1="535" x2="998" y2="535" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
