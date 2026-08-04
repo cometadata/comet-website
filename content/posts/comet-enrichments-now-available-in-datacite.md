@@ -11,6 +11,8 @@ media = ""
 
 One of the key elements of the [COMET Model](https://www.cometadata.org/comet-model/) is enabling round-tripping: the flow of open metadata enrichments into the systems that maintain and disseminate scholarly metadata. Round-tripping is important because it prevents enrichment work from fragmenting across the ecosystem. For the first time, provenanced community enrichments are now available directly from a PID provider—through [DataCite’s new enrichments API features](https://support.datacite.org/docs/metadata-enrichments)—showcasing round-tripping in a live production system.
 
+<!--more-->
+
 ## Which enrichments are included?
 
 COMET’s [first pilot project](https://doi.org/10.82461/m8a8-m211) matched preprints from the arXiv repository (registered with DataCite DOIs) to their corresponding published articles (registered with Crossref DOIs) in various journals. The resulting dataset—over 850,000 new preprint-to-article connections—fills a gap in the scholarly record, enabling a better understanding of the research timeline and its impact.
