@@ -6,7 +6,8 @@ slug = "comet-enrichments-now-available-in-datacite"
 authors = ["Dione Mentis"]
 categories = ["Results & Impact"]
 tags = ["Round-tripping"]
-media = "/images/blog/comet-enrichments-now-available-in-datacite/comet-to-datacite-pipeline-diagram.svg"
+media = "/images/blog/comet-enrichments-now-available-in-datacite/comet-to-datacite-pipeline-diagram.jpg"
+featured = true
 +++
 
 One of the key elements of the [COMET Model](https://www.cometadata.org/comet-model/) is enabling round-tripping: the flow of open metadata enrichments into the systems that maintain and disseminate scholarly metadata. Round-tripping is important because it prevents enrichment work from fragmenting across the ecosystem. For the first time, provenanced community enrichments are now available directly from a PID provider—through [DataCite’s new enrichments API features](https://support.datacite.org/docs/metadata-enrichments)—showcasing round-tripping in a live production system.

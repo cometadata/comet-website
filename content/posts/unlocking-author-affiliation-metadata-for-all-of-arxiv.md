@@ -7,7 +7,6 @@ authors = ["Adam Buttrick"]
 categories = ["Results & Impact"]
 tags = ["Pilot projects"]
 media = "/images/blog/unlocking-author-affiliation-metadata-for-all-of-arxiv/featured-student-teacher.png"
-featured = true
 +++
 
 The COMET team is pleased to share results from an exciting line of work we 
