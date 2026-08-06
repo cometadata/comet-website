@@ -9,7 +9,7 @@ tags = [""]
 media = ""
 +++
 
-<!-- TODO: add snippet -->
+Michael Markie of eLife has a way of describing the problem: missing metadata fields are like potholes—you can patch your own, but you can’t fix the road system alone. In this community interview, he talks about what a modular science schema, discovery work with a funder, and a collaboration with COMET are teaching eLife Pathways about closing metadata gaps at scale.
 
 <!--more-->
 
