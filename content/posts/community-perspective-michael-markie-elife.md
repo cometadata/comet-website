@@ -28,13 +28,13 @@ We recently conducted some discovery work with a funder to link preprints to the
 During this work, we became aware of the variance in the quality of information provided across depositors and the gaps in the metadata that has been made available.    
 Looking at the nodes in this knowledge graph across a spectrum of preprints and articles gave us a zoomed-out view of a landscape with metadata potholes, and we saw that the effort required to fill them is not trivial. You can always make changes as original depositors, but beyond that, when making corrections is out of your control,  it's not possible to make changes systematically. So we really need collaborative ways to start filling these potholes.  
 
-## Q3: Where do you see the most significant barriers — technical, institutional, or cultural — to making collaborative metadata enrichment work in practice?
+## Q3: Where do you see the most significant barriers—technical, institutional, or cultural—to making collaborative metadata enrichment work in practice?
 
 There is already a wealth of curated scholarly metadata available, but it is not well connected. Fortunately, the technology and expertise needed to make these connections exist, as demonstrated by the successful COMET pilot projects that have enhanced millions of records. The main challenge lies in creating an automated and trusted pipeline that integrates these assertions into legacy publishing platforms while maintaining the integrity of the original sources. 
 
 To achieve this, collaboration among third-party developers, publishers, and repositories is essential. Adopting shared standards for assertions and building export pipelines are not purely technical challenges; rather, they are cultural ones. Overcoming this barrier will require genuine commitment and cooperation from all stakeholders involved. 
 
-## Q4: How does the COMET Model apply — or potentially apply — in your specific context? What would putting it into practice actually look like for your organisation and/or community?
+## Q4: How does the COMET Model apply—or potentially apply—in your specific context? What would putting it into practice actually look like for your organisation and/or community?
 
 As a collaborative partner with COMET, eLife Pathways is well-positioned to actively support the COMET Model. We will be directly involved in testing and improving parsing models and evaluation benchmarks for preprints, as well as helping to establish community standards for metadata curation and enrichment. Additionally, we will explore ways to create a practical publishing pathway for enriching data back to DOIs through our open-source publishing platform, Kotahi.   
    
