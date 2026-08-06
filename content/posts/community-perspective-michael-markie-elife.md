@@ -5,7 +5,7 @@ title = "Community Perspective: Michael Markie, eLife"
 slug = "community-perspective-michael-markie-elife"
 authors = ["Michael Markie"]
 categories = ["Insights & Analysis"]
-tags = [""]
+tags = ["Community perspectives"]
 media = ""
 +++
 
