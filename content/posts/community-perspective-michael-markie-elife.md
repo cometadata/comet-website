@@ -11,12 +11,12 @@ media = "/images/blog/community-perspective-michael-markie-elife/michael-markie-
 
 Michael Markie of eLife has a way of describing the problem: missing metadata fields are like potholes—you can patch your own, but you can’t fix the road system alone. In this community interview, he talks about what a modular science schema, discovery work with a funder, and a collaboration with COMET are teaching eLife Pathways about closing metadata gaps at scale.
 
+<!--more-->
+
 <figure class="profile"> 
     <img src="/images/blog/community-perspective-michael-markie-elife/michael-markie-profile.jpeg" alt="Michael Markie">
     <figcaption>Michael Markie, eLife</figcaption>
 </figure>
-
-<!--more-->
 
 ## Q1: Why does better quality scholarly metadata matter for your organisation and the communities you work with?
 
@@ -59,4 +59,3 @@ If an organisation's processes are efficient and closely linked to a specific wo
 I’ll revisit my analogy about potholes. It’s a common problem: we are aware of the gaps in our road infrastructure, and we often find ourselves waiting (impatiently) for a central authority to address them. However, in some European countries, a more collaborative approach brings together local authorities, utility companies, and technology firms to share real-time road data and coordinate resurfacing schedules, resulting in much faster, more efficient road repairs.  
    
 In scholarly research, missing or incomplete metadata fields are like potholes. They disrupt the journey for everyone downstream. What we’ve learned so far is that collaboration is the most effective way to address these issues. Rather than assigning blame, it’s more productive to identify areas for improvement and support those depositing the data. Metadata experts from publishers, repositories, and institutions each bring valuable skills to the table. By combining these strengths through the COMET Model, we can resolve metadata issues more efficiently, creating a smoother experience for everyone as we work together to build better infrastructure.
-
