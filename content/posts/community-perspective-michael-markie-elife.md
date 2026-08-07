@@ -1,5 +1,5 @@
 +++
-date = "2026-08-06"
+date = "2026-08-07"
 draft = false
 title = "Community Perspective: Michael Markie, eLife"
 slug = "community-perspective-michael-markie-elife"
