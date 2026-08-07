@@ -15,7 +15,7 @@ Michael Markie of eLife has a way of describing the problem: missing metadata fi
 
 <figure class="profile"> 
     <img src="/images/blog/community-perspective-michael-markie-elife/michael-markie-profile.jpeg" alt="Michael Markie">
-    <figcaption>Michael Markie, eLife</figcaption>
+    <figcaption>Michael Markie, Head of Innovation Initiatives at eLife</figcaption>
 </figure>
 
 ## Q1: Why does better quality scholarly metadata matter for your organisation and the communities you work with?
