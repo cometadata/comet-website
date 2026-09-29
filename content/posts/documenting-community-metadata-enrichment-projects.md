@@ -19,7 +19,7 @@ Enrichment projects are routinely run by institutions and publishers to improve 
 
 COMET represents [diverse stakeholders](/community/) and aims to enable broad participation in metadata enrichment practices and evaluation, so it was important to the organising team that the pilots were accessible to a wide audience, provided easy access to the project outputs, and gave sufficient context for the community to provide feedback. Working from the foundational principle of '[trust through transparency](/comet-model/)', the COMET Project Doc was conceived as a tool that supported our community-focused practice, openly shared the project work as it progressed, and could develop into a trust and provenance record over time.
 
-You can view each COMET Project Doc at [cometadata.org/projects](/projects/).
+You can view the Project Doc for each COMET project at [cometadata.org/projects](/projects/).
 
 ## Enabling repeatable, rigorous processes
 
@@ -35,10 +35,10 @@ We've created the COMET Project Doc Template for the community to reuse and adap
 
 Here we describe each main section of the Project Doc and its recommended use.
 
-| Project phase      | Sections completed                                                                  | Template |
+| Project phase      | Sections completed                                                                  | Template file |
 | ------------------ | ----------------------------------------------------------------------------------- | -------- |
 | Project start      | Introduction, Project overview, Project collaborators, Project status               | Kick-off |
-| During the project | Project status, Project collaborators, Project outputs (updated as they are produced) | Kick-off |
+| During the project | Project status, Project collaborators, Project outputs *(updated as they are produced)* | Kick-off |
 | Project end        | Project report, Project evaluation                                                  | Report   |
 
 ### Introduction
@@ -71,7 +71,7 @@ This section provides updates on the key project phases or milestones. It answer
 
 ### Project collaborators
 
-This section identifies the organisations and individuals involved in the project and states these collaborators' roles. It's a simple collection point for creator and contributor metadata that will be used when registering the DOI for the project. (In future iterations, this section could rather be a linked spreadsheet to both collect structured information and keep all project information in one place.)
+This section identifies the organisations and individuals involved in the project and states these collaborators' roles. It's a simple collection point for creator and contributor metadata that will be used when registering the DOI for the project. *(In future iterations, this section could rather be a linked spreadsheet to both collect structured information and keep all project information in one place.)*
 
 ### Project outputs
 
@@ -124,4 +124,4 @@ A tool is only useful when it's coupled with effective practice. Below we outlin
 
 The Project Doc has already changed in response to community feedback, most evident in the 'Project evaluation' section. In the first pilot, '[Match Preprints to Published Articles](https://doi.org/10.5281/zenodo.20811849)', it asked the project team a wide set of questions and took considerable time to complete. Through iterative use and feedback, the current version, as used in the most recently completed pilot, '[Improve Funding Metadata](https://doi.org/10.82461/1H25-JA54)', hones in on what community members really need to understand from the project team: what did you learn? What guidance do you have for others conducting similar projects?
 
-The COMET Project Doc will keep changing as more enrichment projects are run in the open. The template is open for feedback: if you use it, tell us what was missing, what didn't fit your workflow, and what your team would change so that we can improve it for wider use.
+The COMET Project Doc will keep changing as more enrichment projects are run in the open. The template is open for feedback: if you use it, tell us what was missing, what didn't fit your workflow, and what your team would change so that we can improve it for wider use. Contact us at [info.cometadata@gmail.com](mailto:info.cometadata@gmail.com) to share your feedback.
