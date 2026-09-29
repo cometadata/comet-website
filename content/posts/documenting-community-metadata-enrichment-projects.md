@@ -1,5 +1,5 @@
 +++
-date = '2026-09-15T09:00:00Z'
+date = '2026-09-29'
 draft = true
 title = "An Open Approach to Documenting Community Metadata Enrichment Projects"
 slug = "documenting-community-metadata-enrichment-projects"
