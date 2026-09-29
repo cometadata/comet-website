@@ -1,6 +1,6 @@
 +++
 date = '2026-09-29'
-draft = true
+draft = false
 title = "An Open Approach to Documenting Community Metadata Enrichment Projects"
 slug = "documenting-community-metadata-enrichment-projects"
 authors = ["Dione Mentis"]
