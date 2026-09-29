@@ -7,6 +7,7 @@ authors = ["Dione Mentis"]
 categories = ["Practices & Tools"]
 tags = ["Template"]
 media = "/images/blog/documenting-community-metadata-enrichment-projects/comet-template-enrichment-project-doc.png"
+featured = true
 +++
 
 This post outlines an open approach to documenting community-led metadata enrichment projects, providing examples from COMET's pilot projects and template documents for the COMET community to reuse and improve upon.
