@@ -3,11 +3,6 @@ treatment_variant: "status"
 media_variant: ""
 
 elements:
-  - status: "In progress"
-    headline: "Improve funding metadata"
-    content: "Developing a parsing model for funding statements to address information gaps within scholarly metadata. Piloting with arXiv preprints."
-    link: "https://doi.org/10.82461/gc3p-n671"
-    icon: "<i class='fa-solid fa-spinner'></i>"
 
   - status: "In progress"
     headline: "Improve parsing of ETDs"
@@ -32,14 +27,14 @@ elements:
   - status: "Complete"
     headline: "Match preprints to published articles"
     content: "Developing a matching strategy to connect preprints to published articles, improving knowledge of how research moves from early sharing to formal publication. Piloting with arXiv preprints."
-    link: "https://zenodo.org/records/20811849"
+    link: "https://doi.org/10.82461/m8a8-m211"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
     headline: "Leverage affiliations from CRIS systems"
     collaborators: "European Molecular Biology Lab (EMBL); Wageningen University & Research (WUR)"
     content: "Exploring pathways to integrate high-quality affiliation metadata maintained by institutional Current Research Information Systems (CRIS) into the scholarly metadata ecosystem."
-    link: "https://doi.org/10.82461/8h43-hp06"
+    link: "https://doi.org/10.82461/x8ak-9j67"
     icon: '<i class="fa-solid fa-check"></i>'
 
   - status: "Complete"
@@ -52,4 +47,10 @@ elements:
     headline: "Improve affiliations parsing of preprints"
     content: "Assessing current approaches to affiliations parsing and developing new methods for extracting accurate institutional information from preprint documents. Piloting with arXiv preprints."
     link: "https://doi.org/10.82461/160e-8q92"
+    icon: '<i class="fa-solid fa-check"></i>'
+  
+  - status: "Complete"
+    headline: "Improve funding metadata"
+    content: "Developed a parsing model for funding statements to address information gaps within scholarly metadata. Piloted with arXiv preprints."
+    link: "https://doi.org/10.82461/gc3p-n671"
     icon: '<i class="fa-solid fa-check"></i>'
